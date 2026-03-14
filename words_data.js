@@ -1,0 +1,4826 @@
+var WORDS_DATA = [
+  {
+    "word": "foolproof",
+    "pos": "adj",
+    "pronunciation": "/fuːl pruːf/",
+    "example": "This app is foolproof . Absolutly anyone can use it.",
+    "file": "File 1",
+    "section": "Working out meaning from context",
+    "translation": "kusursuz"
+  },
+  {
+    "word": "geek",
+    "pos": "n",
+    "pronunciation": "/ɡiːk/",
+    "example": "I call myself a geek because I love technology and science-fiction.",
+    "file": "File 1",
+    "section": "Working out meaning from context",
+    "translation": "geek"
+  },
+  {
+    "word": "good-natured rivalry",
+    "pos": "phr",
+    "pronunciation": "/ɡʊd ˈneɪtʃəd ˈraɪvlriː/",
+    "example": "Our offices have a good-natured rivalry to get the better sales figures.",
+    "file": "File 1",
+    "section": "Working out meaning from context",
+    "translation": "iyi huylu rekabet"
+  },
+  {
+    "word": "gut feeling",
+    "pos": "phr",
+    "pronunciation": "/ɡʌt ˈfiːlɪŋ/",
+    "example": "I have a gut feeling that this is going to go wrong.",
+    "file": "File 1",
+    "section": "Working out meaning from context",
+    "translation": "içgüdüsel his"
+  },
+  {
+    "word": "job-seeker",
+    "pos": "n",
+    "pronunciation": "/dʒɒb ˈsiːkə/",
+    "example": "Job-seekers have to work hard at applying to lots of places.",
+    "file": "File 1",
+    "section": "Working out meaning from context",
+    "translation": "iş arayan"
+  },
+  {
+    "word": "light-hearted response",
+    "pos": "phr",
+    "pronunciation": "/laɪt ˈhɑːtɪd rɪˈspɒns/",
+    "example": "I was relieved at his light-hearted response . I was worried he'd be angry.",
+    "file": "File 1",
+    "section": "Working out meaning from context",
+    "translation": "hafif yürekli yanıt"
+  },
+  {
+    "word": "the point of",
+    "pos": "phr",
+    "pronunciation": "/ðə pɔɪnt əv/",
+    "example": "The point of the matter is that we need to change. That's the main thing.",
+    "file": "File 1",
+    "section": "Working out meaning from context",
+    "translation": "noktası"
+  },
+  {
+    "word": "work–life balance",
+    "pos": "phr",
+    "pronunciation": "/wɜːk laɪf ˈbæləns/",
+    "example": "Do you have a good work–life balanc e? ~ Yes, I have time for my family and my hobbies.",
+    "file": "File 1",
+    "section": "Working out meaning from context",
+    "translation": "iş-yaşam dengesi"
+  },
+  {
+    "word": "absent-minded",
+    "pos": "adj",
+    "pronunciation": "/ˌæbsənt ˈmaɪndɪd/",
+    "example": "She’s so absent-minded – she’s always forgetting things.",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "dalgın"
+  },
+  {
+    "word": "bad-tempered",
+    "pos": "adj",
+    "pronunciation": "/bæd ˈtempəd/",
+    "example": "Don't be so bad-tempered . You can't always win things.",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "kötü huylu"
+  },
+  {
+    "word": "big-headed",
+    "pos": "adj",
+    "pronunciation": "/bɪɡ ˈhedɪd/",
+    "example": "She always tells me how clever she is. That's so big-headed .",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "koca kafalı"
+  },
+  {
+    "word": "easy-going",
+    "pos": "adj",
+    "pronunciation": "/ˌiːziˈɡəʊɪŋ/",
+    "example": "My husband is really easy-going and calm.",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "sakin"
+  },
+  {
+    "word": "good-tempered",
+    "pos": "adj",
+    "pronunciation": "/ˌɡʊd ˈtempəd/",
+    "example": "My mum is very good-tempered and kind.",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "iyi huylu"
+  },
+  {
+    "word": "laid-back",
+    "pos": "adj",
+    "pronunciation": "/ˌleɪd ˈbæk/",
+    "example": "I’m really laid-back – nothing bothers me usually.",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "rahat"
+  },
+  {
+    "word": "narrow-minded",
+    "pos": "adj",
+    "pronunciation": "/ˌnærəʊ ˈmaɪndɪd/",
+    "example": "The people who live here are judgemental and narrow-minded .",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "dar görüşlü"
+  },
+  {
+    "word": "open-minded",
+    "pos": "adj",
+    "pronunciation": "/ˌəʊpən ˈmaɪndɪd/",
+    "example": "Psychotherapists need to be open-minded .",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "açık fikirli"
+  },
+  {
+    "word": "self-centred",
+    "pos": "adj",
+    "pronunciation": "/self ˈsentəd/",
+    "example": "I worry that I'm too self-centred . I'm trying to be more aware of people's needs.",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "benmerkezci"
+  },
+  {
+    "word": "strong-willed",
+    "pos": "adj",
+    "pronunciation": "/strɒŋ wɪld/",
+    "example": "My three year old is very strong-willed . She doesn't want to go to bed on time.",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "güçlü iradeli"
+  },
+  {
+    "word": "tight-fisted",
+    "pos": "adj",
+    "pronunciation": "/taɪt fɪstɪd/",
+    "example": "Don't try to borrow money from them. They're very tight-fisted .",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "sıkı yumruklu"
+  },
+  {
+    "word": "two-faced",
+    "pos": "adj",
+    "pronunciation": "/tuː feɪst/",
+    "example": "You're so two-faced ! You tell me one thing and tell my friends something else.",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "iki yüzlü"
+  },
+  {
+    "word": "well-balanced",
+    "pos": "adj",
+    "pronunciation": "/wel ˈbælənst/",
+    "example": "I think I'm quite well-balanced . I don't get stressed easily.",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "iyi dengelenmiş"
+  },
+  {
+    "word": "well-behaved",
+    "pos": "adj",
+    "pronunciation": "/wel bɪˈheɪvd/",
+    "example": "They're very well-behaved children. I'm proud of them.",
+    "file": "File 1",
+    "section": "Compound adjectives",
+    "translation": "iyi huylu"
+  },
+  {
+    "word": "allergic reaction",
+    "pos": "n",
+    "pronunciation": "/əˈlɜːdʒɪk riˈækʃn/",
+    "example": "I had an allergic reaction to the medicine I was given.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "alerjik reaksiyon"
+  },
+  {
+    "word": "be sick",
+    "pos": "phr v",
+    "pronunciation": "/bi sɪk/",
+    "example": "I feel terrible – I think I’m going to be sick .",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "hasta olmak"
+  },
+  {
+    "word": "bleed",
+    "pos": "v",
+    "pronunciation": "/ˈbliːd/",
+    "example": "A cut finger can sometimes bleed for a long time.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "kanama"
+  },
+  {
+    "word": "blister",
+    "pos": "n",
+    "pronunciation": "/ˈblɪstə/",
+    "example": "You will get a blister",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "blister"
+  },
+  {
+    "word": "(high / low) blood pressure",
+    "pos": "n",
+    "pronunciation": "/haɪ ləʊ blʌd ˈpreʃə/",
+    "example": "My grandparents have high blood pressure and have to take medication for it.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "(yüksek / düşük) kan basıncı"
+  },
+  {
+    "word": "burn",
+    "pos": "v",
+    "pronunciation": "/bɜːn/",
+    "example": "Don’t touch that hot pan – it will burn you.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "yanmak"
+  },
+  {
+    "word": "choke",
+    "pos": "v",
+    "pronunciation": "/tʃəʊkɪŋ/",
+    "example": "Be careful not to choke on that sweet.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "şok"
+  },
+  {
+    "word": "cold",
+    "pos": "n",
+    "pronunciation": "/kəʊld/",
+    "example": "I get at least one cold every winter.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "soğuk"
+  },
+  {
+    "word": "come round",
+    "pos": "phr v",
+    "pronunciation": "/kʌm raʊnd/",
+    "example": "If you pour cold water on his face he might come round .",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "yuvarlan"
+  },
+  {
+    "word": "cough",
+    "pos": "n",
+    "pronunciation": "/kɒf/",
+    "example": "You've had that cough for ages. Do you need to see a doctor?",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "öksürük"
+  },
+  {
+    "word": "cut",
+    "pos": "v",
+    "pronunciation": "/kʌt/",
+    "example": "I cut my finger when I was chopping cucumbers.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "kesilmiş"
+  },
+  {
+    "word": "diarrhoea",
+    "pos": "n",
+    "pronunciation": "/daɪəˈrɪə/",
+    "example": "I had diarrhoea last night and had to go to the toilet six times.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "i̇shal"
+  },
+  {
+    "word": "dizzy",
+    "pos": "adj",
+    "pronunciation": "/ˈdɪzi/",
+    "example": "If I don’t eat enough I feel dizzy .",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "başım dönüyor"
+  },
+  {
+    "word": "earache",
+    "pos": "n",
+    "pronunciation": "/ˈɪəreɪk/",
+    "example": "I have an earache and it’s really painful.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "kulak ağrısı"
+  },
+  {
+    "word": "faint",
+    "pos": "v",
+    "pronunciation": "/ˈfeɪnt/",
+    "example": "I faint when I see blood.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "soluk"
+  },
+  {
+    "word": "feel sick",
+    "pos": "phr v",
+    "pronunciation": "/fiːl sɪk/",
+    "example": "I'm going to go home. I feel sick and I can't concentrate.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "hasta hissediyorum"
+  },
+  {
+    "word": "flu",
+    "pos": "n",
+    "pronunciation": "/fluː/",
+    "example": "My teacher has flu and hasn’t been at school all week.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "grip"
+  },
+  {
+    "word": "food poisoning",
+    "pos": "n",
+    "pronunciation": "/ˈfuːd pɔɪzənɪŋ/",
+    "example": "I ate some mussels and they gave me food poisoning .",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "gıda zehirlenmesi"
+  },
+  {
+    "word": "get over",
+    "pos": "phr v",
+    "pronunciation": "/ɡet ˈəʊvə/",
+    "example": "It often takes a long time to get over flu.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "aşmak"
+  },
+  {
+    "word": "headache",
+    "pos": "n",
+    "pronunciation": "/ˈhedeɪk/",
+    "example": "If you have a headache , take some paracetemol.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "baş ağrısı"
+  },
+  {
+    "word": "hurt",
+    "pos": "v",
+    "pronunciation": "/hɜːt/",
+    "example": "Does your back hurt after driving so long?",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "incinmiş"
+  },
+  {
+    "word": "lie down",
+    "pos": "phr v",
+    "pronunciation": "/ˌlaɪ ˈdaʊn/",
+    "example": "Please lie down on the couch.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "uzanmak"
+  },
+  {
+    "word": "pass out",
+    "pos": "phr v",
+    "pronunciation": "/pɑːs aʊt/",
+    "example": "I’m so tired I think I’m going to pass out .",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "dışarı çıkmak"
+  },
+  {
+    "word": "rash",
+    "pos": "n",
+    "pronunciation": "/ræʃ/",
+    "example": "One of the symptoms of measles is a red rash .",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "kızarıklık"
+  },
+  {
+    "word": "sore throat",
+    "pos": "n",
+    "pronunciation": "/sɔ θrəʊt/",
+    "example": "I can’t talk too long because I have a sore throat .",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "boğaz ağrısı"
+  },
+  {
+    "word": "sprain",
+    "pos": "v",
+    "pronunciation": "/spreɪn/",
+    "example": "Did you sprain your wrist when you were playing tennis?",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "burkulma"
+  },
+  {
+    "word": "stomach ache",
+    "pos": "n",
+    "pronunciation": "/ˈstʌmək eɪk/",
+    "example": "I’ve eaten too much and now I have a stomach ache .",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "mide ağrısı"
+  },
+  {
+    "word": "sunburn",
+    "pos": "n",
+    "pronunciation": "/ˈsʌnbɜːn/",
+    "example": "Don’t stay out in the sun too long or you will get sunburn .",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "güneş yanığı"
+  },
+  {
+    "word": "swell",
+    "pos": "v",
+    "pronunciation": "/ˈswel/",
+    "example": "This bee sting is starting to swell.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "harika"
+  },
+  {
+    "word": "temperature",
+    "pos": "n",
+    "pronunciation": "/ˈtemprətʃə/",
+    "example": "I’ve got a high temperature and I feel feverish.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "sıcaklık"
+  },
+  {
+    "word": "throw up",
+    "pos": "phr v",
+    "pronunciation": "/θrəʊ ʌp/",
+    "example": "I felt very ill and I had to run to the bathroom and throw up .",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "kusmak"
+  },
+  {
+    "word": "toothache",
+    "pos": "n",
+    "pronunciation": "/ˈtuːθeɪk/",
+    "example": "If you have a toothach e you should go to see the dentist.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "di̇ş ağrisi"
+  },
+  {
+    "word": "unconscious",
+    "pos": "adj",
+    "pronunciation": "/ʌnˈkɒnʃəs/",
+    "example": "She's unconscious so we need medical help immediately.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "bilinçsiz"
+  },
+  {
+    "word": "vomit",
+    "pos": "v",
+    "pronunciation": "/ˈvɒmɪt/",
+    "example": "Some people vomit when they travel by boat in rough seas.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Illnesses and injuries",
+    "translation": "kusmuk"
+  },
+  {
+    "word": "casual",
+    "pos": "adj",
+    "pronunciation": "/ˈkæʒuəl/",
+    "example": "You can wear anything you like, we have a casual dress code.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "gündelik"
+  },
+  {
+    "word": "checked",
+    "pos": "adj",
+    "pronunciation": "/tʃekt/",
+    "example": "I wore a checked shirt to the party.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "kontrol edildi"
+  },
+  {
+    "word": "classic",
+    "pos": "adj",
+    "pronunciation": "/ˈklæsɪk/",
+    "example": "The coat, suit and smart shoes are a classic combination.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "klasik"
+  },
+  {
+    "word": "dress up",
+    "pos": "phr v",
+    "pronunciation": "/dres ʌp/",
+    "example": "I’m going to dress up tonight and wear a smart suit.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "giyinmek"
+  },
+  {
+    "word": "fit",
+    "pos": "v",
+    "pronunciation": "/fɪt/",
+    "example": "These jeans don’t fit me. I need a different size.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "uygun"
+  },
+  {
+    "word": "get changed",
+    "pos": "phr v",
+    "pronunciation": "/ɡet tʃeɪndʒd/",
+    "example": "I need to get changed before we can go to the beach.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "değişti"
+  },
+  {
+    "word": "get dressed",
+    "pos": "phr v",
+    "pronunciation": "/ɡet drest/",
+    "example": "Get up and get dressed .",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "giyinmek"
+  },
+  {
+    "word": "get undressed",
+    "pos": "phr v",
+    "pronunciation": "/ɡet ʌnˈdrest/",
+    "example": "Hurry up and get undressed !",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "soyunmak"
+  },
+  {
+    "word": "go with",
+    "pos": "phr v",
+    "pronunciation": "/ɡəʊ wɪð/",
+    "example": "I don’t think that skirt will go with this top.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "ile git"
+  },
+  {
+    "word": "hang up",
+    "pos": "phr v",
+    "pronunciation": "/ˈhæŋ ʌp/",
+    "example": "Please hang up your coat.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "kapat."
+  },
+  {
+    "word": "hooded",
+    "pos": "adj",
+    "pronunciation": "/ˈhʊdɪd/",
+    "example": "I have a warm black hooded top which I like to wear.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "kapüşonlu"
+  },
+  {
+    "word": "long-sleeved",
+    "pos": "adj",
+    "pronunciation": "/lɒŋ sliːvd/",
+    "example": "I wore a blue long-sleeved shirt.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "uzun kollu"
+  },
+  {
+    "word": "loose",
+    "pos": "adj",
+    "pronunciation": "/luːs/",
+    "example": "He was wearing a loose linen suit.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "gevşek"
+  },
+  {
+    "word": "match",
+    "pos": "v",
+    "pronunciation": "/mætʃ/",
+    "example": "Does this bag match my shoes?",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "maç"
+  },
+  {
+    "word": "old-fashioned",
+    "pos": "adj",
+    "pronunciation": "/əʊld ˈfæʃənd/",
+    "example": "She was wearing an old-fashioned dress in the style of the 1920s.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "eski moda"
+  },
+  {
+    "word": "patterned",
+    "pos": "adj",
+    "pronunciation": "/ˈpætənd/",
+    "example": "She wore a patterned skirt with flowers on.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "desenli"
+  },
+  {
+    "word": "plain",
+    "pos": "adj",
+    "pronunciation": "/pleɪn/",
+    "example": "I wore a plain blue top.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "ova"
+  },
+  {
+    "word": "scruffy",
+    "pos": "adj",
+    "pronunciation": "/ˈskrʌfi/",
+    "example": "My younger brother always looks really scruffy and dirty.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "scruffy"
+  },
+  {
+    "word": "sleeveless",
+    "pos": "adj",
+    "pronunciation": "/ˈsliːvləs/",
+    "example": "I wore a sleeveless dress to the wedding.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "kolsuz"
+  },
+  {
+    "word": "smart",
+    "pos": "adj",
+    "pronunciation": "/smɑːt/",
+    "example": "You need to look smart when we go out for dinner tonight.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "akıllı"
+  },
+  {
+    "word": "spotted",
+    "pos": "adj",
+    "pronunciation": "/ˈspɒtɪd/",
+    "example": "She wore a pink and white spotted dress to the party.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "benekli"
+  },
+  {
+    "word": "striped",
+    "pos": "adj",
+    "pronunciation": "/straɪpt/",
+    "example": "I wore a blue and white striped T-shirt on the beach.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "çizgili"
+  },
+  {
+    "word": "suit",
+    "pos": "v",
+    "pronunciation": "/suːt/",
+    "example": "Those glasses really suit you.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "takım elbise"
+  },
+  {
+    "word": "tight",
+    "pos": "adj",
+    "pronunciation": "/taɪt/",
+    "example": "This T-shirt is very tight now. I bought it when I was much younger.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "sıkı"
+  },
+  {
+    "word": "V-neck",
+    "pos": "adj",
+    "pronunciation": "/ˈviː nek/",
+    "example": "He always wears a V-neck jumper over his shirts.",
+    "file": "File 2",
+    "section": "Vocabulary Banks: Clothes and fashion",
+    "translation": "v yaka"
+  },
+  {
+    "word": "airport terminal",
+    "pos": "n",
+    "pronunciation": "/ˈeəpɔːt ˈtɜːmɪnl/",
+    "example": "The taxi dropped us off at the airport terminal .",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "havalimanı terminali"
+  },
+  {
+    "word": "aisle",
+    "pos": "n",
+    "pronunciation": "/aɪl/",
+    "example": "Don't leave your bag in the aisle ! People need to walk up and down.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "koridor"
+  },
+  {
+    "word": "bag(gage) drop",
+    "pos": "n",
+    "pronunciation": "/ˈbæɡɪdʒ drɒp/",
+    "example": "Please take that bag to baggage drop .",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "torba (gage) düşüşü"
+  },
+  {
+    "word": "baggage reclaim",
+    "pos": "n",
+    "pronunciation": "/ˈbæɡɪdʒ rɪˈkleɪm/",
+    "example": "You need to go to baggage reclaim to collect your bags.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "bagaj geri̇ alma"
+  },
+  {
+    "word": "board",
+    "pos": "v",
+    "pronunciation": "/bɔːd/",
+    "example": "Can we board our flight now?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "yönetim kurulu"
+  },
+  {
+    "word": "boarding pass",
+    "pos": "n",
+    "pronunciation": "/ˈbɔːdɪŋ pɑːs/",
+    "example": "You have to show your boarding pass at the gate.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "biniş kartı"
+  },
+  {
+    "word": "business",
+    "pos": "adj",
+    "pronunciation": "/ˈbɪznəs/",
+    "example": "Are you in economy? ~ No, I'm in business class today.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "i̇ş"
+  },
+  {
+    "word": "cabin crew",
+    "pos": "n pl",
+    "pronunciation": "/ˈkæbɪn kruː/",
+    "example": "I asked one of the cabin crew to help me with my bags.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "kabin ekibi"
+  },
+  {
+    "word": "check",
+    "pos": "v",
+    "pronunciation": "/tʃek/",
+    "example": "They will check your hand baggage when you go through security.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "kontrol et"
+  },
+  {
+    "word": "check in",
+    "pos": "phr v",
+    "pronunciation": "/tʃek in/",
+    "example": "You need to check in when you arrive at the airport.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "giriş yap"
+  },
+  {
+    "word": "check-in desk",
+    "pos": "n",
+    "pronunciation": "/tʃek ɪn desk/",
+    "example": "Please go immediately to the check-in desk .",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "check-in masası"
+  },
+  {
+    "word": "closed",
+    "pos": "adj",
+    "pronunciation": "/kləʊzd/",
+    "example": "I'm sorry, the check-in for your flight is now closed.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "kapalı"
+  },
+  {
+    "word": "collect",
+    "pos": "v",
+    "pronunciation": "/kəˈlekt/",
+    "example": "Please collect your luggage on arrival.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "toplamak"
+  },
+  {
+    "word": "connecting flight",
+    "pos": "n",
+    "pronunciation": "/kəˈnektɪŋ flaɪt/",
+    "example": "When I get to Frankfurt I need to get a connecting flight to Berlin",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "aktarmalı uçuş"
+  },
+  {
+    "word": "customs",
+    "pos": "n",
+    "pronunciation": "/ˈkʌstəmz/",
+    "example": "Show your passport at customs.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "gümrükler"
+  },
+  {
+    "word": "delayed",
+    "pos": "adj",
+    "pronunciation": "/dɪˈleɪd/",
+    "example": "Oh no! Our flight is delayed by three hours.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "gecikmeli"
+  },
+  {
+    "word": "departures board",
+    "pos": "n",
+    "pronunciation": "/dɪˈpɑːtʃəz bɔːd/",
+    "example": "We looked at the departures board to find out about our flight.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "kalkiş kurulu"
+  },
+  {
+    "word": "direct flight",
+    "pos": "n pl",
+    "pronunciation": "/ˌdəˈrekt flaɪt/",
+    "example": "Is there a direct flight from London to Bangkok?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "direkt uçuş"
+  },
+  {
+    "word": "drop off",
+    "pos": "phr v",
+    "pronunciation": "/drɒp ɒf/",
+    "example": "Can your mum drop us off at the airport tomorrow morning?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "bırakma"
+  },
+  {
+    "word": "first class",
+    "pos": "n",
+    "pronunciation": "/fɜːst klɑːs/",
+    "example": "There is more space for each passenger in first class .",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "birinci sınıf"
+  },
+  {
+    "word": "flight time",
+    "pos": "n",
+    "pronunciation": "/flaɪt taɪm/",
+    "example": "Have you looked at the board to check your flight time ?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "uçuş süresi"
+  },
+  {
+    "word": "fill in",
+    "pos": "phr v",
+    "pronunciation": "/fɪl in/",
+    "example": "Please",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "doldurun"
+  },
+  {
+    "word": "gate",
+    "pos": "n",
+    "pronunciation": "/ɡeɪt/",
+    "example": "How long will it take to walk to our gate ?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "kapı"
+  },
+  {
+    "word": "get off",
+    "pos": "phr v",
+    "pronunciation": "/ɡet ɒf/",
+    "example": "I’m always happy to get off the plane at the end of a flight.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "inin"
+  },
+  {
+    "word": "get on",
+    "pos": "phr v",
+    "pronunciation": "/ɡet ɒn/",
+    "example": "When I get on a plane I always look for the emergency exits.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "binmek"
+  },
+  {
+    "word": "hand luggage",
+    "pos": "n",
+    "pronunciation": "/ˈhænd lʌɡɪdʒ/",
+    "example": "There isn't much space on the plane for everyone's hand luggage .",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "el bagajı"
+  },
+  {
+    "word": "illegal goods",
+    "pos": "n",
+    "pronunciation": "/ɪˈliːɡl ɡʊdz/",
+    "example": "At customs, they check if anyone is bringing illegal goods into the country.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "yasadışı mallar"
+  },
+  {
+    "word": "jet lag",
+    "pos": "n",
+    "pronunciation": "/ˈdʒet læɡ/",
+    "example": "My jet lag after the flight was worse than usual.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "jet lag"
+  },
+  {
+    "word": "journey",
+    "pos": "n",
+    "pronunciation": "/ˈdʒɜːni/",
+    "example": "Did you have a good journey ? ~ Yes, there were no problems, thanks.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "yolculuk"
+  },
+  {
+    "word": "land",
+    "pos": "v",
+    "pronunciation": "/lænd/",
+    "example": "Their flight will land in 20 minutes.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "kara"
+  },
+  {
+    "word": "liquid",
+    "pos": "n",
+    "pronunciation": "/ˈlɪkwɪd/",
+    "example": "If you want to take any liquid through security it must be less than 100 ml.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "sıvı"
+  },
+  {
+    "word": "long-haul flight",
+    "pos": "n",
+    "pronunciation": "/ˌlɒŋ hɔːl ˈflaɪt/",
+    "example": "Have you ever been on a long-haul flight ?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "uzun mesafeli uçuş"
+  },
+  {
+    "word": "(airline) lounge",
+    "pos": "n",
+    "pronunciation": "/ˈeəlaɪn laʊndʒ/",
+    "example": "Let's go and sit in the lounge for a while. We have an hour to wait.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "(havayolu) lounge"
+  },
+  {
+    "word": "luggage",
+    "pos": "n",
+    "pronunciation": "/ˈlʌɡɪdʒ/",
+    "example": "How much luggage have you brought for a two-week holiday?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "bagaj"
+  },
+  {
+    "word": "on time",
+    "pos": "adj",
+    "pronunciation": "/ɒn taɪm/",
+    "example": "Is our flight on time ? Let's check the departures board.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "zamanında"
+  },
+  {
+    "word": "pick up",
+    "pos": "phr v",
+    "pronunciation": "/pɪk ʌp/",
+    "example": "Where can we pick up our luggage?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "almak"
+  },
+  {
+    "word": "pick up",
+    "pos": "phr v",
+    "pronunciation": "/pɪk ʌp/",
+    "example": "Can you pick me up at the airport when my flight lands?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "almak"
+  },
+  {
+    "word": "row",
+    "pos": "n",
+    "pronunciation": "/rəʊ/",
+    "example": "Here we are, row 15. You're sitting in 15A.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "sıra"
+  },
+  {
+    "word": "runway",
+    "pos": "n",
+    "pronunciation": "/ˈrʌnweɪ/",
+    "example": "The plane taxied along the runway .",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "pi̇st"
+  },
+  {
+    "word": "scan",
+    "pos": "v",
+    "pronunciation": "/skæn/",
+    "example": "They will scan your luggage at security",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "tarama"
+  },
+  {
+    "word": "seat belt",
+    "pos": "n",
+    "pronunciation": "/ˈsiːt belt/",
+    "example": "Put on your seat belt , please.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "emniyet kemeri"
+  },
+  {
+    "word": "security",
+    "pos": "n",
+    "pronunciation": "/sɪˈkjʊərəti/",
+    "example": "They opened my bag at security.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "güvenlik"
+  },
+  {
+    "word": "sharp object",
+    "pos": "n",
+    "pronunciation": "/ʃɑːp ˈɒbdʒekt/",
+    "example": "You can't have any sharp object s like scissors in your hand luggage.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "keskin nesne"
+  },
+  {
+    "word": "take off",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ɒf/",
+    "example": "The plane is going to take off in five minutes.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "kalkış"
+  },
+  {
+    "word": "travel",
+    "pos": "v",
+    "pronunciation": "/ˈtrævl/",
+    "example": "I love to travel . It's one of my favourite activities.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "seyahat"
+  },
+  {
+    "word": "trip",
+    "pos": "n",
+    "pronunciation": "/trɪp/",
+    "example": "Are you going away next week? ~ Yes, just for a short trip .",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "yolculuk"
+  },
+  {
+    "word": "trolley",
+    "pos": "n",
+    "pronunciation": "/ˈtrɒli/",
+    "example": "We have lots of bags. Let's get a trolley to carry them.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "el arabası"
+  },
+  {
+    "word": "turbulence",
+    "pos": "n",
+    "pronunciation": "/ˈtɜːbjələns/",
+    "example": "Is turbulence really dangerous?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Air Travel",
+    "translation": "türbülans"
+  },
+  {
+    "word": "actually",
+    "pos": "adv",
+    "pronunciation": "/ˈæktʃuəli/",
+    "example": "I thought it was simple, but actually",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "aslında"
+  },
+  {
+    "word": "apparently",
+    "pos": "adv",
+    "pronunciation": "/əˈpærəntli/",
+    "example": "Apparently , this house is worth £500,000!",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "görünüşe göre"
+  },
+  {
+    "word": "at the moment",
+    "pos": "phr",
+    "pronunciation": "/æt ðə ˈməʊmənt/",
+    "example": "Are you busy at the moment ? I have a question.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "şu anda"
+  },
+  {
+    "word": "basically",
+    "pos": "adv",
+    "pronunciation": "/ˈbeɪsɪkli/",
+    "example": "Basically , we don’t have enough money to move.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "temelde"
+  },
+  {
+    "word": "certainly",
+    "pos": "adv",
+    "pronunciation": "/ˈsɜːtnli/",
+    "example": "I certainly wasn't expecting the film to end in that way. I was really surprised.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "kesinlikle"
+  },
+  {
+    "word": "especially",
+    "pos": "adv",
+    "pronunciation": "/ɪˈspeʃəli/",
+    "example": "I love ice cream, especially mint flavoured ice-cream.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "özellikle"
+  },
+  {
+    "word": "even",
+    "pos": "adv",
+    "pronunciation": "/ˈiːvn/",
+    "example": "I lose everything! I even lost my boarding pass when I was at the airport.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "hatta"
+  },
+  {
+    "word": "eventually",
+    "pos": "adv",
+    "pronunciation": "/ɪˈventʃuəli/",
+    "example": "It took a long time, but eventually we had enough money to buy a house.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "sonunda"
+  },
+  {
+    "word": "ever",
+    "pos": "adv",
+    "pronunciation": "/ˈevə/",
+    "example": "Have you ever been on a long-haul flight?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "hiç"
+  },
+  {
+    "word": "gradually",
+    "pos": "adv",
+    "pronunciation": "/ˈɡrædʒuəli/",
+    "example": "I kept studying and gradually",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "yavaş yavaş"
+  },
+  {
+    "word": "hard",
+    "pos": "adv",
+    "pronunciation": "/hɑːd/",
+    "example": "You should work hard , but ask for help if you need it.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "zor"
+  },
+  {
+    "word": "hardly",
+    "pos": "adv",
+    "pronunciation": "/ˈhɑːdli/",
+    "example": "It’s so foggy, I can hardly see anything.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "zor"
+  },
+  {
+    "word": "ideally",
+    "pos": "adv",
+    "pronunciation": "/aɪˈdiːəli/",
+    "example": "Ideally , we’d like to live near the sea, but it’s not practical.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "ideal olarak"
+  },
+  {
+    "word": "in fact",
+    "pos": "adv",
+    "pronunciation": "/ɪn fækt/",
+    "example": "I thought the café would be closed, but in fact it was open.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "aslında"
+  },
+  {
+    "word": "in the end",
+    "pos": "phr",
+    "pronunciation": "/ɪn ðə end/",
+    "example": "I thought the job would be boring, but in the end",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "sonunda"
+  },
+  {
+    "word": "late",
+    "pos": "adv",
+    "pronunciation": "/leɪt/",
+    "example": "The plane arrived late because of bad weather.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "geç"
+  },
+  {
+    "word": "lately",
+    "pos": "adv",
+    "pronunciation": "/ˈleɪtli/",
+    "example": "I haven’t heard from Mike lately . Have you?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "son zamanlarda"
+  },
+  {
+    "word": "near",
+    "pos": "adv",
+    "pronunciation": "/nɪə/",
+    "example": "Is there a bank near here?",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "yakın"
+  },
+  {
+    "word": "nearly",
+    "pos": "adv",
+    "pronunciation": "/ˈnɪəli/",
+    "example": "I’ve nearly finished my coffee. When I've finished it, we'll go.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "neredeyse"
+  },
+  {
+    "word": "obviously",
+    "pos": "adv",
+    "pronunciation": "/ˈɒbviəsli/",
+    "example": "It will be winter there, so obviously",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "tabii ki"
+  },
+  {
+    "word": "specially",
+    "pos": "adv",
+    "pronunciation": "/ˈspeʃəli/",
+    "example": "I wrote a specially commissioned report for the government.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "özel olarak"
+  },
+  {
+    "word": "still",
+    "pos": "adv",
+    "pronunciation": "/stɪl/",
+    "example": "I'm still reading the book you lent me. It's long, but it's good.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "hala"
+  },
+  {
+    "word": "yet",
+    "pos": "adv",
+    "pronunciation": "/jet/",
+    "example": "Are you ready yet ? We need to leave in five minutes.",
+    "file": "File 3",
+    "section": "Vocabulary Banks: Adverbs and adverbial phrases",
+    "translation": "henüz"
+  },
+  {
+    "word": "blizzard",
+    "pos": "n",
+    "pronunciation": "/ˈblɪzəd/",
+    "example": "A blizzard is a snow storm with very strong winds.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "kar fırtınası"
+  },
+  {
+    "word": "boiling",
+    "pos": "adj",
+    "pronunciation": "/ˈbɔɪlɪŋ/",
+    "example": "It’s too hot today. It’s boiling .",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "kaynama"
+  },
+  {
+    "word": "breeze",
+    "pos": "n",
+    "pronunciation": "/briːz/",
+    "example": "The breeze is really cooling me down.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "esinti"
+  },
+  {
+    "word": "bright",
+    "pos": "adj",
+    "pronunciation": "/braɪt/",
+    "example": "The bright sunshine lit up the mountain.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "parlak"
+  },
+  {
+    "word": "changeable",
+    "pos": "adj",
+    "pronunciation": "/ˈtʃeɪndʒəbl/",
+    "example": "The weather is often very changeable in the UK.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "değiştirilebilir"
+  },
+  {
+    "word": "chilly",
+    "pos": "adj",
+    "pronunciation": "/ˈtʃɪli/",
+    "example": "It’s a bit chilly in here. Shall I put the heating on?",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "soğuk"
+  },
+  {
+    "word": "clear",
+    "pos": "adj",
+    "pronunciation": "/klɪə/",
+    "example": "On a clear day you can see for miles.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "temiz"
+  },
+  {
+    "word": "cool",
+    "pos": "adj",
+    "pronunciation": "/kuːl/",
+    "example": "It’s a bit cool for this time of year. It’s normally hotter.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "havalı"
+  },
+  {
+    "word": "damp",
+    "pos": "adj",
+    "pronunciation": "/dæmp/",
+    "example": "My jacket is still damp from walking in the rain yesterday.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "nemli"
+  },
+  {
+    "word": "drizzle",
+    "pos": "v",
+    "pronunciation": "/ˈdrɪzl/",
+    "example": "It started to drizzle , but didn't rain heavily.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "çiseleme"
+  },
+  {
+    "word": "drought",
+    "pos": "n",
+    "pronunciation": "/draʊt/",
+    "example": "There has been a long drought and all the rivers have dried up.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "kuraklık"
+  },
+  {
+    "word": "flood",
+    "pos": "n",
+    "pronunciation": "/flʌd/",
+    "example": "It was so wet that the water covered the roads in a big flood.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "sel"
+  },
+  {
+    "word": "fog",
+    "pos": "n",
+    "pronunciation": "/fɒɡ/",
+    "example": "The fog is so thick that I can't see anything.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "sis"
+  },
+  {
+    "word": "freezing",
+    "pos": "adj",
+    "pronunciation": "/ˈfriːzɪŋ/",
+    "example": "It’s freezing ! I’ll have to scrape the ice from my car.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "dondurucu"
+  },
+  {
+    "word": "hail",
+    "pos": "n",
+    "pronunciation": "/heɪl/",
+    "example": "Is that rain? ~ No, it's hail . You can see the ice!",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "dolu"
+  },
+  {
+    "word": "heatwave",
+    "pos": "n",
+    "pronunciation": "/ˈhiːtweɪv/",
+    "example": "The heatwave is causing problems for many people in the area. Drink plenty of water!",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "sıcak hava dalgası"
+  },
+  {
+    "word": "heavy",
+    "pos": "adj",
+    "pronunciation": "/ˈhevi/",
+    "example": "The rain was so heavy",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "ağır"
+  },
+  {
+    "word": "humid",
+    "pos": "adj",
+    "pronunciation": "/ˈhjuːmɪd/",
+    "example": "We live close to to a river so the air is often humid in summer.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "nemli"
+  },
+  {
+    "word": "hurricane",
+    "pos": "n",
+    "pronunciation": "/ˈhʌrɪkən/",
+    "example": "The house was destroyed by a hurricane.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "kasırga"
+  },
+  {
+    "word": "icy",
+    "pos": "adj",
+    "pronunciation": "/ˈaɪsi/",
+    "example": "I fell over on the icy path.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "buzlu"
+  },
+  {
+    "word": "lightning",
+    "pos": "n",
+    "pronunciation": "/ˈlaɪtnɪŋ/",
+    "example": "The flash of lightning could be seen for miles.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "şimşek"
+  },
+  {
+    "word": "mild",
+    "pos": "adj",
+    "pronunciation": "/maɪld/",
+    "example": "It’s quite mild by September. The summer heat has gone.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "hafif"
+  },
+  {
+    "word": "mist",
+    "pos": "n",
+    "pronunciation": "/mɪst/",
+    "example": "The mist from the sea was so thick I couldn’t see anything.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "sis"
+  },
+  {
+    "word": "monsoon",
+    "pos": "n",
+    "pronunciation": "/mɒnˈsuːn/",
+    "example": "We get very heavy rains in the monsoon season.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "muson"
+  },
+  {
+    "word": "pour (with rain)",
+    "pos": "v",
+    "pronunciation": "/ˈpɔːr/",
+    "example": "You can't go out now. It's pouring with rain.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "pour (yağmur ile)"
+  },
+  {
+    "word": "settled",
+    "pos": "adj",
+    "pronunciation": "/ˈsetld/",
+    "example": "After a period of changeable weather it became much more settled .",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "yerleşti"
+  },
+  {
+    "word": "shower",
+    "pos": "n",
+    "pronunciation": "/ˈʃaʊə/",
+    "example": "Let’s wait a minute to see if it’s just a short shower .",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "duş"
+  },
+  {
+    "word": "smog",
+    "pos": "n",
+    "pronunciation": "/smɒɡ/",
+    "example": "The pollution causes a thick smog which covers the city.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "duman"
+  },
+  {
+    "word": "strong",
+    "pos": "adj",
+    "pronunciation": "/strɒŋ/",
+    "example": "The strong wind blew over many trees.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "güçlü"
+  },
+  {
+    "word": "sunny",
+    "pos": "adj",
+    "pronunciation": "/ˈsʌni/",
+    "example": "Was it sunny on holiday? ~ Yes, we had wonderful weather.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "güneşli"
+  },
+  {
+    "word": "thick",
+    "pos": "adj",
+    "pronunciation": "/θɪk/",
+    "example": "The fog was so thick",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "kalın"
+  },
+  {
+    "word": "thunder",
+    "pos": "n",
+    "pronunciation": "/ˈθʌndə/",
+    "example": "Can you hear the thunder ? There's a storm nearby.",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "gök gürültüsü"
+  },
+  {
+    "word": "warm",
+    "pos": "adj",
+    "pronunciation": "/wɔːm/",
+    "example": "How warm is it outside? Do I need a jumper?",
+    "file": "File 4",
+    "section": "Vocabulary Banks: Weather",
+    "translation": "sıcak"
+  },
+  {
+    "word": "take advantage of",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ədˈvɑːntɪdʒ əv/",
+    "example": "This is a great opportunity to travel. Take advantage of it!",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "avantajlarından yararlanın"
+  },
+  {
+    "word": "take after",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ˈɑːftə(r)/",
+    "example": "I take after my father. We like the same kind of jokes!",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "sonra al"
+  },
+  {
+    "word": "take against",
+    "pos": "phr v",
+    "pronunciation": "/teɪk əˈɡeɪnst/",
+    "example": "They used to be friends, but now they've taken against each other.",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "karşı almak"
+  },
+  {
+    "word": "take care of",
+    "pos": "phr v",
+    "pronunciation": "/teɪk keə əv/",
+    "example": "If you get a pet, you'll have to take care of",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "ilgilenmek"
+  },
+  {
+    "word": "take into account",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ˈɪntu əˈkaʊnt/",
+    "example": "Do the final results take into account your coursework as well as exam results?",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "dikkate almak"
+  },
+  {
+    "word": "take no notice of",
+    "pos": "phr v",
+    "pronunciation": "/teɪk nəʊ ˈnəʊtɪs əv/",
+    "example": "Some people didn't like our school show. ~ Take no notice of them. It was a great show!",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "dikkate almayın"
+  },
+  {
+    "word": "take off",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ɒf/",
+    "example": "When does your flight leave? We take off at 2 p.m. and land three hours later.",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "kalkış"
+  },
+  {
+    "word": "take (sth) off",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ɒf/",
+    "example": "It's really hot in here. You should take your coat off .",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "(bir şeyi) çıkarmak"
+  },
+  {
+    "word": "take (sb) out",
+    "pos": "phr v",
+    "pronunciation": "/teɪk aʊt/",
+    "example": "Daniel is going to take Elena out for dinner tonight.",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "(sb) dışarı çıkarmak"
+  },
+  {
+    "word": "take (sth) out",
+    "pos": "phr v",
+    "pronunciation": "/teɪk aʊt/",
+    "example": "Can you take the recycling out ? It's collection day tomorrow.",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "(bir şeyi) dışarı çıkarmak"
+  },
+  {
+    "word": "take part in",
+    "pos": "phr v",
+    "pronunciation": "/teɪk pɑːt ɪn/",
+    "example": "More and more people are starting to take part in the sport.",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "katılmak"
+  },
+  {
+    "word": "take pity on",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ˈpɪti ɒn/",
+    "example": "I took pity on the cat and brought it some food.",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "merhamet et"
+  },
+  {
+    "word": "take place",
+    "pos": "phr v",
+    "pronunciation": "/teɪk pleɪs/",
+    "example": "When does the firework show take place ? ~ At 10 p.m. tonight.",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "yer almak"
+  },
+  {
+    "word": "take risks",
+    "pos": "phr v",
+    "pronunciation": "/teɪk rɪsks/",
+    "example": "I like to take risks . I think it's exciting.",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "risk almak"
+  },
+  {
+    "word": "take (your) time",
+    "pos": "phr v",
+    "pronunciation": "/teɪk jɔː taɪm/",
+    "example": "Take your time ! We don't need to leave yet.",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "(senin) zamanını al"
+  },
+  {
+    "word": "take to",
+    "pos": "phr v",
+    "pronunciation": "/teɪk tu/",
+    "example": "The children have really taken to you. They love to see you.",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "al"
+  },
+  {
+    "word": "take up",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ʌp/",
+    "example": "I've taken up kayaking recently. I enjoy it.",
+    "file": "File 4",
+    "section": "Expressions with take",
+    "translation": "kalkmak"
+  },
+  {
+    "word": "astonished",
+    "pos": "adj",
+    "pronunciation": "/əˈstɒnɪʃt/",
+    "example": "I was astonished when they lost. They always win.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "şaşirmiş"
+  },
+  {
+    "word": "bewildered",
+    "pos": "adj",
+    "pronunciation": "/bɪˈwɪldəd/",
+    "example": "I was bewildered by the range of choices. I couldn't make a decision.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "şaşkın"
+  },
+  {
+    "word": "delighted",
+    "pos": "adj",
+    "pronunciation": "/dɪˈlaɪtɪd/",
+    "example": "I was delighted with my high score.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "keyifli"
+  },
+  {
+    "word": "desperate",
+    "pos": "adj",
+    "pronunciation": "/ˈdespərət/",
+    "example": "I was desperate to get a job. I really needed the money.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "çaresiz"
+  },
+  {
+    "word": "devastated",
+    "pos": "adj",
+    "pronunciation": "/ˈdevəsteɪtɪd/",
+    "example": "I was devastated when my granddad died.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "harap olmuş"
+  },
+  {
+    "word": "disappointed",
+    "pos": "adj",
+    "pronunciation": "/dɪsəˈpɔɪntɪd/",
+    "example": "I was disappointed you couldn't come to the party.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "hayal kırıklığına uğramış"
+  },
+  {
+    "word": "down",
+    "pos": "adj",
+    "pronunciation": "/daʊn/",
+    "example": "You look a bit down . What's the problem?",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "aşağı"
+  },
+  {
+    "word": "fed up",
+    "pos": "adj",
+    "pronunciation": "",
+    "example": "",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "biktim"
+  },
+  {
+    "word": "gobsmacked",
+    "pos": "adj",
+    "pronunciation": "/ˈɡɒbsmækt/",
+    "example": "I was gobsmacked when I heard that Tereza and Adam were getting divorced!",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "gobsmacked"
+  },
+  {
+    "word": "grateful",
+    "pos": "adj",
+    "pronunciation": "/ˈɡreɪtfl/",
+    "example": "I’m grateful for any help I get.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "minnettar"
+  },
+  {
+    "word": "gutted",
+    "pos": "adj",
+    "pronunciation": "/ˈɡʌtɪd/",
+    "example": "I was absolutely gutted when they missed that last penalty.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "bağırsakları"
+  },
+  {
+    "word": "homesick",
+    "pos": "adj",
+    "pronunciation": "/ˈhəʊmsɪk/",
+    "example": "I really miss home. I’m feeling homesick .",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "ev hasreti"
+  },
+  {
+    "word": "horrifed",
+    "pos": "adj",
+    "pronunciation": "/ˈhɒrɪfaɪd/",
+    "example": "My mum was horrified by the mess in my room.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "dehşete düştü"
+  },
+  {
+    "word": "lonely",
+    "pos": "adj",
+    "pronunciation": "/ˈləʊnli/",
+    "example": "I feel lonely without you here.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "yalnız"
+  },
+  {
+    "word": "miserable",
+    "pos": "adj",
+    "pronunciation": "/ˈmɪzrəbl/",
+    "example": "I feel miserable when my manager criticizes me and doesn't notice my hard work.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "sefil"
+  },
+  {
+    "word": "offended",
+    "pos": "adj",
+    "pronunciation": "/əˈfendɪd/",
+    "example": "I feel really offended . My cousin didn’t invite me to his wedding.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "kırgın"
+  },
+  {
+    "word": "overwhelmed",
+    "pos": "adj",
+    "pronunciation": "/əʊvəˈwelmd/",
+    "example": "I just don’t know what to say. I’m overwhelmed with emotion.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "bunalmış"
+  },
+  {
+    "word": "proud",
+    "pos": "adj",
+    "pronunciation": "/praʊd/",
+    "example": "I’m so proud my daughter won the race.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "gururlu"
+  },
+  {
+    "word": "relieved",
+    "pos": "adj",
+    "pronunciation": "/rɪˈliːvd/",
+    "example": "I thought I'd lost my wallet, but then I found it. I'm so relieved.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "rahatlamış"
+  },
+  {
+    "word": "shattered",
+    "pos": "adj",
+    "pronunciation": "/ˈʃætəd/",
+    "example": "I’m absolutely shattered . I just want to sit down and relax.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "paramparça"
+  },
+  {
+    "word": "sick of",
+    "pos": "adj",
+    "pronunciation": "/ˈsɪk əv/",
+    "example": "I’m sick of hearing you complain about my food. Why don’t you learn to cook?",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "hasta"
+  },
+  {
+    "word": "stunned",
+    "pos": "adj",
+    "pronunciation": "/stʌnd/",
+    "example": "I was stunned by the job offer. I just wasn’t expecting it.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "sersemlemiş"
+  },
+  {
+    "word": "thrilled",
+    "pos": "adj",
+    "pronunciation": "/θrɪld/",
+    "example": "I was thrilled when I heard I was going to become an uncle.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "heyecanlı"
+  },
+  {
+    "word": "upset",
+    "pos": "adj",
+    "pronunciation": "/ʌpˈset/",
+    "example": "I was really upset when my flight was cancelled. I had to have a shorter holiday.",
+    "file": "File 5",
+    "section": "Vocabulary Banks: Feelings",
+    "translation": "üzgün"
+  },
+  {
+    "word": "amaze",
+    "pos": "v",
+    "pronunciation": "/əˈmeɪz/",
+    "example": "It amazes me that they've become so famous – who would have thought it?",
+    "file": "File 5",
+    "section": "Expressing feelings with verbs or -ed / -ing adjectives",
+    "translation": "hayret"
+  },
+  {
+    "word": "confuse",
+    "pos": "v",
+    "pronunciation": "/kənˈfjuːz/",
+    "example": "It confuses me when people keep changing their schedules.",
+    "file": "File 5",
+    "section": "Expressing feelings with verbs or -ed / -ing adjectives",
+    "translation": "karıştırmak"
+  },
+  {
+    "word": "disappoint",
+    "pos": "v",
+    "pronunciation": "/ˌdɪsəˈpɔɪnt/",
+    "example": "Did it disappoint you when your team lost?",
+    "file": "File 5",
+    "section": "Expressing feelings with verbs or -ed / -ing adjectives",
+    "translation": "hayal kırıklığı"
+  },
+  {
+    "word": "embarrass",
+    "pos": "v",
+    "pronunciation": "/ɪmˈbærəs/",
+    "example": "My children had a fight in front of everyone and it embarrassed me.",
+    "file": "File 5",
+    "section": "Expressing feelings with verbs or -ed / -ing adjectives",
+    "translation": "utandırmak"
+  },
+  {
+    "word": "exhaust",
+    "pos": "v",
+    "pronunciation": "/ɪɡˈzɔːst/",
+    "example": "That was a long run. It's exhausted me.",
+    "file": "File 5",
+    "section": "Expressing feelings with verbs or -ed / -ing adjectives",
+    "translation": "egzoz"
+  },
+  {
+    "word": "frustrate",
+    "pos": "v",
+    "pronunciation": "/frʌˈstreɪt/",
+    "example": "It frustrates me when I have to ask people to repeat themselves several times.",
+    "file": "File 5",
+    "section": "Expressing feelings with verbs or -ed / -ing adjectives",
+    "translation": "hüsrana uğratmak"
+  },
+  {
+    "word": "infuriate",
+    "pos": "v",
+    "pronunciation": "/ɪnˈfjʊərieɪt/",
+    "example": "I hate being stuck in traffic. It really infuriates me.",
+    "file": "File 5",
+    "section": "Expressing feelings with verbs or -ed / -ing adjectives",
+    "translation": "çileden çıkarmak"
+  },
+  {
+    "word": "inspire",
+    "pos": "v",
+    "pronunciation": "/ɪnˈspaɪə/",
+    "example": "Does it inspire you to see such beautiful scenery?",
+    "file": "File 5",
+    "section": "Expressing feelings with verbs or -ed / -ing adjectives",
+    "translation": "ilham ver"
+  },
+  {
+    "word": "terrify",
+    "pos": "v",
+    "pronunciation": "/ˈterɪfaɪ/",
+    "example": "Honestly, quite a few things terrify me. I'm easily scared.",
+    "file": "File 5",
+    "section": "Expressing feelings with verbs or -ed / -ing adjectives",
+    "translation": "dehşete düşürmek"
+  },
+  {
+    "word": "thrill",
+    "pos": "v",
+    "pronunciation": "/θrɪl/",
+    "example": "It thrills me to think we'll be going on holiday this time tomorrow! I can't wait!",
+    "file": "File 5",
+    "section": "Expressing feelings with verbs or -ed / -ing adjectives",
+    "translation": "heyecan"
+  },
+  {
+    "word": "blanket",
+    "pos": "n",
+    "pronunciation": "/ˈblæŋkɪt/",
+    "example": "Do you want an extra blanket for your bed? It's cold at night.",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "battaniye"
+  },
+  {
+    "word": "duvet",
+    "pos": "n",
+    "pronunciation": "/ˈduːveɪ/",
+    "example": "Do you like to have a duvet or a blanket on your bed?",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "yorgan"
+  },
+  {
+    "word": "fall asleep",
+    "pos": "phr v",
+    "pronunciation": "/fɔːl əˈsliːp/",
+    "example": "How quickly do you usually fall asleep at night?",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "uykuya dalmak"
+  },
+  {
+    "word": "insomnia",
+    "pos": "n",
+    "pronunciation": "/ɪnˈsɒmniə/",
+    "example": "My mother has insomnia . She finds it very difficult to fall asleep.",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "uykusuzluk"
+  },
+  {
+    "word": "nap",
+    "pos": "n",
+    "pronunciation": "/næp/",
+    "example": "I'm tired. I'm going to have a nap for an hour.",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "şekerleme"
+  },
+  {
+    "word": "oversleep",
+    "pos": "v",
+    "pronunciation": "/ˌəʊvəˈsliːp/",
+    "example": "Be careful not to oversleep ! Set an extra alarm.",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "aşırı uyku"
+  },
+  {
+    "word": "pillow",
+    "pos": "n",
+    "pronunciation": "/ˈpɪləʊ/",
+    "example": "When you get into bed, you put your head on the pillow .",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "yastık"
+  },
+  {
+    "word": "sheet",
+    "pos": "n",
+    "pronunciation": "/ʃiːt/",
+    "example": "It's too hot to have a blanket on my bed. I'll just have a sheet .",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "levha"
+  },
+  {
+    "word": "sleeping pill",
+    "pos": "n",
+    "pronunciation": "/ˈsliːpɪŋ pɪl/",
+    "example": "My doctor suggested I take sleeping pills to help me get to sleep.",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "uyku hapı"
+  },
+  {
+    "word": "sleepwalk",
+    "pos": "v",
+    "pronunciation": "/sliːp wɔːk/",
+    "example": "My son sleepwalks at night. Once, he walked downstairs and almost out of the house.",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "uyurgezerlik"
+  },
+  {
+    "word": "sleepy",
+    "pos": "adj",
+    "pronunciation": "/ˈsliːpi/",
+    "example": "It's been a long day and I'm sleepy . I'm going to bed.",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "uykulu"
+  },
+  {
+    "word": "snore",
+    "pos": "v",
+    "pronunciation": "/snɔː/",
+    "example": "I have to sleep in a different room because I snore loudly.",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "horlama"
+  },
+  {
+    "word": "yawn",
+    "pos": "v",
+    "pronunciation": "/jɔːn/",
+    "example": "Don't sit there and yawn . If you're tired, go to bed.",
+    "file": "File 6",
+    "section": "Sleep",
+    "translation": "esneme"
+  },
+  {
+    "word": "architecture",
+    "pos": "n",
+    "pronunciation": "/ˈɑːkɪtektʃə/",
+    "example": "I like to look at the architecture of cities – all the different styles of buildings.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "mimarlık"
+  },
+  {
+    "word": "ballet",
+    "pos": "n",
+    "pronunciation": "/ˈbæleɪ/",
+    "example": "Let's go and see a ballet . I love Swan Lake.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "bale"
+  },
+  {
+    "word": "barista",
+    "pos": "n",
+    "pronunciation": "/bəˈrɪstə/",
+    "example": "Which coffee would you like? Tell the barista .",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "bari̇sta"
+  },
+  {
+    "word": "bass guitar",
+    "pos": "n",
+    "pronunciation": "/beɪs ɡɪˈtɑː/",
+    "example": "He wants to learn to play the bass guitar .",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "bas gitar"
+  },
+  {
+    "word": "bouquet",
+    "pos": "n",
+    "pronunciation": "/buˈkeɪ/",
+    "example": "I gave her a bouquet of flowers for Valentine’s Day.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "buket"
+  },
+  {
+    "word": "cappuccino",
+    "pos": "n",
+    "pronunciation": "/ˌkæpuˈtʃiːnəʊ/",
+    "example": "I prefer cappuccino to other types of coffee.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "cappuccino"
+  },
+  {
+    "word": "cello",
+    "pos": "n",
+    "pronunciation": "/ˈtʃeləʊ/",
+    "example": "I play the cello . It's quite big and difficult to carry around.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "çello"
+  },
+  {
+    "word": "chauffeur",
+    "pos": "n",
+    "pronunciation": "/ˈʃəʊfə/",
+    "example": "The company sent a chauffeur to pick them up.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "şoför"
+  },
+  {
+    "word": "chef",
+    "pos": "n",
+    "pronunciation": "/ʃef/",
+    "example": "This restaurant is famous for its food. The chef is amazing.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "şef"
+  },
+  {
+    "word": "chic",
+    "pos": "adj",
+    "pronunciation": "/ʃiːk/",
+    "example": "Those clothes look wonderful - you're so chic .",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "şık"
+  },
+  {
+    "word": "choir",
+    "pos": "n",
+    "pronunciation": "/ˈkwaɪə/",
+    "example": "There were 30 people in the choir and they all sang very well.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "koro"
+  },
+  {
+    "word": "chorus",
+    "pos": "n",
+    "pronunciation": "/ˈkɔːrəs/",
+    "example": "The chorus is the most famous part of the song.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "koro"
+  },
+  {
+    "word": "concerto",
+    "pos": "n",
+    "pronunciation": "/kənˈtʃɜːtəʊ/",
+    "example": "Mozart wrote a concerto when he was very young.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "konçerto"
+  },
+  {
+    "word": "conductor",
+    "pos": "n",
+    "pronunciation": "/kənˈdʌktə/",
+    "example": "The conductor told the orchestra when to start playing.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "kondüktör"
+  },
+  {
+    "word": "croissant",
+    "pos": "n",
+    "pronunciation": "/ˈkrwæsɒ/",
+    "example": "My favourite breakfast is croissants and a cup of coffee.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "kruvasan"
+  },
+  {
+    "word": "drum",
+    "pos": "n",
+    "pronunciation": "/drʌm/",
+    "example": "I like to play the drums . I have a good sense of rhythm.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "davul"
+  },
+  {
+    "word": "encore",
+    "pos": "n",
+    "pronunciation": "/ˈɒŋkɔː/",
+    "example": "The crowd wanted more so they started shouting for an encore .",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "encore"
+  },
+  {
+    "word": "fiancé",
+    "pos": "n",
+    "pronunciation": "/fɪˈɒnseɪ/",
+    "example": "My fiancé is a teacher. He really enjoys his work.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "nişanlısı"
+  },
+  {
+    "word": "flute",
+    "pos": "n",
+    "pronunciation": "/fluːt/",
+    "example": "I love the sound of flutes . They're my favourite woodwind instrument.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "flüt"
+  },
+  {
+    "word": "genre",
+    "pos": "n",
+    "pronunciation": "/ˈʒɒnrə/",
+    "example": "What genre of fiction do you like?",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "tür"
+  },
+  {
+    "word": "graffiti",
+    "pos": "n",
+    "pronunciation": "/ɡrəˈfiːti/",
+    "example": "Some graffiti is great art.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "grafiti"
+  },
+  {
+    "word": "hypochondriac",
+    "pos": "n",
+    "pronunciation": "/hʌɪpəˈkɒndrɪak/",
+    "example": "You're not ill! You're such a hypochondriac.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "hipokondriyak"
+  },
+  {
+    "word": "keyboard",
+    "pos": "n",
+    "pronunciation": "/ˈkiːbɔːd/",
+    "example": "She took the keyboard out of her car, set it up and started playing.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "klavye"
+  },
+  {
+    "word": "macchiato",
+    "pos": "n",
+    "pronunciation": "/ˌmækɪˈɑːtəʊ/",
+    "example": "I like to drink macchiato because it’s a bit lighter.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "macchiato"
+  },
+  {
+    "word": "mezzo-soprano",
+    "pos": "n",
+    "pronunciation": "/metsəʊ səˈprɑːnəʊ/",
+    "example": "She is a mezzo-soprano in the choir.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "mezzo-soprano"
+  },
+  {
+    "word": "microphone",
+    "pos": "n",
+    "pronunciation": "/ˈmaɪkrəfəʊn/",
+    "example": "Can I have a microphone ? I want to make sure everyone can hear me.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "mikrofon"
+  },
+  {
+    "word": "orchestra",
+    "pos": "n",
+    "pronunciation": "/ˈɔːkɪstrə/",
+    "example": "It's amazing to hear the orchestra . They're one of the best in the world.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "orkestra"
+  },
+  {
+    "word": "psychic",
+    "pos": "n",
+    "pronunciation": "/ˈsaɪkɪk/",
+    "example": "A psychic predicted that I would move to Australia one day soon.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "psişik"
+  },
+  {
+    "word": "psychologist",
+    "pos": "n",
+    "pronunciation": "/saɪˈkɒlədʒɪst/",
+    "example": "My daughter is a trained psychologist . She works with a lot of different patients.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "psikolog"
+  },
+  {
+    "word": "rhythm",
+    "pos": "n",
+    "pronunciation": "/ˈrɪðəm/",
+    "example": "I really like the rhythm of this song.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "ritim"
+  },
+  {
+    "word": "saxophone",
+    "pos": "n",
+    "pronunciation": "/ˈsæksəfəʊn/",
+    "example": "This is a solo for a saxophone . It's a very moving piece.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "saksafon"
+  },
+  {
+    "word": "soprano",
+    "pos": "n",
+    "pronunciation": "/səˈprɑːnəʊ/",
+    "example": "More than half of the women in the choir are sopranos .",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "soprano"
+  },
+  {
+    "word": "symphony",
+    "pos": "n",
+    "pronunciation": "/ˈsɪmfəni/",
+    "example": "I love ' Symphony No. 9' by Beethoven.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "senfoni̇"
+  },
+  {
+    "word": "villa",
+    "pos": "n",
+    "pronunciation": "/ˈvɪlə/",
+    "example": "We stayed in a beautiful villa which had its own swimming pool.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "villa"
+  },
+  {
+    "word": "violin",
+    "pos": "n",
+    "pronunciation": "/ˌvaɪəˈlɪn/",
+    "example": "My daughter learned to play the violin when she was at school.",
+    "file": "File 6",
+    "section": "Music; words from other languages",
+    "translation": "keman"
+  },
+  {
+    "word": "advise",
+    "pos": "v",
+    "pronunciation": "/ədˈvaɪz/",
+    "example": "I advise you to start thinking about your future careers while you are at school.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "tavsiye"
+  },
+  {
+    "word": "argue",
+    "pos": "v",
+    "pronunciation": "/ˈɑːɡjuː/",
+    "example": "I often argue with my parents about doing housework.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "tartışmak"
+  },
+  {
+    "word": "avoid",
+    "pos": "v",
+    "pronunciation": "/əˈvɔɪd/",
+    "example": "Jack always tries to avoid arguing with me.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "kaçının"
+  },
+  {
+    "word": "beat",
+    "pos": "v",
+    "pronunciation": "/biːt/",
+    "example": "Manchester United beat Arsenal 5–2.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "dövmek"
+  },
+  {
+    "word": "borrow",
+    "pos": "v",
+    "pronunciation": "/ˈbɒrəʊ/",
+    "example": "I went to the bank to borrow some money for my business.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "ödünç almak"
+  },
+  {
+    "word": "deny",
+    "pos": "v",
+    "pronunciation": "/dɪˈnaɪ/",
+    "example": "Alex denies saying that, but I remember it.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "inkar etmek"
+  },
+  {
+    "word": "discuss",
+    "pos": "v",
+    "pronunciation": "/dɪˈskʌs/",
+    "example": "I need to discuss the problem with my boss.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "tartışmak"
+  },
+  {
+    "word": "expect",
+    "pos": "v",
+    "pronunciation": "/ɪkˈspekt/",
+    "example": "I expect that Daniel will forget our anniversary. He always does.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "beklemek"
+  },
+  {
+    "word": "hope",
+    "pos": "v",
+    "pronunciation": "/həʊp/",
+    "example": "I hope that you can come on Friday. I haven't seen you for ages.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "umut"
+  },
+  {
+    "word": "lay (past laid )",
+    "pos": "v",
+    "pronunciation": "/leɪ/",
+    "example": "Can you lay the table? Put the plates and cutlery on it.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "lay (geçmiş laid )"
+  },
+  {
+    "word": "lend",
+    "pos": "v",
+    "pronunciation": "/lend/",
+    "example": "Can you lend me a pen? I need to make a note of this.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "ödünç ver"
+  },
+  {
+    "word": "lie (past lay )",
+    "pos": "v",
+    "pronunciation": "/laɪ/",
+    "example": "I want to go home and lie on the sofa for half an hour.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "yalan (geçmişte yatmak)"
+  },
+  {
+    "word": "matter",
+    "pos": "v",
+    "pronunciation": "/ˈmætə/",
+    "example": "It doesn’t matter",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "madde"
+  },
+  {
+    "word": "mind",
+    "pos": "v",
+    "pronunciation": "/maɪnd/",
+    "example": "My parents don’t mind",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "zihin"
+  },
+  {
+    "word": "notice",
+    "pos": "v",
+    "pronunciation": "/ˈnəʊtɪs/",
+    "example": "I didn't notice that Katy had changed her hair colour.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "bi̇ldi̇ri̇m"
+  },
+  {
+    "word": "prevent",
+    "pos": "v",
+    "pronunciation": "/prɪˈvent/",
+    "example": "My parents can't prevent me from seeing my friends.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "önlemek"
+  },
+  {
+    "word": "raise",
+    "pos": "v",
+    "pronunciation": "/reɪz/",
+    "example": "It’s hard not to raise your voice when you are arguing with someone.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "yükseltmek"
+  },
+  {
+    "word": "realize",
+    "pos": "v",
+    "pronunciation": "/ˈriːəlaɪz/",
+    "example": "I didn't realize you were so unhappy.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "farkına varmak"
+  },
+  {
+    "word": "refuse",
+    "pos": "v",
+    "pronunciation": "/rɪˈfjuːz/",
+    "example": "My friend always refuses to discuss the problem.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "reddetmek"
+  },
+  {
+    "word": "remember",
+    "pos": "v",
+    "pronunciation": "/rɪˈmembə/",
+    "example": "Remember to turn off the lights before you leave.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "hatırla"
+  },
+  {
+    "word": "remind",
+    "pos": "v",
+    "pronunciation": "/rɪˈmaɪnd/",
+    "example": "Can you remind me to call my parents later?",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "hatırlatmak"
+  },
+  {
+    "word": "rise",
+    "pos": "v",
+    "pronunciation": "/raɪz/",
+    "example": "The cost of living is going to rise again this month.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "yükseliş"
+  },
+  {
+    "word": "rob",
+    "pos": "v",
+    "pronunciation": "/rɒb/",
+    "example": "The police said that four people had tried to rob the bank last night.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "soymak"
+  },
+  {
+    "word": "steal",
+    "pos": "v",
+    "pronunciation": "/stiːl/",
+    "example": "If you leave your bike unlocked, somebody might steal",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "çalmak"
+  },
+  {
+    "word": "wait",
+    "pos": "v",
+    "pronunciation": "/weɪt/",
+    "example": "We’ll have to wait half an hour for the next train.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "bekle"
+  },
+  {
+    "word": "warn",
+    "pos": "v",
+    "pronunciation": "/wɔːn/",
+    "example": "I should warn you that it's always cold in that lecture hall. Take something warm!",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "uyarmak"
+  },
+  {
+    "word": "win",
+    "pos": "v",
+    "pronunciation": "/wɪn/",
+    "example": "Did Manchester United win the match? ~ Yes, they won 5–2!",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "kazanmak"
+  },
+  {
+    "word": "wish",
+    "pos": "v",
+    "pronunciation": "/wɪʃ/",
+    "example": "I wish",
+    "file": "File 7",
+    "section": "Vocabulary Banks: Verbs often confused",
+    "translation": "keşke"
+  },
+  {
+    "word": "ankle",
+    "pos": "n",
+    "pronunciation": "/ˈæŋkl/",
+    "example": "I sprained my ankle playing football.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "ayak bileği"
+  },
+  {
+    "word": "brain",
+    "pos": "n",
+    "pronunciation": "/breɪn/",
+    "example": "Is it true we only use 25% of our brain ?",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "beyin"
+  },
+  {
+    "word": "calf",
+    "pos": "n",
+    "pronunciation": "/kɑːf/",
+    "example": "I pulled my calf muscle running.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "buzağı"
+  },
+  {
+    "word": "cheek",
+    "pos": "n",
+    "pronunciation": "/tʃiːk/",
+    "example": "Their cheeks are really red after running.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "yanak"
+  },
+  {
+    "word": "chest",
+    "pos": "n",
+    "pronunciation": "/tʃest/",
+    "example": "You're much taller than me. My head is level with your chest .",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "göğüs"
+  },
+  {
+    "word": "chew",
+    "pos": "v",
+    "pronunciation": "/tʃuː/",
+    "example": "The steak was tough and difficult to chew .",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "çiğnemek"
+  },
+  {
+    "word": "chin",
+    "pos": "n",
+    "pronunciation": "/tʃɪn/",
+    "example": "He has got a small beard on his chin .",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "çene"
+  },
+  {
+    "word": "elbow",
+    "pos": "n",
+    "pronunciation": "/ˈelbəʊ/",
+    "example": "The bus was crowded. I couldn't help touching people with my elbows .",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "dirsek"
+  },
+  {
+    "word": "eye",
+    "pos": "n",
+    "pronunciation": "/aɪ/",
+    "example": "She closed one eye and opened it again in a slow wink.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "göz"
+  },
+  {
+    "word": "eyebrow",
+    "pos": "n",
+    "pronunciation": "/ˈaɪbraʊ/",
+    "example": "Your eyebrows usually match the colour of your hair.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "kaş"
+  },
+  {
+    "word": "eyelash",
+    "pos": "n",
+    "pronunciation": "/ˈaɪlæʃ/",
+    "example": "Wow! Your eyelashes are so long. They're really striking.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "kirpik"
+  },
+  {
+    "word": "eyelid",
+    "pos": "n",
+    "pronunciation": "/ˈaɪlɪd/",
+    "example": "She put deep blue makeup on her eyelids .",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "göz kapağı"
+  },
+  {
+    "word": "fist",
+    "pos": "n",
+    "pronunciation": "/fɪst/",
+    "example": "She closed her hand into a fist and hit the punchbag.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "yumruk"
+  },
+  {
+    "word": "forehead",
+    "pos": "n",
+    "pronunciation": "/ˈfɔːhed/",
+    "example": "Most of my wrinkles are on my forehead .",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "alın"
+  },
+  {
+    "word": "frown",
+    "pos": "v",
+    "pronunciation": "/fraʊn/",
+    "example": "The train was late. I frowned because I was annoyed, but there was nothing I could do.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "kaşlarını çattı"
+  },
+  {
+    "word": "heart",
+    "pos": "n",
+    "pronunciation": "/hɑːt/",
+    "example": "My heart was beating so fast after that race.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "kalp"
+  },
+  {
+    "word": "heel",
+    "pos": "n",
+    "pronunciation": "/hiːl/",
+    "example": "Don't walk so close to me! You stood on my heel .",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "topuk"
+  },
+  {
+    "word": "hip",
+    "pos": "n",
+    "pronunciation": "/hɪp/",
+    "example": "My grandmother broke her hip and had to go to hospital.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "kalça"
+  },
+  {
+    "word": "hug",
+    "pos": "v",
+    "pronunciation": "/hʌɡ/",
+    "example": "When we meet we always hug each other.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "sarılmak"
+  },
+  {
+    "word": "kidneys",
+    "pos": "n pl",
+    "pronunciation": "/ˈkɪdnɪz/",
+    "example": "The kidneys help clean the blood.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "böbrekler"
+  },
+  {
+    "word": "knee",
+    "pos": "n",
+    "pronunciation": "/niː/",
+    "example": "Ouch! I hit my knee on the edge of that coffee table.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "di̇z"
+  },
+  {
+    "word": "kneel",
+    "pos": "v",
+    "pronunciation": "/niːl/",
+    "example": "Can you kneel on the ground and take the photograph from a new angle?",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "di̇z çök"
+  },
+  {
+    "word": "lips",
+    "pos": "n pl",
+    "pronunciation": "/lɪps/",
+    "example": "Put the flute to your lips and blow gently into it.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "dudaklar"
+  },
+  {
+    "word": "liver",
+    "pos": "n",
+    "pronunciation": "/ˈlɪvə/",
+    "example": "The liver is part of your digestive system and does many essential things in your body.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "karaciğer"
+  },
+  {
+    "word": "lungs",
+    "pos": "n pl",
+    "pronunciation": "/lʌŋz/",
+    "example": "Take a deep breath! Fill your lungs with this fresh air.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "akciğerler"
+  },
+  {
+    "word": "nails",
+    "pos": "n pl",
+    "pronunciation": "/neɪlz/",
+    "example": "I like the colour you've painted your nails . They look really nice.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "tırnaklar"
+  },
+  {
+    "word": "neck",
+    "pos": "n",
+    "pronunciation": "/nek/",
+    "example": "Wrap a scarf around your neck . It's cold today.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "boyun"
+  },
+  {
+    "word": "palm",
+    "pos": "n",
+    "pronunciation": "/pɑːm/",
+    "example": "Some people think that the lines on your palm can tell you about your life.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "avuç içi"
+  },
+  {
+    "word": "point",
+    "pos": "v",
+    "pronunciation": "/pɔɪnt/",
+    "example": "If you don’t know the word for something, just point at what you want.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "nokta"
+  },
+  {
+    "word": "scratch",
+    "pos": "v",
+    "pronunciation": "/skrætʃ/",
+    "example": "Don't scratch that mosquito bite. You'll make it worse.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "çizik"
+  },
+  {
+    "word": "stare",
+    "pos": "v",
+    "pronunciation": "/steə/",
+    "example": "The painting was so strange that I stared at it for a long time.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "bakış"
+  },
+  {
+    "word": "stretch",
+    "pos": "v",
+    "pronunciation": "/stretʃ/",
+    "example": "It's important to stretch before and after doing exercise.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "germek"
+  },
+  {
+    "word": "stubble",
+    "pos": "n",
+    "pronunciation": "/ˈstʌbl/",
+    "example": "I need to shave this stubble or grow it into a beard. I can't decide which to do.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "anız"
+  },
+  {
+    "word": "thigh",
+    "pos": "n",
+    "pronunciation": "/θaɪ/",
+    "example": "Horseriders often have strong muscles in their thighs .",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "uyluk"
+  },
+  {
+    "word": "waist",
+    "pos": "n",
+    "pronunciation": "/weɪst/",
+    "example": "What waist size are your trousers?",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "bel"
+  },
+  {
+    "word": "wave",
+    "pos": "v",
+    "pronunciation": "/weɪv/",
+    "example": "The children waved to their grandparents when they left.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "dalga"
+  },
+  {
+    "word": "wink",
+    "pos": "v",
+    "pronunciation": "/wɪŋk/",
+    "example": "He winked at me to show that he was only joking.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "wink"
+  },
+  {
+    "word": "wrinkles",
+    "pos": "n pl",
+    "pronunciation": "/ˈrɪŋklz/",
+    "example": "Most of my wrinkles are on my forehead.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "kırışıklıklar"
+  },
+  {
+    "word": "wrist",
+    "pos": "n",
+    "pronunciation": "/rɪst/",
+    "example": "I can’t play tennis. I’ve hurt my wrist .",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "bilek"
+  },
+  {
+    "word": "yawn",
+    "pos": "v",
+    "pronunciation": "/jɔːn/",
+    "example": "It’s rude to yawn without covering your mouth.",
+    "file": "File 7",
+    "section": "Vocabulary Banks: The body",
+    "translation": "esneme"
+  },
+  {
+    "word": "accuse",
+    "pos": "v",
+    "pronunciation": "/əˈkjuːz/",
+    "example": "They were accused of armed robbery and car theft.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "suçlamak"
+  },
+  {
+    "word": "acquit",
+    "pos": "v",
+    "pronunciation": "/əˈkwɪt/",
+    "example": "The defendants were acquitted and allowed to go free.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "beraat"
+  },
+  {
+    "word": "arrest",
+    "pos": "v",
+    "pronunciation": "/əˈrest/",
+    "example": "The vandals were immediately arrested and taken to the police station.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "tutuklama"
+  },
+  {
+    "word": "blackmail",
+    "pos": "v",
+    "pronunciation": "/ˈblækmeɪl/",
+    "example": "She tried to blackmail the celebrity by threatening to sell photos to the press.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "şantaj"
+  },
+  {
+    "word": "bribery",
+    "pos": "n",
+    "pronunciation": "/ˈbraɪbəri/",
+    "example": "They got the contract by using bribery .",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "rüşvet"
+  },
+  {
+    "word": "burglary",
+    "pos": "n",
+    "pronunciation": "/ˈbɜːɡləri/",
+    "example": "The burglary was very upsetting for the people who lived there.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "hirsizlik"
+  },
+  {
+    "word": "catch",
+    "pos": "v",
+    "pronunciation": "/kætʃ/",
+    "example": "The police were able to catch the criminals as they tried to escape.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "yakalamak"
+  },
+  {
+    "word": "charge",
+    "pos": "v",
+    "pronunciation": "/tʃɑːdʒ/",
+    "example": "Two people were questioned by the police and charged with armed robbery.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "şarj"
+  },
+  {
+    "word": "commit",
+    "pos": "v",
+    "pronunciation": "/kəˈmɪt/",
+    "example": "Two people committed a crime. They robbed a bank and stole a car.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "taahhüt"
+  },
+  {
+    "word": "court",
+    "pos": "n",
+    "pronunciation": "/kɔːt/",
+    "example": "The defendants appeared in court .",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "mahkeme"
+  },
+  {
+    "word": "drug dealing",
+    "pos": "n",
+    "pronunciation": "/drʌɡ ˈdiːlɪŋ/",
+    "example": "Drug dealing involves selling any illegal drug.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "uyuşturucu satıcılığı"
+  },
+  {
+    "word": "evidence",
+    "pos": "n",
+    "pronunciation": "/ˈevɪdəns/",
+    "example": "The jury of twelve people looked at and heard all the evidence .",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "kanıt"
+  },
+  {
+    "word": "fraud",
+    "pos": "n",
+    "pronunciation": "/drʌɡ ˈdiːlɪŋ/",
+    "example": "He committed fraud by using other people’s identities.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "dolandırıcılık"
+  },
+  {
+    "word": "guilty",
+    "pos": "adj",
+    "pronunciation": "/ˈɡɪlti/",
+    "example": "The jury decided that the defendant was guilty of the crime.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "suçlu"
+  },
+  {
+    "word": "hacking",
+    "pos": "n",
+    "pronunciation": "/hækɪŋ/",
+    "example": "Computer hacking can enable people to steal information.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "hacklemek"
+  },
+  {
+    "word": "hijacking",
+    "pos": "n",
+    "pronunciation": "/ˈhaɪdʒækɪŋ/",
+    "example": "The hijacking of the plane forced the airport to close.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "kaçirma"
+  },
+  {
+    "word": "innocent",
+    "pos": "adj",
+    "pronunciation": "/ˈɪnəsnt/",
+    "example": "The jury decided that the defendant was innocent .",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "masum"
+  },
+  {
+    "word": "investigate",
+    "pos": "v",
+    "pronunciation": "/ɪnˈvestɪɡeɪt/",
+    "example": "The police investigated the crime.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "araştırmak"
+  },
+  {
+    "word": "judge",
+    "pos": "n",
+    "pronunciation": "/dʒʌdʒ/",
+    "example": "The judge decided what the punishment should be.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "yargıç"
+  },
+  {
+    "word": "jury",
+    "pos": "n",
+    "pronunciation": "/ˈdʒʊəri/",
+    "example": "The jury of twelve people looked at and heard all the evidence.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "jüri"
+  },
+  {
+    "word": "kidnapping",
+    "pos": "n",
+    "pronunciation": "/ˈkɪdnæpɪŋ/",
+    "example": "The kidnapping was an attempt to get money from the wealthy family.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "adam kaçırma"
+  },
+  {
+    "word": "mugging",
+    "pos": "n",
+    "pronunciation": "/ˈmʌɡɪŋ/",
+    "example": "The mugging happened on a busy city street at night.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "gasp"
+  },
+  {
+    "word": "murder",
+    "pos": "n",
+    "pronunciation": "/ˈmɜːdə/",
+    "example": "He went to prison for the murder of a woman.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "cinayet"
+  },
+  {
+    "word": "proof",
+    "pos": "n",
+    "pronunciation": "/pruːf/",
+    "example": "There was no proof that the defendants had committed the crime.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "kanıt"
+  },
+  {
+    "word": "punishment",
+    "pos": "n",
+    "pronunciation": "/ˈpʌnɪʃmənt/",
+    "example": "The judge decided what the punishment should be.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "ceza"
+  },
+  {
+    "word": "question",
+    "pos": "v",
+    "pronunciation": "/ˈkwestʃən/",
+    "example": "The police questioned them for ten hours.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "soru"
+  },
+  {
+    "word": "rape",
+    "pos": "n",
+    "pronunciation": "/reɪp/",
+    "example": "Three women accused the man of rape and the case went to court.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "tecavüz"
+  },
+  {
+    "word": "robbery",
+    "pos": "n",
+    "pronunciation": "/ˈrɒbəri/",
+    "example": "Robbery usually is violent and involves a weapon.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "soygun"
+  },
+  {
+    "word": "sentence",
+    "pos": "v",
+    "pronunciation": "/ˈsentəns/",
+    "example": "The judge sentenced the criminals to ten years in prison.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "cümle"
+  },
+  {
+    "word": "smuggling",
+    "pos": "n",
+    "pronunciation": "/ˈsmʌɡlɪŋ/",
+    "example": "Smuggling involves taking illegal products from one country to another.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "kaçakçılık"
+  },
+  {
+    "word": "stalking",
+    "pos": "n",
+    "pronunciation": "/ˈstɔːkɪŋ/",
+    "example": "Stalking can happen physically or on the internet.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "takip etmek"
+  },
+  {
+    "word": "terrorism",
+    "pos": "n",
+    "pronunciation": "/ˈterərɪzəm/",
+    "example": "People debated whether the crime was an act of terrorism .",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "teröri̇zm"
+  },
+  {
+    "word": "theft",
+    "pos": "n",
+    "pronunciation": "/θeft/",
+    "example": "The theft was very stressful for the victim.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "hirsizlik"
+  },
+  {
+    "word": "vandalism",
+    "pos": "n",
+    "pronunciation": "/ˈvændəlɪzəm/",
+    "example": "Some people say",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "vandalizm"
+  },
+  {
+    "word": "verdict",
+    "pos": "n",
+    "pronunciation": "/ˈvɜːdɪkt/",
+    "example": "The jury reached their verdict after two days.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "karar"
+  },
+  {
+    "word": "witness",
+    "pos": "n",
+    "pronunciation": "/ˈwɪtnəs/",
+    "example": "The witness told the court what they had seen.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "tanık"
+  },
+  {
+    "word": "accurate",
+    "pos": "adj",
+    "pronunciation": "/ˈækjərət/",
+    "example": "The film review was quite accurate . It said the plot was poor but the acting was good, which was true.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "doğru"
+  },
+  {
+    "word": "agony aunt",
+    "pos": "n",
+    "pronunciation": "/ˈæɡəni ɑːnt/",
+    "example": "An agony aunt writes in a newspaper or magazine, giving advice to people in reply to their letters.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "aci teyze"
+  },
+  {
+    "word": "axe",
+    "pos": "v",
+    "pronunciation": "/æks/",
+    "example": "Thousands of jobs were axed by UK firms.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "balta"
+  },
+  {
+    "word": "back",
+    "pos": "v",
+    "pronunciation": "/bæk/",
+    "example": "The Prime Minister has backed the Chancellor in the latest scandal.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "geri"
+  },
+  {
+    "word": "biased",
+    "pos": "adj",
+    "pronunciation": "/ˈbaɪəst/",
+    "example": "The news on this channel is really biased . They have a very strong political opinion.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "önyargılı"
+  },
+  {
+    "word": "bid",
+    "pos": "v",
+    "pronunciation": "/bɪd/",
+    "example": "The headline read: 'Astronaut bids to be first person on Mars'.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "teklif"
+  },
+  {
+    "word": "censored",
+    "pos": "adj",
+    "pronunciation": "/ˈækjərət/",
+    "example": "I think the report was censored . The newspaper wasn’t allowed to publish all the details.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "sansürlendi"
+  },
+  {
+    "word": "clash",
+    "pos": "v",
+    "pronunciation": "/klæʃ/",
+    "example": "Ministers clash over new car tax proposal.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "çatışma"
+  },
+  {
+    "word": "commentator",
+    "pos": "n",
+    "pronunciation": "/ˈkɒmənteɪtə/",
+    "example": "A commentator is a person who describes a sports event on TV or radio while it’s happening.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "yorumcu"
+  },
+  {
+    "word": "critic",
+    "pos": "n",
+    "pronunciation": "/ˈkrɪtɪk/",
+    "example": "A critic is a person who writes a review about the good / bad qualities of books, concerts, theatre, films, etc.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "eleşti̇ri̇"
+  },
+  {
+    "word": "editor",
+    "pos": "n",
+    "pronunciation": "/ˈedɪtə/",
+    "example": "An editor is a person in charge of a newspaper or magazine, or part of one, and decides what should be in it.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "editör"
+  },
+  {
+    "word": "freelance journalist",
+    "pos": "n",
+    "pronunciation": "/ˈfriːlɑːns ˈdʒɜːnəlɪst/",
+    "example": "A freelance journalist writes articles for different papers and is not employed by any one paper.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "serbest gazeteci"
+  },
+  {
+    "word": "hit",
+    "pos": "v",
+    "pronunciation": "/hɪt/",
+    "example": "The stock market has been hit by oil price fears.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "vurmak"
+  },
+  {
+    "word": "newsreader",
+    "pos": "n",
+    "pronunciation": "/ˈnjuːzriːdə/",
+    "example": "A newsreader reads the news on TV or radio.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "haber okuyucu"
+  },
+  {
+    "word": "objective",
+    "pos": "adj",
+    "pronunciation": "/əbˈdʒektɪv/",
+    "example": "I want to be objective and base my decision on facts, not feelings.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "amaç"
+  },
+  {
+    "word": "paparazzi",
+    "pos": "n",
+    "pronunciation": "/pæpəˈrætsi/",
+    "example": "The paparazzi follow famous people around to get photos of them to sell to newspapers and magazines.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "paparazzi"
+  },
+  {
+    "word": "presenter",
+    "pos": "n",
+    "pronunciation": "/prɪˈzentə/",
+    "example": "A presenter introduces the different sections of a radio or TV programme.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "sunucu"
+  },
+  {
+    "word": "quit",
+    "pos": "v",
+    "pronunciation": "/kwɪt/",
+    "example": "He quit his job because he wanted to go travelling.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "bırak"
+  },
+  {
+    "word": "quiz",
+    "pos": "v",
+    "pronunciation": "/kwɪz/",
+    "example": "The police quizzed the witness in the murder trial.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "quiz"
+  },
+  {
+    "word": "reporter",
+    "pos": "n",
+    "pronunciation": "/rɪˈpɔːtə/",
+    "example": "A reporter collects and reports news for newspapers, radio or TV.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "muhabir"
+  },
+  {
+    "word": "row",
+    "pos": "v",
+    "pronunciation": "/raʊ/",
+    "example": "They rowed over who should pay the restaurant bill.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "sıra"
+  },
+  {
+    "word": "sensational",
+    "pos": "adj",
+    "pronunciation": "/senˈseɪʃənl/",
+    "example": "The reporting in the paper was very sensational . It made the story seem more shocking than it really was.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "sansasyonel"
+  },
+  {
+    "word": "split",
+    "pos": "v",
+    "pronunciation": "/splɪt/",
+    "example": "The celebrity split from with his wife after her affair.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "bölünmüş"
+  },
+  {
+    "word": "tip",
+    "pos": "v",
+    "pronunciation": "/tɪp/",
+    "example": "A first-time director was tipped to win the major award.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "i̇pucu"
+  },
+  {
+    "word": "vow",
+    "pos": "v",
+    "pronunciation": "/vaʊ/",
+    "example": "The social media star vowed she wouldn't disappoint her fans again.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "yemin"
+  },
+  {
+    "word": "wed",
+    "pos": "v",
+    "pronunciation": "/wed/",
+    "example": "The famous singer wed her make-up artist last year.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "evlenmek"
+  },
+  {
+    "word": "advertising campaign",
+    "pos": "n",
+    "pronunciation": "/ˈædvətaɪzɪŋ kæmˈpeɪn/",
+    "example": "The company ran a successful advertising campaign .",
+    "file": "File 9",
+    "section": "Advertising",
+    "translation": "reklam kampanyası"
+  },
+  {
+    "word": "advertisments",
+    "pos": "n pl",
+    "pronunciation": "/ˈædvɜːtɪzments/",
+    "example": "The marketing department created the series of advertisments .",
+    "file": "File 9",
+    "section": "Advertising",
+    "translation": "reklamlar"
+  },
+  {
+    "word": "brand",
+    "pos": "n",
+    "pronunciation": "/brænd/",
+    "example": "The brand became famous because of a powerful advertising campaign.",
+    "file": "File 9",
+    "section": "Advertising",
+    "translation": "marka"
+  },
+  {
+    "word": "claims",
+    "pos": "n pl",
+    "pronunciation": "/kleɪmz/",
+    "example": "The advert made claims that the product would help you become stronger.",
+    "file": "File 9",
+    "section": "Advertising",
+    "translation": "iddialar"
+  },
+  {
+    "word": "consumers",
+    "pos": "n pl",
+    "pronunciation": "/kənˈsjuːməz/",
+    "example": "Consumers are spending their money carefully.",
+    "file": "File 9",
+    "section": "Advertising",
+    "translation": "tüketiciler"
+  },
+  {
+    "word": "misleading",
+    "pos": "adj",
+    "pronunciation": "/ˌmɪsˈliːdɪŋ/",
+    "example": "Companies can be sued for misleading advertisments.",
+    "file": "File 9",
+    "section": "Advertising",
+    "translation": "yanıltıcı"
+  },
+  {
+    "word": "publicity",
+    "pos": "n",
+    "pronunciation": "/pʌbˈlɪsəti/",
+    "example": "The company hoped to get a lot of good publicity by demonstrating their product.",
+    "file": "File 9",
+    "section": "Advertising",
+    "translation": "tanıtım"
+  },
+  {
+    "word": "slogan",
+    "pos": "n",
+    "pronunciation": "/ˈsləʊɡən/",
+    "example": "A memorable slogan is very important in advertising.",
+    "file": "File 9",
+    "section": "Advertising",
+    "translation": "slogan"
+  },
+  {
+    "word": "sue",
+    "pos": "v",
+    "pronunciation": "/suː/",
+    "example": "The company threatened to sue the journalists who had published stories about it.",
+    "file": "File 9",
+    "section": "Advertising",
+    "translation": "sue"
+  },
+  {
+    "word": "boom",
+    "pos": "n",
+    "pronunciation": "/buːm/",
+    "example": "The economic boom helped many people to improve their lives.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "bom"
+  },
+  {
+    "word": "branch",
+    "pos": "n",
+    "pronunciation": "/brɑːntʃ/",
+    "example": "This chain of shops has branches in many cities around the world.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "şube"
+  },
+  {
+    "word": "chain",
+    "pos": "n",
+    "pronunciation": "/tʃeɪn/",
+    "example": "It's a large chain of shops with branches in many major cities.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "zincir"
+  },
+  {
+    "word": "close down",
+    "pos": "phr v",
+    "pronunciation": "/kləʊz daʊn/",
+    "example": "The company had to close down after two hundred years in business.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "kapat"
+  },
+  {
+    "word": "drop",
+    "pos": "v",
+    "pronunciation": "/drɒp/",
+    "example": "The standard of living will drop",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "düşmek"
+  },
+  {
+    "word": "expand",
+    "pos": "v",
+    "pronunciation": "/ɪkˈspænd/",
+    "example": "The company is set to expand later in the year and take on more staff.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "genişletmek"
+  },
+  {
+    "word": "export",
+    "pos": "v",
+    "pronunciation": "/ɪkˈspɔːt/",
+    "example": "They export the product around the world.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "ihracat"
+  },
+  {
+    "word": "flop",
+    "pos": "n",
+    "pronunciation": "/flɒp/",
+    "example": "The product was a complete flop . Hardly anyone bought it.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "flop"
+  },
+  {
+    "word": "get down to business",
+    "pos": "phr",
+    "pronunciation": "/ɡet daʊn tu ˈbɪznəs/",
+    "example": "Let's get down to business . We can't waste any time.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "işe koyulun"
+  },
+  {
+    "word": "grow",
+    "pos": "v",
+    "pronunciation": "/ɡrəʊ/",
+    "example": "Our company hopes to grow by 5% next year.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "büyümek"
+  },
+  {
+    "word": "import",
+    "pos": "v",
+    "pronunciation": "/ɪmˈpɔːt/",
+    "example": "Our country imports most of its oil.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "i̇thalat"
+  },
+  {
+    "word": "launch",
+    "pos": "n",
+    "pronunciation": "/lɔːntʃ/",
+    "example": "The launch of the new phone is next week.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "fırlatma"
+  },
+  {
+    "word": "manufacture",
+    "pos": "v",
+    "pronunciation": "/mænjʊˈfæktʃə/",
+    "example": "China manufactures many products for the world.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "üretim"
+  },
+  {
+    "word": "mean business",
+    "pos": "phr",
+    "pronunciation": "/miːn ˈbɪznəs/",
+    "example": "You should take them seriously – they mean business .",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "ciddi iş"
+  },
+  {
+    "word": "merge",
+    "pos": "v",
+    "pronunciation": "/mɜːdʒ/",
+    "example": "The two companies will merge to create one large company.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "birleştirme"
+  },
+  {
+    "word": "mind your own business",
+    "pos": "phr",
+    "pronunciation": "/maɪnd jɔː əʊnˈbɪznəs/",
+    "example": "What's in your bag? ~ Mind your own business !",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "kendi işine bak"
+  },
+  {
+    "word": "produce",
+    "pos": "v",
+    "pronunciation": "/prəˈdjuːs/",
+    "example": "The region produces most of the world's supply of oil.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "üretmek"
+  },
+  {
+    "word": "recession",
+    "pos": "n",
+    "pronunciation": "/rɪˈseʃn/",
+    "example": "Many companies failed because of the recession and many people lost their jobs.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "durgunluk"
+  },
+  {
+    "word": "set up",
+    "pos": "phr v",
+    "pronunciation": "/set ʌp/",
+    "example": "The company was set up in 1990.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "kurmak"
+  },
+  {
+    "word": "take over",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ˈəʊvə/",
+    "example": "The larger company wants to take over our smaller company.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "devralmak"
+  },
+  {
+    "word": "absence",
+    "pos": "n",
+    "pronunciation": "/ˈæbsəns/",
+    "example": "Her absence was noted by the teacher.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "yokluk"
+  },
+  {
+    "word": "abundance",
+    "pos": "n",
+    "pronunciation": "/əˈbʌndəns/",
+    "example": "The city is famous for its abundance of parks and plazas.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "bolluk"
+  },
+  {
+    "word": "accommodation",
+    "pos": "n",
+    "pronunciation": "/əˌkɒməˈdeɪʃn/",
+    "example": "Accommodation for tourists can be very expensive in London.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "konaklama"
+  },
+  {
+    "word": "alcoholism",
+    "pos": "n",
+    "pronunciation": "/ˈælkəhɒlɪzəm/",
+    "example": "Alcoholism is a growing problem as drink becomes cheaper.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "alkolizm"
+  },
+  {
+    "word": "antisocial",
+    "pos": "adj",
+    "pronunciation": "/ˌæntiˈsəʊʃl/",
+    "example": "Vandalism, especially breaking public property, is antisocial behaviour.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "antisosyal"
+  },
+  {
+    "word": "autopilot",
+    "pos": "adj",
+    "pronunciation": "/ˈɔːtəʊ ˈpaɪlət/",
+    "example": "The pilot put the plane on autopilot for most of the flight.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "otopi̇lot"
+  },
+  {
+    "word": "belief",
+    "pos": "n",
+    "pronunciation": "/bɪˈliːf/",
+    "example": "It's my belief that this news story isn't entirely true.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "inanç"
+  },
+  {
+    "word": "bilingual",
+    "pos": "adj",
+    "pronunciation": "/ˌbaɪˈlɪŋɡwəl/",
+    "example": "Many people in Montreal are bilingual ; they speak both French and English.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "iki dilli"
+  },
+  {
+    "word": "brotherhood",
+    "pos": "n",
+    "pronunciation": "/ˈbrʌðəhʊd/",
+    "example": "Brotherhood is sometimes used a general term for the friendship between groups of people.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "kardeşli̇k"
+  },
+  {
+    "word": "bulletproof",
+    "pos": "adj",
+    "pronunciation": "/ˈbʊlɪtpruːf/",
+    "example": "The windows of the president's car are made of bulletproof glass.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "kurşun geçirmez"
+  },
+  {
+    "word": "careful",
+    "pos": "adj",
+    "pronunciation": "/ˈhəʊpləs/",
+    "example": "Be careful how you drive!",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "di̇kkatli̇"
+  },
+  {
+    "word": "childhood",
+    "pos": "n",
+    "pronunciation": "/ˈtʃaɪldhʊd/",
+    "example": "Childhood was my favourite time in my life.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "çocukluk"
+  },
+  {
+    "word": "coldness",
+    "pos": "n",
+    "pronunciation": "/ˈkəʊldnəs/",
+    "example": "The coldness hit me as soon as I walked outside.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "soğukluk"
+  },
+  {
+    "word": "connection",
+    "pos": "n",
+    "pronunciation": "/kəˈnekʃn/",
+    "example": "The connection between diet and health is well-known.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "bağlantı"
+  },
+  {
+    "word": "convenience",
+    "pos": "n",
+    "pronunciation": "/kənˈviːniəns/",
+    "example": "I live here because of the convenience of the buses and trains.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "kolaylık"
+  },
+  {
+    "word": "death",
+    "pos": "n",
+    "pronunciation": "/deθ/",
+    "example": "My uncle’s death was difficult for me.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "ölüm"
+  },
+  {
+    "word": "development",
+    "pos": "n",
+    "pronunciation": "/dɪˈveləpmənt/",
+    "example": "There are major plans for the development of the town, with 600 new houses.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "geli̇şi̇m"
+  },
+  {
+    "word": "distance",
+    "pos": "n",
+    "pronunciation": "/ˈdɪstəns/",
+    "example": "The average distance that commuters in the UK travel to work is 8.5 miles.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "mesafe"
+  },
+  {
+    "word": "employment",
+    "pos": "n",
+    "pronunciation": "/ɪmˈplɔɪmənt/",
+    "example": "How easy is it to find employment in your city?",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "istihdam"
+  },
+  {
+    "word": "entertainment",
+    "pos": "n",
+    "pronunciation": "/ˌentəˈteɪnmənt/",
+    "example": "New York has a huge range of entertainment , from Broadway shows to top sporting events.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "eğlence"
+  },
+  {
+    "word": "excitement",
+    "pos": "n",
+    "pronunciation": "/ɪkˈsaɪtmənt/",
+    "example": "The excitement at the end of the game was amazing.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "heyecan"
+  },
+  {
+    "word": "expectation",
+    "pos": "n",
+    "pronunciation": "/ˌekspekˈteɪʃn/",
+    "example": "Do you have any expectations about what you will learn on this course?",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "beklenti̇"
+  },
+  {
+    "word": "friendliness",
+    "pos": "n",
+    "pronunciation": "/ˈfrendlinəs/",
+    "example": "The friendliness of the people was wonderful – they were so welcoming.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "samimiyet"
+  },
+  {
+    "word": "government",
+    "pos": "n",
+    "pronunciation": "/ˈɡʌvənmənt/",
+    "example": "The country has elected a new government .",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "hükümet"
+  },
+  {
+    "word": "heat",
+    "pos": "n",
+    "pronunciation": "/hiːt/",
+    "example": "The heat was too much for me. I had to go inside.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "ısı"
+  },
+  {
+    "word": "height",
+    "pos": "n",
+    "pronunciation": "/haɪt/",
+    "example": "You might have to tell the doctor your height and weight.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "yükseklik"
+  },
+  {
+    "word": "homeless",
+    "pos": "adj",
+    "pronunciation": "/ˈhəʊmləs/",
+    "example": "There are a lot of homeless people in this city.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "evsiz"
+  },
+  {
+    "word": "hopeless",
+    "pos": "adj",
+    "pronunciation": "/ˈhəʊpləs/",
+    "example": "The situation is hopeless . There's nothing I can do to help.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "umutsuz"
+  },
+  {
+    "word": "hunger",
+    "pos": "n",
+    "pronunciation": "/ˈhʌŋɡə/",
+    "example": "Hunger is a big problem in the country because of the poor harvest.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "açlik"
+  },
+  {
+    "word": "ignorance",
+    "pos": "n",
+    "pronunciation": "/ˈɪɡnərəns/",
+    "example": "I'm surprised by their ignorance about the topic. It's been in the news for weeks.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "cehalet"
+  },
+  {
+    "word": "improvement",
+    "pos": "n",
+    "pronunciation": "/ɪmˈpruːvmənt/",
+    "example": "The improvement in the system really helped the company.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "iyileştirme"
+  },
+  {
+    "word": "intention",
+    "pos": "n",
+    "pronunciation": "/ɪnˈtenʃn/",
+    "example": "It's my intention to leave the company at the end of the month.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "ni̇yet"
+  },
+  {
+    "word": "loneliness",
+    "pos": "n",
+    "pronunciation": "/ˈləʊnlinəs/",
+    "example": "Loneliness is often a problem in large cities where people don't know each other.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "yalnizlik"
+  },
+  {
+    "word": "loss",
+    "pos": "n",
+    "pronunciation": "/lɒs/",
+    "example": "The financial loss was a problem for the company.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "kayıp"
+  },
+  {
+    "word": "megacity",
+    "pos": "n",
+    "pronunciation": "/ˈmeɡəsɪti/",
+    "example": "Tokyo is one of the world's megacities .",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "megakent"
+  },
+  {
+    "word": "misunderstood",
+    "pos": "adj",
+    "pronunciation": "/ˌmɪsʌndəˈstʊd/",
+    "example": "This idea is often misunderstood , but it's a very simple idea.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "yanlış anlaşılmış"
+  },
+  {
+    "word": "modernism",
+    "pos": "n",
+    "pronunciation": "/ˈmɒdənɪzəm/",
+    "example": "There's a chilly modernism in the new concrete buildings.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "moderni̇zm"
+  },
+  {
+    "word": "monorail",
+    "pos": "n",
+    "pronunciation": "/ˈmɒnəʊreɪl/",
+    "example": "Is that a train? No, it only has one track. It's a monorail .",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "monoray"
+  },
+  {
+    "word": "multicultural",
+    "pos": "adj",
+    "pronunciation": "/ˌmʌltiˈkʌltʃərəl/",
+    "example": "London is a very multicultural city, with people of many different races and religions.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "çok kültürlü"
+  },
+  {
+    "word": "neighbourhood",
+    "pos": "n",
+    "pronunciation": "/ˈneɪbəhʊd/",
+    "example": "I don't know my city well, yet. I just know my little neighbourhood .",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "komşuluk"
+  },
+  {
+    "word": "overcrowded",
+    "pos": "adj",
+    "pronunciation": "/ˌəʊvəˈkraʊdɪd/",
+    "example": "The city is completely overcrowded . It's difficult to find anywhere to live.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "aşırı kalabalık"
+  },
+  {
+    "word": "pollution",
+    "pos": "n",
+    "pronunciation": "/pəˈluːʃn/",
+    "example": "Pollution is a terrible problem in this city.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "kirlilik"
+  },
+  {
+    "word": "postgraduate",
+    "pos": "adj",
+    "pronunciation": "/ˌpəʊstˈɡrædʒuət/",
+    "example": "I'm doing a postgraduate degree in aeronautical engineering.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "yüksek li̇sans"
+  },
+  {
+    "word": "racism",
+    "pos": "n",
+    "pronunciation": "/ˈreɪsɪzəm/",
+    "example": "You can help stop racism by fighting it.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "irkçilik"
+  },
+  {
+    "word": "silence",
+    "pos": "n",
+    "pronunciation": "/ˈsaɪləns/",
+    "example": "The silence in the house was noticeable after the noisy ride home.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "sessizlik"
+  },
+  {
+    "word": "strength",
+    "pos": "n",
+    "pronunciation": "/streŋθ/",
+    "example": "You need to work harder to lift it – use your full strength .",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "güç"
+  },
+  {
+    "word": "subway",
+    "pos": "n",
+    "pronunciation": "/ˈsʌbweɪ/",
+    "example": "The quickest way to get around New York is on the subway .",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "metro"
+  },
+  {
+    "word": "success",
+    "pos": "n",
+    "pronunciation": "/səkˈses/",
+    "example": "Success is more important to me than money.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "başarı"
+  },
+  {
+    "word": "thought",
+    "pos": "n",
+    "pronunciation": "/θɔːt/",
+    "example": "What are your thoughts on the subject?",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "düşündüm"
+  },
+  {
+    "word": "ugliness",
+    "pos": "n",
+    "pronunciation": "/ˈʌɡlinəs/",
+    "example": "The ugliness of the buildings contrasted with the beauty of the nearby countryside.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "çirkinlik"
+  },
+  {
+    "word": "unbreakable",
+    "pos": "adj",
+    "pronunciation": "/ʌnˈbreɪkəbl/",
+    "example": "The designers claim that the machines are unbreakable .",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "kırılmaz"
+  },
+  {
+    "word": "underdeveloped",
+    "pos": "adj",
+    "pronunciation": "/ˌʌndədɪˈveləpt/",
+    "example": "This part of the city is very poor and underdeveloped .",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "az gelişmiş"
+  },
+  {
+    "word": "undrinkable",
+    "pos": "adj",
+    "pronunciation": "/ˈdrɪŋkəbl/",
+    "example": "The tap water there is undrinkable . We'll take bottled water instead.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "içilemez"
+  },
+  {
+    "word": "useful",
+    "pos": "adj",
+    "pronunciation": "/ˈjuːsfl/",
+    "example": "Your instructions were very useful . Thanks!",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "kullanışlı"
+  },
+  {
+    "word": "vandalism",
+    "pos": "n",
+    "pronunciation": "/ˈvændəlɪzəm/",
+    "example": "The area has had problems with antisocial behaviour and vandalism .",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "vandalizm"
+  },
+  {
+    "word": "violence",
+    "pos": "n",
+    "pronunciation": "/ˈvaɪələns/",
+    "example": "They were prone to violence and aggressive behaviour.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "şi̇ddet"
+  },
+  {
+    "word": "waterproof",
+    "pos": "adj",
+    "pronunciation": "/ˈwɔːtəpruːf/",
+    "example": "My watch is waterproof . I can wear it to go swimming.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "su geçirmez"
+  },
+  {
+    "word": "weakness",
+    "pos": "n",
+    "pronunciation": "/ˈwiːknəs/",
+    "example": "I was asked about my strengths and weaknesses in my job interview.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "zayıflık"
+  },
+  {
+    "word": "width",
+    "pos": "n",
+    "pronunciation": "/wɪdθ/",
+    "example": "My little boy swam the width of the swimming pool – I was very proud.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Word building",
+    "translation": "genişlik"
+  },
+  {
+    "word": "astronomer",
+    "pos": "n",
+    "pronunciation": "/əˈstrɒnəmə/",
+    "example": "He's a famous astronomer who predicted the discovery of black holes.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "astronom"
+  },
+  {
+    "word": "astronomical",
+    "pos": "adj",
+    "pronunciation": "/ˌæstrəˈnɒmɪkl/",
+    "example": "The prices here are astronomical – let's go somewhere cheaper.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "astronomi̇k"
+  },
+  {
+    "word": "astronomy",
+    "pos": "n",
+    "pronunciation": "/əˈstrɒnəmi/",
+    "example": "I'm interested in astronomy and I have a telescope set up in my back garden.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "astronomi"
+  },
+  {
+    "word": "biological",
+    "pos": "adj",
+    "pronunciation": "/ˌbaɪəˈlɒdʒɪkl/",
+    "example": "You can see the biological process as the plant takes in sunlight.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "biyolojik"
+  },
+  {
+    "word": "biologist",
+    "pos": "n",
+    "pronunciation": "/baɪˈɒlədʒɪst/",
+    "example": "She's a very good biologist . Her team are developing new medicines.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "biyolog"
+  },
+  {
+    "word": "biology",
+    "pos": "n",
+    "pronunciation": "/baɪˈɒlədʒi/",
+    "example": "I was quite interested in biology at school, especially in ecosystems.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "bi̇yoloji̇"
+  },
+  {
+    "word": "botanical",
+    "pos": "adj",
+    "pronunciation": "/bəˈtænɪkl/",
+    "example": "The book on plant behaviour followed years of botanical research.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "botanik"
+  },
+  {
+    "word": "botanist",
+    "pos": "n",
+    "pronunciation": "/ˈbɒtənɪst/",
+    "example": "I'm a botanist . My field of study is fruit trees.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "botanikçi"
+  },
+  {
+    "word": "botany",
+    "pos": "n",
+    "pronunciation": "/ˈbɒtəni/",
+    "example": "I study botany . I work in a laboratory as well as in greenhouses.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "botanik"
+  },
+  {
+    "word": "chemical",
+    "pos": "adj",
+    "pronunciation": "/ˈkemɪkl/",
+    "example": "The chemical reaction was fast and dangerous. There was a flash of light and lots of smoke.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "kimyasal"
+  },
+  {
+    "word": "chemist",
+    "pos": "n",
+    "pronunciation": "/ˈkemɪst/",
+    "example": "I'm a chemist , but I don't sell medicine. I work in a laboratory.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "kimyager"
+  },
+  {
+    "word": "chemistry",
+    "pos": "n",
+    "pronunciation": "/ˈkemɪstri/",
+    "example": "I got good marks on my chemistry exam because I knew the periodic table.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "ki̇mya"
+  },
+  {
+    "word": "clone",
+    "pos": "n",
+    "pronunciation": "/kləʊn/",
+    "example": "This sheep is a clone of that sheep. They're absolutely identical.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "klon"
+  },
+  {
+    "word": "discovery",
+    "pos": "n",
+    "pronunciation": "/dɪˈskʌvəri/",
+    "example": "Detecting gravity waves was a major scientific discovery .",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "keşif"
+  },
+  {
+    "word": "drugs",
+    "pos": "n pl",
+    "pronunciation": "/drʌɡz/",
+    "example": "The drugs are used to treat malaria.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "ilaçlar"
+  },
+  {
+    "word": "experiment",
+    "pos": "n",
+    "pronunciation": "/ɪkˈsperɪment/",
+    "example": "We need more people to take part in our experiment . Will you help us?",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "deney"
+  },
+  {
+    "word": "genetic",
+    "pos": "adj",
+    "pronunciation": "/dʒəˈnetɪk/",
+    "example": "You have the same brown eyes. ~ Yes, there's a genetic connection there.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "genetik"
+  },
+  {
+    "word": "geneticist",
+    "pos": "n",
+    "pronunciation": "/dʒəˈnetɪsɪst/",
+    "example": "I'm a geneticist . I'm studying how people's genes affect their reaction to medicine.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "genetikçi"
+  },
+  {
+    "word": "genetics",
+    "pos": "n pl",
+    "pronunciation": "/dʒəˈnetɪks/",
+    "example": "Do you think our genetics strongly influence our personality?",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "genetik"
+  },
+  {
+    "word": "guinea pig",
+    "pos": "n",
+    "pronunciation": "/ˈɡɪni pɪɡ/",
+    "example": "The human test subjects were used as guinea pigs for the new medicine.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "gi̇ne domuzu"
+  },
+  {
+    "word": "laboratory",
+    "pos": "n",
+    "pronunciation": "/ləˈbɒrətri/",
+    "example": "I'm a scientist. I work in a laboratory .",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "laboratuvar"
+  },
+  {
+    "word": "physical",
+    "pos": "adj",
+    "pronunciation": "/ˈfɪzɪkl/",
+    "example": "If you push it, it will move. It's a physical reaction.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "fiziksel"
+  },
+  {
+    "word": "physicist",
+    "pos": "n",
+    "pronunciation": "/ˈfɪzɪsɪst/",
+    "example": "My colleagues are physicists . They're studying quantum theories right now.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "fi̇zi̇kçi̇"
+  },
+  {
+    "word": "physics",
+    "pos": "n",
+    "pronunciation": "/ˈfɪzɪks/",
+    "example": "Are you interested in physics ? ~ Yes, I'm interested in electromagnetics.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "fi̇zi̇k"
+  },
+  {
+    "word": "research",
+    "pos": "n",
+    "pronunciation": "/rɪˈsɜːtʃ/",
+    "example": "What research are you doing? ~ I'm researching new vaccines.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "araştırma"
+  },
+  {
+    "word": "science",
+    "pos": "n",
+    "pronunciation": "/ˈsaɪəns/",
+    "example": "We need more people who love science and want to have careers as scientists.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "bilim"
+  },
+  {
+    "word": "scientific",
+    "pos": "adj",
+    "pronunciation": "/ˌsaɪənˈtɪfɪk/",
+    "example": "Have you heard about the latest scientific research?",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "bilimsel"
+  },
+  {
+    "word": "scientist",
+    "pos": "n",
+    "pronunciation": "/ˈsaɪəntɪst/",
+    "example": "Who do you think are the most famous scientists in history?",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "bilim adamı"
+  },
+  {
+    "word": "side effect",
+    "pos": "n",
+    "pronunciation": "/ˈsaɪd ɪfekt/",
+    "example": "Scientists have to do a lot of tests into the possible side effects of new drugs.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "yan etki"
+  },
+  {
+    "word": "test",
+    "pos": "n",
+    "pronunciation": "/test/",
+    "example": "Will you do a full test to check there are no side effects from that drug?",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "test"
+  },
+  {
+    "word": "theory",
+    "pos": "n",
+    "pronunciation": "/ˈθɪəri/",
+    "example": "Have you heard about the new scientific theory in quantum mechanics?",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "teori"
+  },
+  {
+    "word": "zoological",
+    "pos": "adj",
+    "pronunciation": "/ˌzuːəˈlɒdʒɪkl/",
+    "example": "Zoological research has revealed a link between the two species.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "zoolojik"
+  },
+  {
+    "word": "zoologist",
+    "pos": "n",
+    "pronunciation": "/zuˈɒlədʒɪst/",
+    "example": "My friend is a zoologist . He's studying tiger population numbers at the moment.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "zoolog"
+  },
+  {
+    "word": "zoology",
+    "pos": "n",
+    "pronunciation": "/zuˈɒlədʒi/",
+    "example": "Is that your zoology textbook? ~ Yes, this chapter is about butterfly migration.",
+    "file": "File 10",
+    "section": "Science; stress in word families",
+    "translation": "zooloji"
+  }
+];
