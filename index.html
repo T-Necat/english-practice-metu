@@ -2565,15 +2565,22 @@ cardWrapper.addEventListener('touchstart', function(e) {
   cardContainer.style.transition = 'none';
 }, {passive: true});
 
+var isVerticalSwipe = false;
 cardWrapper.addEventListener('touchmove', function(e) {
   if (isAnimating) return;
   var dx = e.touches[0].clientX - touchStartX;
   var dy = e.touches[0].clientY - touchStartY;
-  if (!isDragging && Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy)) {
-    isDragging = true;
+  if (!isDragging && !isVerticalSwipe) {
+    if (Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy)) {
+      isDragging = true;
+    } else if (Math.abs(dy) > 10 && Math.abs(dy) > Math.abs(dx)) {
+      isVerticalSwipe = true;
+    }
+  }
+  if (isDragging || isVerticalSwipe) {
+    e.preventDefault();
   }
   if (isDragging) {
-    e.preventDefault();
     var rotate = dx * 0.08;
     var opacity = Math.max(0.3, 1 - Math.abs(dx) / 400);
     cardContainer.style.transform = 'translateX(' + dx + 'px) rotate(' + rotate + 'deg)';
@@ -2601,10 +2608,12 @@ cardWrapper.addEventListener('touchend', function(e) {
     return;
   }
 
-  if (Math.abs(dy) > 40 && Math.abs(dy) > Math.abs(dx)) {
+  if (isVerticalSwipe && Math.abs(dy) > 40) {
     card.classList.toggle('flipped');
+    isVerticalSwipe = false;
     return;
   }
+  isVerticalSwipe = false;
 
   if (Math.abs(dx) < 10 && Math.abs(dy) < 10) {
     var now = Date.now();
