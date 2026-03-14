@@ -3291,12 +3291,62 @@ var quizOverlay = el('quizOverlay');
 var quizContainer = el('quizContainer');
 var quizState = { questions: [], current: 0, score: 0, wrong: [], mode: 'mc', count: 10 };
 
+function saveWrongWords(key, wrongItems) {
+  if (!wrongItems || wrongItems.length === 0) return;
+  try {
+    var existing = JSON.parse(localStorage.getItem(key) || '[]');
+    for (var i = 0; i < wrongItems.length; i++) {
+      var w = wrongItems[i];
+      var id = w.word || w.q;
+      var found = false;
+      for (var j = 0; j < existing.length; j++) {
+        if ((existing[j].word || existing[j].q) === id) { existing[j] = w; existing[j].count = (existing[j].count || 1) + 1; found = true; break; }
+      }
+      if (!found) { w.count = 1; existing.push(w); }
+    }
+    localStorage.setItem(key, JSON.stringify(existing));
+  } catch(e) {}
+}
+
+function getSavedWrong(key) {
+  try { return JSON.parse(localStorage.getItem(key) || '[]'); } catch(e) { return []; }
+}
+
+function clearSavedWrong(key) { localStorage.removeItem(key); }
+
 function openQuiz() {
   var pool = getFiltered();
   if (pool.length < 4) { alert('En az 4 kelime gerekli!'); return; }
   quizContainer.innerHTML = '';
   quizOverlay.classList.add('open');
-  renderQuizSetup(pool);
+  var saved = getSavedWrong('eng_quiz_wrong');
+  var savedInPool = saved.filter(function(s) { return pool.some(function(p) { return p.word === s.word; }); });
+  if (savedInPool.length > 0) {
+    renderQuizResumeChoice(pool, savedInPool);
+  } else {
+    renderQuizSetup(pool);
+  }
+}
+
+function renderQuizResumeChoice(pool, savedWrong) {
+  var html = '<div class="quiz-header"><h2>Quiz</h2><button class="quiz-close" id="qrcClose">&times;</button></div>';
+  html += '<div class="quiz-setup">';
+  html += '<h3>\u00d6nceki hatalar\u0131n var (' + savedWrong.length + ' kelime)</h3>';
+  html += '<div class="quiz-setup-options">';
+  html += '<button class="quiz-setup-btn active" id="qrcWrong">Hatalar\u0131ma \u00c7al\u0131\u015f (' + savedWrong.length + ')</button>';
+  html += '<button class="quiz-setup-btn" id="qrcNew">S\u0131f\u0131rdan Ba\u015fla</button>';
+  html += '<button class="quiz-setup-btn" id="qrcClear" style="color:var(--wrong)">Hatalar\u0131 Temizle</button>';
+  html += '</div></div>';
+  quizContainer.innerHTML = html;
+  quizContainer.querySelector('#qrcClose').addEventListener('click', closeQuiz);
+  quizContainer.querySelector('#qrcNew').addEventListener('click', function() { renderQuizSetup(pool); });
+  quizContainer.querySelector('#qrcClear').addEventListener('click', function() { clearSavedWrong('eng_quiz_wrong'); renderQuizSetup(pool); });
+  quizContainer.querySelector('#qrcWrong').addEventListener('click', function() {
+    var wrongPool = savedWrong.map(function(s) { return pool.find(function(p) { return p.word === s.word; }); }).filter(Boolean);
+    quizState.count = wrongPool.length;
+    quizState.mode = 'mc';
+    startQuiz(wrongPool);
+  });
 }
 
 function closeQuiz() { quizOverlay.classList.remove('open'); }
@@ -3539,6 +3589,7 @@ function quizNext() {
 }
 
 function renderQuizResult() {
+  if (quizState.wrong.length > 0) saveWrongWords('eng_quiz_wrong', quizState.wrong);
   var total = quizState.questions.length;
   var pct = Math.round((quizState.score / total) * 100);
   var html = '<div class="quiz-header"><h2>Sonu\u00e7</h2><button class="quiz-close" id="quizCloseBtn">&times;</button></div>';
@@ -3760,12 +3811,39 @@ var grammarState = { questions: [], current: 0, score: 0, wrong: [], unit: 0 };
 function openGrammar(unit) {
   var qs = GRAMMAR_QUESTIONS.filter(function(q) { return unit === 0 || q.u === unit; });
   if (qs.length === 0) return;
+  quizOverlay.classList.add('open');
+  var saved = getSavedWrong('eng_gram_wrong');
+  var savedInUnit = saved.filter(function(s) { return qs.some(function(q) { return q.q === s.q; }); });
+  if (savedInUnit.length > 0) {
+    var html = '<div class="quiz-header"><h2>Grammar</h2><button class="quiz-close" id="grcClose">&times;</button></div>';
+    html += '<div class="quiz-setup">';
+    html += '<h3>\u00d6nceki hatalar\u0131n var (' + savedInUnit.length + ' soru)</h3>';
+    html += '<div class="quiz-setup-options">';
+    html += '<button class="quiz-setup-btn active" id="grcWrong">Hatalar\u0131ma \u00c7al\u0131\u015f (' + savedInUnit.length + ')</button>';
+    html += '<button class="quiz-setup-btn" id="grcNew">S\u0131f\u0131rdan Ba\u015fla</button>';
+    html += '<button class="quiz-setup-btn" id="grcClear" style="color:var(--wrong)">Temizle</button>';
+    html += '</div></div>';
+    quizContainer.innerHTML = html;
+    quizContainer.querySelector('#grcClose').addEventListener('click', closeQuiz);
+    quizContainer.querySelector('#grcNew').addEventListener('click', function() { startGrammar(qs, unit); });
+    quizContainer.querySelector('#grcClear').addEventListener('click', function() { clearSavedWrong('eng_gram_wrong'); startGrammar(qs, unit); });
+    quizContainer.querySelector('#grcWrong').addEventListener('click', function() {
+      var wrongQs = savedInUnit.map(function(s) { return qs.find(function(q) { return q.q === s.q; }); }).filter(Boolean);
+      startGrammar(wrongQs, unit);
+    });
+  } else {
+    startGrammar(qs, unit);
+  }
+}
+
+function startGrammar(qs, unit) {
   grammarState.questions = shuffleArr(qs);
   grammarState.current = 0;
   grammarState.score = 0;
   grammarState.wrong = [];
   grammarState.unit = unit;
-  quizOverlay.classList.add('open');
+  grammarState.answers = new Array(qs.length);
+  grammarState.picks = {};
   renderGrammarQ();
 }
 
@@ -3773,40 +3851,102 @@ function renderGrammarQ() {
   var q = grammarState.questions[grammarState.current];
   var total = grammarState.questions.length;
   var num = grammarState.current + 1;
-  var html = '<div class="quiz-header"><h2>Grammar ' + (grammarState.unit ? 'Unit ' + grammarState.unit : 'T\u00fcm\u00fc') + '</h2><button class="quiz-close" id="gramCloseBtn">&times;</button></div>';
-  html += '<div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:' + ((num / total) * 100) + '%"></div></div>';
-  html += '<div class="quiz-progress-text">' + num + ' / ' + total + '</div>';
+  var answered = grammarState.answers[grammarState.current] !== undefined;
+
+  var html = '<div class="quiz-header">';
+  html += '<button class="quiz-close" id="gramPrevTop"' + (grammarState.current === 0 ? ' disabled style="opacity:0.3;font-size:24px"' : ' style="font-size:24px"') + '>&larr;</button>';
+  html += '<h2>Grammar ' + (grammarState.unit ? 'U' + grammarState.unit : 'T\u00fcm\u00fc') + '</h2>';
+  html += '<button class="quiz-close" id="gramCloseBtn">&times;</button>';
+  html += '</div>';
+
+  html += '<div style="display:flex;justify-content:center;gap:4px;flex-wrap:wrap;margin-bottom:16px">';
+  for (var d = 0; d < total; d++) {
+    var dotColor = 'var(--progress-track)';
+    if (grammarState.answers[d] === true) dotColor = 'var(--correct)';
+    else if (grammarState.answers[d] === false) dotColor = 'var(--wrong)';
+    var dotSize = d === grammarState.current ? '12px' : '8px';
+    var dotBorder = d === grammarState.current ? '2px solid var(--accent)' : 'none';
+    html += '<span style="width:' + dotSize + ';height:' + dotSize + ';border-radius:50%;background:' + dotColor + ';border:' + dotBorder + ';display:inline-block;transition:all 0.2s;cursor:pointer" data-gdot="' + d + '"></span>';
+  }
+  html += '</div>';
+
   html += '<div class="quiz-word" style="font-size:18px;line-height:1.5;margin-bottom:20px">' + q.q.replace('___', '<span style="color:var(--accent);text-decoration:underline">______</span>') + '</div>';
   html += '<div class="quiz-options" id="gramOptions">';
   for (var i = 0; i < q.opts.length; i++) {
-    html += '<button class="quiz-option" data-gi="' + i + '">' + q.opts[i] + '</button>';
+    var cls = 'quiz-option';
+    if (answered) {
+      if (i === q.ans) cls += ' correct';
+      else if (grammarState.picks[grammarState.current] === i) cls += ' wrong';
+    }
+    html += '<button class="' + cls + '" data-gi="' + i + '"' + (answered ? ' disabled style="pointer-events:none"' : '') + '>' + q.opts[i] + '</button>';
   }
   html += '</div>';
-  html += '<div class="quiz-feedback" id="gramFeedback"></div>';
-  html += '<div class="quiz-btn-row"><button class="btn btn-nav" id="gramNextBtn" style="display:none">Sonraki &rarr;</button></div>';
+
+  html += '<div class="quiz-feedback" id="gramFeedback">';
+  if (answered) {
+    if (grammarState.answers[grammarState.current]) html += '<span class="correct">Do\u011fru!</span> ' + q.exp;
+    else html += '<span class="wrong">Yanl\u0131\u015f!</span> ' + q.exp;
+  }
+  html += '</div>';
+
+  html += '<div class="quiz-btn-row">';
+  if (grammarState.current > 0) html += '<button class="btn btn-nav" id="gramPrevBtn">&larr; \u00d6nceki</button>';
+  var nextLabel = grammarState.current >= total - 1 ? 'Bitir' : 'Sonraki &rarr;';
+  html += '<button class="btn btn-nav" id="gramNextBtn"' + (!answered ? ' style="display:none"' : '') + '>' + nextLabel + '</button>';
+  html += '</div>';
+
   quizContainer.innerHTML = html;
   quizContainer.querySelector('#gramCloseBtn').addEventListener('click', closeQuiz);
-  quizContainer.querySelectorAll('.quiz-option').forEach(function(opt) {
-    opt.addEventListener('click', function() { checkGrammarAnswer(opt, q); });
+
+  var prevBtns = quizContainer.querySelectorAll('#gramPrevTop, #gramPrevBtn');
+  prevBtns.forEach(function(b) {
+    if (b && !b.disabled) b.addEventListener('click', function() {
+      grammarState.current--;
+      renderGrammarQ();
+    });
   });
+
+  quizContainer.querySelectorAll('[data-gdot]').forEach(function(dot) {
+    dot.addEventListener('click', function() {
+      var target = parseInt(dot.dataset.gdot);
+      if (grammarState.answers[target] !== undefined || target === grammarState.current) {
+        grammarState.current = target;
+        renderGrammarQ();
+      }
+    });
+  });
+
+  if (!answered) {
+    quizContainer.querySelectorAll('.quiz-option').forEach(function(opt) {
+      opt.addEventListener('click', function() { checkGrammarAnswer(opt, q); });
+    });
+  }
+
+  var nextBtn = quizContainer.querySelector('#gramNextBtn');
+  if (nextBtn && answered) {
+    nextBtn.addEventListener('click', function() {
+      grammarState.current++;
+      if (grammarState.current >= grammarState.questions.length) renderGrammarResult();
+      else renderGrammarQ();
+    });
+  }
 }
 
 function checkGrammarAnswer(optEl, q) {
   var chosen = parseInt(optEl.dataset.gi);
+  grammarState.picks[grammarState.current] = chosen;
+  grammarState.answers[grammarState.current] = (chosen === q.ans);
   var allOpts = quizContainer.querySelectorAll('.quiz-option');
   allOpts.forEach(function(o) { o.style.pointerEvents = 'none'; });
   allOpts[q.ans].classList.add('correct');
-  var fb = quizContainer.querySelector('#gramFeedback');
-  if (chosen === q.ans) {
-    grammarState.score++;
-    fb.innerHTML = '<span class="correct">Do\u011fru!</span> ' + q.exp;
-    fb.style.color = 'var(--text)';
-  } else {
+  if (chosen !== q.ans) {
     optEl.classList.add('wrong');
     grammarState.wrong.push(q);
-    fb.innerHTML = '<span class="wrong">Yanl\u0131\u015f!</span> ' + q.exp;
-    fb.style.color = 'var(--text)';
+  } else {
+    grammarState.score++;
   }
+  var fb = quizContainer.querySelector('#gramFeedback');
+  fb.innerHTML = (chosen === q.ans ? '<span class="correct">Do\u011fru!</span> ' : '<span class="wrong">Yanl\u0131\u015f!</span> ') + q.exp;
   var nb = quizContainer.querySelector('#gramNextBtn');
   nb.style.display = '';
   nb.addEventListener('click', function() {
@@ -3818,6 +3958,7 @@ function checkGrammarAnswer(optEl, q) {
 }
 
 function renderGrammarResult() {
+  if (grammarState.wrong.length > 0) saveWrongWords('eng_gram_wrong', grammarState.wrong);
   var total = grammarState.questions.length;
   var pct = Math.round((grammarState.score / total) * 100);
   var html = '<div class="quiz-header"><h2>Grammar Sonu\u00e7</h2><button class="quiz-close" id="gramCloseBtn">&times;</button></div>';
