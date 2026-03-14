@@ -484,7 +484,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 680px;
+      max-width: clamp(300px, 90%, 1100px);
     }
 
     .header-left {
@@ -532,22 +532,96 @@
 
     .score-bar {
       display: flex;
-      gap: 16px;
-      font-size: 13px;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 8px 16px;
+      background: var(--tag-bg);
+      border-bottom: 1px solid var(--card-border);
+      font-size: 12px;
       font-weight: 600;
-      margin-bottom: 4px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+
+    .score-bar-left {
+      display: flex;
+      gap: 12px;
     }
 
     .score-correct { color: var(--correct); }
     .score-wrong { color: var(--wrong); }
+    .score-progress { color: var(--text-muted); font-weight: 500; }
 
-    .filter-row {
+    /* ===== NAV ISLAND ===== */
+    .nav-island {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 4px;
+      box-shadow: var(--shadow);
+      transition: border-radius 0.3s;
+      margin-bottom: clamp(8px, 1.5vh, 16px);
+    }
+
+    .nav-island.expanded {
+      border-radius: 20px;
+    }
+
+    .nav-island-tabs {
       display: flex;
-      gap: 8px;
-      margin-bottom: 8px;
-      flex-wrap: wrap;
+      gap: 4px;
       width: 100%;
-      max-width: clamp(300px, 80vw, 680px);
+    }
+
+    .nav-island-tab {
+      flex: 1;
+      padding: 8px 20px;
+      border: none;
+      background: transparent;
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .nav-island-tab.active {
+      background: var(--btn-dark-bg);
+      color: var(--card-back-text);
+    }
+
+    .nav-island-filters {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s ease;
+      width: 100%;
+    }
+
+    .nav-island.expanded .nav-island-filters {
+      grid-template-rows: 1fr;
+    }
+
+    .nav-island-filters-inner {
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    .nav-island-filter-group {
+      display: none;
+      flex-wrap: wrap;
+      gap: 4px;
+      padding: 6px 4px 4px;
+      justify-content: center;
+    }
+
+    .nav-island-filter-group.active {
+      display: flex;
     }
 
     .filter-btn {
@@ -572,7 +646,7 @@
     /* ===== CARD ===== */
     .card-wrapper {
       width: 100%;
-      max-width: clamp(300px, 80vw, 680px);
+      max-width: clamp(300px, 90%, 1100px);
       height: clamp(240px, 38vh, 460px);
       position: relative;
       margin: clamp(8px, 2vh, 24px) 0;
@@ -622,6 +696,21 @@
     .card-front {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
+      justify-content: flex-start;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .card-front-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 32px;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
     }
 
     .card-front .word {
@@ -704,14 +793,16 @@
       justify-content: center;
       transition: all 0.2s;
       z-index: 2;
-      opacity: 0.5;
+      color: var(--wrong);
+      opacity: 0.4;
     }
 
-    .fav-btn:hover { transform: scale(1.15); }
+    .fav-btn:hover { transform: scale(1.15); opacity: 0.7; }
 
     .fav-btn.faved {
       opacity: 1;
       background: var(--accent-light);
+      color: var(--wrong);
     }
 
     .card-back {
@@ -749,7 +840,7 @@
 
     .answer-section {
       width: 100%;
-      max-width: clamp(300px, 80vw, 680px);
+      max-width: clamp(300px, 90%, 1100px);
       padding: 0 8px;
     }
 
@@ -813,7 +904,7 @@
       display: flex;
       gap: 12px;
       width: 100%;
-      max-width: clamp(300px, 80vw, 680px);
+      max-width: clamp(300px, 90%, 1100px);
       padding: 0 8px;
     }
 
@@ -841,7 +932,7 @@
 
     .progress-bar-container {
       width: 100%;
-      max-width: clamp(300px, 80vw, 680px);
+      max-width: clamp(300px, 90%, 1100px);
       height: 4px;
       background: var(--progress-track);
       border-radius: 2px;
@@ -862,40 +953,6 @@
       margin-top: 16px;
       text-align: center;
       padding-bottom: 24px;
-    }
-
-    /* ===== TOP NAV ===== */
-    .top-nav {
-      display: flex;
-      justify-content: center;
-      gap: 0;
-      padding: 12px 16px 0;
-      width: 100%;
-      max-width: 100%;
-      max-width: 680px;
-    }
-
-    .top-nav-btn {
-      flex: 1;
-      max-width: 200px;
-      padding: 10px 20px;
-      border: 2px solid var(--border);
-      background: var(--btn-bg);
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .top-nav-btn:first-child { border-radius: 12px 0 0 12px; border-right: none; }
-    .top-nav-btn:last-child { border-radius: 0 12px 12px 0; }
-
-    .top-nav-btn.active {
-      background: var(--btn-dark-bg);
-      color: var(--card-back-text);
-      border-color: var(--btn-dark-bg);
     }
 
     /* ===== FILE FILTER (settings) ===== */
@@ -947,18 +1004,11 @@
     .content-page {
       display: none;
       width: 100%;
-      max-width: 760px;
+      max-width: clamp(300px, 90%, 1000px);
       padding: 0 16px 40px;
     }
 
     .content-page.active { display: block; }
-
-    .content-nav {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-    }
 
     .content-nav-btn {
       padding: 8px 20px;
@@ -1120,17 +1170,13 @@
     .topic-content details.error-toggle[open] summary::before { transform: rotate(90deg); }
     .topic-content details.error-toggle .error-content { padding: 0 14px 12px; }
 
-    /* ===== TOP NAV 3-BUTTON FIX ===== */
-    .top-nav-btn:not(:first-child):not(:last-child) { border-radius: 0; border-right: none; }
-
     /* ===== NOTES PAGE ===== */
-    .notes-page { display: none; width: 100%; max-width: 760px; padding: 0 16px 40px; }
+    .notes-page { display: none; width: 100%; max-width: clamp(300px, 90%, 1200px); padding: 0 16px 40px; }
     .notes-page.active { display: block; }
     .notes-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
     .notes-header h2 { font-size: 22px; font-weight: 800; color: var(--text-strong); }
     .notes-add-btn { background: var(--accent); color: #fff; border-radius: 12px; padding: 10px 20px; font-size: 14px; border: none; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; transition: background 0.15s; }
     .notes-add-btn:hover { background: var(--accent-hover); }
-    .notes-filter-row { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
     .notes-filter-btn { padding: 6px 16px; border: 1.5px solid var(--border); background: var(--btn-bg); border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer; font-family: 'Inter', sans-serif; color: var(--text-muted); transition: all 0.15s; }
     .notes-filter-btn.active { background: var(--btn-dark-bg); color: var(--card-back-text); border-color: var(--btn-dark-bg); }
     .notes-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -1181,7 +1227,7 @@
     /* ===== QUIZ MODE ===== */
     .quiz-overlay { display:none; position:fixed; inset:0; background:var(--bg); z-index:150; overflow-y:auto; overflow-x:hidden; }
     .quiz-overlay.open { display:flex; flex-direction:column; align-items:center; }
-    .quiz-container { width:100%; max-width:600px; padding:24px 16px; overflow-x:hidden; box-sizing:border-box; }
+    .quiz-container { width:100%; max-width:clamp(300px, 90%, 900px); padding:24px 16px; overflow-x:hidden; box-sizing:border-box; }
     .quiz-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
     .quiz-header h2 { font-size:20px; font-weight:800; color:var(--text-strong); }
     .quiz-close { width:40px; height:40px; border:none; background:var(--tag-bg); border-radius:12px; cursor:pointer; font-size:20px; color:var(--text-muted); display:flex; align-items:center; justify-content:center; }
@@ -1279,12 +1325,13 @@
       .topic-content details.error-toggle summary { padding: 8px 12px; font-size: 13px; }
       .btn { padding: 14px 20px; min-height: 48px; }
       .btn-nav { font-size: 14px; }
-      .filter-row { gap: 6px; justify-content: center; }
-      .filter-btn { padding: 8px 12px; min-height: 40px; font-size: 12px; }
-      .top-nav { padding: 8px 4px 0; }
-      .top-nav-btn { padding: 10px 12px; min-height: 44px; font-size: 12px; }
-      .content-nav { gap: 6px; }
-      .content-nav-btn { padding: 10px 14px; min-height: 44px; font-size: 13px; }
+      .nav-island { width: 100%; border-radius: 16px; }
+      .nav-island.expanded { border-radius: 14px; }
+      .nav-island-tab { padding: 10px 12px; min-height: 44px; font-size: 12px; }
+      .nav-island-filter-group { gap: 6px; }
+      .nav-island-filter-group .filter-btn { padding: 8px 12px; min-height: 40px; font-size: 12px; }
+      .nav-island-filter-group .content-nav-btn { padding: 10px 14px; min-height: 44px; font-size: 13px; }
+      .nav-island-filter-group .notes-filter-btn { padding: 10px 14px; min-height: 44px; }
       .topic-card-header { padding: 16px; min-height: 48px; font-size: 15px; }
       .fav-btn { width: 44px; height: 44px; }
       .menu-btn { width: 44px; height: 44px; }
@@ -1293,7 +1340,8 @@
       .input-row input { padding: 14px 14px; font-size: 16px; }
       .input-row { gap: 8px; }
       .nav-row { gap: 8px; }
-      .score-bar { font-size: 12px; }
+      .score-bar { font-size: 11px; padding: 6px 12px; }
+      .card-front-content { padding: 0 16px; }
       .progress { font-size: 13px; }
       .progress-bar-container { margin: 12px 0 0; }
       .note-modal { width: 100vw; max-width: 100vw; max-height: 100dvh; height: 100dvh; border-radius: 0; display: flex; flex-direction: column; }
@@ -1385,40 +1433,60 @@
       <span class="progress" id="progress">1 / 536</span>
     </div>
 
-    <div class="top-nav">
-      <button class="top-nav-btn active" data-page="words" id="navWords">Kelimeler</button>
-      <button class="top-nav-btn" data-page="content" id="navContent">Konular</button>
-      <button class="top-nav-btn" data-page="notes" id="navNotes">Notlar</button>
+    <div class="nav-island" id="navIsland">
+      <div class="nav-island-tabs">
+        <button class="nav-island-tab active" data-page="words" id="navWords">Kelimeler</button>
+        <button class="nav-island-tab" data-page="content" id="navContent">Konular</button>
+        <button class="nav-island-tab" data-page="notes" id="navNotes">Notlar</button>
+      </div>
+      <div class="nav-island-filters">
+        <div class="nav-island-filters-inner">
+          <div class="nav-island-filter-group active" data-filters-for="words">
+            <button class="filter-btn active" data-filter="all">Hepsi</button>
+            <button class="filter-btn" data-filter="favs">Favoriler</button>
+            <button class="filter-btn" id="quizStartBtn" style="background:var(--accent);color:#fff;border-color:var(--accent)">Quiz</button>
+            <button class="filter-btn" id="matchStartBtn">E&#351;le&#351;tir</button>
+            <button class="filter-btn" id="gramStartBtn" style="background:var(--btn-dark-bg);color:var(--card-back-text);border-color:var(--btn-dark-bg)">Grammar</button>
+          </div>
+          <div class="nav-island-filter-group" data-filters-for="content">
+            <button class="content-nav-btn active" data-unit="1">Unit 1</button>
+            <button class="content-nav-btn" data-unit="2">Unit 2</button>
+            <button class="content-nav-btn" data-unit="3">Unit 3</button>
+          </div>
+          <div class="nav-island-filter-group" data-filters-for="notes">
+            <button class="notes-filter-btn active" data-notes-filter="all">T&#252;m&#252;</button>
+            <button class="notes-filter-btn" data-notes-filter="standalone">Genel</button>
+            <button class="notes-filter-btn" data-notes-filter="attached">Konulara Ba&#287;l&#305;</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="wordsPage">
-    <div class="score-bar">
-      <span class="score-correct" id="scoreCorrect">0</span>
-      <span class="score-wrong" id="scoreWrong">0</span>
-    </div>
-
-    <div class="filter-row">
-      <button class="filter-btn active" data-filter="all">Hepsi</button>
-      <button class="filter-btn" data-filter="favs">Favoriler</button>
-      <button class="filter-btn" id="quizStartBtn" style="background:var(--accent);color:#fff;border-color:var(--accent)">Quiz</button>
-      <button class="filter-btn" id="matchStartBtn">E&#351;le&#351;tir</button>
-      <button class="filter-btn" id="gramStartBtn" style="background:var(--btn-dark-bg);color:var(--card-back-text);border-color:var(--btn-dark-bg)">Grammar</button>
-    </div>
 
     <div class="card-wrapper">
       <div class="card-container" id="cardContainer">
         <div class="card" id="card">
           <div class="card-face card-front">
-            <button class="tts-btn" id="ttsBtn" title="Sesli oku">&#128264;</button>
-            <button class="fav-btn" id="favBtn">&#9825;</button>
-            <div class="word" id="wordText">Loading...</div>
-            <div class="pos" id="posText"></div>
-            <div class="pronunciation" id="pronText"></div>
-            <div class="section-tag" id="sectionText"></div>
-            <div class="tap-hint">kart&#305; &#231;evirmek i&#231;in t&#305;kla</div>
+            <div class="score-bar">
+              <div class="score-bar-left">
+                <span class="score-correct" id="scoreCorrect">&#10003; 0</span>
+                <span class="score-wrong" id="scoreWrong">&#10007; 0</span>
+              </div>
+              <span class="score-progress" id="scoreProgress">0 / 0</span>
+            </div>
+            <div class="card-front-content">
+              <button class="tts-btn" id="ttsBtn" title="Sesli oku">&#128264;</button>
+              <button class="fav-btn" id="favBtn">&#9829;</button>
+              <div class="word" id="wordText">Loading...</div>
+              <div class="pos" id="posText"></div>
+              <div class="pronunciation" id="pronText"></div>
+              <div class="section-tag" id="sectionText"></div>
+              <div class="tap-hint">kart&#305; &#231;evirmek i&#231;in t&#305;kla</div>
+            </div>
           </div>
           <div class="card-face card-back">
-            <button class="fav-btn" id="favBtnBack">&#9825;</button>
+            <button class="fav-btn" id="favBtnBack">&#9829;</button>
             <div class="translation" id="translationText"></div>
             <div class="example" id="exampleText"></div>
             <div class="file-ref" id="fileText"></div>
@@ -1449,11 +1517,6 @@
     </div>
 
     <div class="content-page" id="contentPage">
-      <div class="content-nav">
-        <button class="content-nav-btn active" data-unit="1">Unit 1</button>
-        <button class="content-nav-btn" data-unit="2">Unit 2</button>
-        <button class="content-nav-btn" data-unit="3">Unit 3</button>
-      </div>
 
       <div class="unit-section active" id="unit1">
         <h2>Unit 1</h2>
@@ -2419,11 +2482,6 @@
         <h2>Notlar&#305;m</h2>
         <button class="notes-add-btn" id="notesAddBtn">+ Yeni Not</button>
       </div>
-      <div class="notes-filter-row">
-        <button class="notes-filter-btn active" data-notes-filter="all">T&#252;m&#252;</button>
-        <button class="notes-filter-btn" data-notes-filter="standalone">Genel</button>
-        <button class="notes-filter-btn" data-notes-filter="attached">Konulara Ba&#287;l&#305;</button>
-      </div>
       <div class="notes-list" id="notesList"></div>
       <div class="notes-empty" id="notesEmpty" style="display:none">
         <p>Hen&#252;z not eklenmemi&#351;.</p>
@@ -2490,6 +2548,7 @@ var nextBtn = el('nextBtn');
 var shuffleBtn = el('shuffleBtn');
 var scoreCorrect = el('scoreCorrect');
 var scoreWrong = el('scoreWrong');
+var scoreProgress = el('scoreProgress');
 var favBtn = el('favBtn');
 var favBtnBack = el('favBtnBack');
 var sidebar = el('sidebar');
@@ -2649,6 +2708,7 @@ function applyFilter() {
     exampleText.textContent = '';
     fileText.textContent = '';
     progress.textContent = '0 / 0';
+    scoreProgress.textContent = '0 / 0';
     progressBar.style.width = '0%';
     return;
   }
@@ -2656,8 +2716,8 @@ function applyFilter() {
   currentIndex = 0;
   correctCount = 0;
   wrongCount = 0;
-  scoreCorrect.textContent = '0';
-  scoreWrong.textContent = '0';
+  scoreCorrect.textContent = '\u2713 0';
+  scoreWrong.textContent = '\u2717 0';
   showCard(0, 'none');
 }
 
@@ -2665,8 +2725,8 @@ function updateFavBtns() {
   var w = shuffled[currentIndex];
   if (!w) return;
   var isFav = favorites.has(w.word);
-  favBtn.innerHTML = isFav ? '&#9829;' : '&#9825;';
-  favBtnBack.innerHTML = isFav ? '&#9829;' : '&#9825;';
+  favBtn.innerHTML = '&#9829;';
+  favBtnBack.innerHTML = '&#9829;';
   favBtn.classList.toggle('faved', isFav);
   favBtnBack.classList.toggle('faved', isFav);
 }
@@ -2715,6 +2775,7 @@ function populateCard(index) {
   exampleText.textContent = w.example || '';
   fileText.textContent = w.file || '';
   progress.textContent = (index + 1) + ' / ' + shuffled.length;
+  scoreProgress.textContent = (index + 1) + ' / ' + shuffled.length;
   progressBar.style.width = (((index + 1) / shuffled.length) * 100) + '%';
   answerInput.value = '';
   answerInput.className = '';
@@ -2746,8 +2807,8 @@ function checkAnswer() {
     feedbackEl.className = 'feedback wrong';
     wrongCount++;
   }
-  scoreCorrect.textContent = correctCount;
-  scoreWrong.textContent = wrongCount;
+  scoreCorrect.textContent = '\u2713 ' + correctCount;
+  scoreWrong.textContent = '\u2717 ' + wrongCount;
   answered = true;
 }
 
@@ -2789,8 +2850,8 @@ shuffleBtn.addEventListener('click', function() {
   currentIndex = 0;
   correctCount = 0;
   wrongCount = 0;
-  scoreCorrect.textContent = '0';
-  scoreWrong.textContent = '0';
+  scoreCorrect.textContent = '\u2713 0';
+  scoreWrong.textContent = '\u2717 0';
   if (shuffled.length > 0) showCard(0, 'none');
 });
 
@@ -3410,21 +3471,36 @@ var wordsPage = el('wordsPage');
 var contentPage = el('contentPage');
 var navWords = el('navWords');
 var navContent = el('navContent');
+var navIsland = el('navIsland');
+var islandExpanded = false;
 
 function switchPage(page) {
   currentPage = page;
   wordsPage.style.display = page === 'words' ? '' : 'none';
   contentPage.classList.toggle('active', page === 'content');
   notesPage.classList.toggle('active', page === 'notes');
-  navWords.classList.toggle('active', page === 'words');
-  navContent.classList.toggle('active', page === 'content');
-  navNotes.classList.toggle('active', page === 'notes');
+  document.querySelectorAll('.nav-island-tab').forEach(function(t) {
+    t.classList.toggle('active', t.dataset.page === page);
+  });
+  document.querySelectorAll('.nav-island-filter-group').forEach(function(g) {
+    g.classList.toggle('active', g.dataset.filtersFor === page);
+  });
   if (page === 'notes') renderNotesPage();
 }
 
-navWords.addEventListener('click', function() { switchPage('words'); });
-navContent.addEventListener('click', function() { switchPage('content'); });
-navNotes.addEventListener('click', function() { switchPage('notes'); });
+function toggleIsland(page) {
+  if (currentPage === page) {
+    islandExpanded = !islandExpanded;
+  } else {
+    switchPage(page);
+    islandExpanded = true;
+  }
+  navIsland.classList.toggle('expanded', islandExpanded);
+}
+
+navWords.addEventListener('click', function() { toggleIsland('words'); });
+navContent.addEventListener('click', function() { toggleIsland('content'); });
+navNotes.addEventListener('click', function() { toggleIsland('notes'); });
 
 /* ===== CONTENT NAV ===== */
 document.querySelectorAll('.content-nav-btn').forEach(function(btn) {
