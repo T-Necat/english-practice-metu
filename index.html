@@ -2555,6 +2555,26 @@ function normalize(str) {
     .trim();
 }
 
+function matchAnswer(userInput, correctAnswer) {
+  var u = normalize(userInput);
+  var c = normalize(correctAnswer);
+  if (!u) return false;
+  if (u === c) return true;
+  /* Split by / or , to get alternative answers */
+  var alts = c.split(/[\/,]/).map(function(s) { return s.trim(); }).filter(Boolean);
+  for (var i = 0; i < alts.length; i++) {
+    if (alts[i] === u) return true;
+  }
+  /* Allow dropping parenthetical parts: "risk almak (göze almak)" -> "risk almak" */
+  var noParens = c.replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+  if (noParens === u) return true;
+  var altNP = noParens.split(/[\/,]/).map(function(s) { return s.trim(); }).filter(Boolean);
+  for (var j = 0; j < altNP.length; j++) {
+    if (altNP[j] === u) return true;
+  }
+  return false;
+}
+
 function loadFileFilter() {
   try {
     var saved = localStorage.getItem('eng_file_filter');
@@ -2670,10 +2690,9 @@ function populateCard(index) {
 function checkAnswer() {
   var w = shuffled[currentIndex];
   if (!w) return;
-  var userAnswer = normalize(answerInput.value);
-  var correct = normalize(w.translation);
-  if (!userAnswer) return;
-  if (userAnswer === correct || correct.indexOf(userAnswer) !== -1 || userAnswer.indexOf(correct) !== -1) {
+  var userAnswer = answerInput.value;
+  if (!userAnswer.trim()) return;
+  if (matchAnswer(userAnswer, w.translation)) {
     answerInput.classList.add('correct');
     feedbackEl.textContent = 'Do\u011fru!';
     feedbackEl.className = 'feedback correct';
@@ -3649,9 +3668,7 @@ function checkMCAnswer(optEl, q) {
 
 function checkWriteAnswer(inp, q) {
   if (!inp.value.trim()) return;
-  var userAns = normalize(inp.value);
-  var correct = normalize(q.translation);
-  var isCorrect = userAns === correct || correct.indexOf(userAns) !== -1 || userAns.indexOf(correct) !== -1;
+  var isCorrect = matchAnswer(inp.value, q.translation);
   inp.disabled = true;
   quizState.answers[quizState.current] = isCorrect;
   var fb = quizContainer.querySelector('#quizFeedback');
