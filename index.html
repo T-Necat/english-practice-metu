@@ -1274,7 +1274,11 @@
       .score-bar { font-size: 12px; }
       .progress { font-size: 13px; }
       .progress-bar-container { margin: 12px 0 0; }
-      .note-modal { width: 100vw; max-width: 100vw; max-height: 100dvh; height: 100dvh; border-radius: 0; }
+      .note-modal { width: 100vw; max-width: 100vw; max-height: 100dvh; height: 100dvh; border-radius: 0; display: flex; flex-direction: column; }
+      .note-modal .note-modal-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      .note-modal .note-text-input { font-size: 16px; }
+      .note-modal .note-title-input { font-size: 16px; }
+      .note-modal-footer { flex-shrink: 0; position: sticky; bottom: 0; background: var(--sidebar-bg); z-index: 5; }
       .notes-page { padding: 0 4px 40px; }
       .notes-header h2 { font-size: 18px; }
       .note-card-actions { display: flex; }
@@ -3099,11 +3103,13 @@ function openNoteEditor(noteObj, topicKey) {
   noteDeleteBtn.style.display = noteObj ? '' : 'none';
   renderPendingImages();
   noteModalOverlay.classList.add('open');
-  noteTitleInput.focus();
+  setTimeout(function() { noteTitleInput.focus(); }, 300);
 }
 
 function closeNoteEditor() {
   noteModalOverlay.classList.remove('open');
+  noteModal.style.height = '';
+  noteModalOverlay.style.top = '';
   editingNote = null;
   pendingImages = [];
 }
@@ -3185,6 +3191,20 @@ noteModal.addEventListener('drop', function(e) {
   var files = Array.from(e.dataTransfer.files).filter(function(f) { return f.type.startsWith('image/'); });
   if (files.length > 0) handleImageUpload(files);
 });
+
+/* Mobile keyboard viewport fix for note modal */
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', function() {
+    if (noteModalOverlay.classList.contains('open')) {
+      noteModal.style.height = window.visualViewport.height + 'px';
+    }
+  });
+  window.visualViewport.addEventListener('scroll', function() {
+    if (noteModalOverlay.classList.contains('open')) {
+      noteModalOverlay.style.top = window.visualViewport.offsetTop + 'px';
+    }
+  });
+}
 
 /* ===== LIGHTBOX ===== */
 var lightboxOverlay = el('lightboxOverlay');
