@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Practice</title>
+  <script src="https://js.puter.com/v2/"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -2680,32 +2681,29 @@ document.addEventListener('keydown', function(e) {
 
 /* ===== TTS ===== */
 var ttsBtn = el('ttsBtn');
-var ttsAudio = null;
+var ttsPlaying = false;
 
 function speakWord(text) {
-  if (!text) return;
-  if (ttsAudio) { ttsAudio.pause(); ttsAudio = null; }
+  if (!text || ttsPlaying) return;
+  ttsPlaying = true;
   ttsBtn.classList.add('playing');
-  var url = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=' + encodeURIComponent(text);
-  ttsAudio = new Audio(url);
-  ttsAudio.onended = function() { ttsBtn.classList.remove('playing'); ttsAudio = null; };
-  ttsAudio.onerror = function() {
-    ttsBtn.classList.remove('playing');
-    ttsAudio = null;
-    speakWordFallback(text);
-  };
-  var playPromise = ttsAudio.play();
-  if (playPromise !== undefined) {
-    playPromise.catch(function() {
+  if (typeof puter !== 'undefined' && puter.ai && puter.ai.txt2speech) {
+    puter.ai.txt2speech(text, { voice: 'Amy', language: 'en-GB' }).then(function(audio) {
+      audio.onended = function() { ttsPlaying = false; ttsBtn.classList.remove('playing'); };
+      audio.onerror = function() { ttsPlaying = false; ttsBtn.classList.remove('playing'); };
+      audio.play().catch(function() { ttsPlaying = false; ttsBtn.classList.remove('playing'); });
+    }).catch(function() {
+      ttsPlaying = false;
       ttsBtn.classList.remove('playing');
-      ttsAudio = null;
       speakWordFallback(text);
     });
+  } else {
+    speakWordFallback(text);
   }
 }
 
 function speakWordFallback(text) {
-  if (!('speechSynthesis' in window)) return;
+  if (!('speechSynthesis' in window)) { ttsPlaying = false; ttsBtn.classList.remove('playing'); return; }
   speechSynthesis.cancel();
   var utter = new SpeechSynthesisUtterance(text);
   utter.lang = 'en-GB';
@@ -2718,9 +2716,8 @@ function speakWordFallback(text) {
     }
   }
   utter.rate = 0.85;
-  ttsBtn.classList.add('playing');
-  utter.onend = function() { ttsBtn.classList.remove('playing'); };
-  utter.onerror = function() { ttsBtn.classList.remove('playing'); };
+  utter.onend = function() { ttsPlaying = false; ttsBtn.classList.remove('playing'); };
+  utter.onerror = function() { ttsPlaying = false; ttsBtn.classList.remove('playing'); };
   speechSynthesis.speak(utter);
 }
 
