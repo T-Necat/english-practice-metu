@@ -1172,6 +1172,19 @@
     .topic-content details.error-toggle[open] summary::before { transform: rotate(90deg); }
     .topic-content details.error-toggle .error-content { padding: 0 14px 12px; }
 
+    /* ===== TOPIC TABLES ===== */
+    .topic-content table {
+      width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px;
+    }
+    .topic-content th {
+      background: var(--accent-light); color: var(--text-strong); font-weight: 700;
+      padding: 10px 12px; text-align: left; border: 1px solid var(--border);
+    }
+    .topic-content td {
+      padding: 8px 12px; border: 1px solid var(--border); line-height: 1.6;
+    }
+    .topic-content tr:nth-child(even) td { background: var(--tag-bg); }
+
     /* ===== NOTES PAGE ===== */
     .notes-page { display: none; width: 100%; max-width: clamp(300px, 90%, 1200px); padding: 0 16px 40px; }
     .notes-page.active { display: block; }
@@ -1452,7 +1465,8 @@
             <button class="filter-btn" id="gramStartBtn" style="background:var(--btn-dark-bg);color:var(--card-back-text);border-color:var(--btn-dark-bg)">Grammar</button>
           </div>
           <div class="nav-island-filter-group" data-filters-for="content">
-            <button class="content-nav-btn active" data-unit="1">Unit 1</button>
+            <button class="content-nav-btn active" data-unit="0">Temel</button>
+            <button class="content-nav-btn" data-unit="1">Unit 1</button>
             <button class="content-nav-btn" data-unit="2">Unit 2</button>
             <button class="content-nav-btn" data-unit="3">Unit 3</button>
           </div>
@@ -1522,7 +1536,555 @@
 
     <div class="content-page" id="contentPage">
 
-      <div class="unit-section active" id="unit1">
+      <div class="unit-section active" id="unit0">
+        <h2>Temel Konular</h2>
+
+        <!-- ===== KART 1: Ba&#351;rol Oyuncular&#305; ve Yard&#305;mc&#305; Fiiller ===== -->
+        <div class="topic-card" data-unit="0" data-topic="grammar">
+          <div class="topic-card-header">Ba&#351;rol Oyuncular&#305; ve Yard&#305;mc&#305; Fiiller <span class="arrow">&#9660;</span></div>
+          <div class="topic-card-body"><div class="topic-content">
+
+            <div class="logic-box">&#304;ngilizcede c&#252;mlelerin matemati&#287;i ikiye ayr&#305;l&#305;r: <strong>Durum</strong> (hareket yok) ve <strong>Hareket</strong> (eylem var). Zamanlara ve &#351;ah&#305;slara (I, You, We, They vs. He, She, It) g&#246;re yard&#305;mc&#305; fiiller de&#287;i&#351;iklik g&#246;sterir.</div>
+
+            <table>
+              <tr>
+                <th>Zaman / Durum</th>
+                <th>I, You, We, They <span class="tr">(&#199;o&#287;ullar ve Ben)</span></th>
+                <th>He, She, It <span class="tr">(Tekiller &mdash; &quot;S&quot; sevenler)</span></th>
+                <th>&#214;rnek C&#252;mleler</th>
+              </tr>
+              <tr>
+                <td><strong>&#350;u Anki Durum</strong> <span class="tr">(Hareket yok)</span></td>
+                <td><strong>I</strong> &rarr; am, <strong>You/We/They</strong> &rarr; are</td>
+                <td><strong>is</strong></td>
+                <td>I <strong>am</strong> tired. / She <strong>is</strong> ready.</td>
+              </tr>
+              <tr>
+                <td><strong>Ge&#231;mi&#351; Durum</strong> <span class="tr">(Hareket yok)</span></td>
+                <td><strong>I/He/She/It</strong> &rarr; was, <strong>You/We/They</strong> &rarr; were</td>
+                <td><strong>was</strong></td>
+                <td>We <strong>were</strong> at home. / He <strong>was</strong> at home.</td>
+              </tr>
+              <tr>
+                <td><strong>Sahip Olmak</strong> <span class="tr">(Var)</span></td>
+                <td><strong>have got</strong></td>
+                <td><strong>has got</strong></td>
+                <td>I <strong>have got</strong> a car. / It <strong>has got</strong> a tail.</td>
+              </tr>
+              <tr>
+                <td><strong>Geni&#351; Zaman: Olumlu</strong> <span class="tr">(Hareket)</span></td>
+                <td>Fiil yal&#305;n kal&#305;r</td>
+                <td>Fiil <strong>&quot;-s&quot;</strong> tak&#305;s&#305; al&#305;r</td>
+                <td>They <strong>play</strong> tennis. / She <strong>plays</strong> tennis.</td>
+              </tr>
+              <tr>
+                <td><strong>Geni&#351; Zaman: Soru/Olumsuz</strong></td>
+                <td><strong>do / don&rsquo;t</strong></td>
+                <td><strong>does / doesn&rsquo;t</strong> <span class="tr">(Fiildeki &quot;s&quot; d&#252;&#351;er)</span></td>
+                <td>I <strong>don&rsquo;t</strong> know. / He <strong>doesn&rsquo;t</strong> know.</td>
+              </tr>
+              <tr>
+                <td><strong>Ge&#231;mi&#351; Zaman: Hareket</strong> <span class="tr">(D&#252;n)</span></td>
+                <td><strong>did / didn&rsquo;t</strong> <span class="tr">(Herkes i&#231;in ayn&#305;)</span></td>
+                <td><strong>did / didn&rsquo;t</strong></td>
+                <td><strong>Did</strong> you sleep? / I <strong>didn&rsquo;t</strong> go.</td>
+              </tr>
+            </table>
+
+          </div></div>
+        </div>
+
+        <!-- ===== KART 2: Sahiplik ve Nesne Zamirleri ===== -->
+        <div class="topic-card" data-unit="0" data-topic="grammar">
+          <div class="topic-card-header">Sahiplik ve Nesne Zamirleri <span class="arrow">&#9660;</span></div>
+          <div class="topic-card-body"><div class="topic-content">
+
+            <div class="logic-box">Olaylar&#305;n ba&#351;rol&#252;nde olmad&#305;&#287;&#305;m&#305;zda, eylemden etkilendi&#287;imizde <strong>(Bana)</strong> veya bir &#351;eye sahip oldu&#287;umuzda <strong>(Benim)</strong> zamirler &#351;ekil de&#287;i&#351;tirir.</div>
+
+            <table>
+              <tr>
+                <th>Kim? (&#214;zne) <span class="tr">C&#252;mle ba&#351;&#305;</span></th>
+                <th>Aitlik (Benim...) <span class="tr">Yan&#305;na e&#351;ya/ki&#351;i al&#305;r</span></th>
+                <th>Kime/Kimi? (Nesne) <span class="tr">Eylemden etkilenir, sonda yer al&#305;r</span></th>
+              </tr>
+              <tr>
+                <td><strong>I</strong> <span class="tr">(Ben)</span></td>
+                <td><strong>My</strong> &rarr; My book <span class="tr">(Benim kitab&#305;m)</span></td>
+                <td><strong>Me</strong> &rarr; Call me <span class="tr">(Beni ara)</span></td>
+              </tr>
+              <tr>
+                <td><strong>You</strong> <span class="tr">(Sen/Siz)</span></td>
+                <td><strong>Your</strong> &rarr; Your car <span class="tr">(Senin araban)</span></td>
+                <td><strong>You</strong> &rarr; I love you <span class="tr">(Seni seviyorum)</span></td>
+              </tr>
+              <tr>
+                <td><strong>We</strong> <span class="tr">(Biz)</span></td>
+                <td><strong>Our</strong> &rarr; Our house <span class="tr">(Bizim evimiz)</span></td>
+                <td><strong>Us</strong> &rarr; Help us <span class="tr">(Bize yard&#305;m et)</span></td>
+              </tr>
+              <tr>
+                <td><strong>They</strong> <span class="tr">(Onlar)</span></td>
+                <td><strong>Their</strong> &rarr; Their dog <span class="tr">(Onlar&#305;n k&#246;pe&#287;i)</span></td>
+                <td><strong>Them</strong> &rarr; Tell them <span class="tr">(Onlara s&#246;yle)</span></td>
+              </tr>
+              <tr>
+                <td><strong>He</strong> <span class="tr">(O &mdash; Erkek)</span></td>
+                <td><strong>His</strong> &rarr; His pen <span class="tr">(Onun kalemi)</span></td>
+                <td><strong>Him</strong> &rarr; I know him <span class="tr">(Onu tan&#305;yorum)</span></td>
+              </tr>
+              <tr>
+                <td><strong>She</strong> <span class="tr">(O &mdash; Kad&#305;n)</span></td>
+                <td><strong>Her</strong> &rarr; Her cat <span class="tr">(Onun kedisi)</span></td>
+                <td><strong>Her</strong> &rarr; Listen to her <span class="tr">(Onu dinle)</span></td>
+              </tr>
+              <tr>
+                <td><strong>It</strong> <span class="tr">(O &mdash; Cans&#305;z)</span></td>
+                <td><strong>Its</strong> &rarr; Its tail <span class="tr">(Onun kuyru&#287;u)</span></td>
+                <td><strong>It</strong> &rarr; I bought it <span class="tr">(Onu ald&#305;m)</span></td>
+              </tr>
+            </table>
+
+          </div></div>
+        </div>
+
+        <!-- ===== KART 3: Soru Algoritmalar&#305; ===== -->
+        <div class="topic-card" data-unit="0" data-topic="grammar">
+          <div class="topic-card-header">Soru Algoritmalar&#305; &mdash; Tam Kapsaml&#305; Rehber <span class="arrow">&#9660;</span></div>
+          <div class="topic-card-body"><div class="topic-content">
+
+            <h3>Soru Kelimeleri (Wh- Questions &mdash; VIP)</h3>
+            <div class="logic-box">Soru kelimeleri <strong>VIP ge&#231;i&#351; &#252;st&#252;nl&#252;&#287;&#252;ne</strong> sahiptir &mdash; her zaman c&#252;mlenin ba&#351;&#305;na gelirler. Di&#287;er kelimeler onlara yol vermek zorundad&#305;r.</div>
+            <div class="vocab-grid">
+              <div class="vocab-item"><strong>What</strong> <span class="tr">Ne?</span></div>
+              <div class="vocab-item"><strong>Where</strong> <span class="tr">Nerede / Nereye?</span></div>
+              <div class="vocab-item"><strong>When</strong> <span class="tr">Ne zaman?</span></div>
+              <div class="vocab-item"><strong>Who</strong> <span class="tr">Kim?</span></div>
+              <div class="vocab-item"><strong>Why</strong> <span class="tr">Neden?</span></div>
+              <div class="vocab-item"><strong>How</strong> <span class="tr">Nas&#305;l?</span></div>
+              <div class="vocab-item"><strong>Which</strong> <span class="tr">Hangisi?</span></div>
+              <div class="vocab-item"><strong>Whose</strong> <span class="tr">Kimin?</span></div>
+            </div>
+
+            <h3>Yes / No Sorular&#305;</h3>
+            <div class="logic-box">Wh- sorular&#305;nda soru kelimesi ba&#351;a gelir. Ama bazen <strong>soru kelimesine ihtiyac&#305;n yoktur</strong> &mdash; sadece &quot;Evet mi, Hay&#305;r m&#305;?&quot; &#246;&#287;renmek istiyorsun. Bu durumda <strong>yard&#305;mc&#305; fiil</strong> do&#287;rudan ba&#351;a ge&#231;er.</div>
+            <div class="grammar-box"><span class="gram-aux">Yard&#305;mc&#305; Fiil</span> + <span class="gram-subj">&#214;zne</span> + <span class="gram-verb">Fiil</span>...?</div>
+
+            <table>
+              <tr>
+                <th>Zaman</th>
+                <th>Form&#252;l</th>
+                <th>&#214;rnek</th>
+                <th>T&#252;rk&#231;e</th>
+              </tr>
+              <tr>
+                <td><strong>Geni&#351; Zaman</strong></td>
+                <td><span class="gram-aux">Do/Does</span> + &#214;zne + Fiil?</td>
+                <td><span class="gram-aux">Do</span> <span class="gram-subj">you</span> <span class="gram-verb">like</span> coffee?</td>
+                <td><span class="tr">Kahve sever misin?</span></td>
+              </tr>
+              <tr>
+                <td><strong>Ge&#231;mi&#351; Zaman</strong></td>
+                <td><span class="gram-aux">Did</span> + &#214;zne + Fiil?</td>
+                <td><span class="gram-aux">Did</span> <span class="gram-subj">she</span> <span class="gram-verb">call</span> you?</td>
+                <td><span class="tr">Seni arad&#305; m&#305;?</span></td>
+              </tr>
+              <tr>
+                <td><strong>&#350;imdiki Zaman</strong></td>
+                <td><span class="gram-aux">Am/Is/Are</span> + &#214;zne + Fiil-ing?</td>
+                <td><span class="gram-aux">Are</span> <span class="gram-subj">you</span> <span class="gram-verb">coming</span>?</td>
+                <td><span class="tr">Geliyor musun?</span></td>
+              </tr>
+              <tr>
+                <td><strong>Durum (be)</strong></td>
+                <td><span class="gram-aux">Am/Is/Are</span> + &#214;zne + s&#305;fat/isim?</td>
+                <td><span class="gram-aux">Is</span> <span class="gram-subj">he</span> a doctor?</td>
+                <td><span class="tr">O doktor mu?</span></td>
+              </tr>
+              <tr>
+                <td><strong>Modal (can)</strong></td>
+                <td><span class="gram-aux">Can</span> + &#214;zne + Fiil?</td>
+                <td><span class="gram-aux">Can</span> <span class="gram-subj">you</span> <span class="gram-verb">swim</span>?</td>
+                <td><span class="tr">Y&#252;zebilir misin?</span></td>
+              </tr>
+            </table>
+
+            <div class="logic-box"><strong>K&#305;sa Cevaplar:</strong> Yes/No sorular&#305;na tam c&#252;mleyle de&#287;il, yard&#305;mc&#305; fiille k&#305;sa cevap verilir.<br>
+              &mdash; Do you like it? &rarr; <strong>Yes, I do.</strong> / <strong>No, I don&rsquo;t.</strong><br>
+              &mdash; Is she coming? &rarr; <strong>Yes, she is.</strong> / <strong>No, she isn&rsquo;t.</strong><br>
+              &mdash; Can he swim? &rarr; <strong>Yes, he can.</strong> / <strong>No, he can&rsquo;t.</strong>
+            </div>
+
+            <h3>Algoritma 1 &mdash; Nesne Sorusu (Klasik Kural)</h3>
+            <div class="grammar-box"><span class="gram-aux">Soru Kelimesi + Yard&#305;mc&#305; Fiil (do/does/did)</span> + <span class="gram-subj">&#214;zne</span> + <span class="gram-verb">Fiil</span>...?</div>
+            <div class="logic-box">&#214;zneyi <strong>zaten biliyorsun</strong>, nesneyi/tamamlay&#305;c&#305;y&#305; ar&#305;yorsun. &#214;zne yerinde durur, yard&#305;mc&#305; fiil &#246;n&#252;ne ge&#231;er.</div>
+            <div class="example">
+              What <span class="gram-aux">did</span> <span class="gram-subj">she</span> <span class="gram-verb">buy</span>? <span class="tr">(Ne sat&#305;n ald&#305;?)</span><br>
+              Who <span class="gram-aux">did</span> <span class="gram-subj">you</span> <span class="gram-verb">call</span>? <span class="tr">(Kimi arad&#305;n?)</span><br>
+              Where <span class="gram-aux">have</span> <span class="gram-subj">they</span> <span class="gram-verb">gone</span>? <span class="tr">(Nereye gittiler?)</span>
+            </div>
+
+            <h3>Algoritma 2 &mdash; &#214;zne Sorusu (&#304;stisna)</h3>
+            <div class="grammar-box"><span class="gram-subj">Soru Kelimesi (= &#214;zne)</span> + <span class="gram-verb">Fiil</span>...? &mdash; yard&#305;mc&#305; fiil <strong>YOK</strong></div>
+            <div class="logic-box">&#214;zneyi ar&#305;yorsun. Yer de&#287;i&#351;tirecek bir &#246;zne yok &mdash; soru kelimesi zaten &#246;znenin kendisi. Bu y&#252;zden yard&#305;mc&#305; fiil <strong>gerekmez</strong>.</div>
+            <div class="example">
+              <span class="gram-subj">Who</span> <span class="gram-verb">called</span> you? <span class="tr">(Seni kim arad&#305;?)</span><br>
+              <span class="gram-subj">What</span> <span class="gram-verb">happened</span> last night? <span class="tr">(D&#252;n gece ne oldu?)</span><br>
+              <span class="gram-subj">Who</span> <span class="gram-verb">made</span> this cake? <span class="tr">(Bu pastay&#305; kim yapt&#305;?)</span>
+            </div>
+
+            <h4>Algoritma 1 vs 2 Kar&#351;&#305;la&#351;t&#305;rma</h4>
+            <div class="grammar-box">
+              <strong>Alg. 1 (Nesne):</strong> Who <span class="gram-aux">did</span> <span class="gram-subj">you</span> <span class="gram-verb">call</span>? &mdash; K&#304;M&#304; arad&#305;n?<br>
+              <strong>Alg. 2 (&#214;zne):</strong> <span class="gram-subj">Who</span> <span class="gram-verb">called</span> you? &mdash; K&#304;M arad&#305;?
+            </div>
+
+            <h3>Dolayl&#305; Sorular (Indirect Questions &mdash; Kibar &#304;stisna)</h3>
+            <div class="logic-box">Giri&#351; ifadesi (Could you tell me...) zaten soru yap&#305;s&#305; ta&#351;&#305;r. &#304;kinci kez devrik yapmak &mdash; <strong>&#231;ift devrik</strong> olur. &#304;ngilizce &#231;ift devrik yapmaz! C&#252;mle sadece <strong>bir kez</strong> devrilir, bu y&#252;zden i&#231; k&#305;s&#305;m d&#252;z c&#252;mle s&#305;ras&#305; kullan&#305;r.</div>
+            <div class="grammar-box">Kibar Giri&#351; + Soru Kelimesi + <span class="gram-subj">&#214;zne</span> + <span class="gram-verb">Fiil</span> (d&#252;z s&#305;ra)</div>
+            <div class="example">
+              <strong>Do&#287;rudan:</strong> Where <strong>is</strong> the bank?<br>
+              <strong>Dolayl&#305;:</strong> Could you tell me where the bank <strong>is</strong>? <span class="tr">(Banka nerede, s&#246;yler misiniz?)</span><br><br>
+              <strong>Do&#287;rudan:</strong> What <strong>do</strong> you want?<br>
+              <strong>Dolayl&#305;:</strong> Do you know what you <strong>want</strong>? <span class="tr">(Ne istedi&#287;ini biliyor musun?)</span><br><br>
+              <strong>Do&#287;rudan:</strong> He <strong>is</strong> here. &rarr; Where <strong>is</strong> he?<br>
+              <strong>Dolayl&#305;:</strong> Do you know where he <strong>is</strong>? <span class="tr">(Onun nerede oldu&#287;unu biliyor musun?)</span>
+            </div>
+            <p><strong>Yes/No dolayl&#305; sorular:</strong></p>
+            <div class="grammar-box">Kibar Giri&#351; + <strong>if / whether</strong> + <span class="gram-subj">&#214;zne</span> + <span class="gram-verb">Fiil</span></div>
+            <div class="example">
+              I wonder <strong>if</strong> she passed. <span class="tr">(Ge&#231;ti mi acaba.)</span>
+            </div>
+
+            <h3>Olumsuz Sorular (Negative Questions)</h3>
+            <div class="logic-box">Olumsuz soru soruyorsan, asl&#305;nda <strong>EVET</strong> yan&#305;t&#305; bekliyorsun ya da &#351;a&#351;k&#305;nl&#305;k / hayal k&#305;r&#305;kl&#305;&#287;&#305; ifade ediyorsun.</div>
+            <div class="grammar-box"><span class="gram-aux">Yard&#305;mc&#305; Fiil + n&rsquo;t</span> + <span class="gram-subj">&#214;zne</span> + <span class="gram-verb">Fiil</span>...?</div>
+            <div class="example">
+              <span class="gram-aux">Don&rsquo;t</span> <span class="gram-subj">you</span> <span class="gram-verb">like</span> it? <span class="tr">(Sevmiyor musun?)</span><br>
+              <span class="gram-aux">Isn&rsquo;t</span> this amazing? <span class="tr">(Bu harika de&#287;il mi?)</span><br>
+              <span class="gram-aux">Haven&rsquo;t</span> <span class="gram-subj">you</span> <span class="gram-verb">finished</span> yet? <span class="tr">(Hala bitirmedin mi?)</span>
+            </div>
+
+            <details class="error-toggle"><summary>Yayg&#305;n Hatalar</summary><div class="error-content">
+              &times; Who did call you? &rarr; &#10004; Who called you? <span class="tr">(&#214;zne sorusu &mdash; auxiliary yok)</span><br>
+              &times; Who you called? &rarr; &#10004; Who did you call? <span class="tr">(Nesne sorusu &mdash; auxiliary laz&#305;m)</span><br>
+              &times; Do you know where is the bank? &rarr; &#10004; ...where the bank is? <span class="tr">(Dolayl&#305; soru &mdash; d&#252;z s&#305;ra)</span>
+            </div></details>
+
+          </div></div>
+        </div>
+
+        <!-- ===== KART 4: Am/Is/Are ===== -->
+        <div class="topic-card" data-unit="0" data-topic="grammar">
+          <div class="topic-card-header">Am / Is / Are &mdash; &#304;ki Farkl&#305; G&#246;rev <span class="arrow">&#9660;</span></div>
+          <div class="topic-card-body"><div class="topic-content">
+
+            <div class="logic-box"><strong>Am, is, are</strong> kelimelerinin c&#252;mlede iki farkl&#305; g&#246;revi vard&#305;r. Hangi g&#246;revde oldu&#287;unu anlamak i&#231;in c&#252;mlede <strong>-ing</strong>&rsquo;li bir fiil olup olmad&#305;&#287;&#305;na bak.</div>
+
+            <h3>G&#246;rev 1: Ana Fiil (Durum Bildirme)</h3>
+            <div class="grammar-box"><span class="gram-subj">&#214;zne</span> + <span class="gram-verb">am / is / are</span> + durum / s&#305;fat / isim</div>
+            <div class="logic-box">C&#252;mlede ko&#351;mak, okumak gibi hareket <strong>yoksa</strong>, am/is/are tek ba&#351;lar&#305;na kullan&#305;l&#305;r. &quot;Ben doktorum&quot;, &quot;O haz&#305;r&quot; gibi <strong>durum</strong> bildirirler.</div>
+            <div class="example">
+              I <strong>am</strong> a doctor. <span class="tr">(Ben doktorum.)</span><br>
+              She <strong>is</strong> ready. <span class="tr">(O haz&#305;r.)</span><br>
+              They <strong>are</strong> at home. <span class="tr">(Onlar evde.)</span><br>
+              It <strong>is</strong> cold. <span class="tr">(Hava so&#287;uk.)</span>
+            </div>
+
+            <h3>G&#246;rev 2: Yard&#305;mc&#305; Fiil (&#350;imdiki Zaman &mdash; ing)</h3>
+            <div class="grammar-box"><span class="gram-subj">&#214;zne</span> + <span class="gram-aux">am / is / are</span> + <span class="gram-verb">Fiil + ing</span></div>
+            <div class="logic-box">Tam &#351;u an yap&#305;lan bir eylemi anlatmak i&#231;in am/is/are <strong>yard&#305;mc&#305; fiil</strong> olur. Fiilin sonuna <strong>-ing</strong> (T&#252;rk&#231;edeki -yor eki) gelir.</div>
+            <div class="example">
+              I <span class="gram-aux">am</span> <span class="gram-verb">working</span>. <span class="tr">(&#199;al&#305;&#351;&#305;yorum.)</span><br>
+              She <span class="gram-aux">is</span> <span class="gram-verb">sleeping</span>. <span class="tr">(Uyuyor.)</span><br>
+              They <span class="gram-aux">are</span> <span class="gram-verb">playing</span> football. <span class="tr">(Futbol oynuyorlar.)</span>
+            </div>
+
+          </div></div>
+        </div>
+
+        <!-- ===== KART 5: In, On, At ===== -->
+        <div class="topic-card" data-unit="0" data-topic="grammar">
+          <div class="topic-card-header">In, On, At &mdash; Edatlar Piramidi <span class="arrow">&#9660;</span></div>
+          <div class="topic-card-body"><div class="topic-content">
+
+            <div class="logic-box">Zaman ve yer bildirirken en geni&#351; alandan en dar (nokta at&#305;&#351;&#305;) alana do&#287;ru <strong>huni mant&#305;&#287;&#305;yla</strong> daralt&#305;l&#305;r: <strong>IN</strong> (geni&#351;) &rarr; <strong>ON</strong> (daha dar) &rarr; <strong>AT</strong> (nokta at&#305;&#351;&#305;).</div>
+
+            <table>
+              <tr>
+                <th>Edat</th>
+                <th>Boyut</th>
+                <th>Zaman &#304;&#231;in</th>
+                <th>Yer &#304;&#231;in</th>
+              </tr>
+              <tr>
+                <td><strong>IN</strong></td>
+                <td>Geni&#351; <span class="tr">(&#304;&#231;inde)</span></td>
+                <td>Y&#305;llar, Aylar, Mevsimler<br><span class="tr">in 2024, in May, in summer</span></td>
+                <td>&#220;lkeler, &#350;ehirler<br><span class="tr">in Turkey, in Ankara</span></td>
+              </tr>
+              <tr>
+                <td><strong>ON</strong></td>
+                <td>Daha Dar <span class="tr">(&#220;st&#252;nde)</span></td>
+                <td>G&#252;nler<br><span class="tr">on Monday, on Friday</span></td>
+                <td>Sokaklar, Caddeler<br><span class="tr">on Oxford Street</span></td>
+              </tr>
+              <tr>
+                <td><strong>AT</strong></td>
+                <td>Nokta At&#305;&#351;&#305; <span class="tr">(Tam orada)</span></td>
+                <td>Tam Saatler<br><span class="tr">at 10:30, at 8:00</span></td>
+                <td>Tam Adresler, Konumlar<br><span class="tr">at home, at the bus stop</span></td>
+              </tr>
+            </table>
+
+            <div class="example">
+              I was born <strong>in</strong> 1999. <span class="tr">(Y&#305;l &mdash; geni&#351;)</span><br>
+              The meeting is <strong>on</strong> Wednesday. <span class="tr">(G&#252;n &mdash; daha dar)</span><br>
+              Let&rsquo;s meet <strong>at</strong> 3 o&rsquo;clock. <span class="tr">(Saat &mdash; nokta at&#305;&#351;&#305;)</span><br><br>
+              She lives <strong>in</strong> Istanbul. <span class="tr">(&#350;ehir &mdash; geni&#351;)</span><br>
+              The shop is <strong>on</strong> Main Street. <span class="tr">(Cadde &mdash; daha dar)</span><br>
+              I&rsquo;m <strong>at</strong> the bus stop. <span class="tr">(Konum &mdash; nokta at&#305;&#351;&#305;)</span>
+            </div>
+
+          </div></div>
+        </div>
+
+        <!-- ===== KART 6: A, An, The ===== -->
+        <div class="topic-card" data-unit="0" data-topic="grammar">
+          <div class="topic-card-header">A, An, The &mdash; Etiketler <span class="arrow">&#9660;</span></div>
+          <div class="topic-card-body"><div class="topic-content">
+
+            <h3>A / An &mdash; Herhangi Bir</h3>
+            <div class="logic-box">&#304;lk kez bahsedilen ve d&#252;nyadaki say&#305;s&#305;z benzerinden <strong>herhangi biri</strong> olan isimler i&#231;in kullan&#305;l&#305;r. Sessiz harfle okunan isme <strong>a</strong>, sesliyle okunan isme <strong>an</strong> gelir.</div>
+            <div class="example">
+              I saw <strong>a</strong> dog in the park. <span class="tr">(Herhangi bir k&#246;pek)</span><br>
+              She is <strong>a</strong> teacher. <span class="tr">(&#214;&#287;retmenlerden biri)</span><br>
+              He ate <strong>an</strong> apple. <span class="tr">(Herhangi bir elma &mdash; sesli harf)</span><br>
+              It was <strong>an</strong> honest mistake. <span class="tr">(&quot;h&quot; sessiz &rarr; an)</span>
+            </div>
+
+            <h3>The &mdash; Belirli / Bilinen</h3>
+            <div class="logic-box">Konu&#351;an iki ki&#351;inin de neyden bahsetti&#287;ini bildi&#287;i veya d&#252;nyada <strong>tek olan</strong> &#351;eyler i&#231;in kullan&#305;l&#305;r.</div>
+            <div class="example">
+              I saw a dog. <strong>The</strong> dog was big. <span class="tr">(Az &#246;nce bahsetti&#287;im k&#246;pek)</span><br>
+              <strong>The</strong> sun is bright today. <span class="tr">(G&#252;ne&#351; tek &mdash; herkes bilir)</span><br>
+              Can you close <strong>the</strong> door? <span class="tr">(Hangi kap&#305; oldu&#287;u belli)</span>
+            </div>
+
+            <h3>S&#305;f&#305;r Etiket (&mdash;)</h3>
+            <div class="logic-box">Genel olarak bir gruptan bahsederken, &#351;ehir/&#252;lke isimlerinde ve say&#305;lamayan genel kavramlarda etiket <strong>kullan&#305;lmaz</strong>.</div>
+            <div class="example">
+              I love (&mdash;) dogs. <span class="tr">(Genel olarak k&#246;pekleri severim)</span><br>
+              She lives in (&mdash;) Ankara. <span class="tr">(&#350;ehir ismi)</span><br>
+              I drink (&mdash;) water every day. <span class="tr">(Genel kavram)</span>
+            </div>
+
+            <h4>Adam Senaryosu &mdash; Ak&#305;&#351;</h4>
+            <div class="grammar-box">
+              1. I saw <strong>a</strong> dog. <span class="tr">(&#304;lk kez &rarr; a)</span><br>
+              2. <strong>The</strong> dog was big. <span class="tr">(Art&#305;k bilinen &rarr; the)</span><br>
+              3. I love (&mdash;) dogs. <span class="tr">(Genel &rarr; etiket yok)</span>
+            </div>
+
+          </div></div>
+        </div>
+
+        <!-- ===== KART 7: To vs For ===== -->
+        <div class="topic-card" data-unit="0" data-topic="grammar">
+          <div class="topic-card-header">To vs For <span class="arrow">&#9660;</span></div>
+          <div class="topic-card-body"><div class="topic-content">
+
+            <h3>To &mdash; Y&#246;nelme / Transfer</h3>
+            <div class="logic-box"><strong>To</strong>, bir &#351;eyin bir yerden ba&#351;ka bir yere <strong>hareket etti&#287;ini</strong> g&#246;sterir. Fiziksel veya soyut bir transfer vard&#305;r.</div>
+            <div class="example">
+              Send an email <strong>to</strong> Ali. <span class="tr">(E-posta Ali&rsquo;ye gidiyor &rarr; transfer)</span><br>
+              I gave the book <strong>to</strong> her. <span class="tr">(Kitap ona ge&#231;ti &rarr; transfer)</span><br>
+              We went <strong>to</strong> the park. <span class="tr">(Parka do&#287;ru gittik &rarr; y&#246;n)</span><br>
+              Talk <strong>to</strong> me. <span class="tr">(Bana do&#287;ru konu&#351; &rarr; y&#246;nelme)</span>
+            </div>
+
+            <h3>For &mdash; Ama&#231; / Fayda</h3>
+            <div class="logic-box"><strong>For</strong>, bir &#351;eyin kimin <strong>yarar&#305;na</strong> yap&#305;ld&#305;&#287;&#305;n&#305; veya amac&#305;n&#305; belirtir. Ortada hen&#252;z fiziksel bir transfer yoktur.</div>
+            <div class="example">
+              This coffee is <strong>for</strong> you. <span class="tr">(Senin i&#231;in &rarr; fayda)</span><br>
+              I bought a gift <strong>for</strong> my mom. <span class="tr">(Annem i&#231;in &rarr; ama&#231;)</span><br>
+              She works <strong>for</strong> a big company. <span class="tr">(&#350;irket ad&#305;na &rarr; fayda)</span><br>
+              This tool is <strong>for</strong> cutting wood. <span class="tr">(Tahta kesmek i&#231;in &rarr; ama&#231;)</span>
+            </div>
+
+            <h4>Kar&#351;&#305;la&#351;t&#305;rma</h4>
+            <div class="grammar-box">
+              I gave the book <strong>to</strong> her. <span class="tr">(Kitap fiziksel olarak ona ge&#231;ti)</span><br>
+              I bought a book <strong>for</strong> her. <span class="tr">(Onun ad&#305;na ald&#305;m, hen&#252;z vermemi&#351; olabilirim)</span>
+            </div>
+
+          </div></div>
+        </div>
+
+        <!-- ===== KART 8: S Harfinin 3 G&#246;revi ===== -->
+        <div class="topic-card" data-unit="0" data-topic="grammar">
+          <div class="topic-card-header">&quot;S&quot; Harfinin 3 G&#246;revi <span class="arrow">&#9660;</span></div>
+          <div class="topic-card-body"><div class="topic-content">
+
+            <div class="logic-box"><strong>&quot;S&quot;</strong> harfi kelimenin neresinde oldu&#287;una g&#246;re 3 farkl&#305; anlam ta&#351;&#305;r. G&#246;r&#252;n&#252;&#351;te ayn&#305;, i&#351;levde farkl&#305;!</div>
+
+            <h3>1. &#199;o&#287;ul (Plural)</h3>
+            <div class="grammar-box">&#304;simlere gelerek <strong>&quot;-lar, -ler&quot;</strong> anlam&#305; katar.</div>
+            <div class="example">
+              car &rarr; car<strong>s</strong> <span class="tr">(arabalar)</span><br>
+              book &rarr; book<strong>s</strong> <span class="tr">(kitaplar)</span><br>
+              dog &rarr; dog<strong>s</strong> <span class="tr">(k&#246;pekler)</span>
+            </div>
+
+            <h3>2. Aitlik (Possessive &mdash; &rsquo;s)</h3>
+            <div class="grammar-box">Kesme i&#351;aretiyle (<strong>&rsquo;s</strong>) gelerek <strong>&quot;-in, -&#305;n&quot;</strong> anlam&#305; katar.</div>
+            <div class="example">
+              Ali<strong>&rsquo;s</strong> book <span class="tr">(Ali&rsquo;nin kitab&#305;)</span><br>
+              the cat<strong>&rsquo;s</strong> tail <span class="tr">(kedinin kuyru&#287;u)</span><br>
+              my mother<strong>&rsquo;s</strong> car <span class="tr">(annemin arabas&#305;)</span>
+            </div>
+
+            <h3>3. Geni&#351; Zaman &mdash; 3. Tekil (Present Simple)</h3>
+            <div class="grammar-box">Sadece geni&#351; zamanda ve sadece <strong>He, She, It</strong> &#246;znelerinde hareket bildiren fiillerin sonuna gelir. &#199;o&#287;ullukla ilgisi yoktur.</div>
+            <div class="example">
+              She work<strong>s</strong> every day. <span class="tr">(O her g&#252;n &#231;al&#305;&#351;&#305;r.)</span><br>
+              He play<strong>s</strong> guitar. <span class="tr">(O gitar &#231;alar.)</span><br>
+              It rain<strong>s</strong> a lot here. <span class="tr">(Burada &#231;ok ya&#287;mur ya&#287;ar.)</span>
+            </div>
+
+            <h4>Mini Quiz &mdash; Hangi &quot;S&quot;?</h4>
+            <div class="grammar-box">
+              1. Look at those dog<strong>s</strong>! &rarr; <span class="tr">&#199;o&#287;ul</span><br>
+              2. My brother run<strong>s</strong> fast. &rarr; <span class="tr">Geni&#351; Zaman (3. tekil)</span><br>
+              3. This is Ay&#351;e<strong>&rsquo;s</strong> computer. &rarr; <span class="tr">Aitlik</span>
+            </div>
+
+          </div></div>
+        </div>
+
+        <!-- ===== KART 9: Should / Shouldn't ===== -->
+        <div class="topic-card" data-unit="0" data-topic="grammar">
+          <div class="topic-card-header">Should / Shouldn&rsquo;t &mdash; Tavsiye ve Fikir <span class="arrow">&#9660;</span></div>
+          <div class="topic-card-body"><div class="topic-content">
+
+            <div class="logic-box"><strong>Should</strong>, birinin yapmas&#305; gereken &#351;eyi tavsiye etmek veya fikir sormak i&#231;in kullan&#305;l&#305;r. T&#252;rk&#231;ede <strong>&quot;-meli, -mal&#305;&quot;</strong> demektir. Emir de&#287;il, &quot;senin i&#231;in iyi olur&quot; tonundad&#305;r.</div>
+
+            <table>
+              <tr>
+                <th>Durum</th>
+                <th>Form&#252;l</th>
+                <th>&#214;rnek C&#252;mle</th>
+                <th>T&#252;rk&#231;e Anlam&#305;</th>
+              </tr>
+              <tr>
+                <td><strong>Olumlu</strong> <span class="tr">(Tavsiye)</span></td>
+                <td><span class="gram-subj">&#214;zne</span> + <span class="gram-aux">should</span> + <span class="gram-verb">Fiil</span></td>
+                <td><span class="gram-subj">You</span> <span class="gram-aux">should</span> <span class="gram-verb">sleep</span>.</td>
+                <td><span class="tr">Uyumal&#305;s&#305;n. (Uyuman senin i&#231;in iyi olur)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Olumsuz</strong> <span class="tr">(Uyar&#305;)</span></td>
+                <td><span class="gram-subj">&#214;zne</span> + <span class="gram-aux">shouldn&rsquo;t</span> + <span class="gram-verb">Fiil</span></td>
+                <td><span class="gram-subj">He</span> <span class="gram-aux">shouldn&rsquo;t</span> <span class="gram-verb">smoke</span>.</td>
+                <td><span class="tr">Sigara i&#231;memeli. (&#304;&#231;mesi k&#246;t&#252; bir fikir)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Soru</strong> <span class="tr">(Fikir Dan&#305;&#351;ma)</span></td>
+                <td><span class="gram-aux">Should</span> + <span class="gram-subj">&#214;zne</span> + <span class="gram-verb">Fiil</span>?</td>
+                <td><span class="gram-aux">Should</span> <span class="gram-subj">I</span> <span class="gram-verb">call</span> her?</td>
+                <td><span class="tr">Onu aramal&#305; m&#305;y&#305;m? (Sence aramam iyi olur mu?)</span></td>
+              </tr>
+            </table>
+
+            <div class="example">
+              You <span class="gram-aux">should</span> <span class="gram-verb">drink</span> more water. <span class="tr">(Daha &#231;ok su i&#231;melisin.)</span><br>
+              She <span class="gram-aux">shouldn&rsquo;t</span> <span class="gram-verb">stay</span> up late. <span class="tr">(Ge&#231; yatmamal&#305;.)</span><br>
+              <span class="gram-aux">Should</span> we <span class="gram-verb">wait</span> for him? <span class="tr">(Onu beklemeli miyiz?)</span><br>
+              <span class="gram-aux">Should</span> I <span class="gram-verb">take</span> an umbrella? <span class="tr">(&#350;emsiye almal&#305; m&#305;y&#305;m?)</span>
+            </div>
+
+            <div class="logic-box"><strong>should vs must:</strong> <code>should</code> = tavsiye (yapsan iyi olur). <code>must</code> = zorunluluk (yapmak zorundas&#305;n). &quot;You should study&quot; bir &#246;neri, &quot;You must study&quot; bir emir gibidir.</div>
+
+          </div></div>
+        </div>
+
+        <!-- ===== KART 10: Much / Many / More ===== -->
+        <div class="topic-card" data-unit="0" data-topic="grammar">
+          <div class="topic-card-header">Much, Many, More &mdash; Miktar &#220;&#231;l&#252;s&#252; <span class="arrow">&#9660;</span></div>
+          <div class="topic-card-body"><div class="topic-content">
+
+            <div class="logic-box">Bu &#252;&#231; kelime tek ba&#351;lar&#305;na kullan&#305;l&#305;r. <strong>Many</strong> ve <strong>much</strong> = &quot;&#231;ok&quot; demektir. <strong>More</strong> = &quot;daha (fazla)&quot; demektir. Yan yana gelmeleri (<em>much more, many more</em>) sadece g&#252;&#231;lerini birle&#351;tirdikleri &#246;zel bir vurgu durumudur.</div>
+
+            <h3>Tek Ba&#351;lar&#305;na Kullan&#305;m</h3>
+
+            <table>
+              <tr>
+                <th>Kelime</th>
+                <th>Anlam&#305;</th>
+                <th>Neyle Kullan&#305;l&#305;r?</th>
+                <th>&#214;rnek</th>
+              </tr>
+              <tr>
+                <td><strong>Many</strong></td>
+                <td>&#199;ok</td>
+                <td>Say&#305;labilen <span class="tr">(kitap, araba, insan)</span></td>
+                <td>I have <strong>many</strong> friends. <span class="tr">(&#199;ok arkada&#351;&#305;m var.)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Much</strong></td>
+                <td>&#199;ok</td>
+                <td>Say&#305;lamayan <span class="tr">(zaman, su, para)</span></td>
+                <td>I don&rsquo;t have <strong>much</strong> time. <span class="tr">(&#199;ok zaman&#305;m yok.)</span></td>
+              </tr>
+              <tr>
+                <td><strong>More</strong></td>
+                <td>Daha (fazla)</td>
+                <td>Her ikisiyle de <span class="tr">(joker!)</span></td>
+                <td>I need <strong>more</strong> water. / We need <strong>more</strong> chairs. <span class="tr">(Daha fazla)</span></td>
+              </tr>
+            </table>
+
+            <div class="logic-box"><strong>&#304;pucu:</strong> <code>much</code> genellikle olumsuz c&#252;mlelerde ve sorularda kullan&#305;l&#305;r. Olumlu c&#252;mlede &quot;a lot of&quot; daha do&#287;ald&#305;r: <em>I have <strong>a lot of</strong> time</em> (&#10004;) vs. <em>I have much time</em> (&#9888; garip durur).</div>
+
+            <h3>G&#252;&#231;lerini Birle&#351;tirdiklerinde &mdash; Vurgu</h3>
+            <div class="logic-box">&quot;Daha&quot; yetmedi&#287;inde, <strong>&quot;&#199;OK daha&quot;</strong> demek i&#231;in <code>much</code> veya <code>many</code> kelimesini <code>more</code>&rsquo;un &#246;n&#252;ne getirirsin.</div>
+
+            <h4>1. &#214;zellik (S&#305;fat) Vurgularken: <strong>Much More</strong></h4>
+            <div class="grammar-box">
+              <em>Normal:</em> This car is <strong>more</strong> expensive. <span class="tr">(Daha pahal&#305;.)</span><br>
+              <em>Vurgulu:</em> This car is <strong>much more</strong> expensive! <span class="tr">(&#199;ok daha pahal&#305;!)</span>
+            </div>
+            <div class="example">
+              English is <strong>much more</strong> important! <span class="tr">(&#199;ok daha &#246;nemli!)</span><br>
+              This test is <strong>much more</strong> difficult. <span class="tr">(&#199;ok daha zor!)</span>
+            </div>
+
+            <h4>2. Miktar Vurgularken: Say&#305;labilen vs Say&#305;lamayan</h4>
+            <table>
+              <tr>
+                <th>T&#252;r</th>
+                <th>Kullan&#305;m</th>
+                <th>&#214;rnek</th>
+              </tr>
+              <tr>
+                <td>Say&#305;lamayan <span class="tr">(para, zaman, su)</span></td>
+                <td><strong>much more</strong></td>
+                <td>I need <strong>much more</strong> time. <span class="tr">(&#199;ok daha fazla zaman)</span></td>
+              </tr>
+              <tr>
+                <td>Say&#305;labilen <span class="tr">(araba, kitap, kişi)</span></td>
+                <td><strong>many more</strong></td>
+                <td>We need <strong>many more</strong> chairs. <span class="tr">(&#199;ok daha fazla sandalye)</span></td>
+              </tr>
+            </table>
+
+            <div class="logic-box"><strong>&#214;zet:</strong> &#214;zellik (pahal&#305;, g&#252;zel, zor) anlat&#305;yorsan d&#252;&#351;&#252;nmeden <strong>much more</strong> yap&#305;&#351;t&#305;r! Miktar anlat&#305;yorsan say&#305;l&#305;p say&#305;lamad&#305;&#287;&#305;na dikkat et: say&#305;lamayan &rarr; <strong>much more</strong>, say&#305;labilen &rarr; <strong>many more</strong>.</div>
+
+          </div></div>
+        </div>
+
+      </div>
+
+      <div class="unit-section" id="unit1">
         <h2>Unit 1</h2>
 
         <div class="topic-card" data-unit="1" data-topic="grammar">
