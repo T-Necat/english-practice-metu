@@ -1826,7 +1826,10 @@ function goPrev() {
   showCard(currentIndex, 'left');
 }
 
-cardContainer.addEventListener('click', function() { card.classList.toggle('flipped'); });
+cardContainer.addEventListener('click', function(e) {
+  if ('ontouchstart' in window) return;
+  card.classList.toggle('flipped');
+});
 checkBtn.addEventListener('click', checkAnswer);
 prevBtn.addEventListener('click', goPrev);
 nextBtn.addEventListener('click', goNext);
@@ -1868,6 +1871,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 var touchStartX = 0, touchStartY = 0, touchStartTime = 0, isDragging = false;
+var lastTapTime = 0;
 var cardWrapper = document.querySelector('.card-wrapper');
 
 cardWrapper.addEventListener('touchstart', function(e) {
@@ -1921,7 +1925,13 @@ cardWrapper.addEventListener('touchend', function(e) {
   }
 
   if (Math.abs(dx) < 10 && Math.abs(dy) < 10) {
-    card.classList.toggle('flipped');
+    var now = Date.now();
+    if (now - lastTapTime < 350) {
+      card.classList.toggle('flipped');
+      lastTapTime = 0;
+    } else {
+      lastTapTime = now;
+    }
   }
 }, {passive: true});
 
