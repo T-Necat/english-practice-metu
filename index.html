@@ -123,6 +123,13 @@
       --shadow: 0 8px 32px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.2);
       --progress-track: #333;
     }
+    [data-theme="dark"] .gram-subj { color: #60a5fa; }
+    [data-theme="dark"] .gram-aux  { color: #f87171; }
+    [data-theme="dark"] .gram-verb { color: #4ade80; }
+    [data-theme="dark"] .topic-content .logic-box { background: #1e293b; border-left-color: #60a5fa; }
+    [data-theme="dark"] .topic-content .logic-box strong { color: #93c5fd; }
+    [data-theme="dark"] .topic-content details.error-toggle { background: #2e1a1a; border-color: #ef5350; }
+    [data-theme="dark"] .topic-content details.error-toggle summary { color: #ef5350; }
 
     [data-theme="midnight"] {
       --bg: #0d1117;
@@ -163,6 +170,13 @@
       --shadow: 0 8px 32px rgba(0,0,0,0.4), 0 2px 8px rgba(0,0,0,0.3);
       --progress-track: #30363d;
     }
+    [data-theme="midnight"] .gram-subj { color: #93bbfd; }
+    [data-theme="midnight"] .gram-aux  { color: #fca5a5; }
+    [data-theme="midnight"] .gram-verb { color: #86efac; }
+    [data-theme="midnight"] .topic-content .logic-box { background: #172033; border-left-color: #93bbfd; }
+    [data-theme="midnight"] .topic-content .logic-box strong { color: #bfdbfe; }
+    [data-theme="midnight"] .topic-content details.error-toggle { background: #2e1a1a; border-color: #f85149; }
+    [data-theme="midnight"] .topic-content details.error-toggle summary { color: #f85149; }
 
     [data-theme="forest"] {
       --bg: #f0f4ed;
@@ -1061,6 +1075,29 @@
 
     .topic-content .tr { color: var(--text-muted); font-size: 12px; }
 
+    /* ===== GRAMMAR COLOR CODING ===== */
+    .gram-subj { color: #2563eb; font-weight: 600; }
+    .gram-aux  { color: #dc2626; font-weight: 600; }
+    .gram-verb { color: #16a34a; font-weight: 600; }
+
+    .topic-content .logic-box {
+      background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 10px;
+      padding: 12px 16px; margin: 10px 0; font-size: 13px; line-height: 1.7;
+    }
+    .topic-content .logic-box strong { color: #1e40af; }
+
+    .topic-content details.error-toggle {
+      background: #fdf0ef; border: 1px solid #e74c3c; border-radius: 10px;
+      padding: 0; margin: 10px 0; overflow: hidden;
+    }
+    .topic-content details.error-toggle summary {
+      padding: 10px 14px; cursor: pointer; font-weight: 600; color: #e74c3c;
+      list-style: none; display: flex; align-items: center; gap: 6px;
+    }
+    .topic-content details.error-toggle summary::before { content: '\25B6'; font-size: 10px; transition: transform 0.2s; }
+    .topic-content details.error-toggle[open] summary::before { transform: rotate(90deg); }
+    .topic-content details.error-toggle .error-content { padding: 0 14px 12px; }
+
     /* ===== TOP NAV 3-BUTTON FIX ===== */
     .top-nav-btn:not(:first-child):not(:last-child) { border-radius: 0; border-right: none; }
 
@@ -1216,6 +1253,8 @@
       .topic-content .vocab-grid { grid-template-columns: 1fr; }
       .topic-content .example { padding: 8px 12px; font-size: 13px; }
       .topic-content .grammar-box { padding: 10px 12px; font-size: 13px; }
+      .topic-content .logic-box { padding: 8px 12px; font-size: 12px; }
+      .topic-content details.error-toggle summary { padding: 8px 12px; font-size: 13px; }
       .btn { padding: 14px 20px; min-height: 48px; }
       .btn-nav { font-size: 14px; }
       .filter-row { gap: 6px; justify-content: center; }
@@ -1397,59 +1436,72 @@
           <div class="topic-card-header">Grammar <span class="arrow">&#9660;</span></div>
           <div class="topic-card-body"><div class="topic-content">
 
-            <h3>1A: Question Formation (Soru Olu&#351;turma)</h3>
+            <h3>1A: Soru Algoritmalar&#305; (Question Algorithms)</h3>
 
-            <h4>Word Order (S&#246;zc&#252;k S&#305;ras&#305;)</h4>
-            <div class="grammar-box"><code>(Question word) + Auxiliary + Subject + Main Verb + ...?</code></div>
-            <div class="example">Do you like coffee? &mdash; Kahve sever misin?<br>Where have they gone? &mdash; Nereye gittiler?<br>Is she coming tomorrow? &mdash; Yar&#305;n geliyor mu?</div>
+            <div class="logic-box">&#304;ngilizce c&#252;mlelerde s&#305;ra sabittir: &#214;zne + Fiil. Soru sormak i&#231;in bu s&#305;ray&#305; bozmak gerekir. Ama eylem fiilleri (go, eat, call) kendi ba&#351;lar&#305;na hareket edemez. Bu y&#252;zden do/does/did icat edilmi&#351;tir &mdash; &#246;znenin &#246;n&#252;ne ge&#231;en bir <strong>vekil yard&#305;mc&#305; fiil</strong>.</div>
 
-            <h4>Subject vs Object Questions</h4>
-            <p>Soru kelimesi <strong>&#246;zne</strong> ise auxiliary gerekmez, <strong>nesne</strong> ise gerekir:</p>
-            <div class="grammar-box">
-              <code>Subject Q: Who called you?</code> &rarr; "Who" &#246;zne, auxiliary yok<br>
-              <code>Object Q: Who did you call?</code> &rarr; "Who" nesne, "did" gerekli
-            </div>
+            <h4>Algoritma 1 &mdash; Nesne Sorusu (Object Question)</h4>
+            <div class="grammar-box"><span class="gram-aux">Auxiliary</span> + <span class="gram-subj">Subject</span> + <span class="gram-verb">Main Verb</span>...?</div>
+            <div class="logic-box">&#214;zneyi zaten biliyorsun. Nesneyi/tamamlay&#305;c&#305;y&#305; ar&#305;yorsun. &#214;zne yerinde durur, yard&#305;mc&#305; fiil &#246;n&#252;ne ge&#231;er.</div>
             <div class="example">
-              What <strong>happened</strong>? <span class="tr">(Ne oldu? &mdash; subject)</span><br>
-              What did you <strong>do</strong>? <span class="tr">(Ne yapt&#305;n? &mdash; object)</span><br>
-              Who <strong>won</strong> the game? <span class="tr">(Kim kazand&#305;? &mdash; subject)</span><br>
-              Who did you <strong>beat</strong>? <span class="tr">(Kimi yendin? &mdash; object)</span>
+              Who <strong>did</strong> you <strong>call</strong>? <span class="tr">(Kimi arad&#305;n?)</span><br>
+              What <strong>did</strong> she <strong>buy</strong>? <span class="tr">(Ne sat&#305;n ald&#305;?)</span><br>
+              Where <strong>have</strong> they <strong>gone</strong>? <span class="tr">(Nereye gittiler?)</span>
             </div>
 
-            <h4>Negative Questions (Olumsuz Sorular)</h4>
-            <p>&#350;a&#351;k&#305;nl&#305;k, hayal k&#305;r&#305;kl&#305;&#287;&#305; veya onay beklerken:</p>
+            <h4>Algoritma 2 &mdash; &#214;zne Sorusu (Subject Question)</h4>
+            <div class="grammar-box"><span class="gram-subj">Soru Kelimesi (= &#214;zne)</span> + <span class="gram-verb">Fiil</span>...?</div>
+            <div class="logic-box">&#214;zneyi ar&#305;yorsun. Yer de&#287;i&#351;tirecek bir &#246;zne yok &mdash; soru kelimesi zaten &#246;znenin kendisi. Bu y&#252;zden yard&#305;mc&#305; fiil <strong>gerekmez</strong>.</div>
+            <div class="example">
+              Who <strong>called</strong> you? <span class="tr">(Seni kim arad&#305;?)</span><br>
+              What <strong>happened</strong> last night? <span class="tr">(D&#252;n gece ne oldu?)</span><br>
+              Who <strong>made</strong> this cake? <span class="tr">(Bu pastay&#305; kim yapt&#305;?)</span>
+            </div>
+
+            <div class="grammar-box">
+              Algoritma 1: Who <span class="gram-aux">did</span> <span class="gram-subj">you</span> <span class="gram-verb">call</span>? &mdash; Nesne (K&#304;M&#304;?)<br>
+              Algoritma 2: <span class="gram-subj">Who</span> <span class="gram-verb">called</span> you? &mdash; &#214;zne (K&#304;M?)
+            </div>
+
+            <details class="error-toggle"><summary>Yayg&#305;n Hatalar</summary><div class="error-content">
+              &times; Who did call you? &rarr; &#10004; Who called you? <span class="tr">(&#214;zne sorusu &mdash; auxiliary yok)</span><br>
+              &times; Who you called? &rarr; &#10004; Who did you call? <span class="tr">(Nesne sorusu &mdash; auxiliary laz&#305;m)</span>
+            </div></details>
+
+            <h4>Olumsuz Sorular (Negative Questions)</h4>
+            <div class="logic-box">Olumsuz soru soruyorsan, asl&#305;nda EVET yan&#305;t&#305; bekliyorsun ya da &#351;a&#351;k&#305;nl&#305;k/hayal k&#305;r&#305;kl&#305;&#287;&#305; ifade ediyorsun.</div>
+            <div class="grammar-box"><span class="gram-aux">Aux + n't</span> + <span class="gram-subj">Subject</span> + <span class="gram-verb">Verb</span>...?</div>
             <div class="example">
               Isn't this amazing? <span class="tr">(Bu harika de&#287;il mi?)</span><br>
               Don't you like it? <span class="tr">(Sevmiyor musun?)</span><br>
-              Haven't you finished yet? <span class="tr">(Hala bitirmedin mi?)</span><br>
-              Can't you see I'm busy? <span class="tr">(Me&#351;gul oldu&#287;umu g&#246;rm&#252;yor musun?)</span>
+              Haven't you finished yet? <span class="tr">(Hala bitirmedin mi?)</span>
             </div>
 
-            <h4>Indirect Questions (Dolayl&#305; Sorular)</h4>
-            <p>Daha kibar / resmi. <strong>D&#252;z c&#252;mle s&#305;ras&#305;</strong> kullan&#305;l&#305;r (devrik de&#287;il):</p>
-            <div class="grammar-box">
-              <code>Could you tell me where the station <strong>is</strong>?</code> <span class="tr">(&times; where is the station)</span><br>
-              <code>Do you know what time it <strong>starts</strong>?</code> <span class="tr">(&times; what time does it start)</span><br>
-              <code>I wonder if/whether she <strong>likes</strong> it.</code> <span class="tr">(&times; does she like)</span><br>
-              <code>Do you have any idea how much it <strong>costs</strong>?</code>
-            </div>
-            <p><strong>Yes/No indirect:</strong> if veya whether kullan:</p>
+            <h4>Dolayl&#305; Sorular (Indirect Questions)</h4>
+            <div class="logic-box">Giri&#351; ifadesi (Could you tell me...) zaten soru yap&#305;s&#305; ta&#351;&#305;r. &#304;kinci kez devrik yapmak &mdash; &#231;ift devrik olur. C&#252;mle sadece <strong>bir kez</strong> devrilir, bu y&#252;zden i&#231; k&#305;s&#305;m d&#252;z c&#252;mle s&#305;ras&#305; kullan&#305;r.</div>
+            <div class="grammar-box">Giri&#351; ifadesi + <span class="gram-subj">Subject</span> + <span class="gram-verb">Verb</span> (d&#252;z s&#305;ra)</div>
             <div class="example">
-              Direct: Is he coming? &rarr; Do you know <strong>if he is coming</strong>?<br>
-              Direct: Did she pass? &rarr; I wonder <strong>whether she passed</strong>.
+              Could you tell me where the bank is? <span class="tr">(Banka nerede, s&#246;yler misiniz?)</span><br>
+              Do you know what time it starts? <span class="tr">(Ka&#231;ta ba&#351;lad&#305;&#287;&#305;n&#305; biliyor musun?)</span><br>
+              I wonder if she passed. <span class="tr">(Ge&#231;ti mi acaba.)</span>
             </div>
+            <p><strong>Yes/No dolayl&#305; sorular:</strong></p>
+            <div class="grammar-box">Giri&#351; ifadesi + <strong>if / whether</strong> + <span class="gram-subj">Subject</span> + <span class="gram-verb">Verb</span></div>
+            <details class="error-toggle"><summary>Yayg&#305;n Hatalar</summary><div class="error-content">
+              &times; Could you tell me where is the bank? &rarr; &#10004; ...where the bank is.
+            </div></details>
 
-            <h4>Yayg&#305;n Hatalar</h4>
-            <ul>
-              <li>&times; Could you tell me where <strong>is</strong> the bank? &rarr; &#10004; ...where the bank <strong>is</strong>?</li>
-              <li>&times; Do you know what time <strong>does</strong> it start? &rarr; &#10004; ...what time it <strong>starts</strong>?</li>
-              <li>&times; I wonder <strong>that</strong> she likes it. &rarr; &#10004; I wonder <strong>if/whether</strong> she likes it.</li>
-            </ul>
+            <h3>1B: Denge Terazisi (Balance Scale) &mdash; Auxiliary Verbs</h3>
 
-            <h3>1B: Auxiliary Verbs + The...The Comparatives</h3>
+            <div class="logic-box">&#304;ngilizcede tag, yan&#305;t ve kat&#305;lma yap&#305;lar&#305;n&#305;n hepsinde ayn&#305; prensip ge&#231;erlidir: ana c&#252;mlenin yard&#305;mc&#305; fiilini <strong>aynala</strong>. Bir terazi gibi d&#252;&#351;&#252;n &mdash; bir tarafta ana c&#252;mle, di&#287;er tarafta tag/yan&#305;t. Auxiliary t&#252;r&#252; e&#351;le&#351;mek zorunda.</div>
 
             <h4>Question Tags (Soru Ekleri)</h4>
-            <p>Olumlu c&#252;mle &rarr; olumsuz tag, olumsuz c&#252;mle &rarr; olumlu tag:</p>
+            <div class="grammar-box">
+              <code>be</code> &rarr; mirror with <code>be</code>: She is happy, <strong>isn't</strong> she?<br>
+              <code>modal</code> &rarr; mirror with that modal: You can swim, <strong>can't</strong> you?<br>
+              <code>action verb</code> &rarr; mirror with do/does/did: You like jazz, <strong>don't</strong> you?
+            </div>
+            <div class="grammar-box">Olumlu c&#252;mle &rarr; olumsuz tag / Olumsuz c&#252;mle &rarr; olumlu tag</div>
             <div class="example">
               You like it, <strong>don't you</strong>?<br>
               She can't swim, <strong>can she</strong>?<br>
@@ -1457,49 +1509,45 @@
               He won't come, <strong>will he</strong>?<br>
               We should leave, <strong>shouldn't we</strong>?
             </div>
+            <h4>Tonlama</h4>
             <div class="grammar-box">
-              <strong>Intonation fark&#305;:</strong><br>
               Ses tonu <strong>d&#252;&#351;erse &#8600;</strong> = onay bekliyorsun (zaten biliyorsun)<br>
               Ses tonu <strong>y&#252;kselirse &#8599;</strong> = ger&#231;ek soru soruyorsun (emin de&#287;ilsin)
             </div>
 
             <h4>So do I / Neither do I (Kat&#305;lma)</h4>
+            <div class="logic-box">Ayn&#305; terazi prensibi. Kar&#351;&#305;ndakinin yard&#305;mc&#305; fiilini aynala.</div>
             <div class="grammar-box">
-              Olumlu: <code>So + auxiliary + I</code><br>
-              Olumsuz: <code>Neither + auxiliary + I</code>
+              Olumlu &rarr; <code>So + aux + I</code><br>
+              Olumsuz &rarr; <code>Neither + aux + I</code>
             </div>
             <div class="example">
               "I love pizza." &rarr; "<strong>So do I.</strong>" <span class="tr">(Ben de.)</span><br>
               "I've been to Japan." &rarr; "<strong>So have I.</strong>" <span class="tr">(Ben de.)</span><br>
               "I can't drive." &rarr; "<strong>Neither can I.</strong>" <span class="tr">(Ben de yapamam.)</span><br>
-              "I don't like rain." &rarr; "<strong>Neither do I.</strong>" <span class="tr">(Ben de sevmem.)</span><br>
-              "I won't be there." &rarr; "<strong>Neither will I.</strong>" <span class="tr">(Ben de olmayaca&#287;&#305;m.)</span>
+              "I won't be there." &rarr; "<strong>Neither will I.</strong>" <span class="tr">(Ben de olmayaca&#287;&#305;m.)</span><br>
+              "I'm exhausted." &rarr; "<strong>So am I.</strong>" <span class="tr">(Ben de.)</span>
             </div>
 
             <h4>Reply Questions (Yan&#305;t Sorular&#305;)</h4>
-            <p>&#304;lgi ve &#351;a&#351;k&#305;nl&#305;k g&#246;stermek i&#231;in. Ayn&#305; auxiliary'yi tekrarla:</p>
+            <div class="logic-box">Yine aynalama: ilgi g&#246;stermek i&#231;in auxiliary'yi geri yans&#305;t.</div>
             <div class="example">
-              "I went to Paris." &mdash; "<strong>Did you?</strong> Really?"<br>
-              "She's getting married." &mdash; "<strong>Is she?</strong> That's great!"<br>
-              "They've bought a house." &mdash; "<strong>Have they?</strong> Where?"<br>
-              "I can speak Chinese." &mdash; "<strong>Can you?</strong> Wow!"
+              "I went to Paris." &mdash; "<strong>Did you?</strong>" <span class="tr">(Ger&#231;ekten mi?)</span><br>
+              "She's getting married." &mdash; "<strong>Is she?</strong>" <span class="tr">(&#214;yle mi?)</span>
             </div>
 
-            <h4>Emphatic do/does/did (Vurgulu yard&#305;mc&#305; fiil)</h4>
-            <p>Kar&#351;&#305; taraf&#305;n &#351;&#252;phesine kar&#351;&#305; vurgu yapmak i&#231;in:</p>
+            <h4>Emphatic do/does/did</h4>
+            <div class="logic-box">do/does/did normalde sadece soru ve olumsuzda g&#246;r&#252;n&#252;r. Olumlu c&#252;mlede kullanmak <strong>vurgu</strong> yapar &mdash; 'Ger&#231;ekten yapt&#305;m!' anlam&#305;.</div>
             <div class="example">
-              "You never listen." &mdash; "I <strong>do</strong> listen!" <span class="tr">(Dinliyorum ger&#231;ekten!)</span><br>
-              I <strong>did</strong> send the email! <span class="tr">(G&#246;nderdim valla!)</span><br>
-              She <strong>does</strong> work hard. <span class="tr">(Ger&#231;ekten &#231;ok &#231;al&#305;&#351;&#305;yor.)</span>
+              I <strong>DID</strong> go to the meeting! <span class="tr">(Toplant&#305;ya gittim ger&#231;ekten!)</span><br>
+              She <strong>DOES</strong> work hard! <span class="tr">(Ger&#231;ekten &#231;ok &#231;al&#305;&#351;&#305;yor!)</span>
             </div>
 
-            <h4>The more... the better (Ne kadar...o kadar)</h4>
+            <h4>The more... the better</h4>
             <div class="grammar-box"><code>The + comparative, the + comparative</code></div>
             <div class="example">
-              The more you practice, the better you get. <span class="tr">(&#199;ok pratik = &#231;ok iyi)</span><br>
-              The older I get, the less I remember. <span class="tr">(Ya&#351;land&#305;k&#231;a daha az hat&#305;rl&#305;yorum.)</span><br>
-              The sooner, the better. <span class="tr">(Ne kadar erken o kadar iyi.)</span><br>
-              The more expensive the hotel, the better the service. <span class="tr">(Otel pahal&#305;ysa hizmet iyi.)</span>
+              The more you practice, the better you get. <span class="tr">(Ne kadar &#231;ok pratik, o kadar iyi.)</span><br>
+              The older I get, the less I remember. <span class="tr">(Ya&#351;land&#305;k&#231;a daha az hat&#305;rl&#305;yorum.)</span>
             </div>
 
           </div></div>
@@ -1641,39 +1689,60 @@
           <div class="topic-card-header">Grammar <span class="arrow">&#9660;</span></div>
           <div class="topic-card-body"><div class="topic-content">
 
-            <h3>2A: Present Perfect Simple vs Continuous</h3>
+            <h3>2A: Skorboard vs Kronometre (Present Perfect)</h3>
 
-            <h4>Present Perfect Simple</h4>
-            <div class="grammar-box"><code>have/has + V3 (past participle)</code><br>Sonu&#231; odakl&#305;, tamamlanm&#305;&#351; eylemler, ka&#231; kez yap&#305;ld&#305;&#287;&#305;</div>
+            <div class="logic-box">Present Perfect ge&#231;mi&#351;i &#350;&#304;MD&#304;YE ba&#287;lar. Tek soru &#351;u: eylemin <strong>sonucu</strong> mu &#246;nemli (skorboard) yoksa <strong>s&#252;reci</strong> mi (kronometre)?</div>
+
+            <h4>Skorboard &mdash; Present Perfect Simple</h4>
+            <div class="grammar-box"><code><span class="gram-aux">have/has</span> + <span class="gram-verb">V3</span></code><br>Skorboard: Ka&#231; tane bitti? Sonu&#231; ne?</div>
+            <div class="logic-box">Bir skorboard tamamlanm&#305;&#351; sonu&#231;lar&#305; g&#246;sterir. &ldquo;Ka&#231; tane?&rdquo;, &ldquo;Bitti mi?&rdquo; sorular&#305;na yan&#305;t verir. S&#252;reyle ilgilenmez.</div>
             <div class="example">
-              I've <strong>finished</strong> my homework. <span class="tr">(Bitti &mdash; sonu&#231; belli)</span><br>
-              She's <strong>visited</strong> Paris three times. <span class="tr">(3 kez &mdash; say&#305; &#246;nemli)</span><br>
-              I've <strong>lost</strong> my keys. <span class="tr">(Anahtarlar&#305;m yok &mdash; &#351;u anki durum)</span><br>
-              He's <strong>broken</strong> his leg. <span class="tr">(Baca&#287;&#305; k&#305;r&#305;k &mdash; sonu&#231;)</span>
+              I <strong>have read</strong> 50 pages. <span class="tr">(50 sayfa bitti &mdash; sonu&#231;)</span><br>
+              She <strong>has written</strong> three emails. <span class="tr">(3 email &mdash; tamamlanm&#305;&#351; say&#305;)</span><br>
+              He <strong>has visited</strong> ten countries. <span class="tr">(10 &#252;lke &mdash; sonu&#231;)</span><br>
+              I <strong>have finished</strong> my homework. <span class="tr">(&#214;devim bitti &mdash; sonu&#231;)</span>
             </div>
 
-            <h4>Present Perfect Continuous</h4>
-            <div class="grammar-box"><code>have/has + been + Ving</code><br>S&#252;re&#231; odakl&#305;, devam eden eylemler, ne kadar s&#252;redir yap&#305;ld&#305;&#287;&#305;</div>
+            <h4>Kronometre &mdash; Present Perfect Continuous</h4>
+            <div class="grammar-box"><code><span class="gram-aux">have/has</span> + been + <span class="gram-verb">Ving</span></code><br>Kronometre: Ne kadar s&#252;redir? Efor ne?</div>
+            <div class="logic-box">Bir kronometre ge&#231;en s&#252;reyi &#246;l&#231;er. &ldquo;Ne kadar s&#252;redir?&rdquo;, &ldquo;Ne yap&#305;yordun?&rdquo; sorular&#305;na yan&#305;t verir. Eylem devam ediyor olabilir veya az &#246;nce bitmi&#351; olabilir.</div>
             <div class="example">
-              I've <strong>been studying</strong> all morning. <span class="tr">(Sabahtan beri &mdash; s&#252;re&#231;)</span><br>
-              She's <strong>been crying</strong>. Her eyes are red. <span class="tr">(A&#287;l&#305;yordu &mdash; etki g&#246;r&#252;l&#252;yor)</span><br>
-              It's <strong>been raining</strong> since 7 o'clock. <span class="tr">(7'den beri &mdash; devam ediyor)</span><br>
-              You're sweating. Have you <strong>been running</strong>? <span class="tr">(Ko&#351;tun mu? &mdash; kan&#305;t g&#246;r&#252;yorum)</span>
+              I <strong>have been reading</strong> for 2 hours. <span class="tr">(2 saattir &mdash; s&#252;re)</span><br>
+              She <strong>has been crying</strong> all morning. <span class="tr">(B&#252;t&#252;n sabah &mdash; s&#252;re&#231; + kan&#305;t: g&#246;zleri k&#305;rm&#305;z&#305;)</span><br>
+              It <strong>has been raining</strong> since morning. <span class="tr">(Sabahtan beri &mdash; devam ediyor)</span><br>
+              We <strong>have been waiting</strong> for an hour. <span class="tr">(1 saattir &mdash; s&#252;re)</span>
             </div>
 
             <h4>Kritik Fark &mdash; Kar&#351;&#305;la&#351;t&#305;rma</h4>
             <div class="grammar-box">
-              <strong>Simple</strong> = sonu&#231;, say&#305;, tamamlanma<br>
-              <strong>Continuous</strong> = s&#252;re&#231;, s&#252;re, devam etme
+              I've painted two rooms. = Skorboard <span class="tr">(2 oda bitti, sonu&#231;)</span><br>
+              I've been painting all day. = Kronometre <span class="tr">(b&#252;t&#252;n g&#252;n, s&#252;re&#231;)</span>
             </div>
             <div class="example">
-              I've <strong>painted</strong> two rooms. <span class="tr">(2 oda bitti &mdash; sonu&#231;)</span><br>
-              I've <strong>been painting</strong> all day. <span class="tr">(B&#252;t&#252;n g&#252;n boyad&#305;m &mdash; s&#252;re&#231;)</span><br><br>
-              She's <strong>read</strong> the book. <span class="tr">(Okudu, bitirdi)</span><br>
-              She's <strong>been reading</strong> the book. <span class="tr">(Okuyor, devam ediyor)</span><br><br>
-              How many pages have you <strong>read</strong>? <span class="tr">(Ka&#231; sayfa &mdash; say&#305;)</span><br>
-              How long have you <strong>been reading</strong>? <span class="tr">(Ne kadar s&#252;redir &mdash; s&#252;re)</span>
+              I've <strong>read</strong> the book. <span class="tr">(Bitirdim)</span> vs I've <strong>been reading</strong> the book. <span class="tr">(H&#226;l&#226; okuyorum)</span><br>
+              She's <strong>written</strong> 3 emails. <span class="tr">(3 tane tamamland&#305;)</span> vs She's <strong>been writing</strong> emails all morning. <span class="tr">(Sabahtan beri yaz&#305;yor)</span><br>
+              How many pages <strong>have</strong> you <strong>read</strong>? <span class="tr">(Skorboard &mdash; say&#305;)</span> vs How long <strong>have</strong> you <strong>been reading</strong>? <span class="tr">(Kronometre &mdash; s&#252;re)</span>
             </div>
+
+            <h4>Bypass Kural&#305; &mdash; Stative Verbs</h4>
+            <div class="logic-box">Bir eylem 10 y&#305;ld&#305;r devam etse bile, e&#287;er <strong>durum fiili</strong> ise (hareket bildirmeyen), &#304;ngilizce o fiile ASLA -ing tak&#305;s&#305; eklemene izin vermez. Kronometre form&#252;l&#252;nden &#231;&#305;kar&#305;p zorla Skorboard (Simple) form&#252;l&#252;ne sokar.</div>
+            <div class="vocab-grid">
+              <div class="vocab-item"><strong>know</strong> <span class="tr">bilmek</span></div>
+              <div class="vocab-item"><strong>like / love</strong> <span class="tr">sevmek</span></div>
+              <div class="vocab-item"><strong>believe</strong> <span class="tr">inanmak</span></div>
+              <div class="vocab-item"><strong>want / need</strong> <span class="tr">istemek / ihtiya&#231; duymak</span></div>
+              <div class="vocab-item"><strong>belong</strong> <span class="tr">ait olmak</span></div>
+              <div class="vocab-item"><strong>understand</strong> <span class="tr">anlamak</span></div>
+              <div class="vocab-item"><strong>prefer</strong> <span class="tr">tercih etmek</span></div>
+              <div class="vocab-item"><strong>mean</strong> <span class="tr">anlam&#305;na gelmek</span></div>
+            </div>
+            <details class="error-toggle">
+              <summary>Yayg&#305;n Hatalar &mdash; Stative Verbs</summary>
+              <div class="error-content">
+                &times; I have been knowing her for 5 years. &rarr; &#10004; I have <strong>known</strong> her for 5 years.<br>
+                &times; She has been wanting this for ages. &rarr; &#10004; She has <strong>wanted</strong> this for ages.
+              </div>
+            </details>
 
             <h4>yet / already / just / still</h4>
             <ul>
@@ -1689,23 +1758,6 @@
               They <strong>still</strong> haven't replied. <span class="tr">(Hala cevap vermediler.)</span>
             </div>
 
-            <h4>Stative Verbs &mdash; sadece Simple!</h4>
-            <p>Bu fiiller continuous yap&#305;lamaz:</p>
-            <div class="vocab-grid">
-              <div class="vocab-item"><strong>know</strong> <span class="tr">bilmek</span></div>
-              <div class="vocab-item"><strong>like / love</strong> <span class="tr">sevmek</span></div>
-              <div class="vocab-item"><strong>believe</strong> <span class="tr">inanmak</span></div>
-              <div class="vocab-item"><strong>want / need</strong> <span class="tr">istemek / ihtiya&#231; duymak</span></div>
-              <div class="vocab-item"><strong>belong</strong> <span class="tr">ait olmak</span></div>
-              <div class="vocab-item"><strong>understand</strong> <span class="tr">anlamak</span></div>
-              <div class="vocab-item"><strong>prefer</strong> <span class="tr">tercih etmek</span></div>
-              <div class="vocab-item"><strong>mean</strong> <span class="tr">anlam&#305;na gelmek</span></div>
-            </div>
-            <div class="example">
-              &#10004; I've <strong>known</strong> her for years.<br>
-              &times; I've been knowing her for years.
-            </div>
-
             <h4>since / for / how long</h4>
             <div class="grammar-box">
               <code>since</code> + ba&#351;lang&#305;&#231; noktas&#305; (since 2020, since Monday, since I was a child)<br>
@@ -1717,24 +1769,19 @@
               <strong>How long</strong> have you been waiting? <span class="tr">(Ne kadar s&#252;redir bekliyorsun?)</span>
             </div>
 
-            <h4>Present Perfect vs Past Simple &mdash; 3'l&#252; Kar&#351;&#305;la&#351;t&#305;rma</h4>
+            <h4>Present Perfect vs Past Simple</h4>
+            <div class="logic-box">Past Simple = kap&#305; KAPALI (belirli ge&#231;mi&#351; zaman). Present Perfect = kap&#305; A&#199;IK (&#351;imdiye ba&#287;l&#305;).</div>
             <div class="grammar-box">
               <code>Past Simple</code> = ge&#231;mi&#351;te bitti, zaman belirtilir (yesterday, last week, in 2020)<br>
-              <code>Present Perfect</code> = ge&#231;mi&#351;ten &#351;imdiye ba&#287;lant&#305;, zaman belirtilmez
+              <code>Present Perfect</code> = &#351;imdiye ba&#287;l&#305;, zaman belirtilmez veya &ldquo;unfinished time&rdquo; (today, this week, ever)
             </div>
             <div class="example">
-              I <strong>read</strong> that book last summer. <span class="tr">(Past Simple &mdash; ge&#231;en yaz, bitti)</span><br>
-              I've <strong>read</strong> that book. <span class="tr">(Pres. Perfect &mdash; ne zaman oldu&#287;u &#246;nemli de&#287;il, sonu&#231; &#246;nemli)</span><br>
-              I've been <strong>reading</strong> that book. <span class="tr">(Pres. Perfect Cont. &mdash; h&#226;l&#226; okuyorum / yeni b&#305;rakt&#305;m)</span>
+              I <strong>saw</strong> that film last weekend. <span class="tr">(Kap&#305; kapal&#305; &mdash; belirli zaman)</span> vs I've <strong>seen</strong> that film. It's great. <span class="tr">(Kap&#305; a&#231;&#305;k &mdash; &#351;imdiye ba&#287;l&#305;)</span><br>
+              She <strong>lived</strong> in London for 5 years. <span class="tr">(Art&#305;k orada de&#287;il)</span> vs She <strong>has lived</strong> in London for 5 years. <span class="tr">(H&#226;l&#226; orada)</span><br>
+              Did you ever visit Japan? <span class="tr">(WRONG)</span> vs <strong>Have</strong> you ever <strong>visited</strong> Japan? <span class="tr">(Correct &mdash; ever = kap&#305; a&#231;&#305;k)</span>
             </div>
-            <div class="example">
-              She <strong>lived</strong> in London for 5 years. <span class="tr">(Art&#305;k orada ya&#351;am&#305;yor &mdash; Past Simple)</span><br>
-              She's <strong>lived</strong> in London for 5 years. <span class="tr">(H&#226;l&#226; orada ya&#351;&#305;yor &mdash; Present Perfect)</span><br>
-              She's been <strong>living</strong> in London for 5 years. <span class="tr">(H&#226;l&#226; orada, s&#252;re vurgusu &mdash; Pres. Perf. Cont.)</span>
-            </div>
-            <p><strong>Kural:</strong> yesterday, last week, ago, in 2020 gibi belirli zaman ifadeleri varsa <strong>kesinlikle Past Simple</strong> kullan. "Have you ever...?" veya "I've never..." gibi belirsiz zaman ifadelerinde Present Perfect kullan.</p>
 
-            <h3>2B: Adjectives as Nouns + Adjective Order</h3>
+            <h3>2B: S&#305;fat Sistemleri (Adjective Systems)</h3>
 
             <h4>The + Adjective = Grup &#304;smi</h4>
             <div class="grammar-box"><code>the + adjective</code> = o gruptaki insanlar (&#231;o&#287;ul anlam, fiil &#231;o&#287;ul)</div>
@@ -1748,26 +1795,18 @@
             </div>
             <p><strong>Dikkat:</strong> "the rich" = zenginler (grup), "a rich man" = zengin bir adam (birey)</p>
 
-            <h4>OSASCOMP &mdash; S&#305;fat S&#305;ras&#305;</h4>
-            <div class="grammar-box"><code>Opinion &rarr; Size &rarr; Age &rarr; Shape &rarr; Colour &rarr; Origin &rarr; Material &rarr; Purpose</code></div>
-            <ul>
-              <li><strong>O</strong>pinion: beautiful, lovely, ugly, nice, horrible</li>
-              <li><strong>S</strong>ize: big, small, tall, tiny, huge, long</li>
-              <li><strong>A</strong>ge: old, new, young, ancient, modern</li>
-              <li><strong>S</strong>hape: round, square, flat, thin, wide</li>
-              <li><strong>C</strong>olour: red, blue, dark, light, bright</li>
-              <li><strong>O</strong>rigin: Italian, Turkish, Chinese, American</li>
-              <li><strong>M</strong>aterial: leather, wooden, cotton, silk, metal</li>
-              <li><strong>P</strong>urpose: racing, sleeping, cooking, running</li>
-            </ul>
-            <div class="example">
-              a <strong>beautiful small old round red Italian leather racing</strong> car<br>
-              <span class="tr">(g&#252;zel k&#252;&#231;&#252;k eski yuvarlak k&#305;rm&#305;z&#305; &#304;talyan deri yar&#305;&#351; arabas&#305;)</span><br><br>
-              a <strong>lovely big modern</strong> house <span class="tr">(O-S-A)</span><br>
-              an <strong>old blue French</strong> car <span class="tr">(A-C-O)</span><br>
-              a <strong>long black silk</strong> dress <span class="tr">(S-C-M)</span>
+            <h4>OSASCOMP &mdash; 3 B&#246;lge Sistemi</h4>
+            <div class="logic-box">OSASCOMP'u 8 harf olarak ezberlemek yerine 3 ana b&#246;lgeye ay&#305;r. S&#305;fatlar her zaman EN &#214;ZNEL olandan EN NESNEL olana do&#287;ru s&#305;ralan&#305;r.</div>
+            <div class="grammar-box">
+              <strong>B&#246;lge 1 &mdash; &#214;znel Fikir:</strong> Opinion (beautiful, lovely, ugly)<br>
+              <strong>B&#246;lge 2 &mdash; Fiziksel Ger&#231;eklik:</strong> Size, Age, Shape, Colour (big, old, round, red)<br>
+              <strong>B&#246;lge 3 &mdash; Kimlik &amp; &#214;z:</strong> Origin, Material, Purpose (Italian, leather, racing)
             </div>
-            <p><strong>Pratik ipucu:</strong> Genelde 2-3 s&#305;fattan fazlas&#305; kullan&#305;lmaz. S&#305;ray&#305; hisset: "a big red car" do&#287;al, "a red big car" garip gelir.</p>
+            <div class="logic-box">B&#246;lge 3 isme en yak&#305;n olmak zorundad&#305;r &mdash; bunlar ismin kimli&#287;ini tan&#305;mlar ve ayr&#305;lamazlar.</div>
+            <div class="example">
+              a <strong>beautiful</strong> <span class="tr">(1-fikir)</span> <strong>long</strong> <span class="tr">(2-boyut)</span> <strong>black</strong> <span class="tr">(2-renk)</span> <strong>Italian</strong> <span class="tr">(3-k&#246;ken)</span> <strong>leather</strong> <span class="tr">(3-malzeme)</span> jacket<br>
+              a <strong>lovely</strong> <span class="tr">(1)</span> <strong>big</strong> <span class="tr">(2)</span> <strong>red</strong> <span class="tr">(2)</span> <strong>German</strong> <span class="tr">(3)</span> car
+            </div>
 
           </div></div>
         </div>
@@ -1951,49 +1990,51 @@
           <div class="topic-card-header">Grammar <span class="arrow">&#9660;</span></div>
           <div class="topic-card-body"><div class="topic-content">
 
-            <h3>3A: Narrative Tenses (Anlat&#305; Zamanlar&#305;)</h3>
-            <p>Hikaye anlat&#305;rken 4 zaman birlikte kullan&#305;l&#305;r:</p>
+            <h3>3A: Film &#350;eridi (Film Strip) &mdash; Anlat&#305; Zamanlar&#305;</h3>
 
-            <h4>1. Past Simple &mdash; Ana olaylar</h4>
-            <div class="grammar-box"><code>V2 (past form)</code><br>Kronolojik s&#305;rayla olan olaylar</div>
+            <div class="logic-box">Bir hikaye anlatmak, film kurgulamak gibidir. 4 farkl&#305; kamera tekni&#287;in var &mdash; her biri farkl&#305; bir anlat&#305; amac&#305;na hizmet eder.</div>
+
+            <h4>Ana &#304;skelet &mdash; Past Simple (Kamera Oda&#287;&#305;)</h4>
+            <div class="grammar-box"><code><span class="gram-verb">V2 (past form)</span></code><br>Ana hikaye &mdash; ne OLDU, kronolojik s&#305;rayla</div>
+            <div class="logic-box">Bu ana kamerand&#305;r. Eylemleri kronolojik s&#305;rayla takip eder. Her Past Simple fiil bir sonraki sahneye ge&#231;i&#351;tir.</div>
             <div class="example">
-              I <strong>went</strong> to the airport, <strong>checked in</strong>, and <strong>boarded</strong> the plane.<br>
-              <span class="tr">Havalimanına gittim, check-in yaptım ve u&#231;a&#287;a bindim.</span>
+              I <strong>arrived</strong> home, <strong>opened</strong> the door, and <strong>sat</strong> down.<br>
+              <span class="tr">(Geldim &#8594; a&#231;t&#305;m &#8594; oturdum)</span>
             </div>
 
-            <h4>2. Past Continuous &mdash; Arka plan / sahne</h4>
-            <div class="grammar-box"><code>was/were + Ving</code><br>Uzun eylemler, sahne kurma, kesintiye u&#287;rayan eylemler</div>
+            <h4>Arka Plan Dekoru &mdash; Past Continuous (Geni&#351; A&#231;&#305;)</h4>
+            <div class="grammar-box"><code><span class="gram-aux">was/were</span> + <span class="gram-verb">Ving</span></code><br>Arka plan &mdash; sahne kurma, devam eden eylemler</div>
+            <div class="logic-box">Bu geni&#351; a&#231;&#305; &#231;ekimdir. Sahneyi kurar: ana karakter bunlar&#305; yaparken arkada ne oluyordu? Uzun eylem (continuous) k&#305;sa eylem (simple) taraf&#305;ndan kesilir.</div>
             <div class="example">
-              The sun <strong>was shining</strong> and people <strong>were walking</strong> in the park.<br>
-              <span class="tr">(Sahne kuruyor &mdash; hikayenin arka plan&#305;)</span><br><br>
+              The sun <strong>was shining</strong> and birds <strong>were singing</strong>.<br>
+              <span class="tr">(Sahne kurma)</span><br><br>
               I <strong>was walking</strong> home when I <strong>saw</strong> an accident.<br>
-              <span class="tr">(Uzun eylem was walking + k&#305;sa kesinti saw)</span>
+              <span class="tr">(Uzun eylem + kesinti)</span>
             </div>
 
-            <h4>3. Past Perfect Simple &mdash; Daha &#246;nce olan</h4>
-            <div class="grammar-box"><code>had + V3</code><br>Ana olaydan DAHA &#214;NCE olan eylemler</div>
+            <h4>Flashback &mdash; Past Perfect Simple (Geri D&#246;n&#252;&#351;)</h4>
+            <div class="grammar-box"><code><span class="gram-aux">had</span> + <span class="gram-verb">V3</span></code><br>Flashback &mdash; ana olaydan DAHA &#214;NCE olan</div>
+            <div class="logic-box">Bu bir flashback'tir. Hikaye ana iskeletteki olaydan daha geriye atlar. Sebep a&#231;&#305;klar veya &#246;nceki bilgiyi verir.</div>
             <div class="example">
               When I arrived, the train <strong>had already left</strong>.<br>
-              <span class="tr">(&#214;nce tren gitti, sonra ben vard&#305;m)</span><br>
+              <span class="tr">(Vard&#305;&#287;&#305;mda tren &#231;oktan gitmi&#351;ti &mdash; flashback)</span><br>
               She wasn't hungry because she <strong>had eaten</strong> lunch.<br>
-              <span class="tr">(&#214;nce yedi, bu y&#252;zden a&#231; de&#287;ildi &mdash; sebep-sonu&#231;)</span>
+              <span class="tr">(A&#231; de&#287;ildi &#231;&#252;nk&#252; &#246;&#287;le yeme&#287;i yemi&#351;ti)</span>
             </div>
 
-            <h4>4. Past Perfect Continuous &mdash; Daha &#246;nceden devam eden</h4>
-            <div class="grammar-box"><code>had been + Ving</code><br>Ana olaydan &#246;nce ba&#351;lay&#305;p bir s&#252;re devam etmi&#351; eylem</div>
+            <h4>S&#252;reli Flashback &mdash; Past Perfect Continuous</h4>
+            <div class="grammar-box"><code><span class="gram-aux">had been</span> + <span class="gram-verb">Ving</span></code><br>S&#252;reli flashback &mdash; ne kadar s&#252;redir devam ediyordu</div>
+            <div class="logic-box">Flashback + s&#252;re zamanlay&#305;c&#305;s&#305;. Sadece ne oldu&#287;unu de&#287;il, ne kadar s&#252;redir devam etti&#287;ini de g&#246;sterir.</div>
             <div class="example">
-              She was tired because she <strong>had been running</strong> for an hour.<br>
-              <span class="tr">(1 saattir ko&#351;uyordu, bu y&#252;zden yorgundu)</span><br>
+              She was tired because she <strong>had been running</strong> for two hours.<br>
+              <span class="tr">(2 saattir ko&#351;uyordu &mdash; s&#252;re)</span><br>
               The roads were wet. It <strong>had been raining</strong>.<br>
-              <span class="tr">(Ya&#287;mur ya&#287;&#305;yordu bir s&#252;re &mdash; etkisi g&#246;r&#252;l&#252;yor)</span>
+              <span class="tr">(Ya&#287;mur ya&#287;m&#305;&#351;t&#305; &mdash; ge&#231;mi&#351; aktivite + g&#246;r&#252;n&#252;r sonu&#231;)</span>
             </div>
 
-            <h4>4 Tense Birlikte &mdash; Paragraf &#214;rne&#287;i</h4>
+            <h4>4 Tense Birlikte &mdash; Film &#214;rne&#287;i</h4>
             <div class="example">
-              It <strong>was</strong> a cold evening. Snow <strong>was falling</strong> gently. <span class="tr">[Past Continuous &mdash; sahne]</span><br>
-              I <strong>had been driving</strong> for three hours and I <strong>was</strong> exhausted. <span class="tr">[Past Perfect Continuous &mdash; s&#252;re]</span><br>
-              I <strong>had left</strong> home late because of the traffic. <span class="tr">[Past Perfect &mdash; daha &#246;nce]</span><br>
-              Finally, I <strong>saw</strong> the hotel and <strong>parked</strong> the car. <span class="tr">[Past Simple &mdash; ana olay]</span>
+              When I <strong>got</strong> <span class="tr">[Ana &#304;skelet]</span> to the station, I <strong>realized</strong> <span class="tr">[Ana &#304;skelet]</span> that I <strong>had left</strong> <span class="tr">[Flashback]</span> my wallet at home. It <strong>had been raining</strong> <span class="tr">[S&#252;reli Flashback]</span> all morning and the streets <strong>were</strong> still wet. A man <strong>was selling</strong> <span class="tr">[Arka Plan]</span> umbrellas near the entrance, so I <strong>bought</strong> <span class="tr">[Ana &#304;skelet]</span> one.
             </div>
 
             <h4>so / such...that</h4>
@@ -2006,8 +2047,10 @@
               He spoke <strong>so quickly that</strong> I couldn't understand. <span class="tr">(O kadar h&#305;zl&#305; konu&#351;tu ki...)</span><br>
               It was <strong>such a cold day that</strong> we stayed inside. <span class="tr">(&#214;yle so&#287;uk bir g&#252;nd&#252; ki...)</span><br>
               They were <strong>such nice people that</strong> we invited them again. <span class="tr">(&#214;yle iyi insanlard&#305; ki...)</span><br>
-              There was <strong>so much</strong> traffic <strong>that</strong> we were late. <span class="tr">(O kadar &#231;ok trafik vard&#305; ki...)</span>
+              There was <strong>so much</strong> noise <strong>that</strong> I couldn't concentrate. <span class="tr">(O kadar &#231;ok g&#252;r&#252;lt&#252; vard&#305; ki...)</span><br>
+              There were <strong>so many</strong> people <strong>that</strong> we couldn't get in. <span class="tr">(O kadar &#231;ok insan vard&#305; ki...)</span>
             </div>
+
             <h4>so many / so few / so much / so little + that</h4>
             <div class="grammar-box">
               <code>so many / so few</code> + say&#305;labilir &#231;o&#287;ul isim<br>
@@ -2020,57 +2063,64 @@
               She had <strong>so much</strong> luggage <strong>that</strong> she needed two trolleys. <span class="tr">(O kadar &#231;ok bagaj&#305; vard&#305; ki...)</span>
             </div>
 
-            <h3>3B: Position of Adverbs (Zarf Konumu)</h3>
+            <h3>3B: SVOMPT &mdash; Zarf Konumu Master Kural&#305;</h3>
+
+            <div class="logic-box">Her zarf t&#252;r&#252; i&#231;in ayr&#305; kural ezberlemek yerine tek bir master form&#252;l &#246;&#287;ren: <strong>SVOMPT</strong>. &#199;o&#287;u zarf bu s&#305;raya oturur. &#214;zel zarflar&#305;n (s&#305;kl&#305;k, derece, yorum) belirli giri&#351; noktalar&#305; vard&#305;r.</div>
+
+            <div class="grammar-box"><code><span class="gram-subj">S</span>ubject + <span class="gram-verb">V</span>erb + <strong>O</strong>bject + <strong>M</strong>anner + <strong>P</strong>lace + <strong>T</strong>ime</code></div>
+            <div class="example">
+              She spoke English <strong>fluently</strong> <strong>at the conference</strong> <strong>yesterday</strong>.<br>
+              <span class="tr">(M + P + T)</span>
+            </div>
 
             <h4>1. Frequency Adverbs &mdash; fiilden &#214;NCE, "be" fiilinden SONRA</h4>
-            <div class="example">
-              I <strong>always</strong> wake up early. / She <strong>never</strong> eats meat.<br>
-              He is <strong>usually</strong> late. / They are <strong>often</strong> tired.<br>
-              <span class="tr">(Normal fiilden &#246;nce, "be" fiilinden sonra)</span>
-            </div>
+            <div class="logic-box">S&#305;kl&#305;k zarflar&#305; fiilin s&#305;kl&#305;&#287;&#305;n&#305; de&#287;i&#351;tirir, bu y&#252;zden fiilden hemen &#246;nce gelir. Ama 'be' fiili &#246;zeldir &mdash; 'be' den sonra gelir.</div>
             <div class="vocab-grid">
               <div class="vocab-item"><strong>always</strong> <span class="tr">her zaman</span></div>
               <div class="vocab-item"><strong>usually</strong> <span class="tr">genellikle</span></div>
               <div class="vocab-item"><strong>often</strong> <span class="tr">s&#305;k s&#305;k</span></div>
               <div class="vocab-item"><strong>sometimes</strong> <span class="tr">bazen</span></div>
+              <div class="vocab-item"><strong>rarely</strong> <span class="tr">nadiren</span></div>
               <div class="vocab-item"><strong>hardly ever</strong> <span class="tr">neredeyse hi&#231;</span></div>
               <div class="vocab-item"><strong>never</strong> <span class="tr">asla</span></div>
             </div>
+            <div class="example">
+              I <strong>usually</strong> wake up early. / She is <strong>always</strong> late. / They <strong>never</strong> eat meat.
+            </div>
 
             <h4>2. Manner Adverbs &mdash; fiilden / nesneden SONRA</h4>
+            <div class="logic-box">SVOMPT'nin M harfi: Manner nesne varsa nesneden sonra, yoksa fiilden sonra gelir.</div>
             <div class="example">
-              She speaks English <strong>fluently</strong>.<br>
-              He drove the car <strong>carefully</strong>.<br>
+              She speaks English <strong>fluently</strong>. / He drove the car <strong>carefully</strong>.<br>
               &#9650; He carefully drove the car. <span class="tr">(do&#287;ru ama daha az yayg&#305;n &mdash; fiilden sonras&#305; tercih edilir)</span>
             </div>
 
             <h4>3. Place, then Time &mdash; c&#252;mle SONU</h4>
+            <div class="logic-box">SVOMPT'nin P ve T harfleri: &#246;nce yer, sonra zaman.</div>
             <div class="grammar-box"><code>...verb + place + time</code></div>
             <div class="example">
-              I met her <strong>at the station</strong> <strong>yesterday</strong>. <span class="tr">(&#246;nce yer, sonra zaman)</span><br>
-              We arrived <strong>in Paris</strong> <strong>last night</strong>.
+              I met her <strong>at the station</strong> <strong>yesterday</strong>. / We arrived <strong>in Paris</strong> <strong>last night</strong>.
             </div>
 
             <h4>4. Comment / Attitude Adverbs &mdash; c&#252;mle BA&#350;I</h4>
+            <div class="logic-box">Bu zarflar t&#252;m c&#252;mle hakk&#305;nda yorum yapar, bu y&#252;zden SVOMPT yap&#305;s&#305;n&#305;n d&#305;&#351;&#305;nda, c&#252;mle ba&#351;&#305;nda durur.</div>
             <div class="vocab-grid">
               <div class="vocab-item"><strong>fortunately</strong> <span class="tr">neyse ki</span></div>
               <div class="vocab-item"><strong>unfortunately</strong> <span class="tr">ne yaz&#305;k ki</span></div>
               <div class="vocab-item"><strong>obviously</strong> <span class="tr">a&#231;&#305;k&#231;a</span></div>
               <div class="vocab-item"><strong>apparently</strong> <span class="tr">g&#246;r&#252;n&#252;&#351;e g&#246;re</span></div>
-              <div class="vocab-item"><strong>basically</strong> <span class="tr">asl&#305;nda, temelde</span></div>
+              <div class="vocab-item"><strong>basically</strong> <span class="tr">asl&#305;nda</span></div>
               <div class="vocab-item"><strong>actually</strong> <span class="tr">asl&#305;nda</span></div>
               <div class="vocab-item"><strong>ideally</strong> <span class="tr">ideal olarak</span></div>
             </div>
             <div class="example">
-              <strong>Fortunately</strong>, nobody was hurt. <span class="tr">(Neyse ki kimse yaralanmad&#305;.)</span><br>
-              <strong>Apparently</strong>, they're getting divorced. <span class="tr">(G&#246;r&#252;n&#252;&#351;e g&#246;re.)</span><br>
-              <strong>Obviously</strong>, we need to change our plans. <span class="tr">(A&#231;&#305;k&#231;a.)</span>
+              <strong>Fortunately</strong>, nobody was hurt. / <strong>Apparently</strong>, they're getting divorced.
             </div>
 
             <h4>5. Degree Adverbs &mdash; s&#305;fat/zarftan &#214;NCE</h4>
+            <div class="logic-box">Derece zarflar&#305; bir s&#305;fat&#305; veya ba&#351;ka bir zarf&#305; g&#252;&#231;lendirir, bu y&#252;zden de&#287;i&#351;tirdikleri kelimenin hemen &#246;n&#252;nde durur.</div>
             <div class="example">
-              She's <strong>incredibly</strong> talented. / It was <strong>really</strong> boring.<br>
-              He drives <strong>extremely</strong> fast. / I'm <strong>pretty</strong> sure.
+              She's <strong>incredibly</strong> talented. / He drives <strong>extremely</strong> fast.
             </div>
 
             <h4>6. also / even / too &mdash; &#214;zel Konumlar</h4>
@@ -2080,12 +2130,14 @@
               <code>too</code> = c&#252;mle SONU
             </div>
             <div class="example">
-              She <strong>also</strong> speaks French. <span class="tr">(Ayr&#305;ca Frans&#305;zca da konu&#351;uyor.)</span><br>
-              He's <strong>also</strong> a teacher. <span class="tr">("be" fiilinden sonra)</span><br>
-              <strong>Even</strong> my teacher didn't know the answer. <span class="tr">(Hocam bile bilmiyordu.)</span><br>
-              I can't <strong>even</strong> swim. <span class="tr">(Y&#252;zmeyi bile bilmiyorum.)</span><br>
-              She speaks French <strong>too</strong>. <span class="tr">(O da Frans&#305;zca konu&#351;uyor.)</span>
+              She <strong>also</strong> speaks French. / <strong>Even</strong> my teacher didn't know. / She speaks French <strong>too</strong>.
             </div>
+
+            <details class="error-toggle"><summary>Zarf Yerle&#351;tirme Hatalar&#305;</summary><div class="error-content">
+              &times; I met yesterday her at the station. &#8594; &#10004; I met her at the station yesterday. <span class="tr">(SVOMPT: O+P+T)</span><br>
+              &times; She fluently speaks English. &#8594; &#10004; She speaks English fluently. <span class="tr">(Manner: nesneden sonra)</span><br>
+              &times; Always I wake up early. &#8594; &#10004; I always wake up early. <span class="tr">(Frequency: fiilden &#246;nce)</span>
+            </div></details>
 
           </div></div>
         </div>
