@@ -508,6 +508,9 @@
       display: flex;
       gap: 8px;
       margin-bottom: 8px;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: clamp(300px, 80vw, 680px);
     }
 
     .filter-btn {
@@ -831,6 +834,7 @@
       gap: 0;
       padding: 12px 16px 0;
       width: 100%;
+      max-width: 100%;
       max-width: 680px;
     }
 
@@ -1115,9 +1119,9 @@
     .lightbox-img { max-width: 92vw; max-height: 88vh; object-fit: contain; border-radius: 8px; }
 
     /* ===== QUIZ MODE ===== */
-    .quiz-overlay { display:none; position:fixed; inset:0; background:var(--bg); z-index:150; overflow-y:auto; }
+    .quiz-overlay { display:none; position:fixed; inset:0; background:var(--bg); z-index:150; overflow-y:auto; overflow-x:hidden; }
     .quiz-overlay.open { display:flex; flex-direction:column; align-items:center; }
-    .quiz-container { width:100%; max-width:600px; padding:24px 16px; }
+    .quiz-container { width:100%; max-width:600px; padding:24px 16px; overflow-x:hidden; box-sizing:border-box; }
     .quiz-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
     .quiz-header h2 { font-size:20px; font-weight:800; color:var(--text-strong); }
     .quiz-close { width:40px; height:40px; border:none; background:var(--tag-bg); border-radius:12px; cursor:pointer; font-size:20px; color:var(--text-muted); display:flex; align-items:center; justify-content:center; }
@@ -1194,8 +1198,8 @@
     }
 
     @media (max-width: 520px) {
-      .main { min-height: auto; padding: 0 12px; }
-      .app-layout { display: block; }
+      .main { min-height: auto; padding: 0 8px; overflow-x: hidden; max-width: 100vw; }
+      .app-layout { display: block; overflow-x: hidden; }
       .card-wrapper { height: 260px; margin: 8px 0 16px; }
       .card-face { padding: 20px 16px; }
       .card-front .word { font-size: 24px; }
@@ -1213,9 +1217,10 @@
       .topic-content .grammar-box { padding: 10px 12px; font-size: 13px; }
       .btn { padding: 14px 20px; min-height: 48px; }
       .btn-nav { font-size: 14px; }
-      .filter-btn { padding: 10px 16px; min-height: 44px; }
+      .filter-row { gap: 6px; justify-content: center; }
+      .filter-btn { padding: 8px 12px; min-height: 40px; font-size: 12px; }
       .top-nav { padding: 8px 4px 0; }
-      .top-nav-btn { padding: 10px 16px; min-height: 44px; font-size: 13px; }
+      .top-nav-btn { padding: 10px 12px; min-height: 44px; font-size: 12px; }
       .content-nav { gap: 6px; }
       .content-nav-btn { padding: 10px 14px; min-height: 44px; font-size: 13px; }
       .topic-card-header { padding: 16px; min-height: 48px; font-size: 15px; }
@@ -1240,7 +1245,9 @@
       .quiz-container { padding: 16px 8px; }
       .quiz-option { padding: 14px 16px; font-size: 14px; min-height: 48px; }
       .quiz-write-input { font-size: 16px; padding: 14px; }
-      .match-card { font-size: 11px; padding: 6px; border-radius: 10px; }
+      .match-grid { gap: 6px; }
+      .match-card-front, .match-card-back { font-size: 11px; padding: 4px; border-radius: 10px; }
+      .match-type-label { font-size: 8px; }
       .tts-btn { width: 40px; height: 40px; }
     }
   </style>
@@ -1327,7 +1334,7 @@
     <div class="filter-row">
       <button class="filter-btn active" data-filter="all">Hepsi</button>
       <button class="filter-btn" data-filter="favs">Favoriler</button>
-      <button class="filter-btn" id="quizStartBtn" style="margin-left:auto;background:var(--accent);color:#fff;border-color:var(--accent)">Quiz</button>
+      <button class="filter-btn" id="quizStartBtn" style="background:var(--accent);color:#fff;border-color:var(--accent)">Quiz</button>
       <button class="filter-btn" id="matchStartBtn">E&#351;le&#351;tir</button>
       <button class="filter-btn" id="gramStartBtn" style="background:var(--btn-dark-bg);color:var(--card-back-text);border-color:var(--btn-dark-bg)">Grammar</button>
     </div>
@@ -2682,8 +2689,39 @@ function speakWord(text) {
   var url = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=' + encodeURIComponent(text);
   ttsAudio = new Audio(url);
   ttsAudio.onended = function() { ttsBtn.classList.remove('playing'); ttsAudio = null; };
-  ttsAudio.onerror = function() { ttsBtn.classList.remove('playing'); ttsAudio = null; };
-  ttsAudio.play();
+  ttsAudio.onerror = function() {
+    ttsBtn.classList.remove('playing');
+    ttsAudio = null;
+    speakWordFallback(text);
+  };
+  var playPromise = ttsAudio.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(function() {
+      ttsBtn.classList.remove('playing');
+      ttsAudio = null;
+      speakWordFallback(text);
+    });
+  }
+}
+
+function speakWordFallback(text) {
+  if (!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  var utter = new SpeechSynthesisUtterance(text);
+  utter.lang = 'en-GB';
+  var voices = speechSynthesis.getVoices();
+  for (var i = 0; i < voices.length; i++) {
+    if (voices[i].lang.replace('_','-').toLowerCase().substring(0,2) === 'en') {
+      utter.voice = voices[i];
+      utter.lang = voices[i].lang;
+      break;
+    }
+  }
+  utter.rate = 0.85;
+  ttsBtn.classList.add('playing');
+  utter.onend = function() { ttsBtn.classList.remove('playing'); };
+  utter.onerror = function() { ttsBtn.classList.remove('playing'); };
+  speechSynthesis.speak(utter);
 }
 
 ttsBtn.addEventListener('click', function(e) {
@@ -3682,137 +3720,42 @@ el('matchStartBtn').addEventListener('click', openMatching);
 
 /* ===== GRAMMAR EXERCISES ===== */
 var GRAMMAR_QUESTIONS = [
-  // ===== UNIT 1 (33 questions) =====
-  // --- Question Formation: word order ---
-  {u:1,q:"___ did you call yesterday?",opts:["Who","Who did","What who","Whom did"],ans:0,exp:"Object question: 'Who' is the object of 'call', auxiliary 'did' follows."},
-  {u:1,q:"Who ___ this cake?",opts:["made","did make","did made","was make"],ans:0,exp:"Subject question: 'Who' is the subject \u2192 no auxiliary needed."},
-  {u:1,q:"What ___ last night?",opts:["happened","did happen","was happen","did happened"],ans:0,exp:"Subject question: 'What' is the subject \u2192 no auxiliary. What happened?"},
-  {u:1,q:"Who ___ you at the party? (object question)",opts:["did you see","you saw","saw you","you did see"],ans:0,exp:"Object question: 'Who' is the object \u2192 auxiliary 'did' needed. Who did you see?"},
-  {u:1,q:"___ have they gone?",opts:["Where","Where do","Where did","Where are"],ans:0,exp:"Question word + auxiliary (have) + subject (they) + V3."},
-  // --- Negative Questions ---
-  {u:1,q:"___ this amazing?",opts:["Isn't","Doesn't","Hasn't","Weren't"],ans:0,exp:"Negative question for surprise/confirmation: Isn't this amazing?"},
-  {u:1,q:"___ you like it? I thought you loved chocolate.",opts:["Don't","Aren't","Isn't","Hasn't"],ans:0,exp:"Negative question showing surprise/disappointment: Don't you like it?"},
-  {u:1,q:"___ you finished yet? (surprise)",opts:["Haven't","Don't","Didn't","Aren't"],ans:0,exp:"Negative question with Present Perfect: Haven't you finished yet?"},
-  // --- Indirect Questions ---
-  {u:1,q:"Could you tell me where ___?",opts:["the bank is","is the bank","the bank are","does the bank"],ans:0,exp:"Indirect question: d\u00fcz c\u00fcmle s\u0131ras\u0131 (subject + verb), devrik de\u011fil."},
-  {u:1,q:"Do you know what time ___?",opts:["it starts","does it start","it does start","starts it"],ans:0,exp:"Indirect question: no inversion \u2192 what time it starts."},
-  {u:1,q:"I wonder ___ she passed the exam.",opts:["if","that","what","do"],ans:0,exp:"Indirect yes/no question: I wonder if/whether... ('that' kullan\u0131lmaz)."},
-  {u:1,q:"Do you have any idea how much ___?",opts:["it costs","does it cost","it does cost","costs it"],ans:0,exp:"Indirect question: normal word order \u2192 how much it costs."},
-  {u:1,q:"I'd like to know ___ she is coming or not.",opts:["whether","that","what","how"],ans:0,exp:"Indirect yes/no question with 'or not': whether + or not is standard."},
-  // --- Question Tags ---
-  {u:1,q:"You like jazz, ___?",opts:["don't you","do you","isn't it","aren't you"],ans:0,exp:"Positive sentence \u2192 negative tag. 'like' (present) \u2192 don't you."},
+  {u:1,q:"___ did you call yesterday?",opts:["Who","Who did","What who","Whom did"],ans:0,exp:"Object question: Who did you call? But here 'call' needs an object \u2192 Who."},
+  {u:1,q:"Who ___ this cake?",opts:["made","did make","did made","was make"],ans:0,exp:"Subject question: Who made? No auxiliary needed."},
+  {u:1,q:"Could you tell me where ___?",opts:["the bank is","is the bank","the bank are","does the bank"],ans:0,exp:"Indirect question: normal word order (subject + verb)."},
+  {u:1,q:"Do you know what time ___?",opts:["it starts","does it start","it does start","starts it"],ans:0,exp:"Indirect question: no inversion."},
+  {u:1,q:"You like jazz, ___?",opts:["don't you","do you","isn't it","aren't you"],ans:0,exp:"Positive sentence \u2192 negative tag. 'like' \u2192 don't you."},
   {u:1,q:"She can't swim, ___?",opts:["can she","can't she","does she","is she"],ans:0,exp:"Negative sentence \u2192 positive tag. 'can't' \u2192 can she."},
-  {u:1,q:"They've been here before, ___?",opts:["haven't they","have they","isn't it","didn't they"],ans:0,exp:"Present Perfect positive \u2192 negative tag: haven't they?"},
-  {u:1,q:"He won't come, ___?",opts:["will he","won't he","does he","is he"],ans:0,exp:"Negative (won't) \u2192 positive tag: will he?"},
-  {u:1,q:"We should leave now, ___?",opts:["shouldn't we","should we","don't we","won't we"],ans:0,exp:"Positive + should \u2192 negative tag: shouldn't we?"},
-  // --- So do I / Neither do I ---
-  {u:1,q:"\"I love pizza.\" \u2014 \"___\"",opts:["So do I.","So I do.","Neither do I.","I do so."],ans:0,exp:"Agreeing with positive: So + auxiliary + I. 'love' \u2192 do."},
+  {u:1,q:"\"I love pizza.\" \u2014 \"___\"",opts:["So do I.","So I do.","Neither do I.","I do so."],ans:0,exp:"Agreeing with positive: So + auxiliary + I."},
   {u:1,q:"\"I don't like rain.\" \u2014 \"___\"",opts:["Neither do I.","So do I.","Neither I do.","Nor I do."],ans:0,exp:"Agreeing with negative: Neither + auxiliary + I."},
-  {u:1,q:"\"I've been to Japan.\" \u2014 \"___\"",opts:["So have I.","So do I.","Neither have I.","So I have."],ans:0,exp:"Olumlu Present Perfect \u2192 So have I. Auxiliary'yi e\u015fle\u015ftir."},
-  {u:1,q:"\"I can't drive.\" \u2014 \"___\"",opts:["Neither can I.","So can I.","Neither do I.","Nor I can."],ans:0,exp:"Olumsuz + can't \u2192 Neither can I. Auxiliary'yi e\u015fle\u015ftir."},
-  {u:1,q:"\"I won't be there.\" \u2014 \"___\"",opts:["Neither will I.","So will I.","Neither do I.","Nor will me."],ans:0,exp:"Olumsuz + won't \u2192 Neither will I."},
-  // --- Reply Questions ---
-  {u:1,q:"\"I went to Paris.\" \u2014 \"___ Really?\"",opts:["Did you?","Were you?","Have you?","Do you?"],ans:0,exp:"Reply question: repeat the auxiliary. 'went' (Past Simple) \u2192 Did you?"},
-  {u:1,q:"\"She's getting married.\" \u2014 \"___ That's great!\"",opts:["Is she?","Does she?","Has she?","Did she?"],ans:0,exp:"Reply question: 'She's getting' = She is getting \u2192 Is she?"},
-  // --- Emphatic do/does/did ---
-  {u:1,q:"I ___ go to the meeting! (emphatic, past)",opts:["did","was","have","do did"],ans:0,exp:"Emphatic past: I DID go! Vurgu i\u00e7in did + base verb."},
-  {u:1,q:"She ___ work hard, believe me! (emphatic, present)",opts:["does","do","is","has"],ans:0,exp:"Emphatic present (3rd person): She DOES work hard. does + base verb."},
-  // --- The more...the better ---
-  {u:1,q:"The ___ you practice, the ___ you get.",opts:["more / better","most / best","much / good","many / well"],ans:0,exp:"The + comparative, the + comparative. more...better."},
-  {u:1,q:"The ___ I get, the ___ I remember.",opts:["older / less","oldest / least","old / little","more old / more little"],ans:0,exp:"The older..., the less... \u0130ki comparative yap\u0131."},
-  {u:1,q:"The ___ the hotel, the ___ the service.",opts:["more expensive / better","most expensive / best","expensive / good","much expensive / much good"],ans:0,exp:"The more expensive..., the better... Comparative + comparative."},
-  // --- Compound Adjectives ---
-  {u:1,q:"My grandmother is very ___. She never gets angry.",opts:["good-tempered","bad-tempered","big-headed","two-faced"],ans:0,exp:"good-tempered = iyi huylu, k\u0131zmaz. bad-tempered = huysuz."},
-  {u:1,q:"He always forgets where he put his keys. He's so ___.",opts:["absent-minded","open-minded","strong-willed","narrow-minded"],ans:0,exp:"absent-minded = dalg\u0131n, unutkan. S\u00fcrekli unutuyor \u2192 absent-minded."},
-  // --- Modifiers: gradable vs non-gradable ---
-  {u:1,q:"I'm ___ tired. (gradable adjective)",opts:["very","absolutely","completely","totally"],ans:0,exp:"Gradable adjective (tired) \u2192 very/really. 'absolutely' is for non-gradable (exhausted)."},
-  {u:1,q:"The film was ___ brilliant! (non-gradable adjective)",opts:["absolutely","very","a bit","fairly"],ans:0,exp:"Non-gradable adjective (brilliant) \u2192 absolutely/completely. 'very' is for gradable only."},
-  // ===== UNIT 2 (33 questions) =====
-  // --- Present Perfect Simple vs Continuous ---
-  {u:2,q:"I ___ my homework. (just finished, result)",opts:["have finished","have been finishing","finished","was finishing"],ans:0,exp:"Present Perfect Simple: completed action with present result. \u00d6dev bitti \u2192 sonu\u00e7."},
-  {u:2,q:"She ___ all morning. Her eyes are red.",opts:["has been crying","has cried","cried","was crying"],ans:0,exp:"Present Perfect Continuous: recent activity with visible evidence (red eyes = kan\u0131t)."},
-  {u:2,q:"How many books ___ this year?",opts:["have you read","have you been reading","did you read","you have read"],ans:0,exp:"'How many' asks for a number/completed result \u2192 Present Perfect Simple."},
-  {u:2,q:"How long ___ for this company?",opts:["have you been working","have you worked","did you work","do you work"],ans:0,exp:"'How long' + ongoing activity \u2192 Present Perfect Continuous: s\u00fcre\u00e7 vurgusu."},
-  {u:2,q:"I ___ three emails today. (completed count)",opts:["have written","have been writing","wrote","was writing"],ans:0,exp:"Completed count (three) \u2192 Present Perfect Simple. Say\u0131 = sonu\u00e7."},
-  {u:2,q:"Sorry I'm late. ___ long? (ongoing wait)",opts:["Have you been waiting","Have you waited","Did you wait","Were you waiting"],ans:0,exp:"Ongoing activity up to now \u2192 Present Perfect Continuous: s\u00fcre\u00e7, devam eden bekleme."},
-  {u:2,q:"She ___ the book. (finished reading it)",opts:["has read","has been reading","read","was reading"],ans:0,exp:"Completed action \u2192 Present Perfect Simple. Kitab\u0131 bitirdi."},
-  {u:2,q:"She ___ the book all afternoon. (process, not finished)",opts:["has been reading","has read","read","was reading"],ans:0,exp:"Ongoing process \u2192 Present Perfect Continuous. B\u00fct\u00fcn \u00f6\u011fleden sonra okuyor."},
-  {u:2,q:"I ___ two rooms so far. (completed count)",opts:["have painted","have been painting","painted","was painting"],ans:0,exp:"Completed count (two rooms) \u2192 Present Perfect Simple. Sonu\u00e7 ve say\u0131 \u00f6nemli."},
-  // --- yet / already / just / still ---
-  {u:2,q:"Have you finished ___?",opts:["yet","already","just","still"],ans:0,exp:"'yet' in questions and negatives = hen\u00fcz. Have you finished yet?"},
-  {u:2,q:"She's ___ left. (a moment ago)",opts:["just","yet","still","already"],ans:0,exp:"'just' = az \u00f6nce. She's just left = az \u00f6nce gitti."},
-  {u:2,q:"I ___ haven't finished. (continuing state)",opts:["still","yet","already","just"],ans:0,exp:"'still' + negative = h\u00e2l\u00e2 bitmedi. I still haven't finished."},
-  {u:2,q:"I've ___ seen that film. You don't need to tell me about it.",opts:["already","yet","still","just"],ans:0,exp:"'already' = \u00e7oktan, beklenenden erken. I've already seen it."},
-  // --- Stative verbs ---
-  {u:2,q:"I ___ her for ten years. (stative: know)",opts:["have known","have been knowing","knew","am knowing"],ans:0,exp:"'know' is stative \u2192 only Simple, never Continuous. Stative fiiller -ing almaz."},
-  {u:2,q:"This book ___ to me. (stative: belong)",opts:["belongs","is belonging","has been belonging","belonging"],ans:0,exp:"'belong' is stative \u2192 no continuous form. This book belongs to me."},
-  // --- since vs for ---
-  {u:2,q:"I've lived here ___ 2018.",opts:["since","for","from","during"],ans:0,exp:"'since' + starting point (2018). since = ba\u015flang\u0131\u00e7 noktas\u0131."},
-  {u:2,q:"I've lived here ___ six years.",opts:["for","since","from","during"],ans:0,exp:"'for' + duration (six years). for = s\u00fcre."},
-  {u:2,q:"She's been studying ___ she was a child.",opts:["since","for","during","while"],ans:0,exp:"'since' + starting point (she was a child). since = o zamandan beri."},
-  // --- Present Perfect vs Past Simple ---
-  {u:2,q:"She ___ in London for 5 years. (still there)",opts:["has lived","lived","has been lived","was living"],ans:0,exp:"Present Perfect: started in past, continues now (still there). H\u00e2l\u00e2 orada."},
-  {u:2,q:"She ___ in London for 5 years. (not there anymore)",opts:["lived","has lived","has been living","is living"],ans:0,exp:"Past Simple: finished period in the past (not there anymore). Art\u0131k orada de\u011fil."},
-  {u:2,q:"I ___ that film last weekend.",opts:["saw","have seen","have been seeing","see"],ans:0,exp:"'last weekend' = specific past time \u2192 Past Simple. Belirli zaman = Past Simple."},
-  {u:2,q:"I ___ that film. It's really good. (unspecified time)",opts:["have seen","saw","was seeing","see"],ans:0,exp:"No specific time, result matters now \u2192 Present Perfect. Zaman belirtilmemi\u015f."},
-  // --- The + adjective as noun ---
-  {u:2,q:"___ need more support from the government.",opts:["The elderly","The elder","Elderly","An elderly"],ans:0,exp:"the + adjective = group of people (plural meaning). The elderly = ya\u015fl\u0131lar."},
-  {u:2,q:"___ are getting richer while ___ are getting poorer.",opts:["The rich / the poor","Rich / poor","A rich / a poor","Richs / poors"],ans:0,exp:"the + adjective = group. The rich = zenginler, the poor = fakirler. Plural verb."},
-  {u:2,q:"___ were taken to the nearest hospital.",opts:["The injured","The injureds","Injured","An injured"],ans:0,exp:"the + adjective = group of people. The injured = yaral\u0131lar. No plural -s."},
-  // --- OSASCOMP adjective order ---
-  {u:2,q:"She wore a beautiful ___ Italian leather jacket.",opts:["long black","black long","leather Italian long","Italian black long"],ans:0,exp:"OSASCOMP: Opinion(beautiful) Size(long) Colour(black) Origin(Italian) Material(leather)."},
-  {u:2,q:"He bought a ___ car.",opts:["lovely big red German","red big lovely German","German red big lovely","big lovely red German"],ans:0,exp:"OSASCOMP: Opinion(lovely) Size(big) Colour(red) Origin(German)."},
-  {u:2,q:"She wore ___ shoes.",opts:["elegant small black leather","black small elegant leather","leather black small elegant","small black elegant leather"],ans:0,exp:"OSASCOMP: Opinion(elegant) Size(small) Colour(black) Material(leather)."},
-  // --- Illnesses vocabulary ---
-  {u:2,q:"I think I'm ___ with a cold. (catching an illness)",opts:["coming down","getting over","throwing up","passing out"],ans:0,exp:"come down with = bir hastal\u0131\u011fa yakalanmak. I'm coming down with a cold."},
-  {u:2,q:"It took me a week to ___ the flu.",opts:["get over","come down with","pass out","throw up"],ans:0,exp:"get over = iyile\u015fmek, atlatmak. Get over the flu = gribi atlatmak."},
-  // --- Clothes/fashion vocabulary ---
-  {u:2,q:"Does this shirt ___ these trousers? (match)",opts:["go with","suit","fit","dress up"],ans:0,exp:"go with = match = uymak (k\u0131yafetler aras\u0131). suit = yak\u0131\u015fmak (ki\u015fiye)."},
-  {u:2,q:"That dress really ___ you! (looks good on you)",opts:["suits","fits","goes with","matches"],ans:0,exp:"suit = yak\u0131\u015fmak (ki\u015fiye). fit = beden olarak olmak. That dress suits you."},
-  {u:2,q:"These shoes don't ___ me. They're too small.",opts:["fit","suit","go with","match"],ans:0,exp:"fit = beden olarak olmak/uygunluk. Too small = beden sorunu \u2192 fit."},
-  // ===== UNIT 3 (33 questions) =====
-  // --- Narrative tenses ---
-  {u:3,q:"When I arrived, the train ___.",opts:["had already left","already left","was already leaving","has already left"],ans:0,exp:"Past Perfect: earlier event (left) before Past Simple (arrived). \u00d6nce tren gitti."},
-  {u:3,q:"I ___ to the airport, checked in, and boarded the plane.",opts:["went","was going","had gone","have gone"],ans:0,exp:"Past Simple for main events in sequence. Kronolojik s\u0131rayla olan olaylar."},
-  {u:3,q:"The sun ___ and birds ___ singing. (scene setting)",opts:["was shining / were","shone / were","had shone / had been","shined / was"],ans:0,exp:"Past Continuous for background/scene setting in narratives. Sahne kurma."},
-  {u:3,q:"I ___ home when I ___ an accident.",opts:["was walking / saw","walked / was seeing","had walked / saw","walk / see"],ans:0,exp:"Past Continuous (long action) interrupted by Past Simple (short event)."},
-  {u:3,q:"She wasn't hungry because she ___ lunch.",opts:["had eaten","ate","was eating","has eaten"],ans:0,exp:"Past Perfect: earlier event (ate lunch) explains Past Simple state (wasn't hungry)."},
-  {u:3,q:"By the time we got there, the film ___.",opts:["had started","started","was starting","has started"],ans:0,exp:"Past Perfect: film started before we arrived. 'By the time' + Past Simple \u2192 Past Perfect."},
-  {u:3,q:"She was tired because she ___ for two hours.",opts:["had been running","ran","was running","has been running"],ans:0,exp:"Past Perfect Continuous: duration before the past moment. 2 saattir ko\u015fuyordu."},
-  {u:3,q:"The roads were wet. It ___.",opts:["had been raining","rained","was raining","has rained"],ans:0,exp:"Past Perfect Continuous: past activity with visible result. Ya\u011fmur ya\u011fm\u0131\u015ft\u0131 \u2192 yollar \u0131slak."},
-  // --- so/such...that ---
-  {u:3,q:"It was ___ cold ___ we stayed inside.",opts:["so / that","such / that","so / than","such / so"],ans:0,exp:"so + adjective + that. 'so cold that...'"},
-  {u:3,q:"It was ___ a cold day ___ we stayed inside.",opts:["such / that","so / that","such / than","very / that"],ans:0,exp:"such + a/an + adjective + noun + that. 'such a cold day that...'"},
-  {u:3,q:"There were ___ people that we couldn't get in.",opts:["so many","so much","such many","such a lot"],ans:0,exp:"so many + countable plural noun + that. many = say\u0131labilir \u00e7o\u011ful."},
-  {u:3,q:"There was ___ traffic that we were late.",opts:["so much","so many","such much","such a"],ans:0,exp:"so much + uncountable noun + that. traffic = say\u0131lamaz."},
-  {u:3,q:"There were ___ tickets left that we had to queue for hours.",opts:["so few","so little","such few","such a few"],ans:0,exp:"so few + countable plural noun. tickets = say\u0131labilir \u2192 few."},
-  // --- Position of adverbs ---
-  {u:3,q:"She speaks English ___. (manner adverb, after verb/object)",opts:["fluently","fluent","fluently she","she fluently"],ans:0,exp:"Manner adverb goes after the verb/object: speaks English fluently."},
-  {u:3,q:"___, nobody was hurt in the accident.",opts:["Fortunately","Fortunate","Fortune","Fortuning"],ans:0,exp:"Comment/attitude adverb at the beginning of the sentence: Fortunately, ..."},
-  {u:3,q:"He is ___ late for work. (frequency adverb + be)",opts:["usually","usual","use","using"],ans:0,exp:"Frequency adverb comes AFTER 'be': He is usually late. ('be' fiilinden sonra)"},
-  {u:3,q:"I met her ___ ___. (place then time)",opts:["at the station yesterday","yesterday at the station","yesterday station","station the yesterday"],ans:0,exp:"Place before time at end of sentence: at the station (place) yesterday (time)."},
-  // --- also / even / too ---
-  {u:3,q:"She ___ speaks French. (in addition, before main verb)",opts:["also","too","as well","even"],ans:0,exp:"'also' goes before the main verb. She also speaks French."},
-  {u:3,q:"___ my teacher didn't know the answer. (surprising emphasis)",opts:["Even","Also","Too","As well"],ans:0,exp:"'even' = bile/hatta. Even + surprising element: Even my teacher..."},
-  {u:3,q:"She speaks French ___. (in addition, end of sentence)",opts:["too","also","even","neither"],ans:0,exp:"'too' / 'as well' go at the end of the sentence. She speaks French too."},
-  // --- Confusing adverbs ---
-  {u:3,q:"She works ___. (with great effort)",opts:["hard","hardly","hardily","hardy"],ans:0,exp:"hard (adv) = s\u0131k\u0131/yo\u011fun. hardly = neredeyse hi\u00e7. She works hard = \u00e7ok \u00e7al\u0131\u015f\u0131yor."},
-  {u:3,q:"I haven't seen him ___. (recently)",opts:["lately","late","later","latest"],ans:0,exp:"lately = son zamanlarda (= recently). late = ge\u00e7."},
-  {u:3,q:"I ___ missed the plane. (almost)",opts:["nearly","near","nearing","nearest"],ans:0,exp:"nearly = neredeyse (= almost). near = yak\u0131n (mesafe)."},
-  {u:3,q:"Have you ___ been to Japan?",opts:["ever","even","never","just"],ans:0,exp:"ever = hi\u00e7 (sorularda). Have you ever...? = Hi\u00e7 ... yapt\u0131n m\u0131?"},
-  {u:3,q:"___, we decided to stay home. (after long deliberation)",opts:["In the end","At the end","On the end","By the end"],ans:0,exp:"in the end = sonunda, neticede (= finally). at the end (of) = bir \u015feyin biti\u015f noktas\u0131."},
-  // --- Linking words ---
-  {u:3,q:"___ the rain, we went out.",opts:["Despite","Although","However","Even"],ans:0,exp:"Despite + noun (no clause). Despite the rain = ya\u011fmura ra\u011fmen."},
-  {u:3,q:"___ it was raining, we went out.",opts:["Although","Despite","However","In spite of"],ans:0,exp:"Although/Even though + subject + verb (clause). Although it was raining..."},
-  {u:3,q:"The hotel was expensive. ___, the service was excellent.",opts:["However","Although","Despite","Even though"],ans:0,exp:"However connects two separate sentences with contrast. \u0130ki ayr\u0131 c\u00fcmle birle\u015ftirir."},
-  {u:3,q:"___ being tired, she continued working.",opts:["In spite of","Although","However","Even though"],ans:0,exp:"In spite of / Despite + noun/-ing. In spite of being tired = yorgun olmas\u0131na ra\u011fmen."},
-  {u:3,q:"I studied really hard. ___, I failed the exam.",opts:["Nevertheless","Although","Despite","Even though"],ans:0,exp:"Nevertheless = yine de. Connects two sentences like 'however' but more formal."},
-  // --- Air travel & travel/trip/journey ---
-  {u:3,q:"Please put your ___ in the overhead locker.",opts:["hand luggage","boarding pass","seat belt","customs"],ans:0,exp:"hand luggage = el bagaj\u0131 \u2192 overhead locker (\u00fcst dolap) i\u00e7ine konur."},
-  {u:3,q:"The plane was ___ by two hours because of the storm.",opts:["delayed","cancelled","overbooked","landed"],ans:0,exp:"delayed = r\u00f6tar, gecikmi\u015f. The plane was delayed = u\u00e7ak r\u00f6tar yapt\u0131."},
-  {u:3,q:"We went on a ___ to Istanbul last weekend.",opts:["trip","travel","journey","voyage"],ans:0,exp:"trip = gidi\u015f-d\u00f6n\u00fc\u015fl\u00fc k\u0131sa seyahat (say\u0131labilir). a trip to Istanbul."},
-  {u:3,q:"The ___ from Ankara to Istanbul takes 4 hours by train.",opts:["journey","travel","trip","tour"],ans:0,exp:"journey = A'dan B'ye gitme s\u00fcreci, genelde uzun. The journey takes 4 hours."},
-  {u:3,q:"___ broadens the mind. (general concept)",opts:["Travel","A travel","Trip","A trip"],ans:0,exp:"travel = genel kavram (say\u0131lamaz isim). Travel broadens the mind. 'a travel' yanl\u0131\u015f."}
+  {u:1,q:"I ___ go to the meeting! (emphatic)",opts:["did","was","have","do did"],ans:0,exp:"Emphatic past: I DID go."},
+  {u:1,q:"The ___ you practice, the ___ you get.",opts:["more / better","most / best","much / good","many / well"],ans:0,exp:"The + comparative, the + comparative."},
+  {u:1,q:"___ this amazing?",opts:["Isn't","Doesn't","Hasn't","Weren't"],ans:0,exp:"Negative question for surprise/confirmation."},
+  {u:1,q:"I wonder ___ she passed the exam.",opts:["if","that","what","do"],ans:0,exp:"Indirect yes/no: I wonder if/whether."},
+  {u:2,q:"I ___ my homework. (just finished, result)",opts:["have finished","have been finishing","finished","was finishing"],ans:0,exp:"Present Perfect Simple for completed result."},
+  {u:2,q:"She ___ all morning. Her eyes are red.",opts:["has been crying","has cried","cried","was crying"],ans:0,exp:"Present Perfect Continuous: recent activity with visible evidence."},
+  {u:2,q:"How many books ___ this year?",opts:["have you read","have you been reading","did you read","you have read"],ans:0,exp:"'How many' asks for a number/result \u2192 Simple."},
+  {u:2,q:"I ___ her for ten years. (stative verb)",opts:["have known","have been knowing","knew","am knowing"],ans:0,exp:"'know' is stative \u2192 only Simple, never Continuous."},
+  {u:2,q:"Have you finished ___?",opts:["yet","already","just","still"],ans:0,exp:"'yet' in questions = hen\u00fcz."},
+  {u:2,q:"She's ___ left. (a moment ago)",opts:["just","yet","still","already"],ans:0,exp:"'just' = az \u00f6nce."},
+  {u:2,q:"I ___ haven't finished. (continuing state)",opts:["still","yet","already","just"],ans:0,exp:"'still' + negative = h\u00e2l\u00e2 bitmedi."},
+  {u:2,q:"She ___ in London for 5 years. (still there)",opts:["has lived","lived","has been lived","was living"],ans:0,exp:"Present Perfect: started in past, continues now."},
+  {u:2,q:"___ need more support from the government.",opts:["The elderly","The elder","Elderly","An elderly"],ans:0,exp:"the + adjective = group of people (plural)."},
+  {u:2,q:"She wore a beautiful ___ Italian leather jacket.",opts:["long black","black long","leather Italian long","Italian black long"],ans:0,exp:"OSASCOMP: Size (long) \u2192 Colour (black) \u2192 Origin (Italian) \u2192 Material (leather)."},
+  {u:3,q:"When I arrived, the train ___.",opts:["had already left","already left","was already leaving","has already left"],ans:0,exp:"Past Perfect: earlier event before Past Simple 'arrived'."},
+  {u:3,q:"The sun ___ and birds ___ singing.",opts:["was shining / were","shone / were","had shone / had been","shined / was"],ans:0,exp:"Past Continuous for background/scene setting."},
+  {u:3,q:"She was tired because she ___ for two hours.",opts:["had been running","ran","was running","has been running"],ans:0,exp:"Past Perfect Continuous: duration before the past moment."},
+  {u:3,q:"It was ___ cold ___ we stayed inside.",opts:["so / that","such / that","so / than","such / so"],ans:0,exp:"so + adjective + that."},
+  {u:3,q:"It was ___ a cold day ___ we stayed inside.",opts:["such / that","so / that","such / than","very / that"],ans:0,exp:"such + a/an + noun phrase + that."},
+  {u:3,q:"There were ___ people that we couldn't get in.",opts:["so many","so much","such many","such a lot"],ans:0,exp:"so many + countable plural noun + that."},
+  {u:3,q:"She works ___. (with great effort)",opts:["hard","hardly","hardily","hardy"],ans:0,exp:"hard = s\u0131k\u0131/yo\u011fun. hardly = neredeyse hi\u00e7."},
+  {u:3,q:"I haven't seen him ___. (recently)",opts:["lately","late","later","latest"],ans:0,exp:"lately = son zamanlarda. late = ge\u00e7."},
+  {u:3,q:"I ___ missed the plane. (almost)",opts:["nearly","near","nearing","nearest"],ans:0,exp:"nearly = neredeyse. near = yak\u0131n (mesafe)."},
+  {u:3,q:"She ___ speaks French. (in addition)",opts:["also","too","as well","even"],ans:0,exp:"also goes before the main verb."},
+  {u:3,q:"I ___ always wake up early.",opts:["almost","ever","usually","real"],ans:0,exp:"Frequency adverb before main verb."},
+  {u:3,q:"___ the rain, we went out.",opts:["Despite","Although","However","Even"],ans:0,exp:"Despite + noun (no clause). Although + clause."},
+  {u:3,q:"___ it was raining, we went out.",opts:["Although","Despite","However","In spite of"],ans:0,exp:"Although/Even though + subject + verb."},
+  {u:3,q:"The hotel was expensive. ___, the service was excellent.",opts:["However","Although","Despite","Even though"],ans:0,exp:"However connects two separate sentences."}
 ];
 
 var grammarState = { questions: [], current: 0, score: 0, wrong: [], unit: 0 };

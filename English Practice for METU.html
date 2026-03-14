@@ -508,6 +508,9 @@
       display: flex;
       gap: 8px;
       margin-bottom: 8px;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: clamp(300px, 80vw, 680px);
     }
 
     .filter-btn {
@@ -831,6 +834,7 @@
       gap: 0;
       padding: 12px 16px 0;
       width: 100%;
+      max-width: 100%;
       max-width: 680px;
     }
 
@@ -1115,9 +1119,9 @@
     .lightbox-img { max-width: 92vw; max-height: 88vh; object-fit: contain; border-radius: 8px; }
 
     /* ===== QUIZ MODE ===== */
-    .quiz-overlay { display:none; position:fixed; inset:0; background:var(--bg); z-index:150; overflow-y:auto; }
+    .quiz-overlay { display:none; position:fixed; inset:0; background:var(--bg); z-index:150; overflow-y:auto; overflow-x:hidden; }
     .quiz-overlay.open { display:flex; flex-direction:column; align-items:center; }
-    .quiz-container { width:100%; max-width:600px; padding:24px 16px; }
+    .quiz-container { width:100%; max-width:600px; padding:24px 16px; overflow-x:hidden; box-sizing:border-box; }
     .quiz-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
     .quiz-header h2 { font-size:20px; font-weight:800; color:var(--text-strong); }
     .quiz-close { width:40px; height:40px; border:none; background:var(--tag-bg); border-radius:12px; cursor:pointer; font-size:20px; color:var(--text-muted); display:flex; align-items:center; justify-content:center; }
@@ -1194,8 +1198,8 @@
     }
 
     @media (max-width: 520px) {
-      .main { min-height: auto; padding: 0 12px; }
-      .app-layout { display: block; }
+      .main { min-height: auto; padding: 0 8px; overflow-x: hidden; max-width: 100vw; }
+      .app-layout { display: block; overflow-x: hidden; }
       .card-wrapper { height: 260px; margin: 8px 0 16px; }
       .card-face { padding: 20px 16px; }
       .card-front .word { font-size: 24px; }
@@ -1213,9 +1217,10 @@
       .topic-content .grammar-box { padding: 10px 12px; font-size: 13px; }
       .btn { padding: 14px 20px; min-height: 48px; }
       .btn-nav { font-size: 14px; }
-      .filter-btn { padding: 10px 16px; min-height: 44px; }
+      .filter-row { gap: 6px; justify-content: center; }
+      .filter-btn { padding: 8px 12px; min-height: 40px; font-size: 12px; }
       .top-nav { padding: 8px 4px 0; }
-      .top-nav-btn { padding: 10px 16px; min-height: 44px; font-size: 13px; }
+      .top-nav-btn { padding: 10px 12px; min-height: 44px; font-size: 12px; }
       .content-nav { gap: 6px; }
       .content-nav-btn { padding: 10px 14px; min-height: 44px; font-size: 13px; }
       .topic-card-header { padding: 16px; min-height: 48px; font-size: 15px; }
@@ -1240,7 +1245,9 @@
       .quiz-container { padding: 16px 8px; }
       .quiz-option { padding: 14px 16px; font-size: 14px; min-height: 48px; }
       .quiz-write-input { font-size: 16px; padding: 14px; }
-      .match-card { font-size: 11px; padding: 6px; border-radius: 10px; }
+      .match-grid { gap: 6px; }
+      .match-card-front, .match-card-back { font-size: 11px; padding: 4px; border-radius: 10px; }
+      .match-type-label { font-size: 8px; }
       .tts-btn { width: 40px; height: 40px; }
     }
   </style>
@@ -1327,7 +1334,7 @@
     <div class="filter-row">
       <button class="filter-btn active" data-filter="all">Hepsi</button>
       <button class="filter-btn" data-filter="favs">Favoriler</button>
-      <button class="filter-btn" id="quizStartBtn" style="margin-left:auto;background:var(--accent);color:#fff;border-color:var(--accent)">Quiz</button>
+      <button class="filter-btn" id="quizStartBtn" style="background:var(--accent);color:#fff;border-color:var(--accent)">Quiz</button>
       <button class="filter-btn" id="matchStartBtn">E&#351;le&#351;tir</button>
       <button class="filter-btn" id="gramStartBtn" style="background:var(--btn-dark-bg);color:var(--card-back-text);border-color:var(--btn-dark-bg)">Grammar</button>
     </div>
@@ -2682,8 +2689,39 @@ function speakWord(text) {
   var url = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=' + encodeURIComponent(text);
   ttsAudio = new Audio(url);
   ttsAudio.onended = function() { ttsBtn.classList.remove('playing'); ttsAudio = null; };
-  ttsAudio.onerror = function() { ttsBtn.classList.remove('playing'); ttsAudio = null; };
-  ttsAudio.play();
+  ttsAudio.onerror = function() {
+    ttsBtn.classList.remove('playing');
+    ttsAudio = null;
+    speakWordFallback(text);
+  };
+  var playPromise = ttsAudio.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(function() {
+      ttsBtn.classList.remove('playing');
+      ttsAudio = null;
+      speakWordFallback(text);
+    });
+  }
+}
+
+function speakWordFallback(text) {
+  if (!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  var utter = new SpeechSynthesisUtterance(text);
+  utter.lang = 'en-GB';
+  var voices = speechSynthesis.getVoices();
+  for (var i = 0; i < voices.length; i++) {
+    if (voices[i].lang.replace('_','-').toLowerCase().substring(0,2) === 'en') {
+      utter.voice = voices[i];
+      utter.lang = voices[i].lang;
+      break;
+    }
+  }
+  utter.rate = 0.85;
+  ttsBtn.classList.add('playing');
+  utter.onend = function() { ttsBtn.classList.remove('playing'); };
+  utter.onerror = function() { ttsBtn.classList.remove('playing'); };
+  speechSynthesis.speak(utter);
 }
 
 ttsBtn.addEventListener('click', function(e) {
