@@ -15,7 +15,7 @@ var WORDS_DATA = [
     "example": "I call myself a geek because I love technology and science-fiction.",
     "file": "File 1",
     "section": "Working out meaning from context",
-    "translation": "geek"
+    "translation": "bilgisayar meraklisi"
   },
   {
     "word": "good-natured rivalry",
@@ -231,7 +231,7 @@ var WORDS_DATA = [
     "example": "You will get a blister",
     "file": "File 2",
     "section": "Vocabulary Banks: Illnesses and injuries",
-    "translation": "blister"
+    "translation": "su toplaması, kabarcik"
   },
   {
     "word": "(high / low) blood pressure",
@@ -663,7 +663,7 @@ var WORDS_DATA = [
     "example": "My younger brother always looks really scruffy and dirty.",
     "file": "File 2",
     "section": "Vocabulary Banks: Clothes and fashion",
-    "translation": "scruffy"
+    "translation": "bakimsiz, pejmurde"
   },
   {
     "word": "sleeveless",
@@ -978,7 +978,7 @@ var WORDS_DATA = [
     "example": "My jet lag after the flight was worse than usual.",
     "file": "File 3",
     "section": "Vocabulary Banks: Air Travel",
-    "translation": "jet lag"
+    "translation": "saat farki yorgunlugu"
   },
   {
     "word": "journey",
@@ -1896,7 +1896,7 @@ var WORDS_DATA = [
     "example": "I was gobsmacked when I heard that Tereza and Adam were getting divorced!",
     "file": "File 5",
     "section": "Vocabulary Banks: Feelings",
-    "translation": "gobsmacked"
+    "translation": "saskinliktan agzi acik kalmis"
   },
   {
     "word": "grateful",
@@ -2292,7 +2292,7 @@ var WORDS_DATA = [
     "example": "I prefer cappuccino to other types of coffee.",
     "file": "File 6",
     "section": "Music; words from other languages",
-    "translation": "cappuccino"
+    "translation": "kapucino (kahve)"
   },
   {
     "word": "cello",
@@ -2391,7 +2391,7 @@ var WORDS_DATA = [
     "example": "The crowd wanted more so they started shouting for an encore .",
     "file": "File 6",
     "section": "Music; words from other languages",
-    "translation": "encore"
+    "translation": "bir daha! (alkis)"
   },
   {
     "word": "fiancé",
@@ -2454,7 +2454,7 @@ var WORDS_DATA = [
     "example": "I like to drink macchiato because it’s a bit lighter.",
     "file": "File 6",
     "section": "Music; words from other languages",
-    "translation": "macchiato"
+    "translation": "makiyato (kahve)"
   },
   {
     "word": "mezzo-soprano",
@@ -2463,7 +2463,7 @@ var WORDS_DATA = [
     "example": "She is a mezzo-soprano in the choir.",
     "file": "File 6",
     "section": "Music; words from other languages",
-    "translation": "mezzo-soprano"
+    "translation": "mezzo-soprano (orta kalin kadin sesi)"
   },
   {
     "word": "microphone",
@@ -2526,7 +2526,7 @@ var WORDS_DATA = [
     "example": "More than half of the women in the choir are sopranos .",
     "file": "File 6",
     "section": "Music; words from other languages",
-    "translation": "soprano"
+    "translation": "soprano (ince kadin sesi)"
   },
   {
     "word": "symphony",
@@ -2544,7 +2544,7 @@ var WORDS_DATA = [
     "example": "We stayed in a beautiful villa which had its own swimming pool.",
     "file": "File 6",
     "section": "Music; words from other languages",
-    "translation": "villa"
+    "translation": "villa, yazlik ev"
   },
   {
     "word": "violin",
@@ -3138,7 +3138,7 @@ var WORDS_DATA = [
     "example": "He winked at me to show that he was only joking.",
     "file": "File 7",
     "section": "Vocabulary Banks: The body",
-    "translation": "wink"
+    "translation": "goz kirpmak"
   },
   {
     "word": "wrinkles",
@@ -3633,7 +3633,7 @@ var WORDS_DATA = [
     "example": "The paparazzi follow famous people around to get photos of them to sell to newspapers and magazines.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "paparazzi"
+    "translation": "paparazi (unlu fotografcisi)"
   },
   {
     "word": "presenter",
@@ -3660,7 +3660,7 @@ var WORDS_DATA = [
     "example": "The police quizzed the witness in the murder trial.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "quiz"
+    "translation": "kisa sinav, bilgi yarismasi"
   },
   {
     "word": "reporter",
@@ -3795,7 +3795,7 @@ var WORDS_DATA = [
     "example": "A memorable slogan is very important in advertising.",
     "file": "File 9",
     "section": "Advertising",
-    "translation": "slogan"
+    "translation": "slogan, reklam sozcu"
   },
   {
     "word": "sue",
@@ -3804,7 +3804,7 @@ var WORDS_DATA = [
     "example": "The company threatened to sue the journalists who had published stories about it.",
     "file": "File 9",
     "section": "Advertising",
-    "translation": "sue"
+    "translation": "dava acmak"
   },
   {
     "word": "boom",
@@ -3876,7 +3876,7 @@ var WORDS_DATA = [
     "example": "The product was a complete flop . Hardly anyone bought it.",
     "file": "File 9",
     "section": "Vocabulary Banks: Business",
-    "translation": "flop"
+    "translation": "fiyasko, basarisizlik"
   },
   {
     "word": "get down to business",
@@ -4785,7 +4785,7 @@ var WORDS_DATA = [
     "example": "Will you do a full test to check there are no side effects from that drug?",
     "file": "File 10",
     "section": "Science; stress in word families",
-    "translation": "test"
+    "translation": "test, deney, sinav"
   },
   {
     "word": "theory",
@@ -4822,5 +4822,545 @@ var WORDS_DATA = [
     "file": "File 10",
     "section": "Science; stress in word families",
     "translation": "zooloji"
+  },
+  {
+    "word": "heatwave",
+    "pos": "n",
+    "pronunciation": "/ˈhiːtweɪv/",
+    "example": "The heatwave lasted for two weeks and broke temperature records.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "sıcak hava dalgası"
+  },
+  {
+    "word": "hurricane",
+    "pos": "n",
+    "pronunciation": "/ˈhʌrɪkən/",
+    "example": "A hurricane hit the southern coast last night.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "kasırga"
+  },
+  {
+    "word": "typhoon",
+    "pos": "n",
+    "pronunciation": "/taɪˈfuːn/",
+    "example": "The typhoon caused massive flooding in coastal areas.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "tayfun"
+  },
+  {
+    "word": "cyclone",
+    "pos": "n",
+    "pronunciation": "/ˈsaɪkləʊn/",
+    "example": "A cyclone formed over the Indian Ocean.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "siklon, kasırga"
+  },
+  {
+    "word": "flood",
+    "pos": "n",
+    "pronunciation": "/flʌd/",
+    "example": "The flood destroyed many homes in the village.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "sel, su baskını"
+  },
+  {
+    "word": "drought",
+    "pos": "n",
+    "pronunciation": "/draʊt/",
+    "example": "The drought damaged the wheat crops this season.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "kuraklık"
+  },
+  {
+    "word": "blizzard",
+    "pos": "n",
+    "pronunciation": "/ˈblɪzəd/",
+    "example": "A blizzard closed all the mountain roads.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "kar fırtınası"
+  },
+  {
+    "word": "thunderstorm",
+    "pos": "n",
+    "pronunciation": "/ˈθʌndəstɔːm/",
+    "example": "The thunderstorm woke everyone up at 3 AM.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "gök gürültülü fırtına"
+  },
+  {
+    "word": "severe weather",
+    "pos": "phr",
+    "pronunciation": "/sɪˈvɪə ˈweðə/",
+    "example": "Severe weather events are becoming more common.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "şiddetli hava (olayı)"
+  },
+  {
+    "word": "global warming",
+    "pos": "phr",
+    "pronunciation": "/ˈɡləʊbl ˈwɔːmɪŋ/",
+    "example": "Global warming threatens many species with extinction.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "küresel ısınma"
+  },
+  {
+    "word": "climate change",
+    "pos": "phr",
+    "pronunciation": "/ˈklaɪmət tʃeɪndʒ/",
+    "example": "Climate change is the biggest challenge of our generation.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "iklim değişikliği"
+  },
+  {
+    "word": "greenhouse gas",
+    "pos": "n",
+    "pronunciation": "/ˈɡriːnhaʊs ɡæs/",
+    "example": "Greenhouse gases trap heat in the atmosphere.",
+    "file": "File 11",
+    "section": "Environment and energy",
+    "translation": "sera gazı"
+  },
+  {
+    "word": "emissions",
+    "pos": "n",
+    "pronunciation": "/ɪˈmɪʃnz/",
+    "example": "Carbon emissions must be reduced by 50% by 2030.",
+    "file": "File 11",
+    "section": "Environment and energy",
+    "translation": "emisyon, salınım"
+  },
+  {
+    "word": "glacier",
+    "pos": "n",
+    "pronunciation": "/ˈɡlæsiə/",
+    "example": "Glaciers are retreating worldwide due to warming temperatures.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "buzul"
+  },
+  {
+    "word": "ice cap",
+    "pos": "n",
+    "pronunciation": "/aɪs kæp/",
+    "example": "The polar ice caps are melting at an alarming rate.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "kutup buz örtüsü"
+  },
+  {
+    "word": "melt",
+    "pos": "v",
+    "pronunciation": "/melt/",
+    "example": "The snow will melt by early spring.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "erimek"
+  },
+  {
+    "word": "low-lying",
+    "pos": "adj",
+    "pronunciation": "/ˈləʊ laɪɪŋ/",
+    "example": "Low-lying islands are at risk of disappearing.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "alçak rakımlı"
+  },
+  {
+    "word": "renewable",
+    "pos": "adj",
+    "pronunciation": "/rɪˈnjuːəbl/",
+    "example": "Renewable energy is the future of power generation.",
+    "file": "File 11",
+    "section": "Environment and energy",
+    "translation": "yenilenebilir"
+  },
+  {
+    "word": "fossil fuels",
+    "pos": "n",
+    "pronunciation": "/ˈfɒsl fjuːəlz/",
+    "example": "We must stop using fossil fuels to slow climate change.",
+    "file": "File 11",
+    "section": "Environment and energy",
+    "translation": "fosil yakıtlar"
+  },
+  {
+    "word": "solar",
+    "pos": "adj",
+    "pronunciation": "/ˈsəʊlə/",
+    "example": "Solar panels are getting cheaper every year.",
+    "file": "File 11",
+    "section": "Environment and energy",
+    "translation": "güneş (enerjisi)"
+  },
+  {
+    "word": "wind power",
+    "pos": "n",
+    "pronunciation": "/wɪnd ˈpaʊə/",
+    "example": "Wind power produces clean energy without emissions.",
+    "file": "File 11",
+    "section": "Environment and energy",
+    "translation": "rüzgar enerjisi"
+  },
+  {
+    "word": "recycle",
+    "pos": "v",
+    "pronunciation": "/riːˈsaɪkl/",
+    "example": "Always recycle your plastic bottles and paper.",
+    "file": "File 11",
+    "section": "Environment and energy",
+    "translation": "geri dönüştürmek"
+  },
+  {
+    "word": "carbon footprint",
+    "pos": "n",
+    "pronunciation": "/ˈkɑːbn ˈfʊtprɪnt/",
+    "example": "Cycling to work reduces your carbon footprint.",
+    "file": "File 11",
+    "section": "Environment and energy",
+    "translation": "karbon ayak izi"
+  },
+  {
+    "word": "biodegradable",
+    "pos": "adj",
+    "pronunciation": "/ˌbaɪəʊdɪˈɡreɪdəbl/",
+    "example": "Use biodegradable bags instead of plastic ones.",
+    "file": "File 11",
+    "section": "Environment and energy",
+    "translation": "biyolojik olarak çözünür"
+  },
+  {
+    "word": "evaporate",
+    "pos": "v",
+    "pronunciation": "/ɪˈvæpəreɪt/",
+    "example": "Lakes evaporate quickly during long droughts.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "buharlaşmak"
+  },
+  {
+    "word": "ski resort",
+    "pos": "n",
+    "pronunciation": "/skiː rɪˈzɔːt/",
+    "example": "Many ski resorts are closing due to lack of snow.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "kayak merkezi"
+  },
+  {
+    "word": "beach resort",
+    "pos": "n",
+    "pronunciation": "/biːtʃ rɪˈzɔːt/",
+    "example": "Some beach resorts may disappear by 2100.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "sahil tatil yeri"
+  },
+  {
+    "word": "drinking water",
+    "pos": "n",
+    "pronunciation": "/ˈdrɪŋkɪŋ ˈwɔːtə/",
+    "example": "Access to clean drinking water is a human right.",
+    "file": "File 11",
+    "section": "Environment and energy",
+    "translation": "içme suyu"
+  },
+  {
+    "word": "plant-based",
+    "pos": "adj",
+    "pronunciation": "/plɑːnt beɪst/",
+    "example": "A plant-based diet helps reduce environmental impact.",
+    "file": "File 11",
+    "section": "Environment and energy",
+    "translation": "bitki bazlı"
+  },
+  {
+    "word": "predict",
+    "pos": "v",
+    "pronunciation": "/prɪˈdɪkt/",
+    "example": "Scientists predict more severe weather in the future.",
+    "file": "File 11",
+    "section": "Weather and climate",
+    "translation": "tahmin etmek"
+  },
+  {
+    "word": "risky",
+    "pos": "adj",
+    "pronunciation": "/ˈrɪski/",
+    "example": "Skydiving is too risky for me; I prefer safer hobbies.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "riskli"
+  },
+  {
+    "word": "risk-averse",
+    "pos": "adj",
+    "pronunciation": "/rɪsk əˈvɜːs/",
+    "example": "She is very risk-averse when it comes to investing money.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "risk almaktan kaçınan"
+  },
+  {
+    "word": "daredevil",
+    "pos": "n",
+    "pronunciation": "/ˈdeədevl/",
+    "example": "He is a daredevil who loves extreme sports.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "gözüpek, atılgan"
+  },
+  {
+    "word": "adrenaline",
+    "pos": "n",
+    "pronunciation": "/əˈdrenəlɪn/",
+    "example": "Skydiving gives you a huge adrenaline rush.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "adrenalin"
+  },
+  {
+    "word": "dangerous",
+    "pos": "adj",
+    "pronunciation": "/ˈdeɪndʒərəs/",
+    "example": "Driving in a snowstorm is dangerous.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "tehlikeli"
+  },
+  {
+    "word": "hazardous",
+    "pos": "adj",
+    "pronunciation": "/ˈhæzədəs/",
+    "example": "Working with chemicals is a hazardous job.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "tehlikeli (resmi)"
+  },
+  {
+    "word": "take a chance",
+    "pos": "phr",
+    "pronunciation": "/teɪk ə tʃɑːns/",
+    "example": "Sometimes you have to take a chance and trust your instinct.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "şansa bırakmak"
+  },
+  {
+    "word": "take a risk",
+    "pos": "phr",
+    "pronunciation": "/teɪk ə rɪsk/",
+    "example": "I never take risks at work; I always plan carefully.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "risk almak"
+  },
+  {
+    "word": "worth the risk",
+    "pos": "phr",
+    "pronunciation": "/wɜːθ ðə rɪsk/",
+    "example": "The reward was worth the risk in the end.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "riske değer"
+  },
+  {
+    "word": "tattoo",
+    "pos": "n",
+    "pronunciation": "/təˈtuː/",
+    "example": "She got a small tattoo on her arm last weekend.",
+    "file": "File 12",
+    "section": "Daily life and decisions",
+    "translation": "dövme"
+  },
+  {
+    "word": "piercing",
+    "pos": "n",
+    "pronunciation": "/ˈpɪəsɪŋ/",
+    "example": "He has multiple piercings in his ears.",
+    "file": "File 12",
+    "section": "Daily life and decisions",
+    "translation": "piercing, delme"
+  },
+  {
+    "word": "dye your hair",
+    "pos": "phr",
+    "pronunciation": "/daɪ jɔː heə/",
+    "example": "I want to dye my hair purple this summer.",
+    "file": "File 12",
+    "section": "Daily life and decisions",
+    "translation": "saçını boyamak"
+  },
+  {
+    "word": "exotic food",
+    "pos": "n",
+    "pronunciation": "/ɪɡˈzɒtɪk fuːd/",
+    "example": "I love trying exotic food when I travel abroad.",
+    "file": "File 12",
+    "section": "Daily life and decisions",
+    "translation": "egzotik yemek"
+  },
+  {
+    "word": "raw fish",
+    "pos": "n",
+    "pronunciation": "/rɔː fɪʃ/",
+    "example": "Sushi is made with raw fish and rice.",
+    "file": "File 12",
+    "section": "Daily life and decisions",
+    "translation": "çiğ balık"
+  },
+  {
+    "word": "street food",
+    "pos": "n",
+    "pronunciation": "/striːt fuːd/",
+    "example": "Bangkok street food is incredible and cheap.",
+    "file": "File 12",
+    "section": "Daily life and decisions",
+    "translation": "sokak yemeği"
+  },
+  {
+    "word": "hitchhike",
+    "pos": "v",
+    "pronunciation": "/ˈhɪtʃhaɪk/",
+    "example": "We hitchhiked across Europe with very little money.",
+    "file": "File 12",
+    "section": "Daily life and decisions",
+    "translation": "otostop yapmak"
+  },
+  {
+    "word": "backpack",
+    "pos": "v",
+    "pronunciation": "/ˈbækpæk/",
+    "example": "They backpacked through Southeast Asia for six months.",
+    "file": "File 12",
+    "section": "Daily life and decisions",
+    "translation": "sırt çantasıyla seyahat etmek"
+  },
+  {
+    "word": "drop out",
+    "pos": "phr v",
+    "pronunciation": "/drɒp aʊt/",
+    "example": "He dropped out of college to start his own company.",
+    "file": "File 12",
+    "section": "Daily life and decisions",
+    "translation": "okuldan ayrılmak, bırakmak"
+  },
+  {
+    "word": "start a business",
+    "pos": "phr",
+    "pronunciation": "/stɑːt ə ˈbɪznəs/",
+    "example": "She started a business at the age of 22.",
+    "file": "File 12",
+    "section": "Daily life and decisions",
+    "translation": "iş kurmak"
+  },
+  {
+    "word": "change career",
+    "pos": "phr",
+    "pronunciation": "/tʃeɪndʒ kəˈrɪə/",
+    "example": "Many people change careers in their forties.",
+    "file": "File 12",
+    "section": "Daily life and decisions",
+    "translation": "kariyer değiştirmek"
+  },
+  {
+    "word": "deadline",
+    "pos": "n",
+    "pronunciation": "/ˈdedlaɪn/",
+    "example": "The deadline for the report is Friday at 5 PM.",
+    "file": "File 12",
+    "section": "Deadlines and daily life",
+    "translation": "son tarih, deadline"
+  },
+  {
+    "word": "meet a deadline",
+    "pos": "phr",
+    "pronunciation": "/miːt ə ˈdedlaɪn/",
+    "example": "We worked all night to meet the deadline.",
+    "file": "File 12",
+    "section": "Deadlines and daily life",
+    "translation": "deadline'a yetişmek"
+  },
+  {
+    "word": "miss a deadline",
+    "pos": "phr",
+    "pronunciation": "/mɪs ə ˈdedlaɪn/",
+    "example": "Don't miss the deadline; the boss will be furious.",
+    "file": "File 12",
+    "section": "Deadlines and daily life",
+    "translation": "deadline'ı kaçırmak"
+  },
+  {
+    "word": "strict",
+    "pos": "adj",
+    "pronunciation": "/strɪkt/",
+    "example": "The teacher is very strict about late homework.",
+    "file": "File 12",
+    "section": "Deadlines and daily life",
+    "translation": "sıkı, katı"
+  },
+  {
+    "word": "flexible",
+    "pos": "adj",
+    "pronunciation": "/ˈfleksəbl/",
+    "example": "We have flexible working hours at this company.",
+    "file": "File 12",
+    "section": "Deadlines and daily life",
+    "translation": "esnek"
+  },
+  {
+    "word": "consequence",
+    "pos": "n",
+    "pronunciation": "/ˈkɒnsɪkwəns/",
+    "example": "Every action has consequences, good or bad.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "sonuç, akıbet"
+  },
+  {
+    "word": "impulsive",
+    "pos": "adj",
+    "pronunciation": "/ɪmˈpʌlsɪv/",
+    "example": "He's an impulsive shopper and always regrets it.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "dürtüsel, ani"
+  },
+  {
+    "word": "cautious",
+    "pos": "adj",
+    "pronunciation": "/ˈkɔːʃəs/",
+    "example": "Be cautious when investing your savings.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "dikkatli, ihtiyatlı"
+  },
+  {
+    "word": "brave",
+    "pos": "adj",
+    "pronunciation": "/breɪv/",
+    "example": "It was a brave decision to start over in a new country.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "cesur"
+  },
+  {
+    "word": "coward",
+    "pos": "n",
+    "pronunciation": "/ˈkaʊəd/",
+    "example": "I'm not a coward; I just like to think before acting.",
+    "file": "File 12",
+    "section": "Risk-taking and personality",
+    "translation": "korkak"
   }
 ];
