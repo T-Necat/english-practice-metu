@@ -5368,8 +5368,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/ɡɪv ʌp/",
     "example": "Don't give up; you're almost there.",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "pes etmek, vazgeçmek"
   },
   {
@@ -5377,8 +5377,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/kiːp ˈɡəʊɪŋ/",
     "example": "Keep going, you're doing great!",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "devam etmek (zorlukta)"
   },
   {
@@ -5386,8 +5386,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/pʊl θruː/",
     "example": "The patient pulled through after surgery.",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "atlatmak (hastalık/zorluk)"
   },
   {
@@ -5395,8 +5395,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/ɡet baɪ/",
     "example": "We get by on a small income.",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "idare etmek, kıt kanaat geçinmek"
   },
   {
@@ -5404,8 +5404,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/diːl wɪð/",
     "example": "I'll deal with this problem tomorrow.",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "başa çıkmak"
   },
   {
@@ -5413,8 +5413,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/ɡəʊ θruː/",
     "example": "She has gone through some tough times.",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "geçirmek (zor şey yaşamak)"
   },
   {
@@ -5422,8 +5422,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/lʊk ˈɑːftə/",
     "example": "Can you look after my dog this weekend?",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "bakmak, ilgilenmek"
   },
   {
@@ -5431,8 +5431,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/kʌm raʊnd/",
     "example": "He came round after the surgery.",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "kendine gelmek, ayılmak"
   },
   {
@@ -5440,8 +5440,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/həʊld ɒn/",
     "example": "Hold on tight! The road is bumpy.",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "tutunmak, dayanmak"
   },
   {
@@ -5449,8 +5449,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/rʌn aʊt əv/",
     "example": "We've run out of milk; can you buy some?",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "tükenmek, bitmek"
   },
   {
@@ -5458,8 +5458,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/kəʊp wɪð/",
     "example": "It's hard to cope with so much stress.",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "başa çıkmak, üstesinden gelmek"
   },
   {
@@ -5467,8 +5467,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/ɡɪv ɪn/",
     "example": "He finally gave in and apologized.",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "boyun eğmek, kabullenmek"
   },
   {
@@ -5476,8 +5476,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/ɡet ˈəʊvə/",
     "example": "It took her months to get over the breakup.",
-    "file": "File 13",
-    "section": "Survival phrasal verbs",
+    "file": "File 17",
+    "section": "Bonus: Survival phrasal verbs",
     "translation": "atlatmak (duygusal)"
   },
   {
@@ -5485,8 +5485,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/səˈvaɪv/",
     "example": "Only two passengers survived the crash.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "hayatta kalmak"
   },
   {
@@ -5494,8 +5494,8 @@ var WORDS_DATA = [
     "pos": "n",
     "pronunciation": "/səˈvaɪvə/",
     "example": "She is a cancer survivor and an inspiration.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "hayatta kalan kişi"
   },
   {
@@ -5503,8 +5503,8 @@ var WORDS_DATA = [
     "pos": "n",
     "pronunciation": "/ˈʃeltə/",
     "example": "We built a shelter from branches and leaves.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "barınak, sığınak"
   },
   {
@@ -5512,8 +5512,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/ˈreskjuː/",
     "example": "Helicopters rescued the stranded climbers.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "kurtarmak"
   },
   {
@@ -5521,8 +5521,8 @@ var WORDS_DATA = [
     "pos": "n",
     "pronunciation": "/ˈdʒʌŋɡl/",
     "example": "They got lost in the Amazon jungle for three days.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "orman, cangıl"
   },
   {
@@ -5530,8 +5530,8 @@ var WORDS_DATA = [
     "pos": "phr",
     "pronunciation": "/ɡet lɒst/",
     "example": "We got lost on the mountain trail.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "kaybolmak"
   },
   {
@@ -5539,8 +5539,8 @@ var WORDS_DATA = [
     "pos": "phr",
     "pronunciation": "/bi ˈstrændɪd/",
     "example": "Hikers were stranded by the snowstorm.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "mahsur kalmak"
   },
   {
@@ -5548,8 +5548,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/stɑːv/",
     "example": "Many refugees were starving in the camps.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "açlıktan ölmek, aç kalmak"
   },
   {
@@ -5557,8 +5557,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/draʊn/",
     "example": "He almost drowned in the river last summer.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "boğulmak"
   },
   {
@@ -5566,8 +5566,8 @@ var WORDS_DATA = [
     "pos": "n",
     "pronunciation": "/ˈɪndʒəri/",
     "example": "She suffered minor injuries in the accident.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "yaralanma"
   },
   {
@@ -5575,8 +5575,8 @@ var WORDS_DATA = [
     "pos": "n",
     "pronunciation": "/wuːnd/",
     "example": "The wound healed quickly with proper care.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "yara"
   },
   {
@@ -5584,8 +5584,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/hiːl/",
     "example": "The cut will heal in a few days.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "iyileşmek"
   },
   {
@@ -5593,8 +5593,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/ˈstrʌɡl/",
     "example": "He struggled to climb the steep mountain.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "mücadele etmek, çabalamak"
   },
   {
@@ -5602,8 +5602,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/ɪnˈdjʊə/",
     "example": "They endured terrible conditions for weeks.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "katlanmak, dayanmak"
   },
   {
@@ -5611,8 +5611,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/rɪˈzɪst/",
     "example": "She couldn't resist the temptation of chocolate.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "direnmek, karşı koymak"
   },
   {
@@ -5620,8 +5620,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/əˈbændən/",
     "example": "The crew had to abandon the sinking ship.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "terk etmek"
   },
   {
@@ -5629,8 +5629,8 @@ var WORDS_DATA = [
     "pos": "adj",
     "pronunciation": "/ˈhəʊpfl/",
     "example": "We're hopeful about the test result.",
-    "file": "File 13",
-    "section": "Survival and adventure",
+    "file": "File 17",
+    "section": "Bonus: Survival and adventure",
     "translation": "umutlu"
   },
   {
@@ -5638,8 +5638,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/rɪˈɡret/",
     "example": "I regret not studying harder for the exam.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "pişman olmak"
   },
   {
@@ -5647,8 +5647,8 @@ var WORDS_DATA = [
     "pos": "phr",
     "pronunciation": "/ɪf ˈəʊnli/",
     "example": "If only I had more time to travel!",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "keşke (vurgulu)"
   },
   {
@@ -5656,8 +5656,8 @@ var WORDS_DATA = [
     "pos": "phr",
     "pronunciation": "/ʃəd əv/",
     "example": "I should have called you sooner.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "-meliydim (yapmadım)"
   },
   {
@@ -5665,8 +5665,8 @@ var WORDS_DATA = [
     "pos": "phr",
     "pronunciation": "/ˈʃʊdnt əv/",
     "example": "You shouldn't have spent so much money.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "-memeliydim (yaptım)"
   },
   {
@@ -5674,8 +5674,8 @@ var WORDS_DATA = [
     "pos": "phr",
     "pronunciation": "/kəd əv/",
     "example": "You could have warned me about the traffic.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "-ebilirdim (yapmadım)"
   },
   {
@@ -5683,8 +5683,8 @@ var WORDS_DATA = [
     "pos": "phr",
     "pronunciation": "/wəd ˈrɑːðə/",
     "example": "I'd rather stay home tonight than go out.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "tercih etmek"
   },
   {
@@ -5692,8 +5692,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/driːm əv/",
     "example": "She dreams of becoming a pilot one day.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "hayalini kurmak"
   },
   {
@@ -5701,8 +5701,8 @@ var WORDS_DATA = [
     "pos": "adj",
     "pronunciation": "/ˈmemərəbl/",
     "example": "It was a memorable trip we'll never forget.",
-    "file": "File 14",
-    "section": "Travel and holidays",
+    "file": "File 18",
+    "section": "Bonus: Travel and holidays",
     "translation": "unutulmaz, akılda kalıcı"
   },
   {
@@ -5710,8 +5710,8 @@ var WORDS_DATA = [
     "pos": "adj",
     "pronunciation": "/ˌʌnfəˈɡetəbl/",
     "example": "The view from the mountain was unforgettable.",
-    "file": "File 14",
-    "section": "Travel and holidays",
+    "file": "File 18",
+    "section": "Bonus: Travel and holidays",
     "translation": "unutulmaz"
   },
   {
@@ -5719,8 +5719,8 @@ var WORDS_DATA = [
     "pos": "adj",
     "pronunciation": "/nɒˈstældʒɪk/",
     "example": "The old song made her feel nostalgic.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "nostaljik, hüzünlü"
   },
   {
@@ -5728,8 +5728,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/mɪs/",
     "example": "I miss my family back home in Turkey.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "özlemek"
   },
   {
@@ -5737,8 +5737,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/ɡet əˈweɪ/",
     "example": "We need to get away for the weekend.",
-    "file": "File 14",
-    "section": "Travel and holidays",
+    "file": "File 18",
+    "section": "Bonus: Travel and holidays",
     "translation": "tatile çıkmak, kaçıp gitmek"
   },
   {
@@ -5746,8 +5746,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/set ɒf/",
     "example": "We set off at dawn for the long drive.",
-    "file": "File 14",
-    "section": "Travel and holidays",
+    "file": "File 18",
+    "section": "Bonus: Travel and holidays",
     "translation": "yola çıkmak"
   },
   {
@@ -5755,8 +5755,8 @@ var WORDS_DATA = [
     "pos": "phr v",
     "pronunciation": "/hed bæk/",
     "example": "Let's head back before it gets dark.",
-    "file": "File 14",
-    "section": "Travel and holidays",
+    "file": "File 18",
+    "section": "Bonus: Travel and holidays",
     "translation": "geri dönmek"
   },
   {
@@ -5764,8 +5764,8 @@ var WORDS_DATA = [
     "pos": "phr",
     "pronunciation": "/bʊk ɪn ədˈvɑːns/",
     "example": "Book your tickets in advance to get a discount.",
-    "file": "File 14",
-    "section": "Travel and holidays",
+    "file": "File 18",
+    "section": "Bonus: Travel and holidays",
     "translation": "önceden rezervasyon yapmak"
   },
   {
@@ -5773,8 +5773,8 @@ var WORDS_DATA = [
     "pos": "n",
     "pronunciation": "/ˈpəʊstkɑːd/",
     "example": "Send me a postcard from Paris!",
-    "file": "File 14",
-    "section": "Travel and holidays",
+    "file": "File 18",
+    "section": "Bonus: Travel and holidays",
     "translation": "kartpostal"
   },
   {
@@ -5782,8 +5782,8 @@ var WORDS_DATA = [
     "pos": "n",
     "pronunciation": "/ˌsuːvəˈnɪə/",
     "example": "I bought a small souvenir for my mother.",
-    "file": "File 14",
-    "section": "Travel and holidays",
+    "file": "File 18",
+    "section": "Bonus: Travel and holidays",
     "translation": "hediyelik eşya"
   },
   {
@@ -5791,8 +5791,8 @@ var WORDS_DATA = [
     "pos": "n",
     "pronunciation": "/ˈtʊərɪst træp/",
     "example": "This restaurant is a complete tourist trap.",
-    "file": "File 14",
-    "section": "Travel and holidays",
+    "file": "File 18",
+    "section": "Bonus: Travel and holidays",
     "translation": "turist tuzağı"
   },
   {
@@ -5800,8 +5800,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/əˈpɒlədʒaɪz/",
     "example": "I apologize for the delay; the traffic was terrible.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "özür dilemek"
   },
   {
@@ -5809,8 +5809,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/fəˈɡɪv/",
     "example": "Please forgive me for being so late.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "affetmek"
   },
   {
@@ -5818,8 +5818,8 @@ var WORDS_DATA = [
     "pos": "v",
     "pronunciation": "/bleɪm/",
     "example": "Don't blame yourself for the accident.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "suçlamak"
   },
   {
@@ -5827,8 +5827,8 @@ var WORDS_DATA = [
     "pos": "n",
     "pronunciation": "/mɪˈsteɪk/",
     "example": "Everyone makes mistakes from time to time.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "hata"
   },
   {
@@ -5836,8 +5836,8 @@ var WORDS_DATA = [
     "pos": "n",
     "pronunciation": "/ˌɒpəˈtjuːnəti/",
     "example": "Don't miss this opportunity to study abroad.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "fırsat"
   },
   {
@@ -5845,8 +5845,8 @@ var WORDS_DATA = [
     "pos": "phr",
     "pronunciation": "/ˈsekənd tʃɑːns/",
     "example": "Everyone deserves a second chance.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "ikinci şans"
   },
   {
@@ -5854,8 +5854,8 @@ var WORDS_DATA = [
     "pos": "phr",
     "pronunciation": "/ɪn ˈhaɪndsaɪt/",
     "example": "In hindsight, I shouldn't have quit my job.",
-    "file": "File 14",
-    "section": "Wishes and regrets",
+    "file": "File 18",
+    "section": "Bonus: Wishes and regrets",
     "translation": "şimdi düşününce, dönüp bakınca"
   },
   {
@@ -6424,5 +6424,734 @@ var WORDS_DATA = [
     "file": "File 16",
     "section": "Hypothetical scenarios",
     "translation": "hayali"
+  },
+  {
+    "word": "take care of",
+    "pos": "phr",
+    "pronunciation": "/teɪk keə əv/",
+    "example": "Can you take care of my cat while I'm away?",
+    "file": "File 12",
+    "section": "Expressions with take",
+    "translation": "ilgilenmek, bakmak"
+  },
+  {
+    "word": "take advantage of",
+    "pos": "phr",
+    "pronunciation": "/teɪk ədˈvɑːntɪdʒ əv/",
+    "example": "Don't let people take advantage of your kindness.",
+    "file": "File 12",
+    "section": "Expressions with take",
+    "translation": "fırsattan yararlanmak; istismar etmek"
+  },
+  {
+    "word": "take part in",
+    "pos": "phr",
+    "pronunciation": "/teɪk pɑːt ɪn/",
+    "example": "She took part in the marathon last weekend.",
+    "file": "File 12",
+    "section": "Expressions with take",
+    "translation": "katılmak"
+  },
+  {
+    "word": "take place",
+    "pos": "phr",
+    "pronunciation": "/teɪk pleɪs/",
+    "example": "The wedding will take place in June.",
+    "file": "File 12",
+    "section": "Expressions with take",
+    "translation": "(olay) gerçekleşmek, vuku bulmak"
+  },
+  {
+    "word": "take your time",
+    "pos": "phr",
+    "pronunciation": "/teɪk jɔː taɪm/",
+    "example": "Don't rush, take your time with the decision.",
+    "file": "File 12",
+    "section": "Expressions with take",
+    "translation": "acele etmemek, ağırdan almak"
+  },
+  {
+    "word": "take into account",
+    "pos": "phr",
+    "pronunciation": "/teɪk ˈɪntə əˈkaʊnt/",
+    "example": "We must take the cost into account when planning.",
+    "file": "File 12",
+    "section": "Expressions with take",
+    "translation": "göz önünde bulundurmak, hesaba katmak"
+  },
+  {
+    "word": "take after",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ˈɑːftə/",
+    "example": "She takes after her mother — same eyes, same laugh.",
+    "file": "File 12",
+    "section": "Expressions with take",
+    "translation": "(birine) çekmek, benzemek"
+  },
+  {
+    "word": "take off",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ɒf/",
+    "example": "The plane took off on time. / Take off your shoes, please.",
+    "file": "File 12",
+    "section": "Expressions with take",
+    "translation": "(uçak) kalkmak; (kıyafet) çıkarmak"
+  },
+  {
+    "word": "take up",
+    "pos": "phr v",
+    "pronunciation": "/teɪk ʌp/",
+    "example": "I've decided to take up yoga next year.",
+    "file": "File 12",
+    "section": "Expressions with take",
+    "translation": "(yeni hobi/aktivite) başlamak"
+  },
+  {
+    "word": "miserable",
+    "pos": "adj",
+    "pronunciation": "/ˈmɪzrəbl/",
+    "example": "I felt miserable after I lost the match.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "çok mutsuz, perişan"
+  },
+  {
+    "word": "homesick",
+    "pos": "adj",
+    "pronunciation": "/ˈhəʊmsɪk/",
+    "example": "She gets homesick when she travels for too long.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "(memleket) hasreti çeken, yurt özlemi"
+  },
+  {
+    "word": "disappointed",
+    "pos": "adj",
+    "pronunciation": "/ˌdɪsəˈpɔɪntɪd/",
+    "example": "I was disappointed with the exam result.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "hayal kırıklığına uğramış"
+  },
+  {
+    "word": "lonely",
+    "pos": "adj",
+    "pronunciation": "/ˈləʊnli/",
+    "example": "He felt lonely after moving to a new city.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "yalnız, kimsesiz hisseden"
+  },
+  {
+    "word": "proud",
+    "pos": "adj",
+    "pronunciation": "/praʊd/",
+    "example": "She was proud of her son's achievement.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "gururlu"
+  },
+  {
+    "word": "fed up",
+    "pos": "adj",
+    "pronunciation": "/fed ʌp/",
+    "example": "I'm fed up with this rainy weather.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "bıkkın, illallah etmiş"
+  },
+  {
+    "word": "grateful",
+    "pos": "adj",
+    "pronunciation": "/ˈɡreɪtfl/",
+    "example": "I'm grateful for your help.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "minnettar"
+  },
+  {
+    "word": "upset",
+    "pos": "adj",
+    "pronunciation": "/ˌʌpˈset/",
+    "example": "She was upset by his rude comment.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "üzgün, keyfi kaçmış"
+  },
+  {
+    "word": "relieved",
+    "pos": "adj",
+    "pronunciation": "/rɪˈliːvd/",
+    "example": "I was relieved when the surgery went well.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "rahatlamış, içi rahat"
+  },
+  {
+    "word": "offended",
+    "pos": "adj",
+    "pronunciation": "/əˈfendɪd/",
+    "example": "He was offended by her sarcastic remark.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "gücenmiş, alınmış"
+  },
+  {
+    "word": "astonished",
+    "pos": "adj",
+    "pronunciation": "/əˈstɒnɪʃt/",
+    "example": "I was astonished by the magician's trick.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (strong)",
+    "translation": "hayretler içinde, çok şaşırmış"
+  },
+  {
+    "word": "bewildered",
+    "pos": "adj",
+    "pronunciation": "/bɪˈwɪldəd/",
+    "example": "She looked bewildered by the question.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "kafası karışmış, şaşkın"
+  },
+  {
+    "word": "delighted",
+    "pos": "adj",
+    "pronunciation": "/dɪˈlaɪtɪd/",
+    "example": "We were delighted to see them again.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (strong)",
+    "translation": "çok memnun, sevinçten uçan"
+  },
+  {
+    "word": "devastated",
+    "pos": "adj",
+    "pronunciation": "/ˈdevəsteɪtɪd/",
+    "example": "She was devastated when her dog died.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (strong)",
+    "translation": "yıkılmış, mahvolmuş"
+  },
+  {
+    "word": "horrified",
+    "pos": "adj",
+    "pronunciation": "/ˈhɒrɪfaɪd/",
+    "example": "I was horrified by the news of the accident.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (strong)",
+    "translation": "dehşete düşmüş"
+  },
+  {
+    "word": "overwhelmed",
+    "pos": "adj",
+    "pronunciation": "/ˌəʊvəˈwelmd/",
+    "example": "He felt overwhelmed by all the work.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "altında ezilmiş, bunalmış"
+  },
+  {
+    "word": "stunned",
+    "pos": "adj",
+    "pronunciation": "/stʌnd/",
+    "example": "She was stunned by the unexpected announcement.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (strong)",
+    "translation": "şoke olmuş, donakalmış"
+  },
+  {
+    "word": "thrilled",
+    "pos": "adj",
+    "pronunciation": "/θrɪld/",
+    "example": "I'm thrilled to be here today.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (strong)",
+    "translation": "çok heyecanlı, çok memnun"
+  },
+  {
+    "word": "scared",
+    "pos": "adj",
+    "pronunciation": "/skeəd/",
+    "example": "I'm scared of spiders.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "korkmuş, ürkmüş"
+  },
+  {
+    "word": "down",
+    "pos": "adj",
+    "pronunciation": "/daʊn/",
+    "example": "I've been feeling a bit down lately.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "morali bozuk, üzgün (geçici)"
+  },
+  {
+    "word": "depressed",
+    "pos": "adj",
+    "pronunciation": "/dɪˈprest/",
+    "example": "He's been depressed since losing his job.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "depresyonda, çok mutsuz"
+  },
+  {
+    "word": "terrified",
+    "pos": "adj",
+    "pronunciation": "/ˈterɪfaɪd/",
+    "example": "She was terrified of the dark as a child.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (strong)",
+    "translation": "çok korkmuş, dehşete kapılmış"
+  },
+  {
+    "word": "exhausted",
+    "pos": "adj",
+    "pronunciation": "/ɪɡˈzɔːstɪd/",
+    "example": "I'm exhausted after that long meeting.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (strong)",
+    "translation": "çok yorgun, bitkin"
+  },
+  {
+    "word": "irritated",
+    "pos": "adj",
+    "pronunciation": "/ˈɪrɪteɪtɪd/",
+    "example": "She seemed irritated by the constant noise.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "sinirlenmiş, rahatsız olmuş"
+  },
+  {
+    "word": "gutted",
+    "pos": "adj",
+    "pronunciation": "/ˈɡʌtɪd/",
+    "example": "I'm gutted that we lost the final.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (slang)",
+    "translation": "yıkılmış (argo), perişan"
+  },
+  {
+    "word": "anxious",
+    "pos": "adj",
+    "pronunciation": "/ˈæŋkʃəs/",
+    "example": "She felt anxious before the presentation.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "endişeli, kaygılı"
+  },
+  {
+    "word": "nervous",
+    "pos": "adj",
+    "pronunciation": "/ˈnɜːvəs/",
+    "example": "I always get nervous before exams.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "gergin, sinirli"
+  },
+  {
+    "word": "embarrassed",
+    "pos": "adj",
+    "pronunciation": "/ɪmˈbærəst/",
+    "example": "I was embarrassed when I forgot her name.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "utanmış, mahcup olmuş"
+  },
+  {
+    "word": "amaze",
+    "pos": "v",
+    "pronunciation": "/əˈmeɪz/",
+    "example": "Her talent amazes everyone who hears her sing.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "şaşırtmak, hayrete düşürmek"
+  },
+  {
+    "word": "amazed",
+    "pos": "adj",
+    "pronunciation": "/əˈmeɪzd/",
+    "example": "I was amazed by her performance.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "şaşırmış (hisseden kişi)"
+  },
+  {
+    "word": "amazing",
+    "pos": "adj",
+    "pronunciation": "/əˈmeɪzɪŋ/",
+    "example": "Her performance was amazing.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "şaşırtıcı (etki yaratan şey)"
+  },
+  {
+    "word": "annoy",
+    "pos": "v",
+    "pronunciation": "/əˈnɔɪ/",
+    "example": "Loud chewing really annoys me.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "sinirlendirmek"
+  },
+  {
+    "word": "annoyed",
+    "pos": "adj",
+    "pronunciation": "/əˈnɔɪd/",
+    "example": "She was annoyed by the constant interruptions.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "sinirlenmiş, rahatsız olmuş"
+  },
+  {
+    "word": "annoying",
+    "pos": "adj",
+    "pronunciation": "/əˈnɔɪɪŋ/",
+    "example": "His habit of clicking pens is so annoying.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "sinir bozucu"
+  },
+  {
+    "word": "bore",
+    "pos": "v",
+    "pronunciation": "/bɔː/",
+    "example": "Long meetings bore me to death.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "sıkmak, sıkıcı hale getirmek"
+  },
+  {
+    "word": "bored",
+    "pos": "adj",
+    "pronunciation": "/bɔːd/",
+    "example": "I'm bored — let's do something fun.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "sıkılmış (hisseden kişi)"
+  },
+  {
+    "word": "boring",
+    "pos": "adj",
+    "pronunciation": "/ˈbɔːrɪŋ/",
+    "example": "That movie was so boring I fell asleep.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "sıkıcı (kaynak)"
+  },
+  {
+    "word": "confuse",
+    "pos": "v",
+    "pronunciation": "/kənˈfjuːz/",
+    "example": "Don't confuse facts with opinions.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "kafa karıştırmak"
+  },
+  {
+    "word": "confused",
+    "pos": "adj",
+    "pronunciation": "/kənˈfjuːzd/",
+    "example": "I'm confused by the instructions.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "kafası karışmış"
+  },
+  {
+    "word": "confusing",
+    "pos": "adj",
+    "pronunciation": "/kənˈfjuːzɪŋ/",
+    "example": "The explanation was very confusing.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "kafa karıştırıcı"
+  },
+  {
+    "word": "disappoint",
+    "pos": "v",
+    "pronunciation": "/ˌdɪsəˈpɔɪnt/",
+    "example": "I don't want to disappoint my parents.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "hayal kırıklığına uğratmak"
+  },
+  {
+    "word": "disappointing",
+    "pos": "adj",
+    "pronunciation": "/ˌdɪsəˈpɔɪntɪŋ/",
+    "example": "The result was disappointing for the team.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "hayal kırıklığı yaratan"
+  },
+  {
+    "word": "embarrass",
+    "pos": "v",
+    "pronunciation": "/ɪmˈbærəs/",
+    "example": "Don't embarrass me in front of my friends.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "utandırmak, mahcup etmek"
+  },
+  {
+    "word": "embarrassing",
+    "pos": "adj",
+    "pronunciation": "/ɪmˈbærəsɪŋ/",
+    "example": "It was an embarrassing moment for everyone.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "utanç verici"
+  },
+  {
+    "word": "excite",
+    "pos": "v",
+    "pronunciation": "/ɪkˈsaɪt/",
+    "example": "The trip excites the children.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "heyecanlandırmak"
+  },
+  {
+    "word": "excited",
+    "pos": "adj",
+    "pronunciation": "/ɪkˈsaɪtɪd/",
+    "example": "I'm so excited about the holiday!",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "heyecanlı"
+  },
+  {
+    "word": "exciting",
+    "pos": "adj",
+    "pronunciation": "/ɪkˈsaɪtɪŋ/",
+    "example": "It was an exciting football match.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "heyecan verici"
+  },
+  {
+    "word": "exhausting",
+    "pos": "adj",
+    "pronunciation": "/ɪɡˈzɔːstɪŋ/",
+    "example": "Looking after twins is exhausting.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "yorucu, bitirici"
+  },
+  {
+    "word": "fascinate",
+    "pos": "v",
+    "pronunciation": "/ˈfæsɪneɪt/",
+    "example": "Ancient history fascinates me.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "büyülemek, ilgisini çekmek"
+  },
+  {
+    "word": "fascinated",
+    "pos": "adj",
+    "pronunciation": "/ˈfæsɪneɪtɪd/",
+    "example": "She was fascinated by the documentary.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "büyülenmiş, çok ilgi duyan"
+  },
+  {
+    "word": "fascinating",
+    "pos": "adj",
+    "pronunciation": "/ˈfæsɪneɪtɪŋ/",
+    "example": "The book was absolutely fascinating.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "büyüleyici, çok ilginç"
+  },
+  {
+    "word": "frighten",
+    "pos": "v",
+    "pronunciation": "/ˈfraɪtn/",
+    "example": "Don't frighten the children with that mask.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "korkutmak"
+  },
+  {
+    "word": "frightened",
+    "pos": "adj",
+    "pronunciation": "/ˈfraɪtnd/",
+    "example": "The dog was frightened by the fireworks.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "korkmuş"
+  },
+  {
+    "word": "frightening",
+    "pos": "adj",
+    "pronunciation": "/ˈfraɪtnɪŋ/",
+    "example": "It was a frightening experience.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "korkutucu"
+  },
+  {
+    "word": "frustrate",
+    "pos": "v",
+    "pronunciation": "/frʌˈstreɪt/",
+    "example": "Slow internet really frustrates me.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "hayal kırıklığına uğratmak, bunaltmak"
+  },
+  {
+    "word": "frustrated",
+    "pos": "adj",
+    "pronunciation": "/frʌˈstreɪtɪd/",
+    "example": "I'm frustrated with my progress.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "engellendiğini hisseden, bunalmış"
+  },
+  {
+    "word": "frustrating",
+    "pos": "adj",
+    "pronunciation": "/frʌˈstreɪtɪŋ/",
+    "example": "It's frustrating not to find a solution.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "bunaltıcı, sinir bozucu"
+  },
+  {
+    "word": "interested",
+    "pos": "adj",
+    "pronunciation": "/ˈɪntrəstɪd/",
+    "example": "She's interested in modern art.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "ilgilenen"
+  },
+  {
+    "word": "interesting",
+    "pos": "adj",
+    "pronunciation": "/ˈɪntrəstɪŋ/",
+    "example": "The lecture was very interesting.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "ilginç"
+  },
+  {
+    "word": "shocked",
+    "pos": "adj",
+    "pronunciation": "/ʃɒkt/",
+    "example": "I was shocked by the news.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "şoke olmuş"
+  },
+  {
+    "word": "shocking",
+    "pos": "adj",
+    "pronunciation": "/ˈʃɒkɪŋ/",
+    "example": "The accident was shocking to witness.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "şok edici"
+  },
+  {
+    "word": "surprised",
+    "pos": "adj",
+    "pronunciation": "/səˈpraɪzd/",
+    "example": "I was surprised to see him there.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "şaşırmış"
+  },
+  {
+    "word": "surprising",
+    "pos": "adj",
+    "pronunciation": "/səˈpraɪzɪŋ/",
+    "example": "It was a surprising twist in the story.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "şaşırtıcı"
+  },
+  {
+    "word": "moved",
+    "pos": "adj",
+    "pronunciation": "/muːvd/",
+    "example": "I was deeply moved by the speech.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "duygulanmış"
+  },
+  {
+    "word": "moving",
+    "pos": "adj",
+    "pronunciation": "/ˈmuːvɪŋ/",
+    "example": "The film had a moving ending.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "duygulandırıcı, etkileyici"
+  },
+  {
+    "word": "pillowcase",
+    "pos": "n",
+    "pronunciation": "/ˈpɪləʊkeɪs/",
+    "example": "I changed the pillowcase this morning.",
+    "file": "File 15",
+    "section": "Bedroom items",
+    "translation": "yastık kılıfı"
+  },
+  {
+    "word": "sleeping pill",
+    "pos": "n",
+    "pronunciation": "/ˈsliːpɪŋ pɪl/",
+    "example": "She took a sleeping pill to fall asleep.",
+    "file": "File 15",
+    "section": "Sleep nouns",
+    "translation": "uyku hapı"
+  },
+  {
+    "word": "pyjamas",
+    "pos": "n",
+    "pronunciation": "/pəˈdʒɑːməz/",
+    "example": "I love wearing soft pyjamas in winter.",
+    "file": "File 15",
+    "section": "Bedroom items",
+    "translation": "pijama"
+  },
+  {
+    "word": "sleepy",
+    "pos": "adj",
+    "pronunciation": "/ˈsliːpi/",
+    "example": "I feel sleepy after a heavy lunch.",
+    "file": "File 15",
+    "section": "Sleep adjectives",
+    "translation": "uykulu"
+  },
+  {
+    "word": "awake",
+    "pos": "adj",
+    "pronunciation": "/əˈweɪk/",
+    "example": "I was awake all night with a toothache.",
+    "file": "File 15",
+    "section": "Sleep adjectives",
+    "translation": "uyanık"
+  },
+  {
+    "word": "deep sleep",
+    "pos": "n",
+    "pronunciation": "/diːp sliːp/",
+    "example": "He was in a deep sleep when the phone rang.",
+    "file": "File 15",
+    "section": "Sleep states",
+    "translation": "derin uyku"
+  },
+  {
+    "word": "jet lag",
+    "pos": "n",
+    "pronunciation": "/dʒet læɡ/",
+    "example": "I had terrible jet lag after the flight from Tokyo.",
+    "file": "File 15",
+    "section": "Sleep nouns",
+    "translation": "jet lag, saat farkı yorgunluğu"
   }
 ];
