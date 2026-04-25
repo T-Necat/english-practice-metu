@@ -7153,5 +7153,455 @@
     "file": "File 15",
     "section": "Sleep nouns",
     "translation": "jet lag, saat farkı yorgunluğu"
+  },
+  {
+    "word": "below zero",
+    "pos": "phr",
+    "pronunciation": "/bɪˈləʊ ˈzɪərəʊ/",
+    "example": "Temperatures dropped to ten below zero last night.",
+    "file": "File 11",
+    "section": "Weather: temperature scale",
+    "translation": "sıfırın altında"
+  },
+  {
+    "word": "boiling",
+    "pos": "adj",
+    "pronunciation": "/ˈbɔɪlɪŋ/",
+    "example": "It's boiling outside — over 40 degrees.",
+    "file": "File 11",
+    "section": "Weather: temperature scale",
+    "translation": "çok sıcak, kaynar"
+  },
+  {
+    "word": "freezing",
+    "pos": "adj",
+    "pronunciation": "/ˈfriːzɪŋ/",
+    "example": "It's freezing today; wear a warm coat.",
+    "file": "File 11",
+    "section": "Weather: temperature scale",
+    "translation": "dondurucu"
+  },
+  {
+    "word": "chilly",
+    "pos": "adj",
+    "pronunciation": "/ˈtʃɪli/",
+    "example": "It feels a bit chilly this evening.",
+    "file": "File 11",
+    "section": "Weather: temperature scale",
+    "translation": "serin (rahatsız edici şekilde soğuk)"
+  },
+  {
+    "word": "cool",
+    "pos": "adj",
+    "pronunciation": "/kuːl/",
+    "example": "A cool breeze made the heat bearable.",
+    "file": "File 11",
+    "section": "Weather: temperature scale",
+    "translation": "serin (rahatlatıcı şekilde)"
+  },
+  {
+    "word": "mild",
+    "pos": "adj",
+    "pronunciation": "/maɪld/",
+    "example": "We had a mild winter this year.",
+    "file": "File 11",
+    "section": "Weather: temperature scale",
+    "translation": "ılıman, ılık (warm'dan biraz daha serin)"
+  },
+  {
+    "word": "warm",
+    "pos": "adj",
+    "pronunciation": "/wɔːm/",
+    "example": "It's warm enough for a t-shirt today.",
+    "file": "File 11",
+    "section": "Weather: temperature scale",
+    "translation": "ılık"
+  },
+  {
+    "word": "humid",
+    "pos": "adj",
+    "pronunciation": "/ˈhjuːmɪd/",
+    "example": "It's hot and humid in the rainforest.",
+    "file": "File 11",
+    "section": "Weather: temperature scale",
+    "translation": "nemli, rutubetli"
+  },
+  {
+    "word": "damp",
+    "pos": "adj",
+    "pronunciation": "/dæmp/",
+    "example": "The grass is still damp from last night's rain.",
+    "file": "File 11",
+    "section": "Weather: temperature scale",
+    "translation": "nemli, rutubetli (hafif ıslak)"
+  },
+  {
+    "word": "breeze",
+    "pos": "n",
+    "pronunciation": "/briːz/",
+    "example": "A gentle sea breeze cooled the beach.",
+    "file": "File 11",
+    "section": "Weather: wind and rain",
+    "translation": "hafif rüzgar, esinti"
+  },
+  {
+    "word": "drizzle",
+    "pos": "v",
+    "pronunciation": "/ˈdrɪzl/",
+    "example": "It started to drizzle as we left the house.",
+    "file": "File 11",
+    "section": "Weather: wind and rain",
+    "translation": "çiselemek (hafif yağmak)"
+  },
+  {
+    "word": "drizzling",
+    "pos": "adj",
+    "pronunciation": "/ˈdrɪzlɪŋ/",
+    "example": "It's drizzling — barely worth opening an umbrella.",
+    "file": "File 11",
+    "section": "Weather: wind and rain",
+    "translation": "çiseleyen (hafif yağışlı)"
+  },
+  {
+    "word": "showers",
+    "pos": "n",
+    "pronunciation": "/ˈʃaʊəz/",
+    "example": "Light showers are expected this afternoon.",
+    "file": "File 11",
+    "section": "Weather: wind and rain",
+    "translation": "kısa süreli yağmur, sağanak"
+  },
+  {
+    "word": "pouring",
+    "pos": "adj",
+    "pronunciation": "/ˈpɔːrɪŋ/",
+    "example": "It's pouring with rain — we can't go out.",
+    "file": "File 11",
+    "section": "Weather: wind and rain",
+    "translation": "sağanak (çok yoğun yağan)"
+  },
+  {
+    "word": "fog",
+    "pos": "n",
+    "pronunciation": "/fɒɡ/",
+    "example": "Thick fog made driving dangerous this morning.",
+    "file": "File 11",
+    "section": "Weather: visibility",
+    "translation": "kalın/yoğun sis (şehir ve kırsalda)"
+  },
+  {
+    "word": "mist",
+    "pos": "n",
+    "pronunciation": "/mɪst/",
+    "example": "A light mist rose from the lake at dawn.",
+    "file": "File 11",
+    "section": "Weather: visibility",
+    "translation": "ince/hafif sis (dağlarda veya deniz kıyısında)"
+  },
+  {
+    "word": "smog",
+    "pos": "n",
+    "pronunciation": "/smɒɡ/",
+    "example": "Beijing's smog is caused by air pollution.",
+    "file": "File 11",
+    "section": "Weather: visibility",
+    "translation": "kirli sis (kirlilikten, büyük şehirlerde)"
+  },
+  {
+    "word": "hail",
+    "pos": "n",
+    "pronunciation": "/heɪl/",
+    "example": "The hail damaged the car's paintwork.",
+    "file": "File 11",
+    "section": "Weather: extremes",
+    "translation": "dolu (yağmur gibi düşen küçük buz topları)"
+  },
+  {
+    "word": "lightning",
+    "pos": "n",
+    "pronunciation": "/ˈlaɪtnɪŋ/",
+    "example": "Lightning lit up the night sky during the storm.",
+    "file": "File 11",
+    "section": "Weather: extremes",
+    "translation": "yıldırım (gökyüzündeki parlak ışık çakması)"
+  },
+  {
+    "word": "thunder",
+    "pos": "n",
+    "pronunciation": "/ˈθʌndə/",
+    "example": "The thunder was so loud it shook the windows.",
+    "file": "File 11",
+    "section": "Weather: extremes",
+    "translation": "gök gürültüsü"
+  },
+  {
+    "word": "monsoon",
+    "pos": "n",
+    "pronunciation": "/mɒnˈsuːn/",
+    "example": "The monsoon brings heavy rain to Southeast Asia every summer.",
+    "file": "File 11",
+    "section": "Weather: extremes",
+    "translation": "muson (Güney Asya'da çok yağmurlu mevsim)"
+  },
+  {
+    "word": "settled",
+    "pos": "adj",
+    "pronunciation": "/ˈsetld/",
+    "example": "The weather was settled all week — no rain at all.",
+    "file": "File 11",
+    "section": "Weather: visibility",
+    "translation": "sabit, düzenli (hava için: stabil)"
+  },
+  {
+    "word": "shattered",
+    "pos": "adj",
+    "pronunciation": "/ˈʃætəd/",
+    "example": "After the marathon, I was completely shattered.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (strong)",
+    "translation": "çok yorgun, bitap (= exhausted)"
+  },
+  {
+    "word": "gobsmacked",
+    "pos": "adj",
+    "pronunciation": "/ˈɡɒbsmækt/",
+    "example": "I was gobsmacked when I heard the news.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (slang)",
+    "translation": "afallamış (= astonished, slang)"
+  },
+  {
+    "word": "sick of",
+    "pos": "phr",
+    "pronunciation": "/sɪk əv/",
+    "example": "I'm sick of waiting for him; I'm leaving.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives",
+    "translation": "bıkmış (= fed up, irritated with)"
+  },
+  {
+    "word": "scared stiff",
+    "pos": "phr",
+    "pronunciation": "/skeəd stɪf/",
+    "example": "She was scared stiff when she saw the spider.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (strong)",
+    "translation": "ödü kopmuş (= terrified)"
+  },
+  {
+    "word": "desperate",
+    "pos": "adj",
+    "pronunciation": "/ˈdespərət/",
+    "example": "He was desperate to find his lost ring.",
+    "file": "File 13",
+    "section": "Feelings: 5A adjectives (strong)",
+    "translation": "umutsuz, çaresiz (umut az, ne pahasına olursa olsun yapacak)"
+  },
+  {
+    "word": "impressed",
+    "pos": "adj",
+    "pronunciation": "/ɪmˈprest/",
+    "example": "I was impressed by her performance.",
+    "file": "File 14",
+    "section": "5B düzensiz: -ed (kişi)",
+    "translation": "etkilenmiş"
+  },
+  {
+    "word": "impressive",
+    "pos": "adj",
+    "pronunciation": "/ɪmˈpresɪv/",
+    "example": "Her performance was impressive. (NOT 'impressing')",
+    "file": "File 14",
+    "section": "5B düzensiz: farklı sıfat",
+    "translation": "etkileyici (etkileyen şey)"
+  },
+  {
+    "word": "stressed",
+    "pos": "adj",
+    "pronunciation": "/strest/",
+    "example": "She felt stressed before the exam.",
+    "file": "File 14",
+    "section": "5B düzensiz: -ed (kişi)",
+    "translation": "stres altında, gerilmiş"
+  },
+  {
+    "word": "stressful",
+    "pos": "adj",
+    "pronunciation": "/ˈstresfl/",
+    "example": "It was a really stressful day. (NOT 'stressing')",
+    "file": "File 14",
+    "section": "5B düzensiz: farklı sıfat",
+    "translation": "stresli, gerilim yaratan"
+  },
+  {
+    "word": "scary",
+    "pos": "adj",
+    "pronunciation": "/ˈskeəri/",
+    "example": "That movie was so scary I couldn't sleep. (NOT 'scaring')",
+    "file": "File 14",
+    "section": "5B düzensiz: farklı sıfat",
+    "translation": "korkutucu (informal alternatif: frightening)"
+  },
+  {
+    "word": "delightful",
+    "pos": "adj",
+    "pronunciation": "/dɪˈlaɪtfl/",
+    "example": "The garden was absolutely delightful in spring. (NOT 'delighting')",
+    "file": "File 14",
+    "section": "5B düzensiz: farklı sıfat",
+    "translation": "harika, keyifli"
+  },
+  {
+    "word": "offensive",
+    "pos": "adj",
+    "pronunciation": "/əˈfensɪv/",
+    "example": "His comments were quite offensive. (NOT 'offending')",
+    "file": "File 14",
+    "section": "5B düzensiz: farklı sıfat",
+    "translation": "saldırgan, gücendirici"
+  },
+  {
+    "word": "infuriate",
+    "pos": "v",
+    "pronunciation": "/ɪnˈfjʊərieɪt/",
+    "example": "Her rude attitude really infuriated me.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "çıldırtmak"
+  },
+  {
+    "word": "infuriated",
+    "pos": "adj",
+    "pronunciation": "/ɪnˈfjʊərieɪtɪd/",
+    "example": "I was infuriated by the unfair decision.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "çıldırmış, çok kızgın"
+  },
+  {
+    "word": "infuriating",
+    "pos": "adj",
+    "pronunciation": "/ɪnˈfjʊərieɪtɪŋ/",
+    "example": "His constant lateness is infuriating.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "çıldırtıcı"
+  },
+  {
+    "word": "inspire",
+    "pos": "v",
+    "pronunciation": "/ɪnˈspaɪə/",
+    "example": "Her speech inspired the whole audience.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "ilham vermek"
+  },
+  {
+    "word": "inspired",
+    "pos": "adj",
+    "pronunciation": "/ɪnˈspaɪəd/",
+    "example": "I felt inspired after reading her book.",
+    "file": "File 14",
+    "section": "5B -ed (kişi hisseder)",
+    "translation": "ilham almış"
+  },
+  {
+    "word": "inspiring",
+    "pos": "adj",
+    "pronunciation": "/ɪnˈspaɪərɪŋ/",
+    "example": "It was an inspiring lecture.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "ilham verici"
+  },
+  {
+    "word": "terrify",
+    "pos": "v",
+    "pronunciation": "/ˈterɪfaɪ/",
+    "example": "Heights terrify me.",
+    "file": "File 14",
+    "section": "5B verbs of feeling",
+    "translation": "çok korkutmak, dehşete düşürmek"
+  },
+  {
+    "word": "terrifying",
+    "pos": "adj",
+    "pronunciation": "/ˈterɪfaɪɪŋ/",
+    "example": "It was a terrifying experience in the dark forest.",
+    "file": "File 14",
+    "section": "5B -ing (durum/şey)",
+    "translation": "dehşet verici"
+  },
+  {
+    "word": "actually",
+    "pos": "adv",
+    "pronunciation": "/ˈæktʃuəli/",
+    "example": "Actually, I prefer tea over coffee.",
+    "file": "File 12",
+    "section": "Adverbs of attitude (4&5 Colloquial)",
+    "translation": "aslında"
+  },
+  {
+    "word": "obviously",
+    "pos": "adv",
+    "pronunciation": "/ˈɒbviəsli/",
+    "example": "Obviously, we need to recycle more.",
+    "file": "File 12",
+    "section": "Adverbs of attitude (4&5 Colloquial)",
+    "translation": "açıkça, belli ki"
+  },
+  {
+    "word": "amazingly",
+    "pos": "adv",
+    "pronunciation": "/əˈmeɪzɪŋli/",
+    "example": "Amazingly, he finished the marathon in under three hours.",
+    "file": "File 12",
+    "section": "Adverbs of attitude (4&5 Colloquial)",
+    "translation": "şaşırtıcı şekilde"
+  },
+  {
+    "word": "strangely",
+    "pos": "adv",
+    "pronunciation": "/ˈstreɪndʒli/",
+    "example": "Strangely, no one mentioned the missing book.",
+    "file": "File 12",
+    "section": "Adverbs of attitude (4&5 Colloquial)",
+    "translation": "garip bir şekilde"
+  },
+  {
+    "word": "sadly",
+    "pos": "adv",
+    "pronunciation": "/ˈsædli/",
+    "example": "Sadly, the project was cancelled.",
+    "file": "File 12",
+    "section": "Adverbs of attitude (4&5 Colloquial)",
+    "translation": "ne yazık ki, üzülerek"
+  },
+  {
+    "word": "unfortunately",
+    "pos": "adv",
+    "pronunciation": "/ʌnˈfɔːtʃənətli/",
+    "example": "Unfortunately, the train was late again.",
+    "file": "File 12",
+    "section": "Adverbs of attitude (4&5 Colloquial)",
+    "translation": "maalesef"
+  },
+  {
+    "word": "plastic packaging",
+    "pos": "n",
+    "pronunciation": "/ˈplæstɪk ˈpækɪdʒɪŋ/",
+    "example": "Supermarkets use too much plastic packaging.",
+    "file": "File 12",
+    "section": "Plastic & waste (Trashed)",
+    "translation": "plastik ambalaj"
+  },
+  {
+    "word": "plastic-free",
+    "pos": "adj",
+    "pronunciation": "/ˈplæstɪk friː/",
+    "example": "She tries to live a plastic-free lifestyle.",
+    "file": "File 12",
+    "section": "Plastic & waste (Trashed)",
+    "translation": "plastiksiz"
   }
 ]
