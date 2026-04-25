@@ -5362,5 +5362,500 @@
     "file": "File 12",
     "section": "Risk-taking and personality",
     "translation": "korkak"
+  },
+  {
+    "word": "give up",
+    "pos": "phr v",
+    "pronunciation": "/ɡɪv ʌp/",
+    "example": "Don't give up; you're almost there.",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "pes etmek, vazgeçmek"
+  },
+  {
+    "word": "keep going",
+    "pos": "phr v",
+    "pronunciation": "/kiːp ˈɡəʊɪŋ/",
+    "example": "Keep going, you're doing great!",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "devam etmek (zorlukta)"
+  },
+  {
+    "word": "pull through",
+    "pos": "phr v",
+    "pronunciation": "/pʊl θruː/",
+    "example": "The patient pulled through after surgery.",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "atlatmak (hastalık/zorluk)"
+  },
+  {
+    "word": "get by",
+    "pos": "phr v",
+    "pronunciation": "/ɡet baɪ/",
+    "example": "We get by on a small income.",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "idare etmek, kıt kanaat geçinmek"
+  },
+  {
+    "word": "deal with",
+    "pos": "phr v",
+    "pronunciation": "/diːl wɪð/",
+    "example": "I'll deal with this problem tomorrow.",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "başa çıkmak"
+  },
+  {
+    "word": "go through",
+    "pos": "phr v",
+    "pronunciation": "/ɡəʊ θruː/",
+    "example": "She has gone through some tough times.",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "geçirmek (zor şey yaşamak)"
+  },
+  {
+    "word": "look after",
+    "pos": "phr v",
+    "pronunciation": "/lʊk ˈɑːftə/",
+    "example": "Can you look after my dog this weekend?",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "bakmak, ilgilenmek"
+  },
+  {
+    "word": "come round",
+    "pos": "phr v",
+    "pronunciation": "/kʌm raʊnd/",
+    "example": "He came round after the surgery.",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "kendine gelmek, ayılmak"
+  },
+  {
+    "word": "hold on",
+    "pos": "phr v",
+    "pronunciation": "/həʊld ɒn/",
+    "example": "Hold on tight! The road is bumpy.",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "tutunmak, dayanmak"
+  },
+  {
+    "word": "run out of",
+    "pos": "phr v",
+    "pronunciation": "/rʌn aʊt əv/",
+    "example": "We've run out of milk; can you buy some?",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "tükenmek, bitmek"
+  },
+  {
+    "word": "cope with",
+    "pos": "phr v",
+    "pronunciation": "/kəʊp wɪð/",
+    "example": "It's hard to cope with so much stress.",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "başa çıkmak, üstesinden gelmek"
+  },
+  {
+    "word": "give in",
+    "pos": "phr v",
+    "pronunciation": "/ɡɪv ɪn/",
+    "example": "He finally gave in and apologized.",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "boyun eğmek, kabullenmek"
+  },
+  {
+    "word": "get over",
+    "pos": "phr v",
+    "pronunciation": "/ɡet ˈəʊvə/",
+    "example": "It took her months to get over the breakup.",
+    "file": "File 13",
+    "section": "Survival phrasal verbs",
+    "translation": "atlatmak (duygusal)"
+  },
+  {
+    "word": "survive",
+    "pos": "v",
+    "pronunciation": "/səˈvaɪv/",
+    "example": "Only two passengers survived the crash.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "hayatta kalmak"
+  },
+  {
+    "word": "survivor",
+    "pos": "n",
+    "pronunciation": "/səˈvaɪvə/",
+    "example": "She is a cancer survivor and an inspiration.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "hayatta kalan kişi"
+  },
+  {
+    "word": "shelter",
+    "pos": "n",
+    "pronunciation": "/ˈʃeltə/",
+    "example": "We built a shelter from branches and leaves.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "barınak, sığınak"
+  },
+  {
+    "word": "rescue",
+    "pos": "v",
+    "pronunciation": "/ˈreskjuː/",
+    "example": "Helicopters rescued the stranded climbers.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "kurtarmak"
+  },
+  {
+    "word": "jungle",
+    "pos": "n",
+    "pronunciation": "/ˈdʒʌŋɡl/",
+    "example": "They got lost in the Amazon jungle for three days.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "orman, cangıl"
+  },
+  {
+    "word": "get lost",
+    "pos": "phr",
+    "pronunciation": "/ɡet lɒst/",
+    "example": "We got lost on the mountain trail.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "kaybolmak"
+  },
+  {
+    "word": "be stranded",
+    "pos": "phr",
+    "pronunciation": "/bi ˈstrændɪd/",
+    "example": "Hikers were stranded by the snowstorm.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "mahsur kalmak"
+  },
+  {
+    "word": "starve",
+    "pos": "v",
+    "pronunciation": "/stɑːv/",
+    "example": "Many refugees were starving in the camps.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "açlıktan ölmek, aç kalmak"
+  },
+  {
+    "word": "drown",
+    "pos": "v",
+    "pronunciation": "/draʊn/",
+    "example": "He almost drowned in the river last summer.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "boğulmak"
+  },
+  {
+    "word": "injury",
+    "pos": "n",
+    "pronunciation": "/ˈɪndʒəri/",
+    "example": "She suffered minor injuries in the accident.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "yaralanma"
+  },
+  {
+    "word": "wound",
+    "pos": "n",
+    "pronunciation": "/wuːnd/",
+    "example": "The wound healed quickly with proper care.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "yara"
+  },
+  {
+    "word": "heal",
+    "pos": "v",
+    "pronunciation": "/hiːl/",
+    "example": "The cut will heal in a few days.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "iyileşmek"
+  },
+  {
+    "word": "struggle",
+    "pos": "v",
+    "pronunciation": "/ˈstrʌɡl/",
+    "example": "He struggled to climb the steep mountain.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "mücadele etmek, çabalamak"
+  },
+  {
+    "word": "endure",
+    "pos": "v",
+    "pronunciation": "/ɪnˈdjʊə/",
+    "example": "They endured terrible conditions for weeks.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "katlanmak, dayanmak"
+  },
+  {
+    "word": "resist",
+    "pos": "v",
+    "pronunciation": "/rɪˈzɪst/",
+    "example": "She couldn't resist the temptation of chocolate.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "direnmek, karşı koymak"
+  },
+  {
+    "word": "abandon",
+    "pos": "v",
+    "pronunciation": "/əˈbændən/",
+    "example": "The crew had to abandon the sinking ship.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "terk etmek"
+  },
+  {
+    "word": "hopeful",
+    "pos": "adj",
+    "pronunciation": "/ˈhəʊpfl/",
+    "example": "We're hopeful about the test result.",
+    "file": "File 13",
+    "section": "Survival and adventure",
+    "translation": "umutlu"
+  },
+  {
+    "word": "regret",
+    "pos": "v",
+    "pronunciation": "/rɪˈɡret/",
+    "example": "I regret not studying harder for the exam.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "pişman olmak"
+  },
+  {
+    "word": "if only",
+    "pos": "phr",
+    "pronunciation": "/ɪf ˈəʊnli/",
+    "example": "If only I had more time to travel!",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "keşke (vurgulu)"
+  },
+  {
+    "word": "should have",
+    "pos": "phr",
+    "pronunciation": "/ʃəd əv/",
+    "example": "I should have called you sooner.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "-meliydim (yapmadım)"
+  },
+  {
+    "word": "shouldn't have",
+    "pos": "phr",
+    "pronunciation": "/ˈʃʊdnt əv/",
+    "example": "You shouldn't have spent so much money.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "-memeliydim (yaptım)"
+  },
+  {
+    "word": "could have",
+    "pos": "phr",
+    "pronunciation": "/kəd əv/",
+    "example": "You could have warned me about the traffic.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "-ebilirdim (yapmadım)"
+  },
+  {
+    "word": "would rather",
+    "pos": "phr",
+    "pronunciation": "/wəd ˈrɑːðə/",
+    "example": "I'd rather stay home tonight than go out.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "tercih etmek"
+  },
+  {
+    "word": "dream of",
+    "pos": "phr v",
+    "pronunciation": "/driːm əv/",
+    "example": "She dreams of becoming a pilot one day.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "hayalini kurmak"
+  },
+  {
+    "word": "memorable",
+    "pos": "adj",
+    "pronunciation": "/ˈmemərəbl/",
+    "example": "It was a memorable trip we'll never forget.",
+    "file": "File 14",
+    "section": "Travel and holidays",
+    "translation": "unutulmaz, akılda kalıcı"
+  },
+  {
+    "word": "unforgettable",
+    "pos": "adj",
+    "pronunciation": "/ˌʌnfəˈɡetəbl/",
+    "example": "The view from the mountain was unforgettable.",
+    "file": "File 14",
+    "section": "Travel and holidays",
+    "translation": "unutulmaz"
+  },
+  {
+    "word": "nostalgic",
+    "pos": "adj",
+    "pronunciation": "/nɒˈstældʒɪk/",
+    "example": "The old song made her feel nostalgic.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "nostaljik, hüzünlü"
+  },
+  {
+    "word": "miss",
+    "pos": "v",
+    "pronunciation": "/mɪs/",
+    "example": "I miss my family back home in Turkey.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "özlemek"
+  },
+  {
+    "word": "get away",
+    "pos": "phr v",
+    "pronunciation": "/ɡet əˈweɪ/",
+    "example": "We need to get away for the weekend.",
+    "file": "File 14",
+    "section": "Travel and holidays",
+    "translation": "tatile çıkmak, kaçıp gitmek"
+  },
+  {
+    "word": "set off",
+    "pos": "phr v",
+    "pronunciation": "/set ɒf/",
+    "example": "We set off at dawn for the long drive.",
+    "file": "File 14",
+    "section": "Travel and holidays",
+    "translation": "yola çıkmak"
+  },
+  {
+    "word": "head back",
+    "pos": "phr v",
+    "pronunciation": "/hed bæk/",
+    "example": "Let's head back before it gets dark.",
+    "file": "File 14",
+    "section": "Travel and holidays",
+    "translation": "geri dönmek"
+  },
+  {
+    "word": "book in advance",
+    "pos": "phr",
+    "pronunciation": "/bʊk ɪn ədˈvɑːns/",
+    "example": "Book your tickets in advance to get a discount.",
+    "file": "File 14",
+    "section": "Travel and holidays",
+    "translation": "önceden rezervasyon yapmak"
+  },
+  {
+    "word": "postcard",
+    "pos": "n",
+    "pronunciation": "/ˈpəʊstkɑːd/",
+    "example": "Send me a postcard from Paris!",
+    "file": "File 14",
+    "section": "Travel and holidays",
+    "translation": "kartpostal"
+  },
+  {
+    "word": "souvenir",
+    "pos": "n",
+    "pronunciation": "/ˌsuːvəˈnɪə/",
+    "example": "I bought a small souvenir for my mother.",
+    "file": "File 14",
+    "section": "Travel and holidays",
+    "translation": "hediyelik eşya"
+  },
+  {
+    "word": "tourist trap",
+    "pos": "n",
+    "pronunciation": "/ˈtʊərɪst træp/",
+    "example": "This restaurant is a complete tourist trap.",
+    "file": "File 14",
+    "section": "Travel and holidays",
+    "translation": "turist tuzağı"
+  },
+  {
+    "word": "apologize",
+    "pos": "v",
+    "pronunciation": "/əˈpɒlədʒaɪz/",
+    "example": "I apologize for the delay; the traffic was terrible.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "özür dilemek"
+  },
+  {
+    "word": "forgive",
+    "pos": "v",
+    "pronunciation": "/fəˈɡɪv/",
+    "example": "Please forgive me for being so late.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "affetmek"
+  },
+  {
+    "word": "blame",
+    "pos": "v",
+    "pronunciation": "/bleɪm/",
+    "example": "Don't blame yourself for the accident.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "suçlamak"
+  },
+  {
+    "word": "mistake",
+    "pos": "n",
+    "pronunciation": "/mɪˈsteɪk/",
+    "example": "Everyone makes mistakes from time to time.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "hata"
+  },
+  {
+    "word": "opportunity",
+    "pos": "n",
+    "pronunciation": "/ˌɒpəˈtjuːnəti/",
+    "example": "Don't miss this opportunity to study abroad.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "fırsat"
+  },
+  {
+    "word": "second chance",
+    "pos": "phr",
+    "pronunciation": "/ˈsekənd tʃɑːns/",
+    "example": "Everyone deserves a second chance.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "ikinci şans"
+  },
+  {
+    "word": "in hindsight",
+    "pos": "phr",
+    "pronunciation": "/ɪn ˈhaɪndsaɪt/",
+    "example": "In hindsight, I shouldn't have quit my job.",
+    "file": "File 14",
+    "section": "Wishes and regrets",
+    "translation": "şimdi düşününce, dönüp bakınca"
   }
 ]
