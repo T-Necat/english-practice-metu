@@ -280,3 +280,25 @@ Tüm kartlar şu **5 katmanlı yapıyı** takip eder (Cognitive Load Theory + Du
 ---
 
 *Bu doküman Aşama 6 düzeltmeleri tamamlandığında oluşturuldu. Üniteler değişirse buradan başlayarak güncelleyin.*
+
+---
+
+## 12. Review-driven Refinements (Aşama 7)
+
+Gemini code review'ünden sonra yapılan teknik ince ayarlar. Önerilerin bir kısmı objektif olarak doğru bulundu ve uygulandı; bazıları zaten mevcut, bazıları kabul edilmedi.
+
+| # | Öneri | Karar | Konum |
+|---|-------|-------|-------|
+| **U4-1** | `likely/unlikely` sıfattır, "Tahmin Zarfları" başlığı yanıltıcı | ✅ **Uygulandı** | Kart 12 (Future Tenses) + Unit 4 Grammar — başlık "Probability Adverbs & Adjectives" oldu, ayrı pozisyon kuralı + error-toggle eklendi |
+| U4-2 | Future time clauses + Present Perfect alternatif | ⏭️ Zaten Aşama 6'da eklenmişti | Unit 4B Grammar |
+| U4-3 | Will istisnası (rica/ısrar) | ⏸️ Gemini "dokunma" dedi | — |
+| **U5-1** | `live`/`work`/`study`/`teach` joker fiil istisnası (PP Simple = Continuous aynı anlam) | ✅ **Uygulandı** | Kart 23 (PP Continuous) — yeni alt bölüm "Joker Fiiller" |
+| **U5-2** | Wish ↔ Conditional eşleşme tablosuna gerçek durum bağlamı | ✅ **Uygulandı** | Unit 5B Grammar — tablo 3. sütunu "Gerçek Durum" oldu |
+| **U5-3** | If clause'da `could` kullanımı (yetenek/imkân vurgusu) | ✅ **Uygulandı** | Unit 5A Grammar — yeni alt bölüm "If Clause'da Could" |
+| **U6-1** | Be/Get used to tense esnekliği (sadece Present değil) | ✅ **Uygulandı** | Unit 6 Grammar — yeni alt bölüm "Tense Esnekliği" + 5 tense örnek tablosu |
+| U6-2 | Spelling tuzağı (didn't used to vs didn't use to) | ⏭️ Zaten doğru ele alınmış | Unit 6 Grammar error-toggle |
+| **U6-3** | Used to vs Past Simple — tek olay vs alışkanlık | ✅ **Uygulandı** | Unit 6 Grammar — yeni alt bölüm "Used to vs Past Simple" + test ipucu |
+
+**Sonuç:** 5 fine-tuning eklendi, 3 öneri zaten karşılanmış / değişiklik gerektirmiyor. Toplam 6 yeni alt bölüm + 3 error-toggle güncellemesi.
+
+**Pedagojik kazanım:** Sınav-odaklı edge case'ler (likely sıfat tuzağı, live/work istisnası, used to'nun tek olayda kullanılamaması) artık öğrencinin önünde &mdash; doğru cevabı bilen ile sınavda tökezleyenin farkı bu detaylarda.
