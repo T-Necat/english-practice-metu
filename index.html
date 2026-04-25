@@ -1172,6 +1172,100 @@
     .topic-content details.error-toggle[open] summary::before { transform: rotate(90deg); }
     .topic-content details.error-toggle .error-content { padding: 0 14px 12px; }
 
+    /* ===== KONU HARİTASI (Mind Map) ===== */
+    .mindmap-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 14px 0;
+      padding: 8px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .mindmap {
+      width: 100%;
+      min-width: 760px;
+      height: auto;
+      display: block;
+      font-family: 'Inter', -apple-system, sans-serif;
+    }
+    .mm-node-bg {
+      stroke-width: 2;
+      transition: opacity 0.2s;
+    }
+    .mm-node-foundation .mm-node-bg { fill: #ebf4ff; stroke: #4a90d9; }
+    .mm-node-unit       .mm-node-bg { fill: var(--accent-light); stroke: var(--accent); }
+    .mm-node-master     .mm-node-bg { fill: #ebfaf0; stroke: #50c878; }
+    .mm-node-text {
+      font-size: 16px;
+      font-weight: 700;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .mm-node-foundation .mm-node-text { fill: #1e40af; }
+    .mm-node-unit       .mm-node-text { fill: var(--accent-hover); }
+    .mm-node-master     .mm-node-text { fill: #1e6b3a; }
+    .mm-node-sub {
+      font-size: 11px;
+      fill: var(--text);
+      text-anchor: middle;
+      font-weight: 500;
+    }
+    .mm-edge {
+      stroke: #888;
+      stroke-width: 2;
+      fill: none;
+    }
+    .mm-edge-dashed {
+      stroke-dasharray: 6 5;
+      stroke: #aaa;
+    }
+    .mm-arrow { fill: #888; }
+    .mm-layer-label {
+      font-size: 11px;
+      font-weight: 800;
+      fill: var(--text-muted);
+      letter-spacing: 1.5px;
+    }
+
+    /* Theme overrides — Mind Map */
+    [data-theme="cool"] .mm-node-foundation .mm-node-bg { fill: #ebf4ff; stroke: #4a90d9; }
+    [data-theme="cool"] .mm-node-foundation .mm-node-text { fill: #2b6cb0; }
+    [data-theme="cool"] .mm-node-unit .mm-node-bg { fill: #fffaf0; stroke: #ed8936; }
+    [data-theme="cool"] .mm-node-unit .mm-node-text { fill: #c05621; }
+    [data-theme="cool"] .mm-node-master .mm-node-bg { fill: #f0fff4; stroke: #38a169; }
+    [data-theme="cool"] .mm-node-master .mm-node-text { fill: #276749; }
+
+    [data-theme="dark"] .mm-node-foundation .mm-node-bg { fill: #1e293b; stroke: #60a5fa; }
+    [data-theme="dark"] .mm-node-foundation .mm-node-text { fill: #93c5fd; }
+    [data-theme="dark"] .mm-node-unit .mm-node-bg { fill: #2a1f1a; stroke: var(--accent); }
+    [data-theme="dark"] .mm-node-unit .mm-node-text { fill: #fbbf77; }
+    [data-theme="dark"] .mm-node-master .mm-node-bg { fill: #14281e; stroke: #4ade80; }
+    [data-theme="dark"] .mm-node-master .mm-node-text { fill: #6ee7b7; }
+    [data-theme="dark"] .mm-node-sub { fill: #cbd5e1; }
+    [data-theme="dark"] .mm-edge { stroke: #64748b; }
+    [data-theme="dark"] .mm-edge-dashed { stroke: #94a3b8; }
+    [data-theme="dark"] .mm-arrow { fill: #64748b; }
+
+    [data-theme="midnight"] .mm-node-foundation .mm-node-bg { fill: #172033; stroke: #93bbfd; }
+    [data-theme="midnight"] .mm-node-foundation .mm-node-text { fill: #bfdbfe; }
+    [data-theme="midnight"] .mm-node-unit .mm-node-bg { fill: #2a1f1a; stroke: var(--accent); }
+    [data-theme="midnight"] .mm-node-unit .mm-node-text { fill: #fbbf77; }
+    [data-theme="midnight"] .mm-node-master .mm-node-bg { fill: #14281e; stroke: #6ee7b7; }
+    [data-theme="midnight"] .mm-node-master .mm-node-text { fill: #a7f3d0; }
+    [data-theme="midnight"] .mm-node-sub { fill: #cbd5e1; }
+    [data-theme="midnight"] .mm-edge { stroke: #64748b; }
+    [data-theme="midnight"] .mm-edge-dashed { stroke: #94a3b8; }
+    [data-theme="midnight"] .mm-arrow { fill: #64748b; }
+
+    [data-theme="forest"] .mm-node-foundation .mm-node-bg { fill: #e6ffe6; stroke: #4a9a5a; }
+    [data-theme="forest"] .mm-node-foundation .mm-node-text { fill: #2c5530; }
+    [data-theme="forest"] .mm-node-unit .mm-node-bg { fill: #fff4e6; stroke: #d97706; }
+    [data-theme="forest"] .mm-node-unit .mm-node-text { fill: #92400e; }
+    [data-theme="forest"] .mm-node-master .mm-node-bg { fill: #f0fdf4; stroke: #16a34a; }
+    [data-theme="forest"] .mm-node-master .mm-node-text { fill: #14532d; }
+
     /* ===== TOPIC TABLES ===== */
     .topic-content table {
       width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px;
@@ -1546,6 +1640,131 @@
 
       <div class="unit-section active" id="unit0">
         <h2>Temel Konular</h2>
+
+        <!-- ===== KART 0: Konu Haritas&#305; (Mind Map) ===== -->
+        <div class="topic-card" data-unit="0" data-topic="map">
+          <div class="topic-card-header">Konu Haritas&#305; &mdash; Bağlantılar &amp; &Ouml;n Gereksinimler <span class="arrow">&#9660;</span></div>
+          <div class="topic-card-body"><div class="topic-content">
+
+            <div class="logic-box"><strong>İkinci vize haritası &mdash; 3 katman:</strong> Üst katman <em>Temel Konular</em>'ın altyapısı (Unit 0), orta katman <em>Üniteler</em>'in işlenişi (Unit 4-5-6), alt katman <em>Conditionals Master</em>'ın derinlemesine pratiği. Oklar &ldquo;ön gereksinim&rdquo; anlamına gelir &mdash; alt başlık, ok'un başındaki konuyu kavramadan çalışılırsa havada kalır.</div>
+
+            <div class="mindmap-wrap">
+              <svg viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid meet" class="mindmap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Konu Haritas&#305;">
+                <defs>
+                  <marker id="mm-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" class="mm-arrow"/>
+                  </marker>
+                </defs>
+
+                <!-- Layer labels (left edge) -->
+                <text x="15" y="115" class="mm-layer-label">TEMEL</text>
+                <text x="15" y="130" class="mm-layer-label">KONULAR</text>
+                <text x="15" y="345" class="mm-layer-label">ÜNİTELER</text>
+                <text x="15" y="585" class="mm-layer-label">CONDITIONALS</text>
+                <text x="15" y="600" class="mm-layer-label">MASTER</text>
+
+                <!-- Edges (drawn before nodes so they sit behind) -->
+                <g class="mm-edges">
+                  <!-- Future Tenses → Unit 4 -->
+                  <path d="M 225 150 Q 230 220 240 290" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Past Perfect → Unit 5 -->
+                  <path d="M 475 150 Q 530 220 590 290" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Modal Verbs → Master (dashed: cross-cutting role) -->
+                  <path d="M 725 150 Q 770 330 770 510" class="mm-edge mm-edge-dashed"/>
+                  <!-- Wish Üçgeni → Unit 5 -->
+                  <path d="M 975 150 Q 800 220 615 290" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Unit 4 → Master -->
+                  <path d="M 240 390 Q 240 460 350 510" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Unit 5 → Master -->
+                  <path d="M 600 390 L 600 510" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                </g>
+
+                <!-- Nodes -->
+                <g class="mm-nodes">
+                  <!-- Foundation row (Unit 0 prerequisite topics) -->
+                  <g class="mm-node mm-node-foundation">
+                    <rect x="125" y="70" width="200" height="80" rx="10" class="mm-node-bg"/>
+                    <text x="225" y="98" class="mm-node-text">Future Tenses</text>
+                    <text x="225" y="120" class="mm-node-sub">will / be going to</text>
+                    <text x="225" y="138" class="mm-node-sub">present continuous</text>
+                  </g>
+                  <g class="mm-node mm-node-foundation">
+                    <rect x="375" y="70" width="200" height="80" rx="10" class="mm-node-bg"/>
+                    <text x="475" y="98" class="mm-node-text">Past Perfect</text>
+                    <text x="475" y="120" class="mm-node-sub">had + V3</text>
+                    <text x="475" y="138" class="mm-node-sub">&ldquo;Film Şeridi&rdquo;</text>
+                  </g>
+                  <g class="mm-node mm-node-foundation">
+                    <rect x="625" y="70" width="200" height="80" rx="10" class="mm-node-bg"/>
+                    <text x="725" y="98" class="mm-node-text">Modal Verbs</text>
+                    <text x="725" y="120" class="mm-node-sub">&ldquo;İhtimal Terazisi&rdquo;</text>
+                    <text x="725" y="138" class="mm-node-sub">would / could / might</text>
+                  </g>
+                  <g class="mm-node mm-node-foundation">
+                    <rect x="875" y="70" width="200" height="80" rx="10" class="mm-node-bg"/>
+                    <text x="975" y="98" class="mm-node-text">Wish Üçgeni</text>
+                    <text x="975" y="120" class="mm-node-sub">3 form</text>
+                    <text x="975" y="138" class="mm-node-sub">past / would / had+V3</text>
+                  </g>
+
+                  <!-- Unit row -->
+                  <g class="mm-node mm-node-unit">
+                    <rect x="120" y="290" width="240" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="240" y="320" class="mm-node-text">Unit 4</text>
+                    <text x="240" y="342" class="mm-node-sub">Stormy weather + Risky business</text>
+                    <text x="240" y="360" class="mm-node-sub">Future Cont. &amp; Future Perfect</text>
+                    <text x="240" y="378" class="mm-node-sub">Cond 0/1 + Future Time Clauses</text>
+                  </g>
+                  <g class="mm-node mm-node-unit">
+                    <rect x="480" y="290" width="240" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="600" y="320" class="mm-node-text">Unit 5</text>
+                    <text x="600" y="342" class="mm-node-sub">Survivor + Wish you were here</text>
+                    <text x="600" y="360" class="mm-node-sub">Unreal Conditionals (Type 2 / 3)</text>
+                    <text x="600" y="378" class="mm-node-sub">Wish (deep dive)</text>
+                  </g>
+                  <g class="mm-node mm-node-unit">
+                    <rect x="840" y="290" width="240" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="960" y="320" class="mm-node-text">Unit 6</text>
+                    <text x="960" y="342" class="mm-node-sub">Night night (sleep &amp; habits)</text>
+                    <text x="960" y="360" class="mm-node-sub">Used to / Be used to</text>
+                    <text x="960" y="378" class="mm-node-sub">Get used to + V-ing</text>
+                  </g>
+
+                  <!-- Master row (Conditionals deep dive) -->
+                  <g class="mm-node mm-node-master">
+                    <rect x="160" y="510" width="880" height="170" rx="10" class="mm-node-bg"/>
+                    <text x="600" y="540" class="mm-node-text">Conditionals Master Serisi (Derinlemesine)</text>
+                    <text x="600" y="568" class="mm-node-sub">Type 0/1 detay (PPTX dialog) &middot; Type 2 hayal &middot; Type 3 Titanic örnekleri</text>
+                    <text x="600" y="588" class="mm-node-sub">Mixed Conditionals (Past&rarr;Present, Present&rarr;Past) &middot; IF vs IN CASE</text>
+                    <text x="600" y="608" class="mm-node-sub">Alternatif bağlaçlar: unless / provided / as long as / even if / only if / otherwise</text>
+                    <text x="600" y="628" class="mm-node-sub">Inversion (akademik): Were I&hellip; / Had I&hellip; / Should you&hellip;</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <div class="logic-box"><strong>Renk kodu &amp; oklar:</strong>
+              <span style="color:#1e40af;font-weight:700;">&#9633; mavi</span> = Temel Konular (ön gereksinim) &middot;
+              <span style="color:var(--accent-hover);font-weight:700;">&#9633; turuncu</span> = Üniteler (vize işlenişi) &middot;
+              <span style="color:#1e6b3a;font-weight:700;">&#9633; yeşil</span> = Conditionals Master (derinlemesine).
+              <strong>Düz ok</strong> &rarr; ön gereksinim (alttaki konuya geçmeden üsttekini bilmek gerekir).
+              <strong>Kesik ok</strong> &rarr; çapraz destek (Modal Verbs Conditionals'ın her tipinde &ldquo;içeriden&rdquo; kullanılır).
+            </div>
+
+            <div class="logic-box"><strong>İkiz yapı uyarısı &mdash; Wish &harr; Conditional:</strong>
+              Unit 5'te göreceğin <em>Wish</em> formları, Conditional 2 ve 3'ün koşul kıyısı olmayan ikizidir.
+              <strong>If I were rich, I would travel</strong> = <strong>I wish I were rich</strong>.
+              <strong>If I had studied, I would have passed</strong> = <strong>I wish I had studied</strong>.
+              Bu yüzden Wish Üçgeni'ni öğrenirsen Conditional 2/3'e zihnen yarı hazırsın.
+            </div>
+
+            <div class="logic-box"><strong>Çalışma sırası önerisi:</strong>
+              <strong>1)</strong> Üst kattaki 4 temel konuyu kavra (özellikle <em>Past Perfect</em> ve <em>Wish Üçgeni</em> sıkça eksik kalır).
+              <strong>2)</strong> Unit 4 &rarr; Unit 5 &rarr; Unit 6 sırasıyla ünite kartlarını gez (Vocabulary + Pronunciation dahil).
+              <strong>3)</strong> Conditionals Master serisini sondan-başa değil, baştan-sona oku &mdash; her kart bir öncekinin üzerine bina ediliyor.
+            </div>
+          </div></div>
+        </div>
 
         <!-- ===== KART 1: Ba&#351;rol Oyuncular&#305; ve Yard&#305;mc&#305; Fiiller ===== -->
         <div class="topic-card" data-unit="0" data-topic="grammar">
