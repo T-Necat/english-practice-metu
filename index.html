@@ -1221,12 +1221,32 @@
       stroke-dasharray: 6 5;
       stroke: #aaa;
     }
+    .mm-edge-light {
+      stroke: #c0c0c0;
+      stroke-width: 1.5;
+      stroke-dasharray: 3 3;
+    }
+    .mm-edge-twin {
+      stroke: #e8734a;
+      stroke-width: 2;
+      stroke-dasharray: 7 4;
+    }
     .mm-arrow { fill: #888; }
+    .mm-arrow-twin { fill: #e8734a; }
     .mm-layer-label {
       font-size: 11px;
       font-weight: 800;
       fill: var(--text-muted);
       letter-spacing: 1.5px;
+    }
+    .mm-edge-label {
+      font-size: 10px;
+      fill: var(--text-muted);
+      text-anchor: middle;
+      font-style: italic;
+    }
+    .mm-edge-label-bg {
+      fill: var(--card-bg);
     }
 
     /* Theme overrides — Mind Map */
@@ -1265,6 +1285,10 @@
     [data-theme="forest"] .mm-node-unit .mm-node-text { fill: #92400e; }
     [data-theme="forest"] .mm-node-master .mm-node-bg { fill: #f0fdf4; stroke: #16a34a; }
     [data-theme="forest"] .mm-node-master .mm-node-text { fill: #14532d; }
+
+    [data-theme="dark"] .mm-edge-twin, [data-theme="midnight"] .mm-edge-twin { stroke: #fb923c; }
+    [data-theme="dark"] .mm-arrow-twin, [data-theme="midnight"] .mm-arrow-twin { fill: #fb923c; }
+    [data-theme="dark"] .mm-edge-light, [data-theme="midnight"] .mm-edge-light { stroke: #475569; }
 
     /* ===== TOPIC TABLES ===== */
     .topic-content table {
@@ -1646,122 +1670,281 @@
           <div class="topic-card-header">Konu Haritas&#305; &mdash; Bağlantılar &amp; &Ouml;n Gereksinimler <span class="arrow">&#9660;</span></div>
           <div class="topic-card-body"><div class="topic-content">
 
-            <div class="logic-box"><strong>İkinci vize haritası &mdash; 3 katman:</strong> Üst katman <em>Temel Konular</em>'ın altyapısı (Unit 0), orta katman <em>Üniteler</em>'in işlenişi (Unit 4-5-6), alt katman <em>Conditionals Master</em>'ın derinlemesine pratiği. Oklar &ldquo;ön gereksinim&rdquo; anlamına gelir &mdash; alt başlık, ok'un başındaki konuyu kavramadan çalışılırsa havada kalır.</div>
+            <div class="logic-box"><strong>İkinci vize haritası &mdash; 4 katmanlı bağımlılık ağı:</strong>
+              <strong>Tier 1 (Yardımcı Fiiller)</strong> tüm yapıların temel taşı &mdash; <em>be / do / have / modals</em> olmadan hiçbir tense kurulamaz.
+              <strong>Tier 2 (Ön Gereksinimler)</strong> Unit 0&rsquo;daki 5 anahtar konu &mdash; üniteler bunlardan birini ya da birkaçını kullanır.
+              <strong>Tier 3 (Üniteler)</strong> İkinci vizenin işlendiği 5 ünite kartı (4A, 4B, 5A, 5B, 6A) &mdash; her biri 1-2 ön gereksinime dayanır.
+              <strong>Tier 4 (Conditionals Master)</strong> 7 ayrı derinlemesine kart &mdash; ünitelerden öğrenileni gerçek sınav seviyesine çıkarır.
+            </div>
 
             <div class="mindmap-wrap">
-              <svg viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid meet" class="mindmap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Konu Haritas&#305;">
+              <svg viewBox="0 0 1400 1020" preserveAspectRatio="xMidYMid meet" class="mindmap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Konu Haritas&#305; - Detayl&#305;">
                 <defs>
                   <marker id="mm-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                     <path d="M 0 0 L 10 5 L 0 10 z" class="mm-arrow"/>
                   </marker>
+                  <marker id="mm-arrow-twin" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" class="mm-arrow-twin"/>
+                  </marker>
                 </defs>
 
                 <!-- Layer labels (left edge) -->
-                <text x="15" y="115" class="mm-layer-label">TEMEL</text>
-                <text x="15" y="130" class="mm-layer-label">KONULAR</text>
-                <text x="15" y="345" class="mm-layer-label">ÜNİTELER</text>
-                <text x="15" y="585" class="mm-layer-label">CONDITIONALS</text>
-                <text x="15" y="600" class="mm-layer-label">MASTER</text>
+                <text x="15" y="50" class="mm-layer-label">TIER 1</text>
+                <text x="15" y="65" class="mm-layer-label">YARDIMCI</text>
+                <text x="15" y="80" class="mm-layer-label">FİİLLER</text>
+
+                <text x="15" y="220" class="mm-layer-label">TIER 2</text>
+                <text x="15" y="235" class="mm-layer-label">ÖN GEREK-</text>
+                <text x="15" y="250" class="mm-layer-label">SİNİMLER</text>
+
+                <text x="15" y="465" class="mm-layer-label">TIER 3</text>
+                <text x="15" y="480" class="mm-layer-label">ÜNİTELER</text>
+
+                <text x="15" y="765" class="mm-layer-label">TIER 4</text>
+                <text x="15" y="780" class="mm-layer-label">CONDITIONALS</text>
+                <text x="15" y="795" class="mm-layer-label">MASTER</text>
 
                 <!-- Edges (drawn before nodes so they sit behind) -->
                 <g class="mm-edges">
-                  <!-- Future Tenses → Unit 4 -->
-                  <path d="M 225 150 Q 230 220 240 290" class="mm-edge" marker-end="url(#mm-arrow)"/>
-                  <!-- Past Perfect → Unit 5 -->
-                  <path d="M 475 150 Q 530 220 590 290" class="mm-edge" marker-end="url(#mm-arrow)"/>
-                  <!-- Modal Verbs → Master (dashed: cross-cutting role) -->
-                  <path d="M 725 150 Q 770 330 770 510" class="mm-edge mm-edge-dashed"/>
-                  <!-- Wish Üçgeni → Unit 5 -->
-                  <path d="M 975 150 Q 800 220 615 290" class="mm-edge" marker-end="url(#mm-arrow)"/>
-                  <!-- Unit 4 → Master -->
-                  <path d="M 240 390 Q 240 460 350 510" class="mm-edge" marker-end="url(#mm-arrow)"/>
-                  <!-- Unit 5 → Master -->
-                  <path d="M 600 390 L 600 510" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Tier 1 → Tier 2 (5 light dashed lines, fan-out from Yardımcı Fiiller) -->
+                  <path d="M 700 90 Q 240 130 240 180" class="mm-edge mm-edge-light"/>
+                  <path d="M 700 90 Q 470 130 470 180" class="mm-edge mm-edge-light"/>
+                  <path d="M 700 90 L 700 180" class="mm-edge mm-edge-light"/>
+                  <path d="M 700 90 Q 930 130 930 180" class="mm-edge mm-edge-light"/>
+                  <path d="M 700 90 Q 1160 130 1160 180" class="mm-edge mm-edge-light"/>
+
+                  <!-- Tier 2 → Tier 3 (solid prereq arrows) -->
+                  <!-- Future Tenses → Unit 4A -->
+                  <path d="M 240 280 L 240 410" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Future Tenses → Unit 4B (cross arrow) -->
+                  <path d="M 280 280 Q 350 350 430 410" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- When vs While → Unit 4B -->
+                  <path d="M 470 280 L 470 410" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Modal Verbs → Unit 5A -->
+                  <path d="M 700 280 L 700 410" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Past Perfect → Unit 5A (left curve) -->
+                  <path d="M 900 280 Q 820 350 730 410" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Past Perfect → Unit 5B -->
+                  <path d="M 930 280 L 930 410" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Wish Üçgeni → Unit 5B -->
+                  <path d="M 1130 280 Q 1050 350 970 410" class="mm-edge" marker-end="url(#mm-arrow)"/>
+
+                  <!-- Tier 3 → Tier 4 (solid arrows) -->
+                  <!-- Unit 4A → Master 4 (Mixed uses Future) -->
+                  <path d="M 250 540 Q 380 620 660 710" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Unit 4B → Master 1 (Type 0/1 deep) -->
+                  <path d="M 430 540 Q 240 620 110 710" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Unit 4B → Master 5 (IF vs IN CASE) -->
+                  <path d="M 480 540 Q 680 620 850 710" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Unit 4B → Master 6 (alt. bağlaçlar) -->
+                  <path d="M 510 540 Q 800 620 1040 710" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Unit 5A → Master 2 (Type 2 deep) -->
+                  <path d="M 670 540 Q 470 620 295 710" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Unit 5A → Master 3 (Type 3 deep) -->
+                  <path d="M 690 540 Q 580 620 480 710" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Unit 5A → Master 4 (Mixed) -->
+                  <path d="M 710 540 L 690 710" class="mm-edge" marker-end="url(#mm-arrow)"/>
+                  <!-- Unit 5A → Master 7 (Inversion) -->
+                  <path d="M 730 540 Q 1000 620 1245 710" class="mm-edge" marker-end="url(#mm-arrow)"/>
+
+                  <!-- Twin connections (Wish ↔ Conditional 2/3) — orange dashed -->
+                  <path d="M 870 540 Q 600 700 320 710" class="mm-edge mm-edge-twin" marker-end="url(#mm-arrow-twin)"/>
+                  <path d="M 880 540 Q 700 690 510 710" class="mm-edge mm-edge-twin" marker-end="url(#mm-arrow-twin)"/>
+
+                  <!-- Modal Verbs → Master area (cross-cutting) — vertical dashed -->
+                  <path d="M 720 280 Q 760 500 750 710" class="mm-edge mm-edge-dashed"/>
                 </g>
 
                 <!-- Nodes -->
                 <g class="mm-nodes">
-                  <!-- Foundation row (Unit 0 prerequisite topics) -->
+                  <!-- Tier 1: Yardımcı Fiiller (single wide centered node) -->
                   <g class="mm-node mm-node-foundation">
-                    <rect x="125" y="70" width="200" height="80" rx="10" class="mm-node-bg"/>
-                    <text x="225" y="98" class="mm-node-text">Future Tenses</text>
-                    <text x="225" y="120" class="mm-node-sub">will / be going to</text>
-                    <text x="225" y="138" class="mm-node-sub">present continuous</text>
-                  </g>
-                  <g class="mm-node mm-node-foundation">
-                    <rect x="375" y="70" width="200" height="80" rx="10" class="mm-node-bg"/>
-                    <text x="475" y="98" class="mm-node-text">Past Perfect</text>
-                    <text x="475" y="120" class="mm-node-sub">had + V3</text>
-                    <text x="475" y="138" class="mm-node-sub">&ldquo;Film Şeridi&rdquo;</text>
-                  </g>
-                  <g class="mm-node mm-node-foundation">
-                    <rect x="625" y="70" width="200" height="80" rx="10" class="mm-node-bg"/>
-                    <text x="725" y="98" class="mm-node-text">Modal Verbs</text>
-                    <text x="725" y="120" class="mm-node-sub">&ldquo;İhtimal Terazisi&rdquo;</text>
-                    <text x="725" y="138" class="mm-node-sub">would / could / might</text>
-                  </g>
-                  <g class="mm-node mm-node-foundation">
-                    <rect x="875" y="70" width="200" height="80" rx="10" class="mm-node-bg"/>
-                    <text x="975" y="98" class="mm-node-text">Wish Üçgeni</text>
-                    <text x="975" y="120" class="mm-node-sub">3 form</text>
-                    <text x="975" y="138" class="mm-node-sub">past / would / had+V3</text>
+                    <rect x="540" y="20" width="320" height="70" rx="10" class="mm-node-bg"/>
+                    <text x="700" y="44" class="mm-node-text">Yardımcı Fiiller (Auxiliaries)</text>
+                    <text x="700" y="63" class="mm-node-sub">be · do · have · modals</text>
+                    <text x="700" y="80" class="mm-node-sub">&mdash; tüm yapıların temel taşı</text>
                   </g>
 
-                  <!-- Unit row -->
-                  <g class="mm-node mm-node-unit">
-                    <rect x="120" y="290" width="240" height="100" rx="10" class="mm-node-bg"/>
-                    <text x="240" y="320" class="mm-node-text">Unit 4</text>
-                    <text x="240" y="342" class="mm-node-sub">Stormy weather + Risky business</text>
-                    <text x="240" y="360" class="mm-node-sub">Future Cont. &amp; Future Perfect</text>
-                    <text x="240" y="378" class="mm-node-sub">Cond 0/1 + Future Time Clauses</text>
+                  <!-- Tier 2: 5 prerequisite topics -->
+                  <g class="mm-node mm-node-foundation">
+                    <rect x="150" y="180" width="180" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="240" y="208" class="mm-node-text">Future Tenses</text>
+                    <text x="240" y="232" class="mm-node-sub">will / be going to</text>
+                    <text x="240" y="250" class="mm-node-sub">present continuous</text>
+                    <text x="240" y="268" class="mm-node-sub">future probability adv.</text>
                   </g>
-                  <g class="mm-node mm-node-unit">
-                    <rect x="480" y="290" width="240" height="100" rx="10" class="mm-node-bg"/>
-                    <text x="600" y="320" class="mm-node-text">Unit 5</text>
-                    <text x="600" y="342" class="mm-node-sub">Survivor + Wish you were here</text>
-                    <text x="600" y="360" class="mm-node-sub">Unreal Conditionals (Type 2 / 3)</text>
-                    <text x="600" y="378" class="mm-node-sub">Wish (deep dive)</text>
+                  <g class="mm-node mm-node-foundation">
+                    <rect x="380" y="180" width="180" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="470" y="208" class="mm-node-text">When vs While</text>
+                    <text x="470" y="232" class="mm-node-sub">past simp. vs past cont.</text>
+                    <text x="470" y="250" class="mm-node-sub">an vs aralık</text>
+                    <text x="470" y="268" class="mm-node-sub">FTC bağlaç temeli</text>
                   </g>
-                  <g class="mm-node mm-node-unit">
-                    <rect x="840" y="290" width="240" height="100" rx="10" class="mm-node-bg"/>
-                    <text x="960" y="320" class="mm-node-text">Unit 6</text>
-                    <text x="960" y="342" class="mm-node-sub">Night night (sleep &amp; habits)</text>
-                    <text x="960" y="360" class="mm-node-sub">Used to / Be used to</text>
-                    <text x="960" y="378" class="mm-node-sub">Get used to + V-ing</text>
+                  <g class="mm-node mm-node-foundation">
+                    <rect x="610" y="180" width="180" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="700" y="208" class="mm-node-text">Modal Verbs</text>
+                    <text x="700" y="232" class="mm-node-sub">İhtimal Terazisi</text>
+                    <text x="700" y="250" class="mm-node-sub">would / could / might</text>
+                    <text x="700" y="268" class="mm-node-sub">should / must / have to</text>
+                  </g>
+                  <g class="mm-node mm-node-foundation">
+                    <rect x="840" y="180" width="180" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="930" y="208" class="mm-node-text">Past Perfect</text>
+                    <text x="930" y="232" class="mm-node-sub">had + V3</text>
+                    <text x="930" y="250" class="mm-node-sub">&ldquo;Film Şeridi&rdquo;</text>
+                    <text x="930" y="268" class="mm-node-sub">geçmişten önce geçmiş</text>
+                  </g>
+                  <g class="mm-node mm-node-foundation">
+                    <rect x="1070" y="180" width="180" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="1160" y="208" class="mm-node-text">Wish Üçgeni</text>
+                    <text x="1160" y="232" class="mm-node-sub">3 form temel</text>
+                    <text x="1160" y="250" class="mm-node-sub">past / would / had+V3</text>
+                    <text x="1160" y="268" class="mm-node-sub">&ldquo;Keşke&rdquo; yapıları</text>
                   </g>
 
-                  <!-- Master row (Conditionals deep dive) -->
+                  <!-- Tier 3: 5 unit cards -->
+                  <g class="mm-node mm-node-unit">
+                    <rect x="120" y="410" width="240" height="130" rx="10" class="mm-node-bg"/>
+                    <text x="240" y="438" class="mm-node-text">Unit 4A</text>
+                    <text x="240" y="462" class="mm-node-sub">Stormy weather (climate)</text>
+                    <text x="240" y="480" class="mm-node-sub">Future Continuous</text>
+                    <text x="240" y="498" class="mm-node-sub">Future Perfect</text>
+                    <text x="240" y="516" class="mm-node-sub">probability: definitely will</text>
+                    <text x="240" y="532" class="mm-node-sub">be likely / unlikely to V1</text>
+                  </g>
+                  <g class="mm-node mm-node-unit">
+                    <rect x="350" y="410" width="240" height="130" rx="10" class="mm-node-bg"/>
+                    <text x="470" y="438" class="mm-node-text">Unit 4B</text>
+                    <text x="470" y="462" class="mm-node-sub">A risky business</text>
+                    <text x="470" y="480" class="mm-node-sub">Zero + First Conditional</text>
+                    <text x="470" y="498" class="mm-node-sub">Future Time Clauses</text>
+                    <text x="470" y="516" class="mm-node-sub">if/when + WILL YOK kuralı</text>
+                    <text x="470" y="532" class="mm-node-sub">unless = if + not</text>
+                  </g>
+                  <g class="mm-node mm-node-unit">
+                    <rect x="580" y="410" width="240" height="130" rx="10" class="mm-node-bg"/>
+                    <text x="700" y="438" class="mm-node-text">Unit 5A</text>
+                    <text x="700" y="462" class="mm-node-sub">I&rsquo;m a survivor (jungle)</text>
+                    <text x="700" y="480" class="mm-node-sub">Conditional Type 2</text>
+                    <text x="700" y="498" class="mm-node-sub">Conditional Type 3</text>
+                    <text x="700" y="516" class="mm-node-sub">were/was kuralı</text>
+                    <text x="700" y="532" class="mm-node-sub">3 ton: would/might/could</text>
+                  </g>
+                  <g class="mm-node mm-node-unit">
+                    <rect x="810" y="410" width="240" height="130" rx="10" class="mm-node-bg"/>
+                    <text x="930" y="438" class="mm-node-text">Unit 5B</text>
+                    <text x="930" y="462" class="mm-node-sub">Wish you were here</text>
+                    <text x="930" y="480" class="mm-node-sub">Wish + past simple</text>
+                    <text x="930" y="498" class="mm-node-sub">Wish + would (davranış)</text>
+                    <text x="930" y="516" class="mm-node-sub">Wish + past perfect</text>
+                    <text x="930" y="532" class="mm-node-sub">If only &mdash; vurgulu kardeş</text>
+                  </g>
+                  <g class="mm-node mm-node-unit">
+                    <rect x="1040" y="410" width="240" height="130" rx="10" class="mm-node-bg"/>
+                    <text x="1160" y="438" class="mm-node-text">Unit 6A</text>
+                    <text x="1160" y="462" class="mm-node-sub">Night night (sleep)</text>
+                    <text x="1160" y="480" class="mm-node-sub">Used to + V1 (eskiden)</text>
+                    <text x="1160" y="498" class="mm-node-sub">Be used to + V-ing/N</text>
+                    <text x="1160" y="516" class="mm-node-sub">Get used to + V-ing/N</text>
+                    <text x="1160" y="532" class="mm-node-sub">Used to vs would</text>
+                  </g>
+
+                  <!-- Tier 4: 7 master cards -->
                   <g class="mm-node mm-node-master">
-                    <rect x="160" y="510" width="880" height="170" rx="10" class="mm-node-bg"/>
-                    <text x="600" y="540" class="mm-node-text">Conditionals Master Serisi (Derinlemesine)</text>
-                    <text x="600" y="568" class="mm-node-sub">Type 0/1 detay (PPTX dialog) &middot; Type 2 hayal &middot; Type 3 Titanic örnekleri</text>
-                    <text x="600" y="588" class="mm-node-sub">Mixed Conditionals (Past&rarr;Present, Present&rarr;Past) &middot; IF vs IN CASE</text>
-                    <text x="600" y="608" class="mm-node-sub">Alternatif bağlaçlar: unless / provided / as long as / even if / only if / otherwise</text>
-                    <text x="600" y="628" class="mm-node-sub">Inversion (akademik): Were I&hellip; / Had I&hellip; / Should you&hellip;</text>
+                    <rect x="20" y="710" width="170" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="105" y="735" class="mm-node-text">Master 1</text>
+                    <text x="105" y="757" class="mm-node-sub">Type 0/1 detay</text>
+                    <text x="105" y="775" class="mm-node-sub">PPTX dialog</text>
+                    <text x="105" y="793" class="mm-node-sub">(&ldquo;Bridget&rdquo; örneği)</text>
                   </g>
+                  <g class="mm-node mm-node-master">
+                    <rect x="210" y="710" width="170" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="295" y="735" class="mm-node-text">Master 2</text>
+                    <text x="295" y="757" class="mm-node-sub">Type 2 hayal</text>
+                    <text x="295" y="775" class="mm-node-sub">Yasaklı 4 kelime</text>
+                    <text x="295" y="793" class="mm-node-sub">Speaking prompts</text>
+                  </g>
+                  <g class="mm-node mm-node-master">
+                    <rect x="400" y="710" width="170" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="485" y="735" class="mm-node-text">Master 3</text>
+                    <text x="485" y="757" class="mm-node-sub">Type 3 derin</text>
+                    <text x="485" y="775" class="mm-node-sub">Titanic örnekleri</text>
+                    <text x="485" y="793" class="mm-node-sub">Jack &amp; Rose</text>
+                  </g>
+                  <g class="mm-node mm-node-master">
+                    <rect x="590" y="710" width="170" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="675" y="735" class="mm-node-text">Master 4</text>
+                    <text x="675" y="757" class="mm-node-sub">Mixed Conditionals</text>
+                    <text x="675" y="775" class="mm-node-sub">Past &rarr; Present</text>
+                    <text x="675" y="793" class="mm-node-sub">Present &rarr; Past</text>
+                  </g>
+                  <g class="mm-node mm-node-master">
+                    <rect x="780" y="710" width="170" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="865" y="735" class="mm-node-text">Master 5</text>
+                    <text x="865" y="757" class="mm-node-sub">IF vs IN CASE</text>
+                    <text x="865" y="775" class="mm-node-sub">koşul vs önlem</text>
+                    <text x="865" y="793" class="mm-node-sub">&ldquo;in case it rains&rdquo;</text>
+                  </g>
+                  <g class="mm-node mm-node-master">
+                    <rect x="970" y="710" width="170" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="1055" y="735" class="mm-node-text">Master 6</text>
+                    <text x="1055" y="757" class="mm-node-sub">Alt. bağlaçlar</text>
+                    <text x="1055" y="775" class="mm-node-sub">unless / provided</text>
+                    <text x="1055" y="793" class="mm-node-sub">as long as / even if</text>
+                  </g>
+                  <g class="mm-node mm-node-master">
+                    <rect x="1160" y="710" width="220" height="100" rx="10" class="mm-node-bg"/>
+                    <text x="1270" y="735" class="mm-node-text">Master 7 (akademik)</text>
+                    <text x="1270" y="757" class="mm-node-sub">Inversion</text>
+                    <text x="1270" y="775" class="mm-node-sub">Were I&hellip; / Had I&hellip;</text>
+                    <text x="1270" y="793" class="mm-node-sub">Should you&hellip;</text>
+                  </g>
+                </g>
+
+                <!-- Edge labels (only on most pedagogically critical edges) -->
+                <g class="mm-edge-labels">
+                  <text x="280" y="350" class="mm-edge-label">will</text>
+                  <text x="700" y="350" class="mm-edge-label">would/could/might</text>
+                  <text x="900" y="365" class="mm-edge-label">had + V3</text>
+                  <text x="1080" y="365" class="mm-edge-label">deep dive</text>
                 </g>
               </svg>
             </div>
 
-            <div class="logic-box"><strong>Renk kodu &amp; oklar:</strong>
-              <span style="color:#1e40af;font-weight:700;">&#9633; mavi</span> = Temel Konular (ön gereksinim) &middot;
-              <span style="color:var(--accent-hover);font-weight:700;">&#9633; turuncu</span> = Üniteler (vize işlenişi) &middot;
-              <span style="color:#1e6b3a;font-weight:700;">&#9633; yeşil</span> = Conditionals Master (derinlemesine).
-              <strong>Düz ok</strong> &rarr; ön gereksinim (alttaki konuya geçmeden üsttekini bilmek gerekir).
-              <strong>Kesik ok</strong> &rarr; çapraz destek (Modal Verbs Conditionals'ın her tipinde &ldquo;içeriden&rdquo; kullanılır).
+            <div class="logic-box"><strong>Çizgi tipleri (3 farklı ilişki):</strong>
+              <strong style="color:#888;">━━&rarr;</strong> <strong>Düz gri ok (prereq)</strong> = ön gereksinim &mdash; üstteki konuyu bilmeden alttakine geçilemez (ör. <em>had + V3</em>'ü bilmeden <em>Wish + had + V3</em> kurulamaz). &middot;
+              <strong style="color:#e8734a;">┅┅&rarr;</strong> <strong>Turuncu kesik ok (twin)</strong> = ikiz yapı &mdash; aynı form, farklı çerçeve (ör. <em>If I were rich</em> &harr; <em>I wish I were rich</em>). &middot;
+              <strong style="color:#aaa;">┄┄</strong> <strong>Açık gri kesik (cross-cut)</strong> = çapraz destek &mdash; konunun hemen üstündeki ön gereksinim değil ama <em>her seviyede içinden</em> geçer (Modal Verbs &rarr; Master 1-7'in hepsinde).
             </div>
 
-            <div class="logic-box"><strong>İkiz yapı uyarısı &mdash; Wish &harr; Conditional:</strong>
-              Unit 5'te göreceğin <em>Wish</em> formları, Conditional 2 ve 3'ün koşul kıyısı olmayan ikizidir.
-              <strong>If I were rich, I would travel</strong> = <strong>I wish I were rich</strong>.
-              <strong>If I had studied, I would have passed</strong> = <strong>I wish I had studied</strong>.
-              Bu yüzden Wish Üçgeni'ni öğrenirsen Conditional 2/3'e zihnen yarı hazırsın.
+            <div class="logic-box"><strong>3 kritik öğrenme yolu &mdash; sınavda en çok hata yapılan zincirler:</strong>
+              <strong>Yol A (Future zinciri):</strong> Yardımcı Fiiller &rarr; Future Tenses &rarr; Unit 4A (Future Cont./Perf.) &rarr; Unit 4B (First Cond. + FTC) &rarr; Master 1 (Type 0/1 derin). <em>Dikkat:</em> If/when clause'da WILL yok kuralı hep burada düşürür. &middot;
+              <strong>Yol B (Geçmiş hayal zinciri):</strong> Yardımcı Fiiller (had) &rarr; Past Perfect &rarr; Unit 5A (Type 3) &rarr; Unit 5B (Wish + had+V3) &rarr; Master 3 (Titanic) &rarr; Master 4 (Mixed). <em>Dikkat:</em> Wish + had+V3 ve Cond Type 3 aynı form &mdash; biri sonuçsuz, diğeri sonuçlu. &middot;
+              <strong>Yol C (Modal zinciri):</strong> Modal Verbs &rarr; Unit 5A (would/could/might + V1) &rarr; Master 2 / Master 3 / Master 7 (Inversion). <em>Dikkat:</em> If clause'da would/wouldn't ASLA yok &mdash; sadece <em>main clause</em>'da.
             </div>
 
-            <div class="logic-box"><strong>Çalışma sırası önerisi:</strong>
-              <strong>1)</strong> Üst kattaki 4 temel konuyu kavra (özellikle <em>Past Perfect</em> ve <em>Wish Üçgeni</em> sıkça eksik kalır).
-              <strong>2)</strong> Unit 4 &rarr; Unit 5 &rarr; Unit 6 sırasıyla ünite kartlarını gez (Vocabulary + Pronunciation dahil).
-              <strong>3)</strong> Conditionals Master serisini sondan-başa değil, baştan-sona oku &mdash; her kart bir öncekinin üzerine bina ediliyor.
+            <div class="logic-box"><strong>İkiz yapı detayı &mdash; Wish'in 3 yüzü ↔ Conditional'ın 3 tipi:</strong>
+              <table style="width:100%;font-size:12px;margin-top:6px;">
+                <tr><th style="text-align:left;border-bottom:1px solid var(--border);padding:4px;">Wish (yalın hayal)</th><th style="text-align:left;border-bottom:1px solid var(--border);padding:4px;">Conditional (koşullu hayal)</th><th style="text-align:left;border-bottom:1px solid var(--border);padding:4px;">Aynı form, fark</th></tr>
+                <tr><td style="padding:4px;">I <strong>wish</strong> I <strong>were</strong> rich.</td><td style="padding:4px;">If I <strong>were</strong> rich, I <strong>would</strong> travel.</td><td style="padding:4px;">Wish'te sonuç yok, Cond'da var</td></tr>
+                <tr><td style="padding:4px;">I <strong>wish</strong> I <strong>had studied</strong>.</td><td style="padding:4px;">If I <strong>had studied</strong>, I <strong>would have passed</strong>.</td><td style="padding:4px;">Wish'te pişmanlık, Cond'da alternatif tarih</td></tr>
+                <tr><td style="padding:4px;">I <strong>wish</strong> you <strong>would stop</strong>.</td><td style="padding:4px;">(eşi yok &mdash; davranış için)</td><td style="padding:4px;">Wish + would Type 1/2'nin yerini tutar</td></tr>
+              </table>
+            </div>
+
+            <div class="logic-box"><strong>Tier 4 (Master) iç hiyerarşi:</strong>
+              Master 1 &rarr; 2 &rarr; 3 doğal sıra (kolaydan zora &mdash; gerçekçi/Type 1, hayal/Type 2, geçmiş/Type 3).
+              Master 4 (Mixed) Type 2 ve 3'ü <em>karıştırır</em> &mdash; yani M2-M3 önceden olmalı.
+              Master 5 (IF vs IN CASE) ve Master 6 (alt. bağlaçlar) yan dallar &mdash; bağımsız okunabilir.
+              Master 7 (Inversion) en zor; Type 2/3 formlarını <em>tersine çevirir</em> (akademik yazı için).
+            </div>
+
+            <div class="logic-box"><strong>Çalışma sırası önerisi (5 adım):</strong>
+              <strong>1)</strong> En tepedeki <em>Yardımcı Fiiller</em> kartını gözden geçir &mdash; özellikle <em>had / would / will</em> hangi tense'lerle çalışıyor onu hatırla. &middot;
+              <strong>2)</strong> Tier 2'deki 5 kartı sırasıyla aç (özellikle <em>Past Perfect</em> ve <em>Wish Üçgeni</em> sıkça eksik kalır). &middot;
+              <strong>3)</strong> Üniteleri <em>4A &rarr; 4B &rarr; 5A &rarr; 5B &rarr; 6A</em> sırasıyla tara &mdash; Vocabulary + Pronunciation kartlarını da gez. &middot;
+              <strong>4)</strong> Master serisini <em>baştan-sona</em> oku &mdash; sondan başlama (Inversion'a Type 2/3 olmadan girme). &middot;
+              <strong>5)</strong> Test pratiği için Wordle/Quiz/Eşleştir oyunlarını File 4-5-6 + File 11-13 filtreleri üzerinde çalıştır.
             </div>
           </div></div>
         </div>
