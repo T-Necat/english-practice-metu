@@ -5857,5 +5857,302 @@
     "file": "File 14",
     "section": "Wishes and regrets",
     "translation": "şimdi düşününce, dönüp bakınca"
+  },
+  {
+    "word": "fall asleep",
+    "pos": "phr v",
+    "pronunciation": "/fɔːl əˈsliːp/",
+    "example": "I fell asleep watching TV again last night.",
+    "file": "File 15",
+    "section": "Sleep verbs",
+    "translation": "uykuya dalmak"
+  },
+  {
+    "word": "drift off",
+    "pos": "phr v",
+    "pronunciation": "/drɪft ɒf/",
+    "example": "She drifted off to sleep within minutes.",
+    "file": "File 15",
+    "section": "Sleep verbs",
+    "translation": "(yavaşça) uykuya dalmak"
+  },
+  {
+    "word": "doze off",
+    "pos": "phr v",
+    "pronunciation": "/dəʊz ɒf/",
+    "example": "I dozed off during the boring lecture.",
+    "file": "File 15",
+    "section": "Sleep verbs",
+    "translation": "uyuklamak"
+  },
+  {
+    "word": "oversleep",
+    "pos": "v",
+    "pronunciation": "/ˌəʊvəˈsliːp/",
+    "example": "I overslept and missed my morning class.",
+    "file": "File 15",
+    "section": "Sleep verbs",
+    "translation": "fazla uyumak"
+  },
+  {
+    "word": "sleepwalk",
+    "pos": "v",
+    "pronunciation": "/ˈsliːpwɔːk/",
+    "example": "My brother used to sleepwalk as a child.",
+    "file": "File 15",
+    "section": "Sleep verbs",
+    "translation": "uyurgezerlik yapmak"
+  },
+  {
+    "word": "snore",
+    "pos": "v",
+    "pronunciation": "/snɔː/",
+    "example": "My grandfather snores so loudly the whole house wakes up.",
+    "file": "File 15",
+    "section": "Sleep verbs",
+    "translation": "horlamak"
+  },
+  {
+    "word": "yawn",
+    "pos": "v",
+    "pronunciation": "/jɔːn/",
+    "example": "I can't stop yawning today; I'm exhausted.",
+    "file": "File 15",
+    "section": "Sleep verbs",
+    "translation": "esnemek"
+  },
+  {
+    "word": "wake up",
+    "pos": "phr v",
+    "pronunciation": "/weɪk ʌp/",
+    "example": "I wake up at 6 every morning for work.",
+    "file": "File 15",
+    "section": "Sleep verbs",
+    "translation": "uyanmak"
+  },
+  {
+    "word": "stay up",
+    "pos": "phr v",
+    "pronunciation": "/steɪ ʌp/",
+    "example": "I stayed up late watching films last night.",
+    "file": "File 15",
+    "section": "Sleep verbs",
+    "translation": "geç saatlere kadar uyumamak"
+  },
+  {
+    "word": "fast asleep",
+    "pos": "phr",
+    "pronunciation": "/fɑːst əˈsliːp/",
+    "example": "The baby is fast asleep in her cot.",
+    "file": "File 15",
+    "section": "Sleep states",
+    "translation": "derin uykuda"
+  },
+  {
+    "word": "wide awake",
+    "pos": "phr",
+    "pronunciation": "/waɪd əˈweɪk/",
+    "example": "I'm wide awake at 3 AM and can't sleep.",
+    "file": "File 15",
+    "section": "Sleep states",
+    "translation": "tamamen uyanık"
+  },
+  {
+    "word": "be a light sleeper",
+    "pos": "phr",
+    "pronunciation": "/bi ə laɪt ˈsliːpə/",
+    "example": "I'm a light sleeper; any small noise wakes me.",
+    "file": "File 15",
+    "section": "Sleep states",
+    "translation": "hassas uyuyan biri olmak"
+  },
+  {
+    "word": "be a heavy sleeper",
+    "pos": "phr",
+    "pronunciation": "/bi ə ˈhevi ˈsliːpə/",
+    "example": "He's a heavy sleeper; even the alarm doesn't wake him.",
+    "file": "File 15",
+    "section": "Sleep states",
+    "translation": "derin uyuyan biri olmak"
+  },
+  {
+    "word": "sleep like a log",
+    "pos": "phr",
+    "pronunciation": "/sliːp laɪk ə lɒɡ/",
+    "example": "I slept like a log last night and woke up refreshed.",
+    "file": "File 15",
+    "section": "Sleep states",
+    "translation": "taş gibi uyumak"
+  },
+  {
+    "word": "have nightmares",
+    "pos": "phr",
+    "pronunciation": "/hæv ˈnaɪtmeəz/",
+    "example": "Children sometimes have nightmares after scary movies.",
+    "file": "File 15",
+    "section": "Sleep states",
+    "translation": "kabus görmek"
+  },
+  {
+    "word": "keep someone awake",
+    "pos": "phr",
+    "pronunciation": "/kiːp ˈsʌmwʌn əˈweɪk/",
+    "example": "The neighbour's loud music kept me awake.",
+    "file": "File 15",
+    "section": "Sleep states",
+    "translation": "(birinin) uykusunu kaçırmak"
+  },
+  {
+    "word": "set the alarm",
+    "pos": "phr",
+    "pronunciation": "/set ði əˈlɑːm/",
+    "example": "Don't forget to set the alarm for 6 AM.",
+    "file": "File 15",
+    "section": "Sleep states",
+    "translation": "alarmı kurmak"
+  },
+  {
+    "word": "take a nap",
+    "pos": "phr",
+    "pronunciation": "/teɪk ə næp/",
+    "example": "I take a short nap after lunch every day.",
+    "file": "File 15",
+    "section": "Sleep states",
+    "translation": "şekerleme yapmak"
+  },
+  {
+    "word": "count sheep",
+    "pos": "phr",
+    "pronunciation": "/kaʊnt ʃiːp/",
+    "example": "I count sheep when I can't fall asleep.",
+    "file": "File 15",
+    "section": "Sleep states",
+    "translation": "uyumak için koyun saymak"
+  },
+  {
+    "word": "insomnia",
+    "pos": "n",
+    "pronunciation": "/ɪnˈsɒmniə/",
+    "example": "She suffers from chronic insomnia and can't sleep without medication.",
+    "file": "File 15",
+    "section": "Sleep nouns",
+    "translation": "uykusuzluk (kronik)"
+  },
+  {
+    "word": "nightmare",
+    "pos": "n",
+    "pronunciation": "/ˈnaɪtmeə/",
+    "example": "I had a terrible nightmare about falling.",
+    "file": "File 15",
+    "section": "Sleep nouns",
+    "translation": "kabus"
+  },
+  {
+    "word": "dream",
+    "pos": "n",
+    "pronunciation": "/driːm/",
+    "example": "I had a strange dream about flying last night.",
+    "file": "File 15",
+    "section": "Sleep nouns",
+    "translation": "rüya"
+  },
+  {
+    "word": "REM sleep",
+    "pos": "n",
+    "pronunciation": "/rem sliːp/",
+    "example": "REM sleep is when we dream most vividly.",
+    "file": "File 15",
+    "section": "Sleep nouns",
+    "translation": "REM uykusu"
+  },
+  {
+    "word": "sleep deprivation",
+    "pos": "n",
+    "pronunciation": "/sliːp ˌdeprɪˈveɪʃn/",
+    "example": "Sleep deprivation seriously affects your health.",
+    "file": "File 15",
+    "section": "Sleep nouns",
+    "translation": "uyku yoksunluğu"
+  },
+  {
+    "word": "drowsy",
+    "pos": "adj",
+    "pronunciation": "/ˈdraʊzi/",
+    "example": "I feel drowsy after a heavy lunch.",
+    "file": "File 15",
+    "section": "Sleep adjectives",
+    "translation": "uykulu, sersem"
+  },
+  {
+    "word": "exhausted",
+    "pos": "adj",
+    "pronunciation": "/ɪɡˈzɔːstɪd/",
+    "example": "I'm absolutely exhausted after working all day.",
+    "file": "File 15",
+    "section": "Sleep adjectives",
+    "translation": "bitkin, tükenmiş"
+  },
+  {
+    "word": "refreshed",
+    "pos": "adj",
+    "pronunciation": "/rɪˈfreʃt/",
+    "example": "I feel refreshed after a good night's sleep.",
+    "file": "File 15",
+    "section": "Sleep adjectives",
+    "translation": "dinlenmiş, tazelenmiş"
+  },
+  {
+    "word": "lullaby",
+    "pos": "n",
+    "pronunciation": "/ˈlʌləbaɪ/",
+    "example": "She sang a soft lullaby to the baby.",
+    "file": "File 15",
+    "section": "Sleep nouns",
+    "translation": "ninni"
+  },
+  {
+    "word": "duvet",
+    "pos": "n",
+    "pronunciation": "/ˈduːveɪ/",
+    "example": "The thick duvet kept me warm all night.",
+    "file": "File 15",
+    "section": "Bedroom items",
+    "translation": "yorgan"
+  },
+  {
+    "word": "sheet",
+    "pos": "n",
+    "pronunciation": "/ʃiːt/",
+    "example": "I changed the sheets this morning.",
+    "file": "File 15",
+    "section": "Bedroom items",
+    "translation": "çarşaf"
+  },
+  {
+    "word": "blanket",
+    "pos": "n",
+    "pronunciation": "/ˈblæŋkɪt/",
+    "example": "Pull the blanket up; it's getting cold.",
+    "file": "File 15",
+    "section": "Bedroom items",
+    "translation": "battaniye"
+  },
+  {
+    "word": "pillow",
+    "pos": "n",
+    "pronunciation": "/ˈpɪləʊ/",
+    "example": "I prefer a soft pillow for my neck.",
+    "file": "File 15",
+    "section": "Bedroom items",
+    "translation": "yastık"
+  },
+  {
+    "word": "mattress",
+    "pos": "n",
+    "pronunciation": "/ˈmætrəs/",
+    "example": "We need a new mattress; this one hurts my back.",
+    "file": "File 15",
+    "section": "Bedroom items",
+    "translation": "yatak (tabanı)"
   }
 ]
