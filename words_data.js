@@ -6154,5 +6154,275 @@ var WORDS_DATA = [
     "file": "File 15",
     "section": "Bedroom items",
     "translation": "yatak (tabanı)"
+  },
+  {
+    "word": "if",
+    "pos": "conj",
+    "pronunciation": "/ɪf/",
+    "example": "If it rains, we'll stay home.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "eğer, ...-se"
+  },
+  {
+    "word": "unless",
+    "pos": "conj",
+    "pronunciation": "/ənˈles/",
+    "example": "Unless you hurry, you'll be late.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "...-mediği sürece (= if not)"
+  },
+  {
+    "word": "provided that",
+    "pos": "conj",
+    "pronunciation": "/prəˈvaɪdɪd ðət/",
+    "example": "I'll come provided that you pay for the trip.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "şartıyla, koşuluyla"
+  },
+  {
+    "word": "providing that",
+    "pos": "conj",
+    "pronunciation": "/prəˈvaɪdɪŋ ðət/",
+    "example": "You can borrow it providing that you return it tomorrow.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "şartıyla (= provided that)"
+  },
+  {
+    "word": "as long as",
+    "pos": "conj",
+    "pronunciation": "/əz lɒŋ əz/",
+    "example": "You can stay as long as you're quiet.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "...olduğu sürece"
+  },
+  {
+    "word": "suppose",
+    "pos": "v",
+    "pronunciation": "/səˈpəʊz/",
+    "example": "Suppose you won the lottery — what would you do?",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "farzetmek, varsaymak"
+  },
+  {
+    "word": "supposing",
+    "pos": "conj",
+    "pronunciation": "/səˈpəʊzɪŋ/",
+    "example": "Supposing he doesn't come, what shall we do?",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "diyelim ki, farzedelim"
+  },
+  {
+    "word": "even if",
+    "pos": "conj",
+    "pronunciation": "/ˈiːvn ɪf/",
+    "example": "Even if it rains, we'll go to the picnic.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "...olsa bile"
+  },
+  {
+    "word": "only if",
+    "pos": "conj",
+    "pronunciation": "/ˈəʊnli ɪf/",
+    "example": "I'll go only if you come too.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "sadece ...ise"
+  },
+  {
+    "word": "otherwise",
+    "pos": "adv",
+    "pronunciation": "/ˈʌðəwaɪz/",
+    "example": "Hurry up; otherwise we'll miss the train.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "aksi takdirde"
+  },
+  {
+    "word": "in case",
+    "pos": "conj",
+    "pronunciation": "/ɪn keɪs/",
+    "example": "Take an umbrella in case it rains later.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "...olur diye, ihtimale karşı"
+  },
+  {
+    "word": "given that",
+    "pos": "conj",
+    "pronunciation": "/ˈɡɪvn ðət/",
+    "example": "Given that he's sick, he won't come to work today.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "...olduğu göz önüne alındığında"
+  },
+  {
+    "word": "assume",
+    "pos": "v",
+    "pronunciation": "/əˈsjuːm/",
+    "example": "Let's assume the worst-case scenario.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "varsaymak"
+  },
+  {
+    "word": "assumption",
+    "pos": "n",
+    "pronunciation": "/əˈsʌmpʃn/",
+    "example": "Don't make assumptions without evidence.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "varsayım"
+  },
+  {
+    "word": "on condition that",
+    "pos": "phr",
+    "pronunciation": "/ɒn kənˈdɪʃn ðət/",
+    "example": "I'll lend you the car on condition that you fill it up.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "...şartıyla (resmi)"
+  },
+  {
+    "word": "whether",
+    "pos": "conj",
+    "pronunciation": "/ˈweðə/",
+    "example": "I don't know whether to laugh or cry.",
+    "file": "File 16",
+    "section": "Conditionals connectors",
+    "translation": "...olup olmadığı, -ip -madığı"
+  },
+  {
+    "word": "wish",
+    "pos": "v",
+    "pronunciation": "/wɪʃ/",
+    "example": "I wish I were taller.",
+    "file": "File 16",
+    "section": "Wishes and conditional verbs",
+    "translation": "keşke (dilek)"
+  },
+  {
+    "word": "fictional",
+    "pos": "adj",
+    "pronunciation": "/ˈfɪkʃənl/",
+    "example": "The characters in this novel are entirely fictional.",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "kurgusal, hayali"
+  },
+  {
+    "word": "scenario",
+    "pos": "n",
+    "pronunciation": "/səˈnɑːriəʊ/",
+    "example": "In the worst-case scenario, we lose everything.",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "senaryo, durum"
+  },
+  {
+    "word": "iceberg",
+    "pos": "n",
+    "pronunciation": "/ˈaɪsbɜːɡ/",
+    "example": "The Titanic hit an iceberg and sank.",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "buzdağı"
+  },
+  {
+    "word": "spot",
+    "pos": "v",
+    "pronunciation": "/spɒt/",
+    "example": "She spotted her friend in the crowd.",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "fark etmek, görmek"
+  },
+  {
+    "word": "director",
+    "pos": "n",
+    "pronunciation": "/dɪˈrektə/",
+    "example": "James Cameron is a famous film director.",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "yönetmen"
+  },
+  {
+    "word": "fame",
+    "pos": "n",
+    "pronunciation": "/feɪm/",
+    "example": "She rose to fame after her first film.",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "şöhret, ün"
+  },
+  {
+    "word": "lottery",
+    "pos": "n",
+    "pronunciation": "/ˈlɒtəri/",
+    "example": "If I won the lottery, I would travel the world.",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "piyango"
+  },
+  {
+    "word": "invisible",
+    "pos": "adj",
+    "pronunciation": "/ɪnˈvɪzəbl/",
+    "example": "If I were invisible, what would I do?",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "görünmez"
+  },
+  {
+    "word": "time machine",
+    "pos": "n",
+    "pronunciation": "/taɪm məˈʃiːn/",
+    "example": "If you had a time machine, where would you go?",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "zaman makinesi"
+  },
+  {
+    "word": "superhero",
+    "pos": "n",
+    "pronunciation": "/ˈsuːpəhɪərəʊ/",
+    "example": "If you could be a superhero, which one would you be?",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "süper kahraman"
+  },
+  {
+    "word": "unrealistic",
+    "pos": "adj",
+    "pronunciation": "/ˌʌnrɪəˈlɪstɪk/",
+    "example": "Her expectations are completely unrealistic.",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "gerçekçi olmayan"
+  },
+  {
+    "word": "hypothetical",
+    "pos": "adj",
+    "pronunciation": "/ˌhaɪpəˈθetɪkl/",
+    "example": "Let's discuss a hypothetical situation.",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "varsayımsal, hipotetik"
+  },
+  {
+    "word": "imaginary",
+    "pos": "adj",
+    "pronunciation": "/ɪˈmædʒɪnəri/",
+    "example": "Children often have imaginary friends.",
+    "file": "File 16",
+    "section": "Hypothetical scenarios",
+    "translation": "hayali"
   }
 ];
