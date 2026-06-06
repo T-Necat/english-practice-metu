@@ -303,7 +303,7 @@
     "example": "I had diarrhoea last night and had to go to the toilet six times.",
     "file": "File 2",
     "section": "Vocabulary Banks: Illnesses and injuries",
-    "translation": "i̇shal"
+    "translation": "ishal"
   },
   {
     "word": "dizzy",
@@ -483,7 +483,7 @@
     "example": "If you have a toothach e you should go to see the dentist.",
     "file": "File 2",
     "section": "Vocabulary Banks: Illnesses and injuries",
-    "translation": "di̇ş ağrisi"
+    "translation": "diş ağrisi"
   },
   {
     "word": "unconscious",
@@ -762,7 +762,7 @@
     "example": "You need to go to baggage reclaim to collect your bags.",
     "file": "File 3",
     "section": "Vocabulary Banks: Air Travel",
-    "translation": "bagaj geri̇ alma"
+    "translation": "bagaj geri alma"
   },
   {
     "word": "board",
@@ -789,7 +789,7 @@
     "example": "Are you in economy? ~ No, I'm in business class today.",
     "file": "File 3",
     "section": "Vocabulary Banks: Air Travel",
-    "translation": "i̇ş"
+    "translation": "iş"
   },
   {
     "word": "cabin crew",
@@ -987,7 +987,7 @@
     "example": "Did you have a good journey ? ~ Yes, there were no problems, thanks.",
     "file": "File 3",
     "section": "Vocabulary Banks: Air Travel",
-    "translation": "yolculuk"
+    "translation": "yolculuk (A’dan B’ye gitme süreci)"
   },
   {
     "word": "land",
@@ -1068,7 +1068,7 @@
     "example": "The plane taxied along the runway .",
     "file": "File 3",
     "section": "Vocabulary Banks: Air Travel",
-    "translation": "pi̇st"
+    "translation": "pist"
   },
   {
     "word": "scan",
@@ -1131,7 +1131,7 @@
     "example": "Are you going away next week? ~ Yes, just for a short trip .",
     "file": "File 3",
     "section": "Vocabulary Banks: Air Travel",
-    "translation": "yolculuk"
+    "translation": "gezi, kısa seyahat (gidiş-dönüş)"
   },
   {
     "word": "trolley",
@@ -1158,7 +1158,7 @@
     "example": "I thought it was simple, but actually",
     "file": "File 3",
     "section": "Vocabulary Banks: Adverbs and adverbial phrases",
-    "translation": "aslında"
+    "translation": "aslında, gerçekte"
   },
   {
     "word": "apparently",
@@ -1221,7 +1221,7 @@
     "example": "It took a long time, but eventually we had enough money to buy a house.",
     "file": "File 3",
     "section": "Vocabulary Banks: Adverbs and adverbial phrases",
-    "translation": "sonunda"
+    "translation": "sonunda (uzun bir süreç sonra)"
   },
   {
     "word": "ever",
@@ -1248,7 +1248,7 @@
     "example": "You should work hard , but ask for help if you need it.",
     "file": "File 3",
     "section": "Vocabulary Banks: Adverbs and adverbial phrases",
-    "translation": "zor"
+    "translation": "sıkı, yoğun biçimde (zorlu)"
   },
   {
     "word": "hardly",
@@ -1257,7 +1257,7 @@
     "example": "It’s so foggy, I can hardly see anything.",
     "file": "File 3",
     "section": "Vocabulary Banks: Adverbs and adverbial phrases",
-    "translation": "zor"
+    "translation": "neredeyse hiç, güçbela"
   },
   {
     "word": "ideally",
@@ -1275,7 +1275,7 @@
     "example": "I thought the café would be closed, but in fact it was open.",
     "file": "File 3",
     "section": "Vocabulary Banks: Adverbs and adverbial phrases",
-    "translation": "aslında"
+    "translation": "aslında, hatta (gerçek şu ki)"
   },
   {
     "word": "in the end",
@@ -1284,7 +1284,7 @@
     "example": "I thought the job would be boring, but in the end",
     "file": "File 3",
     "section": "Vocabulary Banks: Adverbs and adverbial phrases",
-    "translation": "sonunda"
+    "translation": "sonuçta, en sonunda"
   },
   {
     "word": "late",
@@ -2256,7 +2256,7 @@
     "example": "Which coffee would you like? Tell the barista .",
     "file": "File 6",
     "section": "Music; words from other languages",
-    "translation": "bari̇sta"
+    "translation": "barista"
   },
   {
     "word": "bass guitar",
@@ -2526,7 +2526,7 @@
     "example": "I love ' Symphony No. 9' by Beethoven.",
     "file": "File 6",
     "section": "Music; words from other languages",
-    "translation": "senfoni̇"
+    "translation": "senfoni"
   },
   {
     "word": "villa",
@@ -2553,7 +2553,7 @@
     "example": "I advise you to start thinking about your future careers while you are at school.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "tavsiye"
+    "translation": "tavsiye etmek, öğüt vermek"
   },
   {
     "word": "argue",
@@ -2562,7 +2562,7 @@
     "example": "I often argue with my parents about doing housework.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "tartışmak"
+    "translation": "tartışmak (kavga ederek), münakaşa etmek"
   },
   {
     "word": "avoid",
@@ -2571,7 +2571,7 @@
     "example": "Jack always tries to avoid arguing with me.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "kaçının"
+    "translation": "kaçınmak, (bir şeyden) sakınmak"
   },
   {
     "word": "beat",
@@ -2580,7 +2580,7 @@
     "example": "Manchester United beat Arsenal 5–2.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "yenmek, mağlup etmek"
+    "translation": "(rakibi) yenmek, mağlup etmek"
   },
   {
     "word": "borrow",
@@ -2598,7 +2598,7 @@
     "example": "Alex denies saying that, but I remember it.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "inkar etmek"
+    "translation": "inkar etmek, (suçlamayı) reddetmek"
   },
   {
     "word": "discuss",
@@ -2607,7 +2607,7 @@
     "example": "I need to discuss the problem with my boss.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "tartışmak"
+    "translation": "görüşmek, ele almak (sakince konuşmak)"
   },
   {
     "word": "expect",
@@ -2616,7 +2616,7 @@
     "example": "I expect that Daniel will forget our anniversary. He always does.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "beklemek"
+    "translation": "(olacağını) beklemek, ummak"
   },
   {
     "word": "hope",
@@ -2625,7 +2625,7 @@
     "example": "I hope that you can come on Friday. I haven't seen you for ages.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "ummak, umut etmek"
+    "translation": "ummak, umut etmek (olası bir şey)"
   },
   {
     "word": "lay (past laid )",
@@ -2634,7 +2634,7 @@
     "example": "Can you lay the table? Put the plates and cutlery on it.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "lay (geçmiş laid )"
+    "translation": "(bir şeyi) yatay koymak, sermek [lay-laid-laid]"
   },
   {
     "word": "lend",
@@ -2643,7 +2643,7 @@
     "example": "Can you lend me a pen? I need to make a note of this.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "ödünç ver"
+    "translation": "ödünç vermek"
   },
   {
     "word": "lie (past lay )",
@@ -2652,7 +2652,7 @@
     "example": "I want to go home and lie on the sofa for half an hour.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "yalan (geçmişte yatmak)"
+    "translation": "(kendin) uzanmak, yatmak [lie-lay-lain]"
   },
   {
     "word": "matter",
@@ -2661,7 +2661,7 @@
     "example": "It doesn’t matter",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "önemli olmak, fark etmek"
+    "translation": "önemli olmak, sorun olmak"
   },
   {
     "word": "mind",
@@ -2670,7 +2670,7 @@
     "example": "My parents don’t mind",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "aldırmak, sakıncası olmak"
+    "translation": "aldırmak, sakıncası olmak (rahatsız olmak)"
   },
   {
     "word": "notice",
@@ -2679,7 +2679,7 @@
     "example": "I didn't notice that Katy had changed her hair colour.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "fark etmek"
+    "translation": "fark etmek (gözle görüp sezmek)"
   },
   {
     "word": "prevent",
@@ -2688,7 +2688,7 @@
     "example": "My parents can't prevent me from seeing my friends.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "önlemek"
+    "translation": "engellemek, (birini bir şeyden) alıkoymak"
   },
   {
     "word": "raise",
@@ -2697,7 +2697,7 @@
     "example": "It’s hard not to raise your voice when you are arguing with someone.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "yükseltmek"
+    "translation": "(bir şeyi) yükseltmek, artırmak [geçişli]"
   },
   {
     "word": "realize",
@@ -2706,7 +2706,7 @@
     "example": "I didn't realize you were so unhappy.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "farkına varmak"
+    "translation": "farkına varmak, anlamak (zihinde)"
   },
   {
     "word": "refuse",
@@ -2715,7 +2715,7 @@
     "example": "My friend always refuses to discuss the problem.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "reddetmek"
+    "translation": "reddetmek, (yapmayı) kabul etmemek"
   },
   {
     "word": "remember",
@@ -2733,7 +2733,7 @@
     "example": "Can you remind me to call my parents later?",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "hatırlatmak"
+    "translation": "hatırlatmak (birine)"
   },
   {
     "word": "rise",
@@ -2742,7 +2742,7 @@
     "example": "The cost of living is going to rise again this month.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "yükselmek, artmak"
+    "translation": "(kendiliğinden) yükselmek, artmak [geçişsiz]"
   },
   {
     "word": "rob",
@@ -2751,7 +2751,7 @@
     "example": "The police said that four people had tried to rob the bank last night.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "soymak"
+    "translation": "(kişiyi/yeri tehditle) soymak"
   },
   {
     "word": "steal",
@@ -2760,7 +2760,7 @@
     "example": "If you leave your bike unlocked, somebody might steal",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "çalmak"
+    "translation": "(eşyayı gizlice) çalmak"
   },
   {
     "word": "wait",
@@ -2769,7 +2769,7 @@
     "example": "We’ll have to wait half an hour for the next train.",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "bekle"
+    "translation": "(zaman geçirerek) beklemek"
   },
   {
     "word": "warn",
@@ -2778,7 +2778,7 @@
     "example": "I should warn you that it's always cold in that lecture hall. Take something warm!",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "uyarmak"
+    "translation": "uyarmak (kötü bir şeye karşı)"
   },
   {
     "word": "win",
@@ -2787,7 +2787,7 @@
     "example": "Did Manchester United win the match? ~ Yes, they won 5–2!",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "kazanmak"
+    "translation": "(maç/yarış/ödül) kazanmak"
   },
   {
     "word": "wish",
@@ -2796,7 +2796,7 @@
     "example": "I wish",
     "file": "File 7",
     "section": "Vocabulary Banks: Verbs often confused",
-    "translation": "dilemek, istemek"
+    "translation": "dilemek, keşke demek (zor/imkânsız bir şey)"
   },
   {
     "word": "ankle",
@@ -2931,7 +2931,7 @@
     "example": "The train was late. I frowned because I was annoyed, but there was nothing I could do.",
     "file": "File 7",
     "section": "Vocabulary Banks: The body",
-    "translation": "kaşlarını çattı"
+    "translation": "kaşlarını çatmak"
   },
   {
     "word": "heart",
@@ -2985,7 +2985,7 @@
     "example": "Ouch! I hit my knee on the edge of that coffee table.",
     "file": "File 7",
     "section": "Vocabulary Banks: The body",
-    "translation": "di̇z"
+    "translation": "diz"
   },
   {
     "word": "kneel",
@@ -2994,7 +2994,7 @@
     "example": "Can you kneel on the ground and take the photograph from a new angle?",
     "file": "File 7",
     "section": "Vocabulary Banks: The body",
-    "translation": "di̇z çök"
+    "translation": "diz çökmek"
   },
   {
     "word": "lips",
@@ -3093,7 +3093,7 @@
     "example": "I need to shave this stubble or grow it into a beard. I can't decide which to do.",
     "file": "File 7",
     "section": "Vocabulary Banks: The body",
-    "translation": "anız"
+    "translation": "(yüzde) kirli/kısa sakal"
   },
   {
     "word": "thigh",
@@ -3129,7 +3129,7 @@
     "example": "He winked at me to show that he was only joking.",
     "file": "File 7",
     "section": "Vocabulary Banks: The body",
-    "translation": "goz kirpmak"
+    "translation": "göz kırpmak"
   },
   {
     "word": "wrinkles",
@@ -3165,7 +3165,7 @@
     "example": "They were accused of armed robbery and car theft.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "suçlamak"
+    "translation": "suçlamak, itham etmek"
   },
   {
     "word": "acquit",
@@ -3174,7 +3174,7 @@
     "example": "The defendants were acquitted and allowed to go free.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "beraat"
+    "translation": "beraat ettirmek, aklamak"
   },
   {
     "word": "arrest",
@@ -3183,7 +3183,7 @@
     "example": "The vandals were immediately arrested and taken to the police station.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "tutuklama"
+    "translation": "tutuklamak, gözaltına almak"
   },
   {
     "word": "blackmail",
@@ -3192,7 +3192,7 @@
     "example": "She tried to blackmail the celebrity by threatening to sell photos to the press.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "şantaj"
+    "translation": "şantaj (yapmak)"
   },
   {
     "word": "bribery",
@@ -3210,7 +3210,7 @@
     "example": "The burglary was very upsetting for the people who lived there.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "hirsizlik"
+    "translation": "ev soygunu (eve girip çalma)"
   },
   {
     "word": "catch",
@@ -3219,7 +3219,7 @@
     "example": "The police were able to catch the criminals as they tried to escape.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "yakalamak"
+    "translation": "(suçluyu) yakalamak"
   },
   {
     "word": "charge",
@@ -3228,7 +3228,7 @@
     "example": "Two people were questioned by the police and charged with armed robbery.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "suçlamak, dava açmak"
+    "translation": "(resmen) suçlamak, itham etmek"
   },
   {
     "word": "commit",
@@ -3237,7 +3237,7 @@
     "example": "Two people committed a crime. They robbed a bank and stole a car.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "taahhüt"
+    "translation": "(suç) işlemek"
   },
   {
     "word": "court",
@@ -3264,7 +3264,7 @@
     "example": "The jury of twelve people looked at and heard all the evidence .",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "kanıt"
+    "translation": "delil, kanıt (mahkemede sunulan)"
   },
   {
     "word": "fraud",
@@ -3273,7 +3273,7 @@
     "example": "He committed fraud by using other people’s identities.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "dolandırıcılık"
+    "translation": "dolandırıcılık, sahtekârlık"
   },
   {
     "word": "guilty",
@@ -3282,7 +3282,7 @@
     "example": "The jury decided that the defendant was guilty of the crime.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "suçlu"
+    "translation": "suçlu (mahkûm)"
   },
   {
     "word": "hacking",
@@ -3291,7 +3291,7 @@
     "example": "Computer hacking can enable people to steal information.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "hacklemek"
+    "translation": "bilgisayar korsanlığı (hackleme)"
   },
   {
     "word": "hijacking",
@@ -3300,7 +3300,7 @@
     "example": "The hijacking of the plane forced the airport to close.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "kaçirma"
+    "translation": "(uçak/araç) kaçırma"
   },
   {
     "word": "innocent",
@@ -3309,7 +3309,7 @@
     "example": "The jury decided that the defendant was innocent .",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "masum"
+    "translation": "masum, suçsuz"
   },
   {
     "word": "investigate",
@@ -3318,7 +3318,7 @@
     "example": "The police investigated the crime.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "araştırmak"
+    "translation": "soruşturmak, araştırmak"
   },
   {
     "word": "judge",
@@ -3327,7 +3327,7 @@
     "example": "The judge decided what the punishment should be.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "yargıç"
+    "translation": "yargıç, hâkim"
   },
   {
     "word": "jury",
@@ -3345,7 +3345,7 @@
     "example": "The kidnapping was an attempt to get money from the wealthy family.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "adam kaçırma"
+    "translation": "adam kaçırma (fidye için)"
   },
   {
     "word": "mugging",
@@ -3354,7 +3354,7 @@
     "example": "The mugging happened on a busy city street at night.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "gasp"
+    "translation": "sokakta gasp/soygun"
   },
   {
     "word": "murder",
@@ -3363,7 +3363,7 @@
     "example": "He went to prison for the murder of a woman.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "cinayet"
+    "translation": "cinayet, (kasten) öldürme"
   },
   {
     "word": "proof",
@@ -3372,7 +3372,7 @@
     "example": "There was no proof that the defendants had committed the crime.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "kanıt"
+    "translation": "kesin kanıt, ispat"
   },
   {
     "word": "punishment",
@@ -3408,7 +3408,7 @@
     "example": "Robbery usually is violent and involves a weapon.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "soygun"
+    "translation": "soygun (tehdit/zorla)"
   },
   {
     "word": "sentence",
@@ -3417,7 +3417,7 @@
     "example": "The judge sentenced the criminals to ten years in prison.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "(cezaya) çarptırmak, hüküm vermek"
+    "translation": "(mahkeme) ceza vermek; hüküm"
   },
   {
     "word": "smuggling",
@@ -3435,7 +3435,7 @@
     "example": "Stalking can happen physically or on the internet.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "takip etmek"
+    "translation": "(ısrarla) takip/taciz etme"
   },
   {
     "word": "terrorism",
@@ -3444,7 +3444,7 @@
     "example": "People debated whether the crime was an act of terrorism .",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "teröri̇zm"
+    "translation": "terörizm"
   },
   {
     "word": "theft",
@@ -3453,7 +3453,7 @@
     "example": "The theft was very stressful for the victim.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "hirsizlik"
+    "translation": "hırsızlık (eşya çalma)"
   },
   {
     "word": "vandalism",
@@ -3462,7 +3462,7 @@
     "example": "Some people say",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "vandalizm"
+    "translation": "vandalizm (kasten zarar verme)"
   },
   {
     "word": "verdict",
@@ -3471,7 +3471,7 @@
     "example": "The jury reached their verdict after two days.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "karar"
+    "translation": "(jüri) kararı, hüküm"
   },
   {
     "word": "witness",
@@ -3480,7 +3480,7 @@
     "example": "The witness told the court what they had seen.",
     "file": "File 8",
     "section": "Vocabulary Banks: Crime and punishment",
-    "translation": "tanık"
+    "translation": "tanık, görgü tanığı"
   },
   {
     "word": "accurate",
@@ -3489,7 +3489,7 @@
     "example": "The film review was quite accurate . It said the plot was poor but the acting was good, which was true.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "doğru"
+    "translation": "doğru, isabetli (haber)"
   },
   {
     "word": "agony aunt",
@@ -3498,7 +3498,7 @@
     "example": "An agony aunt writes in a newspaper or magazine, giving advice to people in reply to their letters.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "aci teyze"
+    "translation": "okur dertlerine cevap veren köşe yazarı"
   },
   {
     "word": "axe",
@@ -3507,7 +3507,7 @@
     "example": "Thousands of jobs were axed by UK firms.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "(işten) çıkarmak, kapatmak"
+    "translation": "(manşet) kesmek, azaltmak (iş/bütçe)"
   },
   {
     "word": "back",
@@ -3516,7 +3516,7 @@
     "example": "The Prime Minister has backed the Chancellor in the latest scandal.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "desteklemek, arka çıkmak"
+    "translation": "(manşet) desteklemek"
   },
   {
     "word": "biased",
@@ -3525,7 +3525,7 @@
     "example": "The news on this channel is really biased . They have a very strong political opinion.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "önyargılı"
+    "translation": "taraflı, önyargılı"
   },
   {
     "word": "bid",
@@ -3534,7 +3534,7 @@
     "example": "The headline read: 'Astronaut bids to be first person on Mars'.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "teklif"
+    "translation": "(manşet) girişimde bulunmak, çabalamak"
   },
   {
     "word": "censored",
@@ -3543,7 +3543,7 @@
     "example": "I think the report was censored . The newspaper wasn’t allowed to publish all the details.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "sansürlendi"
+    "translation": "sansürlenmiş, sansürlü"
   },
   {
     "word": "clash",
@@ -3552,7 +3552,7 @@
     "example": "Ministers clash over new car tax proposal.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "çatışma"
+    "translation": "(manşet) anlaşmazlık, görüş çatışması"
   },
   {
     "word": "commentator",
@@ -3561,7 +3561,7 @@
     "example": "A commentator is a person who describes a sports event on TV or radio while it’s happening.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "yorumcu"
+    "translation": "(spor) yorumcu, spiker"
   },
   {
     "word": "critic",
@@ -3570,7 +3570,7 @@
     "example": "A critic is a person who writes a review about the good / bad qualities of books, concerts, theatre, films, etc.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "eleştirmen"
+    "translation": "eleştirmen (kişi)"
   },
   {
     "word": "editor",
@@ -3579,7 +3579,7 @@
     "example": "An editor is a person in charge of a newspaper or magazine, or part of one, and decides what should be in it.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "editör"
+    "translation": "editör, yazı işleri müdürü"
   },
   {
     "word": "freelance journalist",
@@ -3597,7 +3597,7 @@
     "example": "The stock market has been hit by oil price fears.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "etkilemek, vurmak (mecaz)"
+    "translation": "(manşet) olumsuz etkilemek, sarsmak"
   },
   {
     "word": "newsreader",
@@ -3606,7 +3606,7 @@
     "example": "A newsreader reads the news on TV or radio.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "haber okuyucu"
+    "translation": "haber spikeri/sunucusu"
   },
   {
     "word": "objective",
@@ -3615,7 +3615,7 @@
     "example": "I want to be objective and base my decision on facts, not feelings.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "tarafsız, objektif"
+    "translation": "tarafsız, nesnel"
   },
   {
     "word": "paparazzi",
@@ -3624,7 +3624,7 @@
     "example": "The paparazzi follow famous people around to get photos of them to sell to newspapers and magazines.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "paparazi (unlu fotografcisi)"
+    "translation": "paparazzi (ünlü fotoğrafçıları)"
   },
   {
     "word": "presenter",
@@ -3633,7 +3633,7 @@
     "example": "A presenter introduces the different sections of a radio or TV programme.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "sunucu"
+    "translation": "(TV/radyo) sunucu"
   },
   {
     "word": "quit",
@@ -3642,7 +3642,7 @@
     "example": "He quit his job because he wanted to go travelling.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "bırak"
+    "translation": "(manşet) ayrılmak, istifa etmek"
   },
   {
     "word": "quiz",
@@ -3651,7 +3651,7 @@
     "example": "The police quizzed the witness in the murder trial.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "kisa sinav, bilgi yarismasi"
+    "translation": "(manşet) sorgulamak; (genel) bilgi yarışması"
   },
   {
     "word": "reporter",
@@ -3669,7 +3669,7 @@
     "example": "They rowed over who should pay the restaurant bill.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "tartışmak, kavga etmek"
+    "translation": "(manşet) tartışma, atışma"
   },
   {
     "word": "sensational",
@@ -3678,7 +3678,7 @@
     "example": "The reporting in the paper was very sensational . It made the story seem more shocking than it really was.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "sansasyonel"
+    "translation": "sansasyonel, abartılı (şok edici)"
   },
   {
     "word": "split",
@@ -3687,7 +3687,7 @@
     "example": "The celebrity split from with his wife after her affair.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "ayrılmak, boşanmak"
+    "translation": "(manşet) ayrılık, ayrılmak"
   },
   {
     "word": "tip",
@@ -3696,7 +3696,7 @@
     "example": "A first-time director was tipped to win the major award.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "favori göstermek, aday gösterilmek"
+    "translation": "(manşet) aday gösterilmek, favori görülmek"
   },
   {
     "word": "vow",
@@ -3705,7 +3705,7 @@
     "example": "The social media star vowed she wouldn't disappoint her fans again.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "yemin etmek, söz vermek"
+    "translation": "(manşet) söz vermek, ant içmek"
   },
   {
     "word": "wed",
@@ -3714,7 +3714,7 @@
     "example": "The famous singer wed her make-up artist last year.",
     "file": "File 8",
     "section": "Vocabulary Banks: The media",
-    "translation": "evlenmek (haber dilinde)"
+    "translation": "(manşet) evlenmek"
   },
   {
     "word": "advertising campaign",
@@ -3726,7 +3726,7 @@
     "translation": "reklam kampanyası"
   },
   {
-    "word": "advertisments",
+    "word": "advertisements",
     "pos": "n pl",
     "pronunciation": "/ˈædvɜːtɪzments/",
     "example": "The marketing department created the series of advertisments .",
@@ -3786,7 +3786,7 @@
     "example": "A memorable slogan is very important in advertising.",
     "file": "File 9",
     "section": "Advertising",
-    "translation": "slogan, reklam sozcu"
+    "translation": "slogan, reklam sözü"
   },
   {
     "word": "sue",
@@ -3795,7 +3795,7 @@
     "example": "The company threatened to sue the journalists who had published stories about it.",
     "file": "File 9",
     "section": "Advertising",
-    "translation": "dava acmak"
+    "translation": "dava açmak"
   },
   {
     "word": "boom",
@@ -3831,7 +3831,7 @@
     "example": "The company had to close down after two hundred years in business.",
     "file": "File 9",
     "section": "Vocabulary Banks: Business",
-    "translation": "kapat"
+    "translation": "kapanmak, (işi) kapatmak"
   },
   {
     "word": "drop",
@@ -3858,7 +3858,7 @@
     "example": "They export the product around the world.",
     "file": "File 9",
     "section": "Vocabulary Banks: Business",
-    "translation": "ihracat"
+    "translation": "ihraç etmek"
   },
   {
     "word": "flop",
@@ -3867,7 +3867,7 @@
     "example": "The product was a complete flop . Hardly anyone bought it.",
     "file": "File 9",
     "section": "Vocabulary Banks: Business",
-    "translation": "fiyasko, basarisizlik"
+    "translation": "fiyasko, başarısızlık"
   },
   {
     "word": "get down to business",
@@ -3876,7 +3876,7 @@
     "example": "Let's get down to business . We can't waste any time.",
     "file": "File 9",
     "section": "Vocabulary Banks: Business",
-    "translation": "işe koyulun"
+    "translation": "işe koyulmak"
   },
   {
     "word": "grow",
@@ -3894,7 +3894,7 @@
     "example": "Our country imports most of its oil.",
     "file": "File 9",
     "section": "Vocabulary Banks: Business",
-    "translation": "i̇thalat"
+    "translation": "ithal etmek"
   },
   {
     "word": "launch",
@@ -3903,7 +3903,7 @@
     "example": "The launch of the new phone is next week.",
     "file": "File 9",
     "section": "Vocabulary Banks: Business",
-    "translation": "lansman, piyasaya sürüm"
+    "translation": "lansman, piyasaya sürme"
   },
   {
     "word": "manufacture",
@@ -3912,7 +3912,7 @@
     "example": "China manufactures many products for the world.",
     "file": "File 9",
     "section": "Vocabulary Banks: Business",
-    "translation": "üretim"
+    "translation": "üretmek, imal etmek"
   },
   {
     "word": "mean business",
@@ -3921,7 +3921,7 @@
     "example": "You should take them seriously – they mean business .",
     "file": "File 9",
     "section": "Vocabulary Banks: Business",
-    "translation": "ciddi iş"
+    "translation": "ciddi olmak, işi ciddiye almak"
   },
   {
     "word": "merge",
@@ -4029,7 +4029,7 @@
     "example": "The pilot put the plane on autopilot for most of the flight.",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "otopi̇lot"
+    "translation": "otomatik pilot"
   },
   {
     "word": "belief",
@@ -4056,7 +4056,7 @@
     "example": "Brotherhood is sometimes used a general term for the friendship between groups of people.",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "kardeşli̇k"
+    "translation": "kardeşlik"
   },
   {
     "word": "bulletproof",
@@ -4074,7 +4074,7 @@
     "example": "Be careful how you drive!",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "di̇kkatli̇"
+    "translation": "dikkatli"
   },
   {
     "word": "childhood",
@@ -4128,7 +4128,7 @@
     "example": "There are major plans for the development of the town, with 600 new houses.",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "geli̇şi̇m"
+    "translation": "gelişim"
   },
   {
     "word": "distance",
@@ -4173,7 +4173,7 @@
     "example": "Do you have any expectations about what you will learn on this course?",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "beklenti̇"
+    "translation": "beklenti"
   },
   {
     "word": "friendliness",
@@ -4236,7 +4236,7 @@
     "example": "Hunger is a big problem in the country because of the poor harvest.",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "açlik"
+    "translation": "açlık"
   },
   {
     "word": "ignorance",
@@ -4263,7 +4263,7 @@
     "example": "It's my intention to leave the company at the end of the month.",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "ni̇yet"
+    "translation": "niyet"
   },
   {
     "word": "loneliness",
@@ -4272,7 +4272,7 @@
     "example": "Loneliness is often a problem in large cities where people don't know each other.",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "yalnizlik"
+    "translation": "yalnızlık"
   },
   {
     "word": "loss",
@@ -4308,7 +4308,7 @@
     "example": "There's a chilly modernism in the new concrete buildings.",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "moderni̇zm"
+    "translation": "modernizm"
   },
   {
     "word": "monorail",
@@ -4362,7 +4362,7 @@
     "example": "I'm doing a postgraduate degree in aeronautical engineering.",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "yüksek li̇sans"
+    "translation": "yüksek lisans"
   },
   {
     "word": "racism",
@@ -4371,7 +4371,7 @@
     "example": "You can help stop racism by fighting it.",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "irkçilik"
+    "translation": "ırkçılık"
   },
   {
     "word": "silence",
@@ -4479,7 +4479,7 @@
     "example": "They were prone to violence and aggressive behaviour.",
     "file": "File 9",
     "section": "Vocabulary Banks: Word building",
-    "translation": "şi̇ddet"
+    "translation": "şiddet"
   },
   {
     "word": "waterproof",
@@ -4524,7 +4524,7 @@
     "example": "The prices here are astronomical – let's go somewhere cheaper.",
     "file": "File 10",
     "section": "Science; stress in word families",
-    "translation": "astronomi̇k"
+    "translation": "astronomik"
   },
   {
     "word": "astronomy",
@@ -4560,7 +4560,7 @@
     "example": "I was quite interested in biology at school, especially in ecosystems.",
     "file": "File 10",
     "section": "Science; stress in word families",
-    "translation": "bi̇yoloji̇"
+    "translation": "biyoloji"
   },
   {
     "word": "botanical",
@@ -4614,7 +4614,7 @@
     "example": "I got good marks on my chemistry exam because I knew the periodic table.",
     "file": "File 10",
     "section": "Science; stress in word families",
-    "translation": "ki̇mya"
+    "translation": "kimya"
   },
   {
     "word": "clone",
@@ -4686,7 +4686,7 @@
     "example": "The human test subjects were used as guinea pigs for the new medicine.",
     "file": "File 10",
     "section": "Science; stress in word families",
-    "translation": "gi̇ne domuzu"
+    "translation": "gine domuzu"
   },
   {
     "word": "laboratory",
@@ -4713,7 +4713,7 @@
     "example": "My colleagues are physicists . They're studying quantum theories right now.",
     "file": "File 10",
     "section": "Science; stress in word families",
-    "translation": "fi̇zi̇kçi̇"
+    "translation": "fizikçi"
   },
   {
     "word": "physics",
@@ -4722,7 +4722,7 @@
     "example": "Are you interested in physics ? ~ Yes, I'm interested in electromagnetics.",
     "file": "File 10",
     "section": "Science; stress in word families",
-    "translation": "fi̇zi̇k"
+    "translation": "fizik"
   },
   {
     "word": "research",
@@ -6874,5 +6874,302 @@
     "file": "File 4",
     "section": "Plastic & waste (Trashed)",
     "translation": "plastiksiz"
+  },
+  {
+    "word": "burglar",
+    "pos": "n",
+    "pronunciation": "/ˈbɜːɡlə/",
+    "example": "A burglar broke into our house and stole our laptops.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "ev hırsızı (eve giren)"
+  },
+  {
+    "word": "thief",
+    "pos": "n",
+    "pronunciation": "/θiːf/",
+    "example": "A thief snatched her phone and ran away.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "hırsız (eşya çalan)"
+  },
+  {
+    "word": "robber",
+    "pos": "n",
+    "pronunciation": "/ˈrɒbə/",
+    "example": "The robbers took thousands of pounds from the bank.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "soyguncu"
+  },
+  {
+    "word": "mugger",
+    "pos": "n",
+    "pronunciation": "/ˈmʌɡə/",
+    "example": "A mugger threatened me with a knife in the street.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "(sokakta) gaspçı"
+  },
+  {
+    "word": "murderer",
+    "pos": "n",
+    "pronunciation": "/ˈmɜːdərə/",
+    "example": "The murderer was sentenced to life in prison.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "katil"
+  },
+  {
+    "word": "kidnapper",
+    "pos": "n",
+    "pronunciation": "/ˈkɪdnæpə/",
+    "example": "The kidnappers demanded money for his safe return.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "adam kaçıran (fidyeci)"
+  },
+  {
+    "word": "hacker",
+    "pos": "n",
+    "pronunciation": "/ˈhækə/",
+    "example": "A hacker got into the company’s computer system.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "bilgisayar korsanı"
+  },
+  {
+    "word": "smuggler",
+    "pos": "n",
+    "pronunciation": "/ˈsmʌɡlə/",
+    "example": "The smuggler was caught with illegal goods at customs.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "kaçakçı"
+  },
+  {
+    "word": "vandal",
+    "pos": "n",
+    "pronunciation": "/ˈvændl/",
+    "example": "Vandals had sprayed paint all over the statue.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "vandal (kasten zarar veren)"
+  },
+  {
+    "word": "stalker",
+    "pos": "n",
+    "pronunciation": "/ˈstɔːkə/",
+    "example": "A stalker followed the singer everywhere he went.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "(ısrarlı) takipçi/tacizci"
+  },
+  {
+    "word": "blackmailer",
+    "pos": "n",
+    "pronunciation": "/ˈblækmeɪlə/",
+    "example": "The blackmailer threatened to send the photos to a newspaper.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "şantajcı"
+  },
+  {
+    "word": "fraudster",
+    "pos": "n",
+    "pronunciation": "/ˈfrɔːdstə/",
+    "example": "The fraudster changed real notes for fake ones.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "dolandırıcı"
+  },
+  {
+    "word": "terrorist",
+    "pos": "n",
+    "pronunciation": "/ˈterərɪst/",
+    "example": "The terrorists left a bomb in the car park.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "terörist"
+  },
+  {
+    "word": "rapist",
+    "pos": "n",
+    "pronunciation": "/ˈreɪpɪst/",
+    "example": "The rapist was caught thanks to DNA evidence.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "tecavüzcü"
+  },
+  {
+    "word": "drug dealer",
+    "pos": "n",
+    "pronunciation": "/drʌɡ ˈdiːlə/",
+    "example": "The drug dealer tried to sell marijuana at the concert.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "uyuşturucu satıcısı"
+  },
+  {
+    "word": "hijacker",
+    "pos": "n",
+    "pronunciation": "/ˈhaɪdʒækə/",
+    "example": "The hijackers made the pilot land in the desert.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "(uçak) kaçıran korsan"
+  },
+  {
+    "word": "burgle",
+    "pos": "v",
+    "pronunciation": "/ˈbɜːɡl/",
+    "example": "Our house was burgled while we were on holiday.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "eve girip soymak"
+  },
+  {
+    "word": "mug",
+    "pos": "v",
+    "pronunciation": "/mʌɡ/",
+    "example": "He was mugged on his way home last night.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "(sokakta) gasp etmek"
+  },
+  {
+    "word": "kidnap",
+    "pos": "v",
+    "pronunciation": "/ˈkɪdnæp/",
+    "example": "They kidnapped the businessman and asked for a ransom.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "(insan) kaçırmak"
+  },
+  {
+    "word": "hijack",
+    "pos": "v",
+    "pronunciation": "/ˈhaɪdʒæk/",
+    "example": "Two passengers tried to hijack the plane.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "(uçak/araç) kaçırmak"
+  },
+  {
+    "word": "smuggle",
+    "pos": "v",
+    "pronunciation": "/ˈsmʌɡl/",
+    "example": "They were smuggling cigarettes across the border.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "kaçırmak (kaçakçılık)"
+  },
+  {
+    "word": "vandalize",
+    "pos": "v",
+    "pronunciation": "/ˈvændəlaɪz/",
+    "example": "Someone vandalized the bus stop overnight.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "(kasten) zarar vermek"
+  },
+  {
+    "word": "stalk",
+    "pos": "v",
+    "pronunciation": "/stɔːk/",
+    "example": "He was arrested for stalking his ex-girlfriend.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "(ısrarla) takip/taciz etmek"
+  },
+  {
+    "word": "hack",
+    "pos": "v",
+    "pronunciation": "/hæk/",
+    "example": "Someone hacked into my email account.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "(sisteme) sızmak, hacklemek"
+  },
+  {
+    "word": "bribe",
+    "pos": "v",
+    "pronunciation": "/braɪb/",
+    "example": "He tried to bribe the official with free flats.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "rüşvet vermek"
+  },
+  {
+    "word": "sentence to",
+    "pos": "phr",
+    "pronunciation": "/ˈsentəns tə/",
+    "example": "He was sentenced to ten years in prison.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: Crime and punishment",
+    "translation": "… cezasına çarptırmak"
+  },
+  {
+    "word": "columnist",
+    "pos": "n",
+    "pronunciation": "/ˈkɒləmnɪst/",
+    "example": "She writes a weekly columnist piece on politics.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "köşe yazarı"
+  },
+  {
+    "word": "correspondent",
+    "pos": "n",
+    "pronunciation": "/ˌkɒrɪˈspɒndənt/",
+    "example": "He is the BBC’s correspondent in the Middle East.",
+    "file": "File 8",
+    "section": "Vocabulary Banks: The media",
+    "translation": "(yurt dışı) muhabir"
+  },
+  {
+    "word": "go out of business",
+    "pos": "phr",
+    "pronunciation": "/ɡəʊ aʊt əv ˈbɪznəs/",
+    "example": "Many travel agencies have gone out of business.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "iflas etmek, kapanmak"
+  },
+  {
+    "word": "none of your business",
+    "pos": "phr",
+    "pronunciation": "/nʌn əv jɔː ˈbɪznəs/",
+    "example": "What I earn is none of your business.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "seni ilgilendirmez"
+  },
+  {
+    "word": "unfinished business",
+    "pos": "phr",
+    "pronunciation": "/ʌnˈfɪnɪʃt ˈbɪznəs/",
+    "example": "They met again because they had some unfinished business.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "yarım kalmış iş"
+  },
+  {
+    "word": "any other business",
+    "pos": "phr",
+    "pronunciation": "/ˈeni ˈʌðə ˈbɪznəs/",
+    "example": "Is there any other business before we finish the meeting?",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "(gündemde) başka bir konu"
+  },
+  {
+    "word": "business is booming",
+    "pos": "phr",
+    "pronunciation": "/ˈbɪznəs ɪz ˈbuːmɪŋ/",
+    "example": "Since the new shop opened, business is booming.",
+    "file": "File 9",
+    "section": "Vocabulary Banks: Business",
+    "translation": "işler tıkırında"
   }
 ]

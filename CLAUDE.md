@@ -11,8 +11,8 @@ METU ogrencileri icin Ingilizce kelime ve gramer pratik uygulamasi. Tek sayfalik
 ## Teknik Yapi
 
 - **Tek dosya:** `index.html` — tum HTML, CSS ve JS icinde embedded
-- **Veri:** `words.json` / `words_data.js` — 536 kelime, 9 konu
-- **Harici bagimlilik:** Google Fonts (Inter), Puter.com cloud storage API
+- **Veri:** `words.json` = **tek dogru kaynak** (797 kelime, File 1-13). `words_data.js` + `index.html` icindeki inline `var WORDS_DATA` bunun **birebir aynisi** olmali (uygulama runtime'da inline'i kullanir). Kelime degisikliginde 3 kopyayi da senkron tut (bkz. `docs/CONTENT_MAP.md` → Kelime Verisi).
+- **Harici bagimlilik:** Google Fonts (Inter); Puter.com (sadece premium TTS sesi — yalniz http/https'te yuklenir, `file://`'de atlanir, Web Speech API'ye duser)
 - **Framework:** Yok — vanilla JS, vanilla CSS
 
 ## CSS Mimarisi

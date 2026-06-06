@@ -3,7 +3,7 @@
 Bu doküman sistemdeki tüm konu kartlarının ve kelime dosyalarının kapsamını, kaynaklarını ve pedagojik bağlamını listeler. **Vize hazırlığı + sonraki düzenlemeler için referans.**
 
 > **Kaynak Kitap:** *English File Upper-Intermediate, 4th Edition* (Oxford University Press) — METU coursebook
-> **Son güncelleme:** 2026-04-25 (2. vize hazırlığı kapsamında)
+> **Son güncelleme:** 2026-06-06 (**Final hazırlığı** — Unit 7-9 + V3 + Gerund/Infinitive eklendi)
 
 ---
 
@@ -11,16 +11,31 @@ Bu doküman sistemdeki tüm konu kartlarının ve kelime dosyalarının kapsamı
 
 | Bölüm | Yer | Kart Sayısı | Konu Tipi |
 |-------|-----|-------------|-----------|
-| **Temel Konular** | `#unit0` | **23 kart** | Foundational grammar + Conditionals Master |
+| **Temel Konular** | `#unit0` | **24 kart** | Foundational grammar + Conditionals Master + **⭐ V3 Düzensiz Fiiller** + Final Pusulası banner |
 | Unit 1 | `#unit1` | 3 kart | Question algorithms, compound adjectives, intonation |
 | Unit 2 | `#unit2` | 3 kart | Present Perfect (Skorboard/Kronometre), illnesses |
 | Unit 3 | `#unit3` | 3 kart | Narrative tenses (Film Şeridi), air travel, -ed endings |
 | **Unit 4** | `#unit4` | **3 kart** | **Future perfect/continuous + Zero/First Conditional** |
 | **Unit 5** | `#unit5` | **3 kart** | **Unreal conditionals (Type 2 + 3) + Wish** |
-| **Unit 6** | `#unit6` | **3 kart** | **Used to / Be used to / Get used to + Sleep** |
-| **Kelime Dosyaları** | `words.json` | **795 kelime** | File 1-18 |
+| **Unit 6** | `#unit6` | **4 kart** | **Used to / Be used to / Get used to + 6B Gerund/Infinitive + Sleep** |
+| **Unit 7** 🆕 | `#unit7` | **2 kart** | **7A Past Modals (must/can't have+V3) + Verbs Often Confused** |
+| **Unit 8** 🆕 | `#unit8` | **4 kart** | **8A Passive+Causative+Impersonal · 8B Reporting Verbs · Crime & Punishment · The Media** |
+| **Unit 9** 🆕 | `#unit9` | **2 kart** | **9A Clauses of Contrast & Purpose + Business (verbs+idioms)** |
+| **Kelime Dosyaları** | `words.json` | **797 kelime** | File 1-13 |
 
-**Toplam:** 41 konu kartı, 795 kelime.
+**Toplam:** 52 konu kartı (+ Essay + Final Pusulası banner), 797 kelime.
+
+> **Final kapsamı detayı:** `docs/final/FINAL_SCOPE.md` — 41 görselden çıkarılan tek doğru kaynak (gramer kuralları, örnekler, çözümlü pratikler, kelime bankaları, reading/writing formatı).
+
+### Kelime Verisi — Tek Kaynak & Senkron (ÖNEMLİ)
+- **Tek doğru kaynak:** `words.json`. `words_data.js` ve `index.html` içindeki inline `var WORDS_DATA` **birebir aynısı** olmalı (uygulama runtime'da inline'ı kullanır).
+- Geçmişte desync vardı: inline 536, JSON 764 → 228 kelime (File 4/5/6/11-13) uygulamada görünmüyordu. **Düzeltildi → 3 kopya da 797 kelime.**
+- **Çeviri kalitesi geçişi (2026-06-06):** 117 yakın-anlamlı/bağlam-yanlış çeviri belirginleştirildi (ör. `burglary`=ev soygunu vs `theft`=hırsızlık; `charge`=suçlama (şarj değil); `commit`=suç işlemek; `sentence`=ceza vermek; `objective`=tarafsız; `critic`=eleştirmen; `agony aunt`=okur dertlerine cevap veren yazar; `argue`≠`discuss`; `hard`≠`hardly`). U+0307 birleşik nokta hataları (`teröri̇zm`→`terörizm`) ve dotless-i hataları temizlendi.
+- **Eklenenler:** 17 crime kişi-formu (burglar, thief, mugger, murderer…) + crime fiilleri + media kişileri (columnist, correspondent) + business idiom'ları (go out of business, unfinished business…) — görsellerdeki kelimeler artık mevcut.
+- Ünite filtresi (Ayarlar) artık **dinamik** — File listesi veriden türetilir (File 11-13 dahil).
+
+### Grammar Quiz (Kelimeler sayfası → Grammar butonu)
+156 soru, ünite bazlı seçilebilir: U1 (34), U2 (33), U3 (35), **U6 (15), U7 (12), U8 (15), U9 (12)** + "Tümü". Şıklar artık karıştırılıyor (önceden doğru cevap hep ilk şıktaydı).
 
 ---
 
